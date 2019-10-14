@@ -1,0 +1,20 @@
+{
+  "name": "libra_core",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "kulap-libra": "^1.0.17",
+    "libra-core": "^1.0.7",
+    "libra-grpc": "0.0.7",
+    "node-fetch": "^2.6.0"
+  }
+}
