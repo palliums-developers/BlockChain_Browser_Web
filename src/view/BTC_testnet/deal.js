@@ -13,23 +13,22 @@ class Deal extends Component {
   }
 
   componentDidMount() {
-
-    this.props.getCurSearchtx({
-      txid: this.props.match.params.txid
-    })
+    this.props.getBTCTestTx('testnet', this.props.match.params.transaction);
+    // this.props.getCurSearchtx({
+    //   txid: this.props.match.params.txid
+    // })
   }
   goToDeal = (txid) => {
-    this.props.history.push({
-      pathname: '/app/dealbox/' + txid
-    })
+    this.props.history.push({ pathname: '/app/tBTC_transaction/' + txid })
   }
   goToAddress = (address) => {
-    this.props.history.push({
-      pathname: '/app/addressBox',
-      state: {
-        address: address
-      }
-    })
+    this.props.history.push({ pathname: '/app/tBTC_address/' + address })
+    // this.props.history.push({
+    //   pathname: '/app/addressBox',
+    //   state: {
+    //     address: address
+    //   }
+    // })
   }
 
   getCurValue = (e) => {
@@ -39,12 +38,12 @@ class Deal extends Component {
   }
 
   getSearch = () => {
-    search_box('mainnet', this.state.iptValue, this.props)
+    search_box('testnet', this.state.iptValue, this.props)
   }
 
   render() {
-    let { dealList } = this.props
-    // console.log(dealList)
+    let { dealList, BTC_Test_txid } = this.props
+    // console.log(BTC_Test_txid)
     return (
       <div className="BTCTestNetContent">
         <BTCTestHeader back="netTo"></BTCTestHeader>
@@ -57,16 +56,18 @@ class Deal extends Component {
             <div className="price">
               <p>
                 <i><img src="/img/编组 30@2x.png" /></i>
-                <label>Transaction</label>
+                <label>BTC TestNet Transaction</label>
               </p>
-              <p>{this.props.match.params.txid}</p>
+              <p>{this.props.match.params.transaction}</p>
+              <label>Block Hash</label>
+              <p onClick={() => this.goToBlock(BTC_Test_txid.blockheight)}>{BTC_Test_txid.blockhash}</p>
             </div>
             <div className="blockHeightContent">
               <div className="blockHeightAbstract">
                 <h2>Summary</h2>
                 <div className="abstract">
                   <div className="abstractContent">
-                    <p><label>ID</label><span>{dealList._id}</span></p>
+                    {/* <p><label>ID</label><span>{dealList._id}</span></p>
                     <p><label>From</label><span className="from" onClick={() => {
                       this.props.history.push('/app/addressBox/' + dealList.from)
                     }}>{dealList.from}</span></p>
@@ -78,18 +79,60 @@ class Deal extends Component {
                     <p><label>Gas price</label><span>{dealList.gas_price}</span></p>
                     <p><label>Gas max</label><span>{dealList.gas_max}</span></p>
                     <p><label>Gas used</label><span>{dealList.gas_used}</span></p>
-                    <p><label>Sequence nr</label><span>{dealList.seq_nr}</span></p>
+                    <p><label>Sequence nr</label><span>{dealList.seq_nr}</span></p> */}
+                    <p><label>Block Height</label><span onClick={() => this.goToBlock(BTC_Test_txid.blockheight)}>{BTC_Test_txid.blockheight}</span></p>
+                    <p><label>Time</label><span>{timeStamp2String(BTC_Test_txid.timestamp + '000')}</span></p>
+                    <p><label>Size</label><span>{BTC_Test_txid.size}</span></p>
+                    <p><label>Weight</label><span>{BTC_Test_txid.weight}</span></p>
+                    <p><label>Confirmations</label><span>{BTC_Test_txid.confirmations}</span></p>
                   </div>
                 </div>
               </div>
-              <div className="blockHeightDeal">
+
+              {/* <div className="blockHeightDeal">
                 <p><label>senderPublicKey</label><span>{dealList.senderPublicKey}</span></p>
                 <p><label>senderSignature</label><span>{dealList.senderSignature}</span></p>
                 <p><label>signedTxnHash</label><span>{dealList.signedTxnHash}</span></p>
                 <p><label>stateRootHash</label><span>{dealList.stateRootHash}</span></p>
                 <p><label>eventRootHash</label><span>{dealList.eventRootHash}</span></p>
                 <p><label>rawTxnBytes</label><span>{dealList.rawTxnBytes}</span></p>
+              </div> */}
+                            <div className="deal">
+                <div className="dealContent1">
+                  <div className="dealContents">
+                    <p onClick={() => this.goToDeal(BTC_Test_txid.txid)}>{BTC_Test_txid.txid}</p>
+                    <div className="dealAddress">
+                      <ul>
+                        {
+                          BTC_Test_txid.preaddress && BTC_Test_txid.preaddress.map((v, i) => {
+                            return v.value == 0 ? <p key={i}><span>{v.address}</span></p> :
+                              <li key={i}>
+                                {
+                                  v.value == 0 ? <label>地址解析失败</label> : v.address.length == 34 ? <label className="addBlue" onClick={() => this.goToAddress(v.address)}>{v.address}</label> : <label>{v.address}</label>
+                                }
+                                <span>' '{v.value} BTC</span></li>
+                          })
+                        }
+                      </ul>
+                      <span> >>>>>>>>>>>>>>>>> </span>
+                      <ul>
+                        {
+                          BTC_Test_txid.nextaddress && BTC_Test_txid.nextaddress.map((v, i) => {
+                            return <li key={i}>
+                              {v.value == 0 ? <label>地址解析失败</label> : v.address.length == 34 ? <label className="addBlue" onClick={() => this.goToAddress(v.address)}>{v.address}</label> : <label>{v.address}</label>
+                              }
+                              <span>{v.value} BTC</span>
+                            </li>
 
+                          })
+                        }
+                      </ul>
+                    </div>
+                    <div className="descrPrice">
+                      <span>确认数 {BTC_Test_txid.confirmations}</span>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

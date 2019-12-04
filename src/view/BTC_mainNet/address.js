@@ -56,7 +56,7 @@ class Address extends Component {
             <div className="price">
               <p>
                 <i><img src="/img/address@2x.png" /></i>
-                <label>address</label>
+                <label>BTC MainNet Address</label>
               </p>
               <p>{this.props.match.params.address}</p>
               <QRcode value={this.props.match.params.address}></QRcode>
@@ -67,7 +67,7 @@ class Address extends Component {
                 <div className="abstract">
                   <div className="abstractContent">
                     <p><label>Address</label><span>{this.props.match.params.address}</span></p>
-                    <p><label>Banlance</label><span>{BTC_main_address.data && BTC_main_address.data.balance} LBR</span></p>
+                    <p><label>Banlance</label><span>{BTC_main_address.data && BTC_main_address.data.balance} Sat</span></p>
                     <p><label>Total Receive</label><span>{BTC_main_address.data && BTC_main_address.data.received}</span></p>
                     <p><label>Tx Count</label><span>{BTC_main_address.data && BTC_main_address.data.tx_count}</span></p>
                     {/* <p><label>Recent transactions</label><span>{txs.length}</span></p> */}
@@ -144,10 +144,10 @@ class Address extends Component {
                                   })
                                 }
                               </ul>
-                              <div className="descrPrice">
-                                <span>确认数 {v.confirmations}</span>
-                              </div>
                             </div>
+                              <div className="descrPrice">
+                                <span>Confirmed {v.confirmations}</span>
+                              </div>
                           </div>
                         )
                       })}

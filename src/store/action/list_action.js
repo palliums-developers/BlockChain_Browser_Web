@@ -199,7 +199,7 @@ export let getBTCMainAddress=(_net,_address,_page)=>{
 }
 export let getBTCTestList = () => {
     return dispatch => {
-        axios.get(BTC_api + '/list_10block_main').then(res => {
+        axios.get(BTC_api + '/list_10block_test').then(res => {
             // console.log(res.data.block,'123')
             dispatch({
                 type: 'BTC_Test_List',

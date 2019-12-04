@@ -129,7 +129,7 @@ class BlockHeight extends Component {
             <div className="price">
                 <p>
                   <i><img src="/img/编组 66@2x.png" /></i>
-                  <label>Block</label>
+                  <label>BTC MainNet Block</label>
                   <span>{this.props.match.params.block}</span>
                 </p>
                 <p><label>BlockHash</label><span>{BTC_main_block.detail&&BTC_main_block.detail.hash}</span></p>

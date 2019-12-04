@@ -19,9 +19,9 @@ class BlockHeight extends Component {
   async componentDidMount() {
     // let { limit, offset } = this.state
     await this.hashOrHeight(this.props.match.params.block_hash)
-    this.props.getBTCTestBlock('mainnet', this.state.type, this.props.match.params.block_hash, this.state.limit, this.state.offset)
+    this.props.getBTCTestBlock('testnet', this.state.type, this.props.match.params.block_hash, this.state.limit, this.state.offset)
 
-    
+
     // this.props.getCurListBlock()
 
     // this.props.getCurDetailBlock({
@@ -46,31 +46,44 @@ class BlockHeight extends Component {
 
   goToDeal = (txid) => {
     this.props.history.push({
-      pathname: '/app/dealbox/' + txid
+      pathname: '/app/tBTC_transaction/' + txid
     })
   }
 
-  curBlock = (type) => {
-    let prev = this.props.match.params.block - 1;
-    if (type == 'prev') {
-      if (prev == 1) {
-        prev = 1
-        this.props.history.push('/app/blockHeight/' + prev)
-      } else if (prev > 0) {
-        this.props.history.push('/app/blockHeight/' + prev)
+  // curBlock = (type) => {
+  //   let height = this.props.BTC_Test_block * 1;
+  //   if (type == 'prev') {
+  //     if (height == 1) {
+  //       height = 1
+  //       this.props.history.push('/app/tBTC_block/' + height)
+  //     } else if (height > 0) {
+  //       this.props.history.push('/app/tBTC_block/' + height - 1)
+  //     }
+  //     this.forceUpdate()
+  //   } else if (type == 'next') {
+  //     if (height <= this.props.netTableList.length) {
+  //       this.props.history.push('/app/tBTC_block/' + height + 1)
+  //     } else {
+  //       return;
+  //     }
+  //     this.forceUpdate()
+  //   }
+  // }
+  curBlock=(_type)=>{
+    if(this.props.BTC_Test_block.detail){
+      let _height=this.props.BTC_Test_block.detail.height
+      switch (_type) {
+        case 'prev':
+          this.props.history.push('/app/tBTC_block/'+(_height-1))
+          break;
+        case 'next':
+            this.props.history.push('/app/tBTC_block/'+(_height+1))
+        break;
+        default:
+          break;
       }
-      this.forceUpdate()
-    } else if (type == 'next') {
-      prev = (this.props.match.params.block) * 1 + 1;
-      if (prev <= this.props.netTableList.length) {
-        this.props.history.push('/app/blockHeight/' + prev)
-      } else {
-        return;
-      }
-      this.forceUpdate()
     }
   }
-
   getCurValue = (e) => {
     this.setState({
       iptValue: e.target.value
@@ -97,7 +110,7 @@ class BlockHeight extends Component {
   }
 
   render() {
-    let { abstractDetail, dealsList, total,BTC_Test_block } = this.props;
+    let { abstractDetail, dealsList, total, BTC_Test_block } = this.props;
     return (
       <div className="BTCTestNetContent">
         <BTCTestHeader back="netTo"></BTCTestHeader>
@@ -108,12 +121,12 @@ class BlockHeight extends Component {
               <span onClick={this.getSearch}></span>
             </div>
             <div className="price">
-                <p>
-                  <i><img src="/img/编组 66@2x.png" /></i>
-                  <label>Block</label>
-                  <span>{this.props.match.params.block}</span>
-                </p>
-                <p><label>BlockHash</label><span>{BTC_Test_block.detail&&BTC_Test_block.detail.hash}</span></p>
+              <p>
+                <i><img src="/img/编组 66@2x.png" /></i>
+                <label>BTC TestNet Block</label>
+                <span>{this.props.match.params.block}</span>
+              </p>
+              <p><label>BlockHash</label><span>{BTC_Test_block.detail && BTC_Test_block.detail.hash}</span></p>
             </div>
             <div className="btn">
               <button onClick={() => this.curBlock('prev')}><img src="/img/编组 7.png" />previous</button>
@@ -124,26 +137,26 @@ class BlockHeight extends Component {
                 <h2>Detail</h2>
                 <div className="abstract">
                   <div className="abstractContent">
-                    <p><label>Height</label><span>{BTC_Test_block.detail&&BTC_Test_block.detail.height}</span></p>
-                    <p><label>timestamp</label><span>{timeStamp2String(BTC_Test_block.detail&&BTC_Test_block.detail.timestamp + '000')}</span></p>
-                    <p><label>size</label><span>{BTC_Test_block.detail&&BTC_Test_block.detail.size} Bytes</span></p>
-                    <p><label>Weight</label><span>{BTC_Test_block.detail&&BTC_Test_block.detail.weight}</span></p>
-                    <p><label>confirmations</label><span>{BTC_Test_block.detail&&BTC_Test_block.detail.confirmations}</span></p>
+                    <p><label>Height</label><span>{BTC_Test_block.detail && BTC_Test_block.detail.height}</span></p>
+                    <p><label>timestamp</label><span>{timeStamp2String(BTC_Test_block.detail && BTC_Test_block.detail.timestamp + '000')}</span></p>
+                    <p><label>size</label><span>{BTC_Test_block.detail && BTC_Test_block.detail.size} Bytes</span></p>
+                    <p><label>Weight</label><span>{BTC_Test_block.detail && BTC_Test_block.detail.weight}</span></p>
+                    <p><label>confirmations</label><span>{BTC_Test_block.detail && BTC_Test_block.detail.confirmations}</span></p>
                   </div>
                   <div className="line"></div>
                   <div className="abstractContent">
-                    <p><label>nTx</label><span>{BTC_Test_block.detail&&BTC_Test_block.detail.nTx}</span></p>
-                    <p><label>version</label><span>{BTC_Test_block.detail&&BTC_Test_block.detail.version}</span></p>
-                    <p><label>difficulty</label><span>{BTC_Test_block.detail&&BTC_Test_block.detail.difficulty}</span></p>
-                    <p><label>Bits</label><span>{BTC_Test_block.detail&&BTC_Test_block.detail.bits}</span></p>
-                    <p><label>Nonce</label><span>{BTC_Test_block.detail&&BTC_Test_block.detail.nonce}</span></p>
+                    <p><label>nTx</label><span>{BTC_Test_block.detail && BTC_Test_block.detail.nTx}</span></p>
+                    <p><label>version</label><span>{BTC_Test_block.detail && BTC_Test_block.detail.version}</span></p>
+                    <p><label>difficulty</label><span>{BTC_Test_block.detail && BTC_Test_block.detail.difficulty}</span></p>
+                    <p><label>Bits</label><span>{BTC_Test_block.detail && BTC_Test_block.detail.bits}</span></p>
+                    <p><label>Nonce</label><span>{BTC_Test_block.detail && BTC_Test_block.detail.nonce}</span></p>
                   </div>
                 </div>
               </div>
               <div className="blockHeightDeal">
                 <h2>Transaction</h2>
                 <div className="deal">
-                {
+                  {
                     BTC_Test_block.showtx && BTC_Test_block.showtx.map((item, index) => {
                       return <div key={index}><div className="dealContent1 dealContent2">
                         <div className="dealContents">

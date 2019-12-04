@@ -21,17 +21,13 @@ class Deal extends Component {
     this.props.getBTCMainTx('mainnet', this.props.match.params.transaction);
   }
   goToDeal = (txid) => {
-    this.props.history.push({
-      pathname: '/app/BTC_transaction/' + txid
-    })
+    this.props.history.push({ pathname: '/app/BTC_transaction/' + txid })
   }
   goToAddress = (address) => {
-    this.props.history.push({
-      pathname: '/app/BTC_address/'+address 
-    })
+    this.props.history.push({ pathname: '/app/BTC_address/' + address })
   }
-  goToBlock=(_block)=>{
-    this.props.history.push({pathname:'/app/BTC_block/'+_block})
+  goToBlock = (_block) => {
+    this.props.history.push({ pathname: '/app/BTC_block/' + _block })
   }
   getCurValue = (e) => {
     this.setState({
@@ -58,11 +54,11 @@ class Deal extends Component {
             <div className="price">
               <p>
                 <i><img src="/img/编组 30@2x.png" /></i>
-                <label>Transaction</label>
+                <label>BTC MainNet Transaction</label>
               </p>
               <p>{this.props.match.params.transaction}</p>
               <label>Block Hash</label>
-              <p onClick={()=>this.goToBlock(BTC_main_txid.blockheight)}>{BTC_main_txid.blockhash}</p>
+              <p onClick={() => this.goToBlock(BTC_main_txid.blockheight)}>{BTC_main_txid.blockhash}</p>
             </div>
             <div className="blockHeightContent">
               <div className="blockHeightAbstract">
@@ -76,7 +72,7 @@ class Deal extends Component {
                     <p><label>To</label><span className="to" onClick={() => {
                       this.props.history.push('/app/addressBox/' + dealList.to)
                     }}>{dealList.to}</span></p> */}
-                    <p><label>Block Height</label><span onClick={()=>this.goToBlock(BTC_main_txid.blockheight)}>{BTC_main_txid.blockheight}</span></p>
+                    <p><label>Block Height</label><span onClick={() => this.goToBlock(BTC_main_txid.blockheight)}>{BTC_main_txid.blockheight}</span></p>
                     <p><label>Time</label><span>{timeStamp2String(BTC_main_txid.timestamp + '000')}</span></p>
                     <p><label>Size</label><span>{BTC_main_txid.size}</span></p>
                     <p><label>Weight</label><span>{BTC_main_txid.weight}</span></p>
