@@ -1,0 +1,504 @@
+{
+  ask: 6779.08,
+  bid: 6774.75,
+  last: 6777.71,
+  high: 7284.68,
+  low: 6575.39,
+  volume: 88243.14750228,
+  open: {
+    hour: 6789.31,
+    day: 6938.94,
+    week: 8501.27,
+    month: 7891.17,
+    month_3: 10131.38,
+    month_6: 8041.66,
+    year: 3850.26
+  },
+  averages: { day: 6961.12, week: 7653.43, month: 8469.81 },
+  changes: {
+    price: {
+      hour: -11.59,
+      day: -161.22,
+      week: -1723.56,
+      month: -1113.46,
+      month_3: -3353.67,
+      month_6: -1263.95,
+      year: 2927.45
+    },
+    percent: {
+      hour: -0.17,
+      day: -2.32,
+      week: -20.27,
+      month: -14.11,
+      month_3: -33.1,
+      month_6: -15.72,
+      year: 76.03
+    }
+  },
+  volume_percent: 78.05,
+  timestamp: 1574676380,
+  display_timestamp: '2019-11-25 10:06:20',
+  display_symbol: 'BTC-USD'
+}
+{
+  ask: 6778.85,
+  bid: 6773.85,
+  last: 6777.05,
+  high: 7284.68,
+  low: 6575.39,
+  volume: 88252.09847299,
+  open: {
+    hour: 6789.31,
+    day: 6938.94,
+    week: 8501.27,
+    month: 7891.17,
+    month_3: 10131.38,
+    month_6: 8041.66,
+    year: 3850.26
+  },
+  averages: { day: 6961.12, week: 7653.43, month: 8469.81 },
+  changes: {
+    price: {
+      hour: -12.26,
+      day: -161.89,
+      week: -1724.22,
+      month: -1114.12,
+      month_3: -3354.33,
+      month_6: -1264.61,
+      year: 2926.79
+    },
+    percent: {
+      hour: -0.18,
+      day: -2.33,
+      week: -20.28,
+      month: -14.12,
+      month_3: -33.11,
+      month_6: -15.73,
+      year: 76.02
+    }
+  },
+  volume_percent: 78.04,
+  timestamp: 1574676392,
+  display_timestamp: '2019-11-25 10:06:32',
+  display_symbol: 'BTC-USD'
+}
+{
+  ask: 6780.69,
+  bid: 6775.91,
+  last: 6777.95,
+  high: 7278.97,
+  low: 6575.39,
+  volume: 88327.73387575,
+  open: {
+    hour: 6789.31,
+    day: 6938.94,
+    week: 8501.27,
+    month: 7891.17,
+    month_3: 10131.38,
+    month_6: 8041.66,
+    year: 3850.26
+  },
+  averages: { day: 6960.76, week: 7653.26, month: 8469.75 },
+  changes: {
+    price: {
+      hour: -11.36,
+      day: -160.99,
+      week: -1723.32,
+      month: -1113.22,
+      month_3: -3353.43,
+      month_6: -1263.71,
+      year: 2927.69
+    },
+    percent: {
+      hour: -0.17,
+      day: -2.32,
+      week: -20.27,
+      month: -14.11,
+      month_3: -33.1,
+      month_6: -15.71,
+      year: 76.04
+    }
+  },
+  volume_percent: 77.99,
+  timestamp: 1574676442,
+  display_timestamp: '2019-11-25 10:07:22',
+  display_symbol: 'BTC-USD'
+}
+{
+  ask: 6781.35,
+  bid: 6776.66,
+  last: 6779.4,
+  high: 7278.97,
+  low: 6575.39,
+  volume: 88328.3657217,
+  open: {
+    hour: 6789.31,
+    day: 6938.94,
+    week: 8501.27,
+    month: 7891.17,
+    month_3: 10131.38,
+    month_6: 8041.66,
+    year: 3850.26
+  },
+  averages: { day: 6960.76, week: 7653.26, month: 8469.75 },
+  changes: {
+    price: {
+      hour: -9.91,
+      day: -159.54,
+      week: -1721.87,
+      month: -1111.77,
+      month_3: -3351.98,
+      month_6: -1262.26,
+      year: 2929.14
+    },
+    percent: {
+      hour: -0.15,
+      day: -2.3,
+      week: -20.25,
+      month: -14.09,
+      month_3: -33.09,
+      month_6: -15.7,
+      year: 76.08
+    }
+  },
+  volume_percent: 77.99,
+  timestamp: 1574676450,
+  display_timestamp: '2019-11-25 10:07:30',
+  display_symbol: 'BTC-USD'
+}
+{
+  ask: 6784.54,
+  bid: 6779.86,
+  last: 6782.15,
+  high: 7277.37,
+  low: 6575.39,
+  volume: 88338.08345517,
+  open: {
+    hour: 6789.31,
+    day: 6938.94,
+    week: 8501.27,
+    month: 7891.17,
+    month_3: 10131.38,
+    month_6: 8041.66,
+    year: 3850.26
+  },
+  averages: { day: 6960.41, week: 7653.09, month: 8469.7 },
+  changes: {
+    price: {
+      hour: -7.16,
+      day: -156.79,
+      week: -1719.12,
+      month: -1109.02,
+      month_3: -3349.23,
+      month_6: -1259.51,
+      year: 2931.89
+    },
+    percent: {
+      hour: -0.11,
+      day: -2.26,
+      week: -20.22,
+      month: -14.05,
+      month_3: -33.06,
+      month_6: -15.66,
+      year: 76.15
+    }
+  },
+  volume_percent: 77.98,
+  timestamp: 1574676501,
+  display_timestamp: '2019-11-25 10:08:21',
+  display_symbol: 'BTC-USD'
+}
+{
+  ask: 6784.43,
+  bid: 6779.69,
+  last: 6782.95,
+  high: 7277.37,
+  low: 6575.39,
+  volume: 88344.60362898,
+  open: {
+    hour: 6789.31,
+    day: 6938.94,
+    week: 8501.27,
+    month: 7891.17,
+    month_3: 10131.38,
+    month_6: 8041.66,
+    year: 3850.26
+  },
+  averages: { day: 6960.41, week: 7653.09, month: 8469.7 },
+  changes: {
+    price: {
+      hour: -6.36,
+      day: -155.99,
+      week: -1718.32,
+      month: -1108.22,
+      month_3: -3348.43,
+      month_6: -1258.71,
+      year: 2932.69
+    },
+    percent: {
+      hour: -0.09,
+      day: -2.25,
+      week: -20.21,
+      month: -14.04,
+      month_3: -33.05,
+      month_6: -15.65,
+      year: 76.17
+    }
+  },
+  volume_percent: 77.97,
+  timestamp: 1574676508,
+  display_timestamp: '2019-11-25 10:08:28',
+  display_symbol: 'BTC-USD'
+}
+{
+  ask: 6785.03,
+  bid: 6780.75,
+  last: 6782.91,
+  high: 7277.37,
+  low: 6575.39,
+  volume: 88365.55960482,
+  open: {
+    hour: 6789.31,
+    day: 6938.94,
+    week: 8501.27,
+    month: 7891.17,
+    month_3: 10131.38,
+    month_6: 8041.66,
+    year: 3850.26
+  },
+  averages: { day: 6960.06, week: 7652.91, month: 8469.64 },
+  changes: {
+    price: {
+      hour: -6.39,
+      day: -156.02,
+      week: -1718.35,
+      month: -1108.26,
+      month_3: -3348.47,
+      month_6: -1258.75,
+      year: 2932.65
+    },
+    percent: {
+      hour: -0.09,
+      day: -2.25,
+      week: -20.21,
+      month: -14.04,
+      month_3: -33.05,
+      month_6: -15.65,
+      year: 76.17
+    }
+  },
+  volume_percent: 77.96,
+  timestamp: 1574676562,
+  display_timestamp: '2019-11-25 10:09:22',
+  display_symbol: 'BTC-USD'
+}
+{
+  ask: 6785.21,
+  bid: 6780.86,
+  last: 6783.33,
+  high: 7277.37,
+  low: 6575.39,
+  volume: 88368.57798523,
+  open: {
+    hour: 6789.31,
+    day: 6938.94,
+    week: 8501.27,
+    month: 7891.17,
+    month_3: 10131.38,
+    month_6: 8041.66,
+    year: 3850.26
+  },
+  averages: { day: 6960.06, week: 7652.91, month: 8469.64 },
+  changes: {
+    price: {
+      hour: -5.98,
+      day: -155.61,
+      week: -1717.94,
+      month: -1107.84,
+      month_3: -3348.05,
+      month_6: -1258.33,
+      year: 2933.07
+    },
+    percent: {
+      hour: -0.09,
+      day: -2.24,
+      week: -20.21,
+      month: -14.04,
+      month_3: -33.05,
+      month_6: -15.65,
+      year: 76.18
+    }
+  },
+  volume_percent: 77.95,
+  timestamp: 1574676567,
+  display_timestamp: '2019-11-25 10:09:27',
+  display_symbol: 'BTC-USD'
+}
+{
+  ask: 6792,
+  bid: 6786.67,
+  last: 6789.44,
+  high: 7277.37,
+  low: 6575.39,
+  volume: 88383.25460657,
+  open: {
+    hour: 6789.31,
+    day: 6938.94,
+    week: 8501.27,
+    month: 7891.17,
+    month_3: 10131.38,
+    month_6: 8041.66,
+    year: 3850.26
+  },
+  averages: { day: 6959.72, week: 7652.74, month: 8469.58 },
+  changes: {
+    price: {
+      hour: 0.13,
+      day: -149.5,
+      week: -1711.83,
+      month: -1101.73,
+      month_3: -3341.94,
+      month_6: -1252.22,
+      year: 2939.18
+    },
+    percent: {
+      hour: '',
+      day: -2.15,
+      week: -20.14,
+      month: -13.96,
+      month_3: -32.99,
+      month_6: -15.57,
+      year: 76.34
+    }
+  },
+  volume_percent: 77.96,
+  timestamp: 1574676622,
+  display_timestamp: '2019-11-25 10:10:22',
+  display_symbol: 'BTC-USD'
+}
+{
+  ask: 6791.75,
+  bid: 6785.99,
+  last: 6790.72,
+  high: 7277.37,
+  low: 6575.39,
+  volume: 88384.13089278,
+  open: {
+    hour: 6789.31,
+    day: 6938.94,
+    week: 8501.27,
+    month: 7891.17,
+    month_3: 10131.38,
+    month_6: 8041.66,
+    year: 3850.26
+  },
+  averages: { day: 6959.72, week: 7652.74, month: 8469.58 },
+  changes: {
+    price: {
+      hour: 1.41,
+      day: -148.22,
+      week: -1710.55,
+      month: -1100.45,
+      month_3: -3340.66,
+      month_6: -1250.94,
+      year: 2940.46
+    },
+    percent: {
+      hour: 0.02,
+      day: -2.14,
+      week: -20.12,
+      month: -13.95,
+      month_3: -32.97,
+      month_6: -15.56,
+      year: 76.37
+    }
+  },
+  volume_percent: 77.96,
+  timestamp: 1574676626,
+  display_timestamp: '2019-11-25 10:10:26',
+  display_symbol: 'BTC-USD'
+}
+{
+  ask: 6790.07,
+  bid: 6784.23,
+  last: 6787.16,
+  high: 7276.51,
+  low: 6575.39,
+  volume: 88400.6241802,
+  open: {
+    hour: 6789.31,
+    day: 6938.94,
+    week: 8501.27,
+    month: 7891.17,
+    month_3: 10131.38,
+    month_6: 8041.66,
+    year: 3850.26
+  },
+  averages: { day: 6959.37, week: 7652.57, month: 8469.53 },
+  changes: {
+    price: {
+      hour: -2.15,
+      day: -151.78,
+      week: -1714.11,
+      month: -1104.01,
+      month_3: -3344.22,
+      month_6: -1254.5,
+      year: 2936.9
+    },
+    percent: {
+      hour: -0.03,
+      day: -2.19,
+      week: -20.16,
+      month: -13.99,
+      month_3: -33.01,
+      month_6: -15.6,
+      year: 76.28
+    }
+  },
+  volume_percent: 77.95,
+  timestamp: 1574676684,
+  display_timestamp: '2019-11-25 10:11:24',
+  display_symbol: 'BTC-USD'
+}
+{
+  ask: 6790.02,
+  bid: 6783.98,
+  last: 6786.61,
+  high: 7276.51,
+  low: 6575.39,
+  volume: 88399.16775462,
+  open: {
+    hour: 6789.31,
+    day: 6938.94,
+    week: 8501.27,
+    month: 7891.17,
+    month_3: 10131.38,
+    month_6: 8041.66,
+    year: 3850.26
+  },
+  averages: { day: 6959.37, week: 7652.57, month: 8469.53 },
+  changes: {
+    price: {
+      hour: -2.7,
+      day: -152.33,
+      week: -1714.66,
+      month: -1104.56,
+      month_3: -3344.77,
+      month_6: -1255.05,
+      year: 2936.35
+    },
+    percent: {
+      hour: -0.04,
+      day: -2.2,
+      week: -20.17,
+      month: -14,
+      month_3: -33.01,
+      month_6: -15.61,
+      year: 76.26
+    }
+  },
+  volume_percent: 77.95,
+  timestamp: 1574676689,
+  display_timestamp: '2019-11-25 10:11:29',
+  display_symbol: 'BTC-USD'
+}
