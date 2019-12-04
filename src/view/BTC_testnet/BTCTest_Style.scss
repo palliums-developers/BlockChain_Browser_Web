@@ -250,6 +250,7 @@
         }
 
         .price {
+            
             >p:nth-child(1) {
                 label {
                     white-space: nowrap;
@@ -287,11 +288,11 @@
         .blockHeightDeal {
             width: 100%;
 
-            h2 {
+            >h2 {
                 padding-left: 32px;
                 box-sizing: border-box;
             }
-
+        }
             .deal {
                 width: 100%;
                 background: #fff;
@@ -606,7 +607,7 @@
                     width: 48%;
                     padding-left: 32px;
                     box-sizing: border-box;
-
+                 
                     p {
                         height: 58px;
                         padding: 5px 0;
@@ -630,7 +631,7 @@
                         }
 
                         span {
-                            width: 80%;
+                            flex: 1;
                             // flex: 1;
                             font-size: 18px;
                             font-family: PingFangSC-Medium;
@@ -698,7 +699,25 @@
                 display: flex;
                 align-items: center;
             }
-
+            p {
+                display: flex;
+                align-items: center;
+            }
+            label {
+                font-size: 25px;
+                font-family: PingFangSC-Regular;
+                font-weight: 400;
+                color: rgba(255, 255, 255, 1);
+                margin: 0 13px;
+            }
+            .hash{
+                font-size: 20px;
+                font-family: PingFangSC-Regular;
+                color: rgba(255, 255, 255, 1);
+                font-weight: 400;
+                margin-top: 10px;
+            }
+        
             >p:nth-child(1) {
                 i {
                     width: 62px;
@@ -961,7 +980,6 @@
             }
         }
     }
-}
 
 
 .wrapBox {

@@ -30,7 +30,9 @@ class Deal extends Component {
     //   }
     // })
   }
-
+  goToBlock = (_block) => {
+    this.props.history.push({ pathname: '/app/tBTC_block/' + _block });
+  }
   getCurValue = (e) => {
     this.setState({
       iptValue: e.target.value
@@ -60,7 +62,7 @@ class Deal extends Component {
               </p>
               <p>{this.props.match.params.transaction}</p>
               <label>Block Hash</label>
-              <p onClick={() => this.goToBlock(BTC_Test_txid.blockheight)}>{BTC_Test_txid.blockhash}</p>
+              <p className="hash" onClick={() => this.goToBlock(BTC_Test_txid.blockhash)}>{BTC_Test_txid.blockhash}</p>
             </div>
             <div className="blockHeightContent">
               <div className="blockHeightAbstract">
@@ -114,7 +116,7 @@ class Deal extends Component {
                           })
                         }
                       </ul>
-                      <span> >>>>>>>>>>>>>>>>> </span>
+                      {/* <span> >>>>>>>>>>>>>>>>> </span> */}
                       <ul>
                         {
                           BTC_Test_txid.nextaddress && BTC_Test_txid.nextaddress.map((v, i) => {
@@ -129,7 +131,7 @@ class Deal extends Component {
                       </ul>
                     </div>
                     <div className="descrPrice">
-                      <span>确认数 {BTC_Test_txid.confirmations}</span>
+                      <span>Confirmed {BTC_Test_txid.confirmations}</span>
                     </div>
                   </div>
                 </div>

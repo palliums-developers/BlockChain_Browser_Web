@@ -255,7 +255,9 @@
                     white-space: nowrap;
                 }
             }
-
+            label{
+                
+            }
             .balance {
                 color: #FFF;
                 font-size: 20px;
@@ -287,11 +289,11 @@
         .blockHeightDeal {
             width: 100%;
 
-            h2 {
+            >h2 {
                 padding-left: 32px;
                 box-sizing: border-box;
             }
-
+        }
             .deal {
                 width: 100%;
                 background: #fff;
@@ -699,7 +701,20 @@
                 display: flex;
                 align-items: center;
             }
-
+            label {
+                font-size: 25px;
+                font-family: PingFangSC-Regular;
+                font-weight: 400;
+                color: rgba(255, 255, 255, 1);
+                margin: 0 13px;
+            }
+            .hash{
+                font-size: 20px;
+                font-family: PingFangSC-Regular;
+                color: rgba(255, 255, 255, 1);
+                font-weight: 400;
+                margin-top: 10px;
+            }
             >p:nth-child(1) {
                 i {
                     width: 62px;
@@ -711,14 +726,7 @@
                     }
                 }
 
-                label {
-                    font-size: 45px;
-                    font-family: PingFangSC-Regular;
-                    font-weight: 400;
-                    color: rgba(255, 255, 255, 1);
-                    margin: 0 13px;
-                }
-
+                
                 span {
                     font-size: 66px;
                     font-family: PingFangSC-Medium;
@@ -962,7 +970,6 @@
             }
         }
     }
-}
 
 .wrapBox {
     background: RGBA(17, 30, 64, 1) !important;
