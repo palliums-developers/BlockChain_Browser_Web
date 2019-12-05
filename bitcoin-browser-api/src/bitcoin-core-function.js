@@ -43,7 +43,6 @@ async function getblockcount(_net) {
   })
     .catch(e => console.log("error", e));
 }
-
 async function getblockhash(_net, _height) {
   // console.log(_net,_height)
   let client = whichnet(_net);
@@ -264,7 +263,7 @@ async function USDprice() {
       return (temp = res);
     })
     .catch(e => console.log("error", e));
-  console.log(temp);
+  // console.log(temp);
   return temp;
 }
 

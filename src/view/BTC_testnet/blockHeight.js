@@ -41,7 +41,7 @@ class BlockHeight extends Component {
     }
   }
   goToAddress = (address) => {
-    this.props.history.push('/app/addressBox/' + address)
+    this.props.history.push('/app/tBTC_address/' + address)
   }
 
   goToDeal = (txid) => {
@@ -166,7 +166,7 @@ class BlockHeight extends Component {
                               {
                                 item.preaddress.map((v, i) => {
                                   return v.value == 0 ? <p key={i}><span>{v.address}</span></p> :
-                                    <li key={i}><label onClick={() => this.goToAddress(v.address)} className="addBlue">{v.address}</label><span>{v.value} BTC</span></li>
+                                    <label key={i}><label onClick={() => this.goToAddress(v.address)} className="addBlue">{v.address}</label><p>{v.value} BTC</p></label>
                                 })
                               }
                             </ul>
@@ -174,7 +174,7 @@ class BlockHeight extends Component {
                             <ul>
                               {
                                 item.nextaddress.map((v, i) => {
-                                  return <li key={i}>{v.value == 0 ? <label>Unparsed address</label> : <label className="addBlue" onClick={() => this.goToAddress(v.address)}>{v.address}</label>}<span>{v.value} BTC</span></li>
+                                  return <li key={i}>{v.value == 0 ? <label className="addBlue">Unparsed address</label> : <label className="addBlue" onClick={() => this.goToAddress(v.address)}>{v.address}</label>}<p>{v.value}BTC</p></li>
                                 })
                               }
                             </ul>

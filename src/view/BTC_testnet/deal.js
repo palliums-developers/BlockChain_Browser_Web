@@ -108,11 +108,11 @@ class Deal extends Component {
                         {
                           BTC_Test_txid.preaddress && BTC_Test_txid.preaddress.map((v, i) => {
                             return v.value == 0 ? <p key={i}><span>{v.address}</span></p> :
-                              <li key={i}>
+                              <label key={i}>
                                 {
                                   v.value == 0 ? <label>地址解析失败</label> : v.address.length == 34 ? <label className="addBlue" onClick={() => this.goToAddress(v.address)}>{v.address}</label> : <label>{v.address}</label>
                                 }
-                                <span>' '{v.value} BTC</span></li>
+                                <p>{v.value}BTC</p></label>
                           })
                         }
                       </ul>

@@ -17,7 +17,7 @@ async function list_some_block_info(net,limit,offset){
     // console.log(simple_hash_list);
     return simple_hash_list;
 }
-
+// list_some_block_info('testnet',10,0)
 async function list_block(net,limit1,offset1){
     let price =await b_c.USDprice();
     let response={
@@ -34,7 +34,7 @@ async function list_block(net,limit1,offset1){
     return response;
 }
 
-// list_block(20,0);
+// list_block('mainnet',20,0);
 module.exports={
     list_block
 }

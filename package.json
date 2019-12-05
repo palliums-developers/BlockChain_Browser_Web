@@ -9,7 +9,7 @@
     "react-scripts": "3.1.1"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "PORT=30000 react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -34,6 +34,7 @@
     "bitcoin-core": "^3.0.0",
     "cors": "^2.8.5",
     "express-rate-limit": "^5.0.0",
+    "node-fetch": "^2.6.0",
     "node-sass": "^4.12.0",
     "qrcode-react": "^0.1.16",
     "react-redux": "^7.1.0",
