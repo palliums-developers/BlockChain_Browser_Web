@@ -4,7 +4,7 @@ import * as AllActions from '../../store/action/list_action'
 import { bindActionCreators } from 'redux'
 import BTCTestHeader from '../../component/BTCTestHeader'
 import { timeStamp2String } from '../../utils/timer'
-import search_box from '../../utils/iptVal'
+import search_box from '../../utils/search_BTC'
 import './BTCTest_Style.scss';
 class BTCTestNet extends Component {
   constructor(props) {
@@ -28,7 +28,7 @@ class BTCTestNet extends Component {
   }
 
   getSearch = () => {
-    search_box('mainnet', this.state.iptValue, this.props)
+    search_box('testnet', this.state.iptValue, this.props)
   }
 
   render() {

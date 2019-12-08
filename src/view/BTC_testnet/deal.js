@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 import * as AllActions from '../../store/action/list_action'
 import { bindActionCreators } from 'redux'
 import { timeStamp2String } from '../../utils/timer'
-import search_box from '../../utils/iptVal'
+import search_box from '../../utils/search_BTC'
 import './BTCTest_Style.scss';
 class Deal extends Component {
   constructor(props) {

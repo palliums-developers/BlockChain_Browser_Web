@@ -3,8 +3,8 @@ import axios from 'axios'
 // let url = 'http://192.168.1.253:30001/open/1.0'
 // let libra_api = 'http://47.52.66.26:10080';
 const libra_api = 'http://52.27.228.84:4001/libra';
-// const BTC_api = 'http://localhost:30001/open/1.0';
-const BTC_api = 'http://192.168.1.111:30001/open/1.0';
+const BTC_api = 'http://localhost:30001/open/1.0';
+// const BTC_api = 'http://192.168.1.111:30001/open/1.0';
 //let url = 'http://192.168.1.112:10080';
 let url = 'https://wallet.violas.io';
 

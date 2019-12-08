@@ -4,7 +4,7 @@ import * as AllActions from '../../store/action/list_action'
 import { bindActionCreators } from 'redux'
 import BTCMainHeader from '../../component/BTCMainHeader'
 import { timeStamp2String } from '../../utils/timer'
-import search_box from '../../utils/iptVal'
+import search_box from '../../utils/search_BTC'
 import './BTCMain_Style.scss';
 
 class BTCMainNet extends Component {
