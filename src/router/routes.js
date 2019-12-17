@@ -19,7 +19,7 @@ import BTC_testnet_address from "../view/BTC_testnet/address";
 import BTC_testnet_block from "../view/BTC_testnet/blockHeight";
 import BTC_testnet_transaction from "../view/BTC_testnet/deal";
 import Violas from "../view/Violas/Violas";
-import Violas_version from "../view/Violas/address";
+import Violas_version from "../view/Violas/deal";
 import Violas_address from "../view/Violas/address";
 let routes = [
     //首页

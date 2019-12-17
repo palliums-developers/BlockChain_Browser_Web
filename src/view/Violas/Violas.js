@@ -18,7 +18,9 @@ class Violas extends Component {
     }
   }
   componentDidMount() {
-    this.props.getCurListBlock()
+    // this.props.getCurListBlock()
+    this.props.getViolas(10,0);
+    // console.log(this.props.violas_list);
   }
 
   getCurValue = (e) => {
@@ -47,40 +49,47 @@ class Violas extends Component {
             </div>
             <div className='mainContent'>
               <div className="mainHead">
-                <i><img src="/img/编组 17@2x.png" /></i><span>LATEST BLOCK</span>
+                <i><img src="/img/编组 17@2x.png" /></i><span>Last Version</span>
               </div>
               <div className="table">
                 <table bgcolor="rgba(247, 248, 251, 1)">
                   <thead>
                     <tr>
-                      <th colSpan="3">ID</th>
-                      <th colSpan="7">From</th>
-                      <th colSpan="7">To</th>
-                      <th colSpan="4">Value</th>
-                      <th colSpan="6">Time</th>
+                    <th colSpan="2">TXID</th>
+                      <th colSpan="3">Time</th>
+                      <th colSpan="3">Currency</th>
+                      <th colSpan="2">Type</th>
+                      <th colSpan="4">From</th>
+                      <th colSpan="3">Status</th>
+                      <th colSpan="4">To</th>
+                      <th colSpan="4">Amount</th>
+                      <th colSpan="2">Fee</th>
                     </tr>
                   </thead>
                   <tbody>
-
-                    {
-                      this.props.netTableList && this.props.netTableList.map((item, index) => {
+                    {/* {
+                      this.props.violas_list && this.props.violas_list.map((item, index) => {
                         return <tr key={index}>
-                          <td colSpan="3" onClick={() => {
-                            this.props.history.push('/app/dealbox/' + item.version)
+                          <td colSpan="2" onClick={() => {
+                            this.props.history.push('/app/Libra_dealbox/' + item.version)
                           }}>{item.version}</td>
-                          <td colSpan="7" onClick={() => {
-                            this.props.history.push('/app/addressBox/' + item.from)
-                          }}>{(item.from).slice(0, 24) + '...'}</td>
-                          <td colSpan="7" onClick={() => {
-                            this.props.history.push('/app/addressBox/' + item.to)
-                          }}>{(item.to).slice(0, 24) + '...'}</td>
-                          <td colSpan="4">{item.maxGasAmount}</td>
-                          <td colSpan="6">
-                            {timeStamp2String(item.expirationTime + '000')}
+                          <td colSpan="3">
+                            {timeStamp2String(item.expiration_time + '000')}
                           </td>
+                        <td colSpan="3">{item.currency}</td>
+                          <td colSpan="2">{this.returnType(item.transaction_type)}</td>
+                          <td colSpan="4" onClick={() => {
+                            this.props.history.push('/app/Libra_addressBox/' + item.sender)
+                          }}>{(item.sender).slice(0, 20) + '...'}</td>
+                          <td colSpan="3">{this.returnStatus(item.transaction_status)}</td>
+                          <td colSpan="4" onClick={() => {
+                            this.props.history.push('/app/Libra_addressBox/' + item.receiver)
+                          }}>{(item.receiver).slice(0, 20) + '...'}</td>
+                          <td colSpan="4">{item.amount}</td>
+                          <td colSpan="2">{item.gas_fee}</td>
                         </tr>
                       })
-                    }
+                    } */}
                   </tbody>
                 </table>
               </div>

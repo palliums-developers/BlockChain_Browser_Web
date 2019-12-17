@@ -10,6 +10,9 @@ let initState = {
       total: 0,
       addressObj: {},
       txs: [],
+      violas_list: [],
+      violas_version: {},
+      violas_address: {},
       libra_testnet: [],
       libra_address: {},
       libra_version: {},
@@ -47,6 +50,12 @@ let ListReducer = (state = initState, action) => {
                   return { ...state, addressObj: action.data }
             case 'TXS':
                   return { ...state, txs: [...action.data] }
+            case 'violas_list':
+                  return { ...state, violas_list: [...action.data] }
+            case 'violas_version':
+                  return { ...state, violas_version: action.data }
+            case 'violas_address':
+                  return { ...state, violas_address: action.data }
             case 'libra_testnet':
                   return { ...state, libra_testnet: [...action.data] }
             case 'libra_address':

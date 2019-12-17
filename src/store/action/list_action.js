@@ -3,6 +3,7 @@ import axios from 'axios'
 // let url = 'http://192.168.1.253:30001/open/1.0'
 // let libra_api = 'http://47.52.66.26:10080';
 const libra_api = 'http://52.27.228.84:4001/libra';
+const violas_api = 'http://52.27.228.84:4001/violas';
 const BTC_api = 'http://localhost:30001/open/1.0';
 // const BTC_api = 'http://192.168.1.111:30001/open/1.0';
 //let url = 'http://192.168.1.112:10080';
@@ -241,6 +242,43 @@ export let getBTCTestAddress=(_net,_address,_page)=>{
             // console.log(res.data)
             dispatch({
                 type:'BTC_Test_address',
+                data:res.data
+            })
+        })
+    }
+}
+
+export let getViolas=(_limit,_offset)=>{
+    return dispatch=>{
+        // console.log(violas_api+'/recent_txn?limit='+_limit+'&offset='+_offset)
+        axios.get(violas_api+'/recent_txn?limit='+_limit+'&offset='+_offset)
+        .then(res=>{
+            dispatch({
+                type:'violas_list',
+                data:res.data.data
+            })
+        })
+    }
+}
+
+export let getViolas_version=(_version)=>{
+    return dispatch=>{
+        axios.get(violas_api+'/txn_info?version='+_version)
+        .then(res=>{
+            dispatch({
+                type:'violas_version',
+                data:res.data
+            })
+        })
+    }
+}
+
+export let getViolas_address=(_address)=>{
+    return dispatch=>{
+        axios.get(violas_api+'/address_info?address='+_address)
+        .then(res=>{
+            dispatch({
+                type:'violas_address',
                 data:res.data
             })
         })
