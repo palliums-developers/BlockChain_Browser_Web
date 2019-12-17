@@ -102,24 +102,27 @@ class Deal extends Component {
                         {
                           BTC_main_txid.preaddress && BTC_main_txid.preaddress.map((v, i) => {
                             return v.value == 0 ? <p key={i}><span>{v.address}</span></p> :
-                              <label key={i}>
+                              <li key={i}>
                                 {
                                   v.value == 0 ? <label>地址解析失败</label> : v.address.length == 34 ? <label className="addBlue" onClick={() => this.goToAddress(v.address)}>{v.address}</label> : <label>{v.address}</label>
                                 }
                                 <p>{v.value} BTC</p>
-                              </label>
+                              </li>
                           })
                         }
                       </ul>
-                      {/* <span> >>>>>>>>>>>>>>>>> </span> */}
+                      {
+                        BTC_main_txid && <span></span>
+                      }
+                      
                       <ul>
                         {
                           BTC_main_txid.nextaddress && BTC_main_txid.nextaddress.map((v, i) => {
-                            return <label key={i}>
+                            return <li key={i}>
                               {v.value == 0 ? <label>地址解析失败</label> : v.address.length == 34 ? <label className="addBlue" onClick={() => this.goToAddress(v.address)}>{v.address}</label> : <label>{v.address}</label>
                               }
                               <p>{v.value} BTC</p>
-                            </label>
+                            </li>
 
                           })
                         }

@@ -989,1059 +989,1059 @@
     }
 }
 
-@media (max-width:1800px) {
-    .libraContent {
-        .addressBox {
-            .price {
-                margin-top: 50px;
-
-                >div {
-                    p:nth-child(2) {
-                        margin: 20px 0;
-                    }
-
-                }
-            }
-
-            .blockHeightContent {
-                margin-top: 10%;
-            }
-
-            .blockHeightAbstract {
-                margin-top: 29px;
-            }
-        }
-    }
-}
-
-
-@media (max-width:1600px) {
-
-    .libraContent {
-
-        // height: 1800px;
-        .contents1 {
-            margin-top: -880px;
-        }
-
-        .contents {
-
-            // width: 70%!important;
-            // margin-left: -35%;
-            .dealBox,
-            .addressBox,
-            .pieceHash,
-            .blockHeight {
-                .btns {
-                    width: 200px;
-                    height: 45px;
-
-                    button {
-                        font-size: 23px;
-                    }
-                }
-
-                .form {
-                    height: 50px !important;
-                    padding: 0 15px !important;
-                    box-sizing: border-box;
-                    margin-bottom: 20px !important;
-
-                    ::-webkit-input-placeholder {
-                        font-size: 20px !important;
-                    }
-
-                    input {
-                        // width:250px;
-                        padding-top: 0;
-                        box-sizing: border-box;
-                    }
-
-                    span {
-                        width: 25px;
-                        height: 25px;
-                    }
-                }
-
-                .price {
-                    margin-top: 30px;
-
-                    >div {
-                        >span {
-                            font-size: 16px;
-                        }
-
-                        >p:nth-child(1) {
-                            i {
-                                width: 40px;
-                                height: 40px;
-                            }
-
-                            label {
-                                font-size: 30px;
-                            }
-
-                            span {
-                                font-size: 35px;
-                            }
-                        }
-
-                        >p:nth-child(2) {
-                            label {
-                                font-size: 20px;
-                            }
-
-                            span {
-                                font-size: 17px;
-                            }
-                        }
-                    }
-                }
-
-                .btn {
-                    button {
-                        width: 150px;
-                        height: 40px;
-                        font-size: 20px;
-
-                        img {
-                            width: 20px;
-                            margin-right: 8px;
-                        }
-                    }
-                }
-
-                .blockHeightContent {
-                    margin-top: 7%;
-                }
-
-                .blockHeightAbstract {
-                    h2 {
-                        font-size: 22px;
-                        line-height: 65px;
-                    }
-
-                    .abstractContent {
-                        p {
-
-                            //    height: 38px;
-                            label {
-                                font-size: 16px;
-                            }
-
-                            span {
-                                font-size: 16px;
-                            }
-                        }
-                    }
-                }
-
-                .blockHeightDeal {
-                    h2 {
-                        font-size: 22px;
-                        line-height: 65px;
-                    }
-
-                    .dealContents {
-                        p {
-                            font-size: 17px;
-                        }
-
-                        .dealAddress {
-                            ul {
-                                li {
-                                    label {
-                                        font-size: 14px;
-                                        height: 40px;
-                                        word-wrap: break-word;
-                                        word-break: normal;
-                                    }
-
-                                    span {
-                                        font-size: 14px;
-                                    }
-                                }
-                            }
-                        }
-
-                        .descrPrice {
-                            span {
-                                font-size: 18px;
-                            }
-                        }
-                    }
-                }
-            }
-
-            //交易  地址
-            .addressBox,
-            .dealBox {
-                .price {
-                    >p:nth-child(2) {
-                        font-size: 20px !important;
-                        margin: 10px !important;
-                    }
-
-                    >p:nth-child(3) {
-                        label {
-                            font-size: 20px;
-                        }
-
-                        p {
-                            font-size: 20px;
-                            margin-bottom: 0;
-                        }
-                    }
-                }
-
-                .listDEscr {
-                    span {
-                        font-size: 23px;
-                        // margin-right:15%;
-                    }
-                }
-            }
-        }
-    }
-
-}
-
-@media (max-width:1300px) {
-    .libraContent {
-        .contents1 {
-            margin-top: -920px;
-        }
-
-        .contents {
-
-            .mainNet,
-            .textNet {
-                .searchBox {
-                    h3 {
-                        font-size: 27px;
-                    }
-
-                    .form {
-                        width: 300px;
-                        height: 45px;
-                        padding: 0 15px;
-                        box-sizing: border-box;
-
-                        input {
-                            width: 260px;
-                            font-size: 20px;
-                            padding-top: 0;
-                            box-sizing: border-box;
-                        }
-
-                        ::-webkit-input-placeholder {
-                            font-size: 20px;
-                        }
-
-                        span {
-                            width: 28px;
-                            height: 28px;
-                        }
-                    }
-                }
-
-                .mainContent {
-                    margin-top: 15%;
-
-                    .mainHead {
-                        height: 80px;
-
-                        i {
-                            width: 30px;
-                        }
-
-                        span {
-                            font-size: 30px;
-                        }
-
-                        label {
-                            font-size: 16px;
-                        }
-                    }
-
-                    .table {
-                        table {
-                            font-size: 16px;
-
-                            tr:nth-child(1) {
-                                th {
-                                    font-size: 21px;
-                                    padding: 20px 5px;
-                                    box-sizing: border-box;
-                                }
-                            }
-                        }
-                    }
-                }
-
-                .btn {
-                    width: 200px;
-                    height: 45px;
-
-                    button {
-                        font-size: 23px;
-                    }
-
-                }
-            }
-        }
-    }
-
-}
-
-@media (max-width:1200px) {
-    .libraContent {
-        width: 1200px;
-
-        .dealBox {
-            .blockHeightAbstract {
-                margin-top: 980;
-            }
-        }
-    }
-}
-
-@media (max-width:950px) {
-
-    html,
-    body {
-        width: 100% !important;
-        height: auto;
-    }
-
-    #root {
-        width: 100%;
-        height: auto;
-    }
-
-    #wrap {
-        width: 100%;
-        height: auto;
-
-        .back {
-            width: 13px !important;
-            height: 13px !important;
-            top: 12px;
-            right: 3% !important;
-        }
-    }
-
-    .dealBox {
-        .blockHeightDeal {
-            p {
-                label {
-                    font-size: 10px;
-                }
-
-                span {
-                    font-size: 10px;
-                }
-            }
-        }
-
-        .abstractContent {
-            >p {
-                display: flex;
-                justify-content: space-between;
-                margin-top: 10px;
-
-                label {
-                    width: auto !important;
-                    margin-right: 5px;
-                }
-
-                span {
-                    margin-left: 0 !important;
-                    word-wrap: break-word;
-                    word-break: normal;
-                }
-            }
-        }
-    }
-
-    .height {
-        height: 1000px;
-    }
-
-    .libraContent {
-        // height: 1122px;
-
-        // .netToBack {
-        //     background: url('/img/蒙版2 (2).png') no-repeat;
-        //     background-size: 100%;
-        // }
-
-        // .testBack {
-        //     background: url('/img/编组 18复制@2x.png') no-repeat;
-        //     background-size: 100%;
-        // }
-
-        header {
-            height: 294px;
-        }
-
-        .head {
-            width: 93% !important;
-            height: 44px !important;
-
-            .logo {
-                width: 102px !important;
-            }
-
-            .price {
-                width: 135px !important;
-                height: auto !important;
-                margin-right: 0 !important;
-                margin-left: 15px;
-
-                >div {
-                    width: 27px !important;
-                }
-
-                .priceContent {
-                    margin-left: 3px !important;
-
-                    p {
-                        font-size: 12px !important;
-
-                        span {
-                            font-size: 10px !important;
-                        }
-                    }
-                }
-            }
-        }
-
-        .contents {
-            // width: 94%;
-            // top: 77px;
-            // left: 50%;
-            // margin-left: -47%;
-
-            // z-index: 999;
-            // margin:0 auto;
-            margin-top: -200px;
-
-            .mainNet,
-            .textNet {
-                .searchBox {
-                    h3 {
-                        font-size: 15px;
-                        margin-bottom: 10px;
-                    }
-
-                    .form {
-                        width: 163px;
-                        height: 24px;
-                        padding: 0 10px;
-                        box-sizing: border-box;
-
-                        input {
-                            font-size: 10px;
-                            padding-top: 0;
-                            box-sizing: border-box;
-                            width: 100px;
-                        }
-
-                        ::-webkit-input-placeholder {
-                            font-size: 10px;
-                        }
-
-                        span {
-                            width: 12px;
-                            height: 13px;
-                        }
-                    }
-                }
-
-                .mainContent {
-                    margin-top: 15%;
-
-                    .mainHead {
-                        height: 40px;
-                        padding-left: 12px;
-                        box-sizing: border-box;
-
-                        i {
-                            width: 16px;
-                        }
-
-                        span {
-                            font-size: 13px;
-                            margin: 0 5px;
-                            font-size: 500;
-                        }
-
-                        label {
-                            font-size: 10px;
-                            margin-top: 8px;
-                        }
-                    }
-
-                    .table {
-                        table {
-                            tr:nth-child(1) {
-                                th {
-                                    border-bottom: 1.5px solid #4187fe;
-                                    font-size: 10px;
-                                    padding: 5px;
-                                    box-sizing: border-box;
-                                }
-                            }
-
-                            tr td:last-child {
-                                span:nth-child(1) {
-                                    display: none;
-                                }
-
-                                span:nth-child(2) {
-                                    display: block;
-                                }
-                            }
-
-                            tr td {
-                                font-size: 8px;
-                                padding: 3px;
-                                box-sizing: border-box;
-                            }
-
-                            tr th:nth-child(4) {
-                                display: none;
-                            }
-
-                            tr td:nth-child(4) {
-                                display: none;
-                            }
-                        }
-                    }
-
-                    .btn {
-                        width: 150px;
-                        height: 30px;
-
-                        button {
-                            font-size: 16px;
-                        }
-
-                    }
-                }
-
-                .btn {
-                    width: 200px;
-                    height: 45px;
-
-                    button {
-                        font-size: 23px;
-                    }
-
-                }
-            }
-
-            .dealBox,
-            .addressBox,
-            .pieceHash,
-            .blockHeight {
-                margin-top: -2%;
-
-                .btns {
-                    width: 150px;
-                    height: 30px;
-
-                    button {
-                        font-size: 16px;
-                    }
-
-                }
-
-                .blockHeightContent {
-                    .blockHeightDeal {
-                        h2 {
-                            line-height: 29px;
-                            font-size: 12px;
-                            padding-left: 9px;
-                            box-sizing: border-box;
-                        }
-
-                        .deal {
-                            .dealContent1 {
-                                .dealContents {
-                                    >p {
-                                        width: 95%;
-                                        font-size: 10px;
-                                        margin-top: 11px;
-                                        margin-bottom: 13px !important;
-                                        word-wrap: break-word;
-                                    }
-
-                                    .dealAddress {
-                                        >span {
-                                            width: 15px;
-                                            height: 12px;
-                                            background: url('/img/形状复制 5@2x.png') no-repeat;
-                                            background-size: 100% 100%;
-                                            // margin-left: 15px;
-                                        }
-
-                                        ul {
-                                            width: 48%;
-                                            padding-right: 0;
-                                            box-sizing: border-box;
-                                            margin-top: 0;
-
-                                            p {
-                                                margin-right: 100px;
-
-                                                span {
-                                                    width: 59px;
-                                                    height: 21px;
-                                                    font-size: 10px;
-                                                    line-height: 20px;
-                                                    border: 1px solid rgba(19, 71, 184, 1);
-
-                                                }
-                                            }
-
-                                            li {
-                                                height: 30px;
-                                                padding: 0 !important;
-                                                box-sizing: border-box;
-
-                                                label {
-                                                    // width: 75px;
-                                                    font-size: 10px;
-                                                    // word-break: break-all;
-                                                    // white-space: nowrap;
-                                                    // overflow: hidden; 
-                                                    // text-overflow: ellipsis;
-                                                }
-
-                                                span {
-                                                    font-size: 10px;
-                                                }
-                                            }
-                                        }
-                                    }
-
-                                    .descrPrice {
-                                        padding-right: 0;
-
-                                        span {
-                                            font-size: 10px;
-
-                                            i {
-                                                width: 4px;
-                                                height: 4px;
-                                                margin-right: 2px;
-                                                margin-top: 6px;
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-
-                            .dealContent2 {
-                                .dealContents {
-                                    .pp {
-                                        p {
-                                            font-size: 14px;
-                                        }
-                                    }
-
-                                    .dealAddress {
-                                        ul {
-                                            width: 45%;
-                                            padding-right: 0 !important;
-                                            box-sizing: border-box;
-
-                                            li {
-                                                label {
-                                                    font-size: 10px;
-                                                    // white-space: nowrap;
-                                                    // overflow: hidden; 
-                                                    // text-overflow: ellipsis;
-                                                }
-
-                                                span {
-                                                    font-size: 10px;
-                                                }
-                                            }
-                                        }
-
-                                        >span {
-                                            width: 15px;
-                                            height: 12px;
-                                            margin-top: 10px;
-                                            background: url('/img/形状复制 5@2x.png') no-repeat;
-                                            background-size: 100% 100%;
-                                            // margin-left: 15px;
-                                        }
-                                    }
-
-                                    .descrPrice {
-                                        padding-right: 0;
-
-                                        span {
-                                            font-size: 10px;
-
-                                            i {
-                                                width: 4px;
-                                                height: 4px;
-                                                margin-right: 2px;
-                                                margin-top: 6px;
-                                            }
-                                        }
-                                    }
-
-                                    >p {
-                                        width: 95%;
-                                        font-size: 10px;
-                                        margin-top: 10px;
-                                        margin-bottom: 0;
-                                        word-wrap: break-word;
-                                    }
-                                }
-                            }
-
-                            .line {
-                                margin-top: 8px;
-                            }
-                        }
-                    }
-
-                    .blockHeightAbstract {
-                        margin-top: 15px;
-                        padding: 6px 0;
-                        box-sizing: border-box;
-
-                        h2 {
-                            line-height: 29px;
-                            font-size: 12px;
-                            padding-left: 9px;
-                            box-sizing: border-box;
-                        }
-
-                        .abstract {
-                            .abstractContent:nth-child(3) {
-                                margin-left: 15px;
-                            }
-
-                            .abstractContent {
-                                width: 100%;
-                                padding-left: 5px;
-                                box-sizing: border-box;
-
-                                p {
-                                    width: 100%;
-                                    height: 30px;
-
-                                    label {
-                                        font-size: 10px;
-                                    }
-
-                                    span {
-                                        // width:90%;
-                                        // flex: 1;
-                                        font-size: 10px;
-                                        // margin-left:-18px;
-                                        // word-wrap: break-word;
-                                        // word-break: normal;
-                                    }
-                                }
-                            }
-
-                            .line {
-                                height: 89px;
-                            }
-                        }
-                    }
-                }
-
-                .btn {
-                    width: 80%;
-                    margin: 0 auto;
-
-                    button {
-                        width: 70px;
-                        height: 20px;
-                        font-size: 10px;
-
-                        img {
-                            width: 7px;
-                            margin-right: 4px;
-                        }
-                    }
-                }
-
-                .price {
-                    width: 80%;
-                    margin: 0 auto;
-
-                    p:nth-child(1) {
-                        i {
-                            width: 18px;
-                            height: 18px;
-                        }
-
-                        label {
-                            font-size: 13px;
-                            margin: 0 4px;
-                        }
-
-                        span {
-                            font-size: 20px;
-                        }
-                    }
-
-                    p:nth-child(2) {
-                        align-items: flex-start;
-                        margin: 0 0 8px 0;
-
-                        label {
-                            font-size: 10px;
-                        }
-
-                        span {
-                            width: 95%;
-                            font-size: 10px;
-                            word-wrap: break-word
-                        }
-                    }
-                }
-
-                .form {
-                    width: 80%;
-                    height: 23px !important;
-                    padding: 0 8px !important;
-                    box-sizing: border-box;
-                    border-radius: 1px;
-                    margin-bottom: 9px !important;
-                    margin: 0 auto;
-
-                    input {
-                        width: 50%;
-                        font-size: 8px !important;
-                        padding-right: 5px !important;
-                        box-sizing: border-box;
-                    }
-
-                    ::-webkit-input-placeholder {
-                        font-size: 8px !important;
-                    }
-
-                    span {
-                        width: 12px;
-                        height: 12px;
-                    }
-                }
-            }
-
-            //交易  地址
-            // .addressBox,
-            .dealBox {
-                .descrPrice {
-                    span {
-                        margin-bottom: 15px;
-                    }
-                }
-
-                .price {
-
-                    // display: flex;
-                    p {
-                        width: auto;
-                    }
-
-                    >p:nth-child(2) {
-                        width: 90%;
-                        display: inline-block;
-                        font-size: 10px !important;
-                        margin: 0 !important;
-                        margin-left: 55px !important;
-                        margin-top: -25px !important;
-                        word-wrap: break-word !important;
-                    }
-
-                    >p:nth-child(3) {
-                        // width: 100%;
-                        flex-direction: row;
-                        margin-top: 10px;
-                        margin-left: 15px;
-
-                        label {
-                            font-size: 10px;
-                        }
-
-                        p {
-                            display: inline-block;
-                            width: 90%;
-                            word-wrap: break-word;
-                            margin-left: 5px;
-                            font-size: 10px;
-                            color: rgba(140, 183, 255, 1);
-                        }
-                    }
-                }
-
-                .listDEscr {
-                    height: 44px;
-
-                    span {
-                        font-size: 12px;
-                        padding: 0 4.5%;
-                        box-sizing: border-box;
-                    }
-                }
-            }
-
-            .addressBox {
-                .price {
-                    .balance {
-                        margin-top: -10px;
-                    }
-
-                    >p:nth-child(2) {
-                        display: inline-block;
-                        // width: 75%;
-                        word-wrap: break-word;
-                        font-size: 10px !important;
-                    }
-
-                    >p:nth-child(3) {
-                        width: 40px;
-                        margin-top: 0;
-                    }
-                }
-
-                .blockHeightContent {
-                    .abstract {
-                        .abstractContent {
-                            p {
-                                span {
-                                    margin-left: -15px !important;
-                                }
-                            }
-
-                            >p:nth-child(1) {
-                                span {
-                                    display: inline-block;
-                                    // width: 400px!important;
-                                    // margin-left:30px!important;
-                                    word-wrap: break-word;
-                                    word-break: normal;
-                                    margin-left: 30px;
-                                }
-
-                            }
-
-                            // >div{
-                            //     p:nth-child(2){
-                            //       margin-left:5px;
-                            //     }
-                            // }
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-    footer {
-        height: 121px;
-        background: url('/img/Rectangle 22@2x (1).png')no-repeat;
-        background-size: 100% 100%;
-        position: absolute;
-
-        // bottom: 0;
-        // left: 0;
-        .foot {
-            width: 80%;
-
-            .footDescr {
-                .developer {
-                    h3 {
-                        font-size: 12px;
-                        margin-right: 15px;
-                    }
-
-                    p {
-                        margin-top: 9px;
-                        font-size: 10px;
-                    }
-                }
-
-                .contact {
-                    h3 {
-                        font-size: 12px;
-
-                    }
-
-                    .way {
-                        margin-top: 9px;
-                        align-items: center;
-
-                        >div:nth-child(1) {
-                            width: 140px;
-                        }
-
-                        >div {
-                            p {
-                                font-size: 10px;
-                            }
-                        }
-
-                        div:nth-child(2) {
-                            margin-left: 10px;
-
-                            p {
-                                width: 11px;
-                                margin-right: 6px;
-                            }
-
-                        }
-                    }
-                }
-            }
-
-            .footLogo {
-                width: 21px;
-
-                img:nth-child(2) {
-                    width: 100%;
-                    margin-top: -26px;
-                    margin-left: 20px;
-                    display: block;
-                }
-
-                img:nth-child(1) {
-                    display: none;
-                }
-            }
-        }
-    }
-}
-
-@media (max-width:330px) {
-    footer {
-        .foot {
-            width: 90%;
-
-            .footDescr .developer {
-                h3 {
-                    margin-right: 10px;
-                }
-            }
-
-            .footLogo {
-                img:nth-child(2) {
-                    margin-left: 15px;
-                }
-            }
-        }
-
-    }
-}
+// @media (max-width:1800px) {
+//     .libraContent {
+//         .addressBox {
+//             .price {
+//                 margin-top: 50px;
+
+//                 >div {
+//                     p:nth-child(2) {
+//                         margin: 20px 0;
+//                     }
+
+//                 }
+//             }
+
+//             .blockHeightContent {
+//                 margin-top: 10%;
+//             }
+
+//             .blockHeightAbstract {
+//                 margin-top: 29px;
+//             }
+//         }
+//     }
+// }
+
+
+// @media (max-width:1600px) {
+
+//     .libraContent {
+
+//         // height: 1800px;
+//         .contents1 {
+//             margin-top: -880px;
+//         }
+
+//         .contents {
+
+//             // width: 70%!important;
+//             // margin-left: -35%;
+//             .dealBox,
+//             .addressBox,
+//             .pieceHash,
+//             .blockHeight {
+//                 .btns {
+//                     width: 200px;
+//                     height: 45px;
+
+//                     button {
+//                         font-size: 23px;
+//                     }
+//                 }
+
+//                 .form {
+//                     height: 50px !important;
+//                     padding: 0 15px !important;
+//                     box-sizing: border-box;
+//                     margin-bottom: 20px !important;
+
+//                     ::-webkit-input-placeholder {
+//                         font-size: 20px !important;
+//                     }
+
+//                     input {
+//                         // width:250px;
+//                         padding-top: 0;
+//                         box-sizing: border-box;
+//                     }
+
+//                     span {
+//                         width: 25px;
+//                         height: 25px;
+//                     }
+//                 }
+
+//                 .price {
+//                     margin-top: 30px;
+
+//                     >div {
+//                         >span {
+//                             font-size: 16px;
+//                         }
+
+//                         >p:nth-child(1) {
+//                             i {
+//                                 width: 40px;
+//                                 height: 40px;
+//                             }
+
+//                             label {
+//                                 font-size: 30px;
+//                             }
+
+//                             span {
+//                                 font-size: 35px;
+//                             }
+//                         }
+
+//                         >p:nth-child(2) {
+//                             label {
+//                                 font-size: 20px;
+//                             }
+
+//                             span {
+//                                 font-size: 17px;
+//                             }
+//                         }
+//                     }
+//                 }
+
+//                 .btn {
+//                     button {
+//                         width: 150px;
+//                         height: 40px;
+//                         font-size: 20px;
+
+//                         img {
+//                             width: 20px;
+//                             margin-right: 8px;
+//                         }
+//                     }
+//                 }
+
+//                 .blockHeightContent {
+//                     margin-top: 7%;
+//                 }
+
+//                 .blockHeightAbstract {
+//                     h2 {
+//                         font-size: 22px;
+//                         line-height: 65px;
+//                     }
+
+//                     .abstractContent {
+//                         p {
+
+//                             //    height: 38px;
+//                             label {
+//                                 font-size: 16px;
+//                             }
+
+//                             span {
+//                                 font-size: 16px;
+//                             }
+//                         }
+//                     }
+//                 }
+
+//                 .blockHeightDeal {
+//                     h2 {
+//                         font-size: 22px;
+//                         line-height: 65px;
+//                     }
+
+//                     .dealContents {
+//                         p {
+//                             font-size: 17px;
+//                         }
+
+//                         .dealAddress {
+//                             ul {
+//                                 li {
+//                                     label {
+//                                         font-size: 14px;
+//                                         height: 40px;
+//                                         word-wrap: break-word;
+//                                         word-break: normal;
+//                                     }
+
+//                                     span {
+//                                         font-size: 14px;
+//                                     }
+//                                 }
+//                             }
+//                         }
+
+//                         .descrPrice {
+//                             span {
+//                                 font-size: 18px;
+//                             }
+//                         }
+//                     }
+//                 }
+//             }
+
+//             //交易  地址
+//             .addressBox,
+//             .dealBox {
+//                 .price {
+//                     >p:nth-child(2) {
+//                         font-size: 20px !important;
+//                         margin: 10px !important;
+//                     }
+
+//                     >p:nth-child(3) {
+//                         label {
+//                             font-size: 20px;
+//                         }
+
+//                         p {
+//                             font-size: 20px;
+//                             margin-bottom: 0;
+//                         }
+//                     }
+//                 }
+
+//                 .listDEscr {
+//                     span {
+//                         font-size: 23px;
+//                         // margin-right:15%;
+//                     }
+//                 }
+//             }
+//         }
+//     }
+
+// }
+
+// @media (max-width:1300px) {
+//     .libraContent {
+//         .contents1 {
+//             margin-top: -920px;
+//         }
+
+//         .contents {
+
+//             .mainNet,
+//             .textNet {
+//                 .searchBox {
+//                     h3 {
+//                         font-size: 27px;
+//                     }
+
+//                     .form {
+//                         width: 300px;
+//                         height: 45px;
+//                         padding: 0 15px;
+//                         box-sizing: border-box;
+
+//                         input {
+//                             width: 260px;
+//                             font-size: 20px;
+//                             padding-top: 0;
+//                             box-sizing: border-box;
+//                         }
+
+//                         ::-webkit-input-placeholder {
+//                             font-size: 20px;
+//                         }
+
+//                         span {
+//                             width: 28px;
+//                             height: 28px;
+//                         }
+//                     }
+//                 }
+
+//                 .mainContent {
+//                     margin-top: 15%;
+
+//                     .mainHead {
+//                         height: 80px;
+
+//                         i {
+//                             width: 30px;
+//                         }
+
+//                         span {
+//                             font-size: 30px;
+//                         }
+
+//                         label {
+//                             font-size: 16px;
+//                         }
+//                     }
+
+//                     .table {
+//                         table {
+//                             font-size: 16px;
+
+//                             tr:nth-child(1) {
+//                                 th {
+//                                     font-size: 21px;
+//                                     padding: 20px 5px;
+//                                     box-sizing: border-box;
+//                                 }
+//                             }
+//                         }
+//                     }
+//                 }
+
+//                 .btn {
+//                     width: 200px;
+//                     height: 45px;
+
+//                     button {
+//                         font-size: 23px;
+//                     }
+
+//                 }
+//             }
+//         }
+//     }
+
+// }
+
+// @media (max-width:1200px) {
+//     .libraContent {
+//         width: 1200px;
+
+//         .dealBox {
+//             .blockHeightAbstract {
+//                 margin-top: 980;
+//             }
+//         }
+//     }
+// }
+
+// @media (max-width:950px) {
+
+//     html,
+//     body {
+//         width: 100% !important;
+//         height: auto;
+//     }
+
+//     #root {
+//         width: 100%;
+//         height: auto;
+//     }
+
+//     #wrap {
+//         width: 100%;
+//         height: auto;
+
+//         .back {
+//             width: 13px !important;
+//             height: 13px !important;
+//             top: 12px;
+//             right: 3% !important;
+//         }
+//     }
+
+//     .dealBox {
+//         .blockHeightDeal {
+//             p {
+//                 label {
+//                     font-size: 10px;
+//                 }
+
+//                 span {
+//                     font-size: 10px;
+//                 }
+//             }
+//         }
+
+//         .abstractContent {
+//             >p {
+//                 display: flex;
+//                 justify-content: space-between;
+//                 margin-top: 10px;
+
+//                 label {
+//                     width: auto !important;
+//                     margin-right: 5px;
+//                 }
+
+//                 span {
+//                     margin-left: 0 !important;
+//                     word-wrap: break-word;
+//                     word-break: normal;
+//                 }
+//             }
+//         }
+//     }
+
+//     .height {
+//         height: 1000px;
+//     }
+
+//     .libraContent {
+//         // height: 1122px;
+
+//         // .netToBack {
+//         //     background: url('/img/蒙版2 (2).png') no-repeat;
+//         //     background-size: 100%;
+//         // }
+
+//         // .testBack {
+//         //     background: url('/img/编组 18复制@2x.png') no-repeat;
+//         //     background-size: 100%;
+//         // }
+
+//         header {
+//             height: 294px;
+//         }
+
+//         .head {
+//             width: 93% !important;
+//             height: 44px !important;
+
+//             .logo {
+//                 width: 102px !important;
+//             }
+
+//             .price {
+//                 width: 135px !important;
+//                 height: auto !important;
+//                 margin-right: 0 !important;
+//                 margin-left: 15px;
+
+//                 >div {
+//                     width: 27px !important;
+//                 }
+
+//                 .priceContent {
+//                     margin-left: 3px !important;
+
+//                     p {
+//                         font-size: 12px !important;
+
+//                         span {
+//                             font-size: 10px !important;
+//                         }
+//                     }
+//                 }
+//             }
+//         }
+
+//         .contents {
+//             // width: 94%;
+//             // top: 77px;
+//             // left: 50%;
+//             // margin-left: -47%;
+
+//             // z-index: 999;
+//             // margin:0 auto;
+//             margin-top: -200px;
+
+//             .mainNet,
+//             .textNet {
+//                 .searchBox {
+//                     h3 {
+//                         font-size: 15px;
+//                         margin-bottom: 10px;
+//                     }
+
+//                     .form {
+//                         width: 163px;
+//                         height: 24px;
+//                         padding: 0 10px;
+//                         box-sizing: border-box;
+
+//                         input {
+//                             font-size: 10px;
+//                             padding-top: 0;
+//                             box-sizing: border-box;
+//                             width: 100px;
+//                         }
+
+//                         ::-webkit-input-placeholder {
+//                             font-size: 10px;
+//                         }
+
+//                         span {
+//                             width: 12px;
+//                             height: 13px;
+//                         }
+//                     }
+//                 }
+
+//                 .mainContent {
+//                     margin-top: 15%;
+
+//                     .mainHead {
+//                         height: 40px;
+//                         padding-left: 12px;
+//                         box-sizing: border-box;
+
+//                         i {
+//                             width: 16px;
+//                         }
+
+//                         span {
+//                             font-size: 13px;
+//                             margin: 0 5px;
+//                             font-size: 500;
+//                         }
+
+//                         label {
+//                             font-size: 10px;
+//                             margin-top: 8px;
+//                         }
+//                     }
+
+//                     .table {
+//                         table {
+//                             tr:nth-child(1) {
+//                                 th {
+//                                     border-bottom: 1.5px solid #4187fe;
+//                                     font-size: 10px;
+//                                     padding: 5px;
+//                                     box-sizing: border-box;
+//                                 }
+//                             }
+
+//                             tr td:last-child {
+//                                 span:nth-child(1) {
+//                                     display: none;
+//                                 }
+
+//                                 span:nth-child(2) {
+//                                     display: block;
+//                                 }
+//                             }
+
+//                             tr td {
+//                                 font-size: 8px;
+//                                 padding: 3px;
+//                                 box-sizing: border-box;
+//                             }
+
+//                             tr th:nth-child(4) {
+//                                 display: none;
+//                             }
+
+//                             tr td:nth-child(4) {
+//                                 display: none;
+//                             }
+//                         }
+//                     }
+
+//                     .btn {
+//                         width: 150px;
+//                         height: 30px;
+
+//                         button {
+//                             font-size: 16px;
+//                         }
+
+//                     }
+//                 }
+
+//                 .btn {
+//                     width: 200px;
+//                     height: 45px;
+
+//                     button {
+//                         font-size: 23px;
+//                     }
+
+//                 }
+//             }
+
+//             .dealBox,
+//             .addressBox,
+//             .pieceHash,
+//             .blockHeight {
+//                 margin-top: -2%;
+
+//                 .btns {
+//                     width: 150px;
+//                     height: 30px;
+
+//                     button {
+//                         font-size: 16px;
+//                     }
+
+//                 }
+
+//                 .blockHeightContent {
+//                     .blockHeightDeal {
+//                         h2 {
+//                             line-height: 29px;
+//                             font-size: 12px;
+//                             padding-left: 9px;
+//                             box-sizing: border-box;
+//                         }
+
+//                         .deal {
+//                             .dealContent1 {
+//                                 .dealContents {
+//                                     >p {
+//                                         width: 95%;
+//                                         font-size: 10px;
+//                                         margin-top: 11px;
+//                                         margin-bottom: 13px !important;
+//                                         word-wrap: break-word;
+//                                     }
+
+//                                     .dealAddress {
+//                                         >span {
+//                                             width: 15px;
+//                                             height: 12px;
+//                                             background: url('/img/形状复制 5@2x.png') no-repeat;
+//                                             background-size: 100% 100%;
+//                                             // margin-left: 15px;
+//                                         }
+
+//                                         ul {
+//                                             width: 48%;
+//                                             padding-right: 0;
+//                                             box-sizing: border-box;
+//                                             margin-top: 0;
+
+//                                             p {
+//                                                 margin-right: 100px;
+
+//                                                 span {
+//                                                     width: 59px;
+//                                                     height: 21px;
+//                                                     font-size: 10px;
+//                                                     line-height: 20px;
+//                                                     border: 1px solid rgba(19, 71, 184, 1);
+
+//                                                 }
+//                                             }
+
+//                                             li {
+//                                                 height: 30px;
+//                                                 padding: 0 !important;
+//                                                 box-sizing: border-box;
+
+//                                                 label {
+//                                                     // width: 75px;
+//                                                     font-size: 10px;
+//                                                     // word-break: break-all;
+//                                                     // white-space: nowrap;
+//                                                     // overflow: hidden; 
+//                                                     // text-overflow: ellipsis;
+//                                                 }
+
+//                                                 span {
+//                                                     font-size: 10px;
+//                                                 }
+//                                             }
+//                                         }
+//                                     }
+
+//                                     .descrPrice {
+//                                         padding-right: 0;
+
+//                                         span {
+//                                             font-size: 10px;
+
+//                                             i {
+//                                                 width: 4px;
+//                                                 height: 4px;
+//                                                 margin-right: 2px;
+//                                                 margin-top: 6px;
+//                                             }
+//                                         }
+//                                     }
+//                                 }
+//                             }
+
+//                             .dealContent2 {
+//                                 .dealContents {
+//                                     .pp {
+//                                         p {
+//                                             font-size: 14px;
+//                                         }
+//                                     }
+
+//                                     .dealAddress {
+//                                         ul {
+//                                             width: 45%;
+//                                             padding-right: 0 !important;
+//                                             box-sizing: border-box;
+
+//                                             li {
+//                                                 label {
+//                                                     font-size: 10px;
+//                                                     // white-space: nowrap;
+//                                                     // overflow: hidden; 
+//                                                     // text-overflow: ellipsis;
+//                                                 }
+
+//                                                 span {
+//                                                     font-size: 10px;
+//                                                 }
+//                                             }
+//                                         }
+
+//                                         >span {
+//                                             width: 15px;
+//                                             height: 12px;
+//                                             margin-top: 10px;
+//                                             background: url('/img/形状复制 5@2x.png') no-repeat;
+//                                             background-size: 100% 100%;
+//                                             // margin-left: 15px;
+//                                         }
+//                                     }
+
+//                                     .descrPrice {
+//                                         padding-right: 0;
+
+//                                         span {
+//                                             font-size: 10px;
+
+//                                             i {
+//                                                 width: 4px;
+//                                                 height: 4px;
+//                                                 margin-right: 2px;
+//                                                 margin-top: 6px;
+//                                             }
+//                                         }
+//                                     }
+
+//                                     >p {
+//                                         width: 95%;
+//                                         font-size: 10px;
+//                                         margin-top: 10px;
+//                                         margin-bottom: 0;
+//                                         word-wrap: break-word;
+//                                     }
+//                                 }
+//                             }
+
+//                             .line {
+//                                 margin-top: 8px;
+//                             }
+//                         }
+//                     }
+
+//                     .blockHeightAbstract {
+//                         margin-top: 15px;
+//                         padding: 6px 0;
+//                         box-sizing: border-box;
+
+//                         h2 {
+//                             line-height: 29px;
+//                             font-size: 12px;
+//                             padding-left: 9px;
+//                             box-sizing: border-box;
+//                         }
+
+//                         .abstract {
+//                             .abstractContent:nth-child(3) {
+//                                 margin-left: 15px;
+//                             }
+
+//                             .abstractContent {
+//                                 width: 100%;
+//                                 padding-left: 5px;
+//                                 box-sizing: border-box;
+
+//                                 p {
+//                                     width: 100%;
+//                                     height: 30px;
+
+//                                     label {
+//                                         font-size: 10px;
+//                                     }
+
+//                                     span {
+//                                         // width:90%;
+//                                         // flex: 1;
+//                                         font-size: 10px;
+//                                         // margin-left:-18px;
+//                                         // word-wrap: break-word;
+//                                         // word-break: normal;
+//                                     }
+//                                 }
+//                             }
+
+//                             .line {
+//                                 height: 89px;
+//                             }
+//                         }
+//                     }
+//                 }
+
+//                 .btn {
+//                     width: 80%;
+//                     margin: 0 auto;
+
+//                     button {
+//                         width: 70px;
+//                         height: 20px;
+//                         font-size: 10px;
+
+//                         img {
+//                             width: 7px;
+//                             margin-right: 4px;
+//                         }
+//                     }
+//                 }
+
+//                 .price {
+//                     width: 80%;
+//                     margin: 0 auto;
+
+//                     p:nth-child(1) {
+//                         i {
+//                             width: 18px;
+//                             height: 18px;
+//                         }
+
+//                         label {
+//                             font-size: 13px;
+//                             margin: 0 4px;
+//                         }
+
+//                         span {
+//                             font-size: 20px;
+//                         }
+//                     }
+
+//                     p:nth-child(2) {
+//                         align-items: flex-start;
+//                         margin: 0 0 8px 0;
+
+//                         label {
+//                             font-size: 10px;
+//                         }
+
+//                         span {
+//                             width: 95%;
+//                             font-size: 10px;
+//                             word-wrap: break-word
+//                         }
+//                     }
+//                 }
+
+//                 .form {
+//                     width: 80%;
+//                     height: 23px !important;
+//                     padding: 0 8px !important;
+//                     box-sizing: border-box;
+//                     border-radius: 1px;
+//                     margin-bottom: 9px !important;
+//                     margin: 0 auto;
+
+//                     input {
+//                         width: 50%;
+//                         font-size: 8px !important;
+//                         padding-right: 5px !important;
+//                         box-sizing: border-box;
+//                     }
+
+//                     ::-webkit-input-placeholder {
+//                         font-size: 8px !important;
+//                     }
+
+//                     span {
+//                         width: 12px;
+//                         height: 12px;
+//                     }
+//                 }
+//             }
+
+//             //交易  地址
+//             // .addressBox,
+//             .dealBox {
+//                 .descrPrice {
+//                     span {
+//                         margin-bottom: 15px;
+//                     }
+//                 }
+
+//                 .price {
+
+//                     // display: flex;
+//                     p {
+//                         width: auto;
+//                     }
+
+//                     >p:nth-child(2) {
+//                         width: 90%;
+//                         display: inline-block;
+//                         font-size: 10px !important;
+//                         margin: 0 !important;
+//                         margin-left: 55px !important;
+//                         margin-top: -25px !important;
+//                         word-wrap: break-word !important;
+//                     }
+
+//                     >p:nth-child(3) {
+//                         // width: 100%;
+//                         flex-direction: row;
+//                         margin-top: 10px;
+//                         margin-left: 15px;
+
+//                         label {
+//                             font-size: 10px;
+//                         }
+
+//                         p {
+//                             display: inline-block;
+//                             width: 90%;
+//                             word-wrap: break-word;
+//                             margin-left: 5px;
+//                             font-size: 10px;
+//                             color: rgba(140, 183, 255, 1);
+//                         }
+//                     }
+//                 }
+
+//                 .listDEscr {
+//                     height: 44px;
+
+//                     span {
+//                         font-size: 12px;
+//                         padding: 0 4.5%;
+//                         box-sizing: border-box;
+//                     }
+//                 }
+//             }
+
+//             .addressBox {
+//                 .price {
+//                     .balance {
+//                         margin-top: -10px;
+//                     }
+
+//                     >p:nth-child(2) {
+//                         display: inline-block;
+//                         // width: 75%;
+//                         word-wrap: break-word;
+//                         font-size: 10px !important;
+//                     }
+
+//                     >p:nth-child(3) {
+//                         width: 40px;
+//                         margin-top: 0;
+//                     }
+//                 }
+
+//                 .blockHeightContent {
+//                     .abstract {
+//                         .abstractContent {
+//                             p {
+//                                 span {
+//                                     margin-left: -15px !important;
+//                                 }
+//                             }
+
+//                             >p:nth-child(1) {
+//                                 span {
+//                                     display: inline-block;
+//                                     // width: 400px!important;
+//                                     // margin-left:30px!important;
+//                                     word-wrap: break-word;
+//                                     word-break: normal;
+//                                     margin-left: 30px;
+//                                 }
+
+//                             }
+
+//                             // >div{
+//                             //     p:nth-child(2){
+//                             //       margin-left:5px;
+//                             //     }
+//                             // }
+//                         }
+//                     }
+//                 }
+//             }
+//         }
+//     }
+
+//     footer {
+//         height: 121px;
+//         background: url('/img/Rectangle 22@2x (1).png')no-repeat;
+//         background-size: 100% 100%;
+//         position: absolute;
+
+//         // bottom: 0;
+//         // left: 0;
+//         .foot {
+//             width: 80%;
+
+//             .footDescr {
+//                 .developer {
+//                     h3 {
+//                         font-size: 12px;
+//                         margin-right: 15px;
+//                     }
+
+//                     p {
+//                         margin-top: 9px;
+//                         font-size: 10px;
+//                     }
+//                 }
+
+//                 .contact {
+//                     h3 {
+//                         font-size: 12px;
+
+//                     }
+
+//                     .way {
+//                         margin-top: 9px;
+//                         align-items: center;
+
+//                         >div:nth-child(1) {
+//                             width: 140px;
+//                         }
+
+//                         >div {
+//                             p {
+//                                 font-size: 10px;
+//                             }
+//                         }
+
+//                         div:nth-child(2) {
+//                             margin-left: 10px;
+
+//                             p {
+//                                 width: 11px;
+//                                 margin-right: 6px;
+//                             }
+
+//                         }
+//                     }
+//                 }
+//             }
+
+//             .footLogo {
+//                 width: 21px;
+
+//                 img:nth-child(2) {
+//                     width: 100%;
+//                     margin-top: -26px;
+//                     margin-left: 20px;
+//                     display: block;
+//                 }
+
+//                 img:nth-child(1) {
+//                     display: none;
+//                 }
+//             }
+//         }
+//     }
+// }
+
+// @media (max-width:330px) {
+//     footer {
+//         .foot {
+//             width: 90%;
+
+//             .footDescr .developer {
+//                 h3 {
+//                     margin-right: 10px;
+//                 }
+//             }
+
+//             .footLogo {
+//                 img:nth-child(2) {
+//                     margin-left: 15px;
+//                 }
+//             }
+//         }
+
+//     }
+// }
