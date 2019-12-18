@@ -13,7 +13,20 @@ class App extends Component {
     if (!frame) {
       window.localStorage.setItem('frame', 'light')
     }
+    // this.init()
   }
+  // init() {
+
+  //   let designSize = 750; // 设计图尺寸
+
+  //   let html = document.documentElement;
+
+  //   let wW = html.clientWidth;// 窗口宽度
+  //   let rem = wW * 100 / designSize;
+
+  //   document.documentElement.style.fontSize = rem + 'px';
+  // }
+
   getFrame = () => {
     let frame = window.localStorage.getItem('frame')
     if (frame == 'light') {

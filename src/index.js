@@ -4,5 +4,17 @@ import './index.scss';
 import RouterConfig from './router/routerConfig'
 import { Provider } from 'react-redux'
 import Store from './store'
+function init() {
+    let designSize = 1920; 
+    let html = document.documentElement;
+    let wW = html.clientWidth;// 窗口宽度
+    let rem = wW * 100 / designSize;
+    document.documentElement.style.fontSize = rem + 'px';
+}
+init();
+window.addEventListener('resize', function () {
+    init();
+});
+
 
 ReactDOM.render(<Provider store={Store}><RouterConfig></RouterConfig></Provider>, document.getElementById('root'));
