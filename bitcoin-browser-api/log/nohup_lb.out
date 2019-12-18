@@ -1,0 +1,312 @@
+error { Error: ESOCKETTIMEDOUT
+    at ClientRequest.<anonymous> (C:\Users\user\Desktop\BlockChain_Browser_Web\node_modules\request\request.js:816:19)
+    at Object.onceWrapper (events.js:286:20)
+    at ClientRequest.emit (events.js:198:13)
+    at Socket.emitRequestTimeout (_http_client.js:662:40)
+    at Object.onceWrapper (events.js:286:20)
+    at Socket.emit (events.js:198:13)
+    at Socket._onTimeout (net.js:442:8)
+    at ontimeout (timers.js:436:11)
+    at tryOnTimeout (timers.js:300:5)
+    at listOnTimeout (timers.js:263:5) code: 'ESOCKETTIMEDOUT', connect: false }
+(node:26328) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'height' of undefined
+    at list_some_block_info (C:\Users\user\Desktop\BlockChain_Browser_Web\bitcoin-browser-api\src\list_block.js:10:26)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+(node:26328) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 1)
+(node:26328) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+error { Error: ESOCKETTIMEDOUT
+    at ClientRequest.<anonymous> (C:\Users\user\Desktop\BlockChain_Browser_Web\node_modules\request\request.js:816:19)
+    at Object.onceWrapper (events.js:286:20)
+    at ClientRequest.emit (events.js:198:13)
+    at Socket.emitRequestTimeout (_http_client.js:662:40)
+    at Object.onceWrapper (events.js:286:20)
+    at Socket.emit (events.js:198:13)
+    at Socket._onTimeout (net.js:442:8)
+    at ontimeout (timers.js:436:11)
+    at tryOnTimeout (timers.js:300:5)
+    at listOnTimeout (timers.js:263:5) code: 'ESOCKETTIMEDOUT', connect: false }
+(node:26328) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'height' of undefined
+    at list_some_block_info (C:\Users\user\Desktop\BlockChain_Browser_Web\bitcoin-browser-api\src\list_block.js:10:26)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+(node:26328) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 2)
+error { Error: ESOCKETTIMEDOUT
+    at ClientRequest.<anonymous> (C:\Users\user\Desktop\BlockChain_Browser_Web\node_modules\request\request.js:816:19)
+    at Object.onceWrapper (events.js:286:20)
+    at ClientRequest.emit (events.js:198:13)
+    at Socket.emitRequestTimeout (_http_client.js:662:40)
+    at Object.onceWrapper (events.js:286:20)
+    at Socket.emit (events.js:198:13)
+    at Socket._onTimeout (net.js:442:8)
+    at ontimeout (timers.js:436:11)
+    at tryOnTimeout (timers.js:300:5)
+    at listOnTimeout (timers.js:263:5) code: 'ESOCKETTIMEDOUT', connect: false }
+(node:26328) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'tx' of undefined
+    at Object.getBlockHashProfit (C:\Users\user\Desktop\BlockChain_Browser_Web\bitcoin-browser-api\src\bitcoin-core-function.js:82:48)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+(node:26328) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 3)
+error { Error: ESOCKETTIMEDOUT
+    at ClientRequest.<anonymous> (C:\Users\user\Desktop\BlockChain_Browser_Web\node_modules\request\request.js:816:19)
+    at Object.onceWrapper (events.js:286:20)
+    at ClientRequest.emit (events.js:198:13)
+    at Socket.emitRequestTimeout (_http_client.js:662:40)
+    at Object.onceWrapper (events.js:286:20)
+    at Socket.emit (events.js:198:13)
+    at Socket._onTimeout (net.js:442:8)
+    at ontimeout (timers.js:436:11)
+    at tryOnTimeout (timers.js:300:5)
+    at listOnTimeout (timers.js:263:5) code: 'ESOCKETTIMEDOUT', connect: false }
+(node:26328) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'tx' of undefined
+    at Object.getBlockHashProfit (C:\Users\user\Desktop\BlockChain_Browser_Web\bitcoin-browser-api\src\bitcoin-core-function.js:82:48)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+(node:26328) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 4)
+error { Error: ESOCKETTIMEDOUT
+    at ClientRequest.<anonymous> (C:\Users\user\Desktop\BlockChain_Browser_Web\node_modules\request\request.js:816:19)
+    at Object.onceWrapper (events.js:286:20)
+    at ClientRequest.emit (events.js:198:13)
+    at Socket.emitRequestTimeout (_http_client.js:662:40)
+    at Object.onceWrapper (events.js:286:20)
+    at Socket.emit (events.js:198:13)
+    at Socket._onTimeout (net.js:442:8)
+    at ontimeout (timers.js:436:11)
+    at tryOnTimeout (timers.js:300:5)
+    at listOnTimeout (timers.js:263:5) code: 'ESOCKETTIMEDOUT', connect: false }
+(node:26328) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'tx' of undefined
+    at Object.getBlockHashProfit (C:\Users\user\Desktop\BlockChain_Browser_Web\bitcoin-browser-api\src\bitcoin-core-function.js:82:48)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+(node:26328) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 5)
+error { Error: ESOCKETTIMEDOUT
+    at ClientRequest.<anonymous> (C:\Users\user\Desktop\BlockChain_Browser_Web\node_modules\request\request.js:816:19)
+    at Object.onceWrapper (events.js:286:20)
+    at ClientRequest.emit (events.js:198:13)
+    at Socket.emitRequestTimeout (_http_client.js:662:40)
+    at Object.onceWrapper (events.js:286:20)
+    at Socket.emit (events.js:198:13)
+    at Socket._onTimeout (net.js:442:8)
+    at ontimeout (timers.js:436:11)
+    at tryOnTimeout (timers.js:300:5)
+    at listOnTimeout (timers.js:263:5) code: 'ESOCKETTIMEDOUT', connect: false }
+(node:26328) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'height' of undefined
+    at list_some_block_info (C:\Users\user\Desktop\BlockChain_Browser_Web\bitcoin-browser-api\src\list_block.js:10:26)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+(node:26328) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 6)
+error { Error: connect ETIMEDOUT 47.92.49.137:8332
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1106:14)
+  errno: 'ETIMEDOUT',
+  code: 'ETIMEDOUT',
+  syscall: 'connect',
+  address: '47.92.49.137',
+  port: 8332 }
+(node:26328) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'vout' of undefined
+    at Object.getBlockHashProfit (C:\Users\user\Desktop\BlockChain_Browser_Web\bitcoin-browser-api\src\bitcoin-core-function.js:84:13)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+(node:26328) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 7)
+error { Error: ESOCKETTIMEDOUT
+    at ClientRequest.<anonymous> (C:\Users\user\Desktop\BlockChain_Browser_Web\node_modules\request\request.js:816:19)
+    at Object.onceWrapper (events.js:286:20)
+    at ClientRequest.emit (events.js:198:13)
+    at Socket.emitRequestTimeout (_http_client.js:662:40)
+    at Object.onceWrapper (events.js:286:20)
+    at Socket.emit (events.js:198:13)
+    at Socket._onTimeout (net.js:442:8)
+    at ontimeout (timers.js:436:11)
+    at tryOnTimeout (timers.js:300:5)
+    at listOnTimeout (timers.js:263:5) code: 'ESOCKETTIMEDOUT', connect: false }
+(node:26328) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'height' of undefined
+    at list_some_block_info (C:\Users\user\Desktop\BlockChain_Browser_Web\bitcoin-browser-api\src\list_block.js:10:26)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+(node:26328) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 8)
+error { Error: ESOCKETTIMEDOUT
+    at ClientRequest.<anonymous> (C:\Users\user\Desktop\BlockChain_Browser_Web\node_modules\request\request.js:816:19)
+    at Object.onceWrapper (events.js:286:20)
+    at ClientRequest.emit (events.js:198:13)
+    at Socket.emitRequestTimeout (_http_client.js:662:40)
+    at Object.onceWrapper (events.js:286:20)
+    at Socket.emit (events.js:198:13)
+    at Socket._onTimeout (net.js:442:8)
+    at ontimeout (timers.js:436:11)
+    at tryOnTimeout (timers.js:300:5)
+    at listOnTimeout (timers.js:263:5) code: 'ESOCKETTIMEDOUT', connect: false }
+(node:26328) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'tx' of undefined
+    at Object.getBlockHashProfit (C:\Users\user\Desktop\BlockChain_Browser_Web\bitcoin-browser-api\src\bitcoin-core-function.js:82:48)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+(node:26328) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 9)
+error { Error: ESOCKETTIMEDOUT
+    at ClientRequest.<anonymous> (C:\Users\user\Desktop\BlockChain_Browser_Web\node_modules\request\request.js:816:19)
+    at Object.onceWrapper (events.js:286:20)
+    at ClientRequest.emit (events.js:198:13)
+    at Socket.emitRequestTimeout (_http_client.js:662:40)
+    at Object.onceWrapper (events.js:286:20)
+    at Socket.emit (events.js:198:13)
+    at Socket._onTimeout (net.js:442:8)
+    at ontimeout (timers.js:436:11)
+    at tryOnTimeout (timers.js:300:5)
+    at listOnTimeout (timers.js:263:5) code: 'ESOCKETTIMEDOUT', connect: false }
+(node:26328) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'tx' of undefined
+    at Object.getBlockHashProfit (C:\Users\user\Desktop\BlockChain_Browser_Web\bitcoin-browser-api\src\bitcoin-core-function.js:82:48)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+(node:26328) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 10)
+error { Error: ESOCKETTIMEDOUT
+    at ClientRequest.<anonymous> (C:\Users\user\Desktop\BlockChain_Browser_Web\node_modules\request\request.js:816:19)
+    at Object.onceWrapper (events.js:286:20)
+    at ClientRequest.emit (events.js:198:13)
+    at Socket.emitRequestTimeout (_http_client.js:662:40)
+    at Object.onceWrapper (events.js:286:20)
+    at Socket.emit (events.js:198:13)
+    at Socket._onTimeout (net.js:442:8)
+    at ontimeout (timers.js:436:11)
+    at tryOnTimeout (timers.js:300:5)
+    at listOnTimeout (timers.js:263:5) code: 'ESOCKETTIMEDOUT', connect: false }
+(node:26328) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'height' of undefined
+    at list_some_block_info (C:\Users\user\Desktop\BlockChain_Browser_Web\bitcoin-browser-api\src\list_block.js:10:26)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+(node:26328) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 11)
+error { Error: ESOCKETTIMEDOUT
+    at ClientRequest.<anonymous> (C:\Users\user\Desktop\BlockChain_Browser_Web\node_modules\request\request.js:816:19)
+    at Object.onceWrapper (events.js:286:20)
+    at ClientRequest.emit (events.js:198:13)
+    at Socket.emitRequestTimeout (_http_client.js:662:40)
+    at Object.onceWrapper (events.js:286:20)
+    at Socket.emit (events.js:198:13)
+    at Socket._onTimeout (net.js:442:8)
+    at ontimeout (timers.js:436:11)
+    at tryOnTimeout (timers.js:300:5)
+    at listOnTimeout (timers.js:263:5) code: 'ESOCKETTIMEDOUT', connect: false }
+(node:26328) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'tx' of undefined
+    at Object.getBlockHashProfit (C:\Users\user\Desktop\BlockChain_Browser_Web\bitcoin-browser-api\src\bitcoin-core-function.js:82:48)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+(node:26328) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 12)
+error { Error: ESOCKETTIMEDOUT
+    at ClientRequest.<anonymous> (C:\Users\user\Desktop\BlockChain_Browser_Web\node_modules\request\request.js:816:19)
+    at Object.onceWrapper (events.js:286:20)
+    at ClientRequest.emit (events.js:198:13)
+    at Socket.emitRequestTimeout (_http_client.js:662:40)
+    at Object.onceWrapper (events.js:286:20)
+    at Socket.emit (events.js:198:13)
+    at Socket._onTimeout (net.js:442:8)
+    at ontimeout (timers.js:436:11)
+    at tryOnTimeout (timers.js:300:5)
+    at listOnTimeout (timers.js:263:5) code: 'ESOCKETTIMEDOUT', connect: false }
+(node:26328) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'height' of undefined
+    at list_some_block_info (C:\Users\user\Desktop\BlockChain_Browser_Web\bitcoin-browser-api\src\list_block.js:10:26)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+(node:26328) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 13)
+error { Error: ESOCKETTIMEDOUT
+    at ClientRequest.<anonymous> (C:\Users\user\Desktop\BlockChain_Browser_Web\node_modules\request\request.js:816:19)
+    at Object.onceWrapper (events.js:286:20)
+    at ClientRequest.emit (events.js:198:13)
+    at Socket.emitRequestTimeout (_http_client.js:662:40)
+    at Object.onceWrapper (events.js:286:20)
+    at Socket.emit (events.js:198:13)
+    at Socket._onTimeout (net.js:442:8)
+    at ontimeout (timers.js:436:11)
+    at tryOnTimeout (timers.js:300:5)
+    at listOnTimeout (timers.js:263:5) code: 'ESOCKETTIMEDOUT', connect: false }
+(node:26328) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'height' of undefined
+    at list_some_block_info (C:\Users\user\Desktop\BlockChain_Browser_Web\bitcoin-browser-api\src\list_block.js:10:26)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+(node:26328) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 14)
+error { Error: ESOCKETTIMEDOUT
+    at ClientRequest.<anonymous> (C:\Users\user\Desktop\BlockChain_Browser_Web\node_modules\request\request.js:816:19)
+    at Object.onceWrapper (events.js:286:20)
+    at ClientRequest.emit (events.js:198:13)
+    at Socket.emitRequestTimeout (_http_client.js:662:40)
+    at Object.onceWrapper (events.js:286:20)
+    at Socket.emit (events.js:198:13)
+    at Socket._onTimeout (net.js:442:8)
+    at ontimeout (timers.js:436:11)
+    at tryOnTimeout (timers.js:300:5)
+    at listOnTimeout (timers.js:263:5) code: 'ESOCKETTIMEDOUT', connect: false }
+(node:26328) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'height' of undefined
+    at list_some_block_info (C:\Users\user\Desktop\BlockChain_Browser_Web\bitcoin-browser-api\src\list_block.js:10:26)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+(node:26328) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 15)
+error { Error: ESOCKETTIMEDOUT
+    at ClientRequest.<anonymous> (C:\Users\user\Desktop\BlockChain_Browser_Web\node_modules\request\request.js:816:19)
+    at Object.onceWrapper (events.js:286:20)
+    at ClientRequest.emit (events.js:198:13)
+    at Socket.emitRequestTimeout (_http_client.js:662:40)
+    at Object.onceWrapper (events.js:286:20)
+    at Socket.emit (events.js:198:13)
+    at Socket._onTimeout (net.js:442:8)
+    at ontimeout (timers.js:436:11)
+    at tryOnTimeout (timers.js:300:5)
+    at listOnTimeout (timers.js:263:5) code: 'ESOCKETTIMEDOUT', connect: false }
+(node:26328) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'height' of undefined
+    at list_some_block_info (C:\Users\user\Desktop\BlockChain_Browser_Web\bitcoin-browser-api\src\list_block.js:10:26)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+(node:26328) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 16)
+error { Error: ESOCKETTIMEDOUT
+    at ClientRequest.<anonymous> (C:\Users\user\Desktop\BlockChain_Browser_Web\node_modules\request\request.js:816:19)
+    at Object.onceWrapper (events.js:286:20)
+    at ClientRequest.emit (events.js:198:13)
+    at Socket.emitRequestTimeout (_http_client.js:662:40)
+    at Object.onceWrapper (events.js:286:20)
+    at Socket.emit (events.js:198:13)
+    at Socket._onTimeout (net.js:442:8)
+    at ontimeout (timers.js:436:11)
+    at tryOnTimeout (timers.js:300:5)
+    at listOnTimeout (timers.js:263:5) code: 'ESOCKETTIMEDOUT', connect: false }
+(node:26328) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'tx' of undefined
+    at Object.getBlockHashProfit (C:\Users\user\Desktop\BlockChain_Browser_Web\bitcoin-browser-api\src\bitcoin-core-function.js:82:48)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+(node:26328) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 17)
+error { Error: ESOCKETTIMEDOUT
+    at ClientRequest.<anonymous> (C:\Users\user\Desktop\BlockChain_Browser_Web\node_modules\request\request.js:816:19)
+    at Object.onceWrapper (events.js:286:20)
+    at ClientRequest.emit (events.js:198:13)
+    at Socket.emitRequestTimeout (_http_client.js:662:40)
+    at Object.onceWrapper (events.js:286:20)
+    at Socket.emit (events.js:198:13)
+    at Socket._onTimeout (net.js:442:8)
+    at ontimeout (timers.js:436:11)
+    at tryOnTimeout (timers.js:300:5)
+    at listOnTimeout (timers.js:263:5) code: 'ESOCKETTIMEDOUT', connect: false }
+(node:26328) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'height' of undefined
+    at list_some_block_info (C:\Users\user\Desktop\BlockChain_Browser_Web\bitcoin-browser-api\src\list_block.js:10:26)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+(node:26328) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 18)
+error { Error: ESOCKETTIMEDOUT
+    at ClientRequest.<anonymous> (C:\Users\user\Desktop\BlockChain_Browser_Web\node_modules\request\request.js:816:19)
+    at Object.onceWrapper (events.js:286:20)
+    at ClientRequest.emit (events.js:198:13)
+    at Socket.emitRequestTimeout (_http_client.js:662:40)
+    at Object.onceWrapper (events.js:286:20)
+    at Socket.emit (events.js:198:13)
+    at Socket._onTimeout (net.js:442:8)
+    at ontimeout (timers.js:436:11)
+    at tryOnTimeout (timers.js:300:5)
+    at listOnTimeout (timers.js:263:5) code: 'ESOCKETTIMEDOUT', connect: false }
+(node:26328) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'height' of undefined
+    at list_some_block_info (C:\Users\user\Desktop\BlockChain_Browser_Web\bitcoin-browser-api\src\list_block.js:10:26)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+(node:26328) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 19)
+error { Error: ESOCKETTIMEDOUT
+    at ClientRequest.<anonymous> (C:\Users\user\Desktop\BlockChain_Browser_Web\node_modules\request\request.js:816:19)
+    at Object.onceWrapper (events.js:286:20)
+    at ClientRequest.emit (events.js:198:13)
+    at Socket.emitRequestTimeout (_http_client.js:662:40)
+    at Object.onceWrapper (events.js:286:20)
+    at Socket.emit (events.js:198:13)
+    at Socket._onTimeout (net.js:442:8)
+    at ontimeout (timers.js:436:11)
+    at tryOnTimeout (timers.js:300:5)
+    at listOnTimeout (timers.js:263:5) code: 'ESOCKETTIMEDOUT', connect: false }
+(node:26328) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'height' of undefined
+    at list_some_block_info (C:\Users\user\Desktop\BlockChain_Browser_Web\bitcoin-browser-api\src\list_block.js:10:26)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+(node:26328) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 20)
+error { Error: ESOCKETTIMEDOUT
+    at ClientRequest.<anonymous> (C:\Users\user\Desktop\BlockChain_Browser_Web\node_modules\request\request.js:816:19)
+    at Object.onceWrapper (events.js:286:20)
+    at ClientRequest.emit (events.js:198:13)
+    at Socket.emitRequestTimeout (_http_client.js:662:40)
+    at Object.onceWrapper (events.js:286:20)
+    at Socket.emit (events.js:198:13)
+    at Socket._onTimeout (net.js:442:8)
+    at ontimeout (timers.js:436:11)
+    at tryOnTimeout (timers.js:300:5)
+    at listOnTimeout (timers.js:263:5) code: 'ESOCKETTIMEDOUT', connect: false }
+(node:26328) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'height' of undefined
+    at list_some_block_info (C:\Users\user\Desktop\BlockChain_Browser_Web\bitcoin-browser-api\src\list_block.js:10:26)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+(node:26328) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 21)

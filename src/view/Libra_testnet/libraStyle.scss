@@ -1,15 +1,13 @@
 .libraContent {
     width: 100%;
-
-    // height: 3345px;
     header {
-        width: 100%;
-        height: 1088px;
+        width: 19.11rem;
+        height: 10.92rem;
         position: relative;
 
         .bgLogo {
-            width: 912px;
-            // height: 755px;
+            width: 9.12rem;
+            // height: 755rem;
             position: absolute;
             right: 18%;
             top: 2%;
@@ -22,7 +20,8 @@
 
         .navList {
             >a {
-                width: 24px;
+               width: 0.2rem;
+            height: 0.22rem;
                 border-bottom: 2px solid rgba(130, 179, 255, 1);
             }
         }
@@ -39,36 +38,36 @@
     }
 
     .contents {
-        width: 1200px;
+        width: 14.4rem;
         position: relative;
         z-index: 999;
         margin: 0 auto;
-        margin-top: -820px;
-        margin-bottom: 200px;
+        margin-top: -8.20rem;
+        margin-bottom: 2rem;
     }
 
     .contents1 {
         // top: 9.1%;
-        margin-top: -850px;
+        margin-top: -8.50rem;
     }
 
     .mainNet {
         .searchBox {
             h3 {
-                font-size: 35px;
+                font-size: 0.35rem;
                 font-family: PingFangSC-Regular;
                 font-weight: 400;
                 color: rgba(255, 255, 255, 1);
-                margin-bottom: 23px;
+                margin-bottom: 0.23rem;
             }
 
             .form {
-                width: 503px;
-                height: 80px;
+                width: 5.03rem;
+                height: 0.80rem;
                 background: rgba(255, 255, 255, 1);
                 border-radius: 5px;
                 display: flex;
-                padding: 0 25px;
+                padding: 0 0.25rem;
                 box-sizing: border-box;
                 justify-content: space-between;
                 align-items: center;
@@ -80,24 +79,24 @@
                     flex: 1;
                     padding-right: 0px;
                     box-sizing: border-box;
-                    font-size: 27px;
+                    font-size: 0.27rem;
                     font-family: PingFangSC-Regular;
                     font-weight: 400;
                     color: rgba(0, 0, 0, .49);
                 }
 
                 input::-webkit-input-placeholder {
-                    font-size: 27px;
+                    font-size: 0.27rem;
                     font-family: PingFangSC-Regular;
                     font-weight: 400;
                     color: rgba(0, 0, 0, .49);
-                    line-height: 100px;
-                    margin-top: 5px;
+                    line-height: 1rem;
+                    margin-top: 0.05rem;
                 }
 
                 span {
-                    width: 40px;
-                    height: 42px;
+                    width: 0.40rem;
+                    height: 0.42rem;
                     background: url('/img/形状 3@2x.png') no-repeat;
                     background-size: 100% 100%;
                 }
@@ -105,8 +104,8 @@
         }
 
         .mainContent {
-            width: 1200px;
-            margin-top: 240px;
+            width:100%;
+            margin-top: 2.40rem;
             background: #FFF;
             display: flex;
             flex-direction: column;
@@ -114,35 +113,35 @@
 
             .mainHead {
                 width: 100%;
-                height: 109px;
+                height: 1.09rem;
                 display: flex;
                 align-items: center;
-                padding-left: 22px;
+                padding-left: 0.22rem;
                 box-sizing: border-box;
 
                 i {
-                    width: 40px;
-
+                    width: 0.40rem;
+                    display: flex;
                     img {
                         width: 100%;
                     }
                 }
 
                 span {
-                    font-size: 35px;
+                    font-size: 0.35rem;
                     font-family: PingFangSC-Medium;
                     font-weight: 500;
                     color: rgba(0, 12, 60, 0.8);
-                    margin-left: 12px;
-                    margin-right: 10px;
+                    margin-left: 0.12rem;
+                    margin-right: 0.10rem;
                 }
 
                 label {
-                    font-size: 20px;
+                    font-size: 0.20rem;
                     font-family: PingFangSC-Regular;
                     font-weight: 400;
                     color: rgba(0, 12, 60, 0.8);
-                    margin-top: 20px;
+                    margin-top: 0.20rem;
                 }
             }
 
@@ -152,20 +151,21 @@
                 table {
                     width: 100%;
                     border-collapse: separate;
-                    border-spacing: 0 10px;
+                    border-spacing: 0 0.10rem;
                     table-layout: fixed;
-                    font-size: 21px;
+                    font-size: 0.21rem;
                     background: rgba(247, 248, 251, 1);
 
                     th,
                     td {
-                        padding: 0;
+                        padding:0.1rem;
                     }
 
                     tr td {
                         width: 100%;
-                        padding: 5px;
-                        box-sizing: border-box;
+                        height: 1.2rem;
+                        // padding: 0.05rem;
+                        // box-sizing: border-box;
                         background: #FFF;
                         word-wrap: break-word;
 
@@ -192,12 +192,12 @@
                     tr:nth-child(1) th {
                         border-bottom: 3px solid rgba(65, 135, 254, 1);
                         background: rgba(247, 248, 251, 1);
-                        font-size: 24px;
+                        font-size: 0.24rem;
                         font-family: PingFangSC-Regular;
                         font-weight: 400;
                         color: rgba(0, 12, 60, 1);
                         text-align: left;
-                        padding: 20px 5px;
+                        padding: 0.20rem 0.05rem;
                         box-sizing: border-box;
                         white-space: nowrap;
                     }
@@ -206,9 +206,9 @@
             }
 
             .btn {
-                width: 311px;
-                height: 70px;
-                margin-top: 26px;
+                width: 3.11rem;
+                height: 0.70rem;
+                margin-top: 0.26rem;
 
                 button {
                     width: 100%;
@@ -218,7 +218,7 @@
                     border-radius: 5px;
                     outline: 0;
                     border: 0;
-                    font-size: 27px;
+                    font-size: 0.27rem;
                     font-family: PingFangSC-Regular;
                     font-weight: 400;
                     color: rgba(255, 255, 255, 1);
@@ -235,9 +235,9 @@
         width: 100%;
 
         .btns {
-            width: 311px;
-            height: 70px;
-            margin: 26px auto;
+            width: 3.11rem;
+            height: 0.70rem;
+            margin: 0.26rem auto;
 
             button {
                 width: 100%;
@@ -247,7 +247,7 @@
                 border-radius: 5px;
                 outline: 0;
                 border: 0;
-                font-size: 27px;
+                font-size: 0.27rem;
                 font-family: PingFangSC-Regular;
                 font-weight: 400;
                 color: rgba(255, 255, 255, 1);
@@ -255,11 +255,12 @@
         }
 
         .price {
-            width: 1034px;
+            width: 12.34rem;
             margin: 0 auto;
             display: flex;
-
+            position: relative;
             >div {
+                width:10rem;
                 >p:nth-child(1) {
                     label {
                         white-space: nowrap;
@@ -267,14 +268,17 @@
                 }
 
                 .balance {
+                    width: 1,28rem!important;
+                    height: 1.28rem!important;
                     color: #FFF;
-                    font-size: 20px;
+                    font-size: 0.20rem;
+                    margin-top: -1rem;
                 }
             }
 
             canvas {
-                margin-left: 50px;
-                margin-top: 30px;
+                position: absolute;;
+                right: 0;
             }
 
         }
@@ -286,13 +290,13 @@
             // background: #FFF;
             h2 {
                 background: rgba(255, 255, 255, 1);
-                font-size: 27px;
+                font-size: 0.27rem;
                 font-family: PingFangSC-Regular;
                 font-weight: 400;
                 color: rgba(0, 12, 60, 1);
-                line-height: 84px;
+                line-height: 0.84rem;
 
-                margin-bottom: 5px;
+                margin-bottom: 0.05rem;
             }
 
             .from,
@@ -304,22 +308,24 @@
 
         .blockHeightDeal {
             width: 100%;
-            padding-left: 32px;
-            padding-right: 15px;
+            padding-left: 0.32rem;
+            padding-right: 0.15rem;
             box-sizing: border-box;
 
             >p {
                 width: 100%;
-                // height: 58px;
-                // line-height: 60px;
+                // height: 58rem;
+                // line-height: 60rem;
+                padding: 0.2rem 0;
+                box-sizing: border-box;
                 display: flex;
                 align-items: center;
                 // justify-content: space-between;
-                margin-top: 25px;
+                margin-top: 0.25rem;
 
                 label {
-                    width: 10%;
-                    font-size: 18px;
+                    width: 1.5rem;
+                    font-size: 0.18rem;
                     font-family: PingFangSC-Regular;
                     font-weight: 400;
                     color: rgba(0, 0, 0, .5);
@@ -327,13 +333,13 @@
 
                 span {
                     width: 70%;
-                    font-size: 18px;
+                    font-size: 0.18rem;
                     font-family: PingFangSC-Medium;
                     font-weight: 500;
                     color: rgba(42, 42, 42, 1);
-                    // margin-left: 118px;
+                    // margin-left: 118rem;
                     color: rgba(0, 0, 0, .5);
-                    margin-left: 40px;
+                    margin-left: 0.40rem;
                     word-wrap: break-word;
                     word-break: normal;
                 }
@@ -343,39 +349,39 @@
 
         .blockHeightAbstract {
             width: 100%;
-            padding: 18px 0;
+            padding: 0.18rem 0;
             box-sizing: border-box;
-            margin-top: 70px;
+            margin-top: 0.70rem;
             background: rgba(247, 248, 251, 1);
 
             h2 {
-                padding-left: 32px;
+                padding-left: 0.32rem;
                 box-sizing: border-box;
             }
 
             .abstract {
                 width: 100%;
-                // height: 298px;
+                // height: 298rem;
                 display: flex;
                 align-items: center;
                 background: rgba(255, 255, 255, 1);
 
                 .line {
-                    width: 3px;
-                    height: 295px;
+                    width: 0.03rem;
+                    height: 2.95rem;
                     background: url('/img/矩形@2x.png') no-repeat;
                     background-size: 100% 100%;
                 }
 
                 .abstractContent {
                     // width: 48%;
-                    padding-left: 32px;
+                    padding-left: 0.32rem;
                     box-sizing: border-box;
 
                     p {
-                        height: 58px;
-                        // line-height: 60px;
-                        padding: 5px 0;
+                        // height: 0.58rem;
+                        // line-height: 60rem;
+                        padding: 0.2rem 0;
                         box-sizing: border-box;
                         display: flex;
                         align-items: center;
@@ -387,8 +393,8 @@
                         }
 
                         label {
-                            width: 100px;
-                            font-size: 18px;
+                            width: 1.5rem;
+                            font-size: 0.18rem;
                             font-family: PingFangSC-Regular;
                             font-weight: 400;
                             color: rgba(0, 0, 0, .5);
@@ -398,35 +404,36 @@
                         span {
                             width: 80%;
                             // flex: 1;
-                            font-size: 18px;
+                            font-size: 0.18rem;
                             font-family: PingFangSC-Medium;
                             font-weight: 500;
                             color: rgba(42, 42, 42, 1);
-                            margin-left: 118px;
+                            margin-left: 1.18rem;
                             // white-space: nowrap;
-                            margin-left: 60px;
+                            margin-left: 0.60rem;
+                            word-break: break-all;
                         }
                     }
                 }
 
                 .abstractContent:nth-child(3) {
-                    padding-left: 71px;
+                    padding-left: 0.71rem;
                     box-sizing: border-box;
                 }
             }
         }
 
         .form {
-            width: 1032px;
-            height: 80px;
+            width: 12.32rem;
+            height: 0.80rem;
             background: #FFF;
             display: flex;
             align-items: center;
             justify-content: space-between;
             margin: 0 auto;
-            padding: 0 25px;
+            padding: 0 0.25rem;
             box-sizing: border-box;
-            margin-bottom: 40px;
+            margin-bottom: 0.40rem;
 
             input {
                 width: 100%;
@@ -434,30 +441,30 @@
                 height: 100%;
                 border: 0;
                 outline: 0;
-                padding-top: 10px;
+                padding-top: 0.10rem;
                 box-sizing: border-box;
-                font-size: 27px;
+                font-size: 0.27rem;
             }
 
             ::-webkit-input-placeholder {
-                font-size: 27px;
+                font-size: 0.27rem;
                 font-family: PingFangSC-Regular;
                 font-weight: 400;
                 color: rgba(0, 0, 0, .49);
                 font-weight: 400;
-                line-height: 100px;
+                line-height: 1rem;
             }
 
             span {
-                width: 38px;
-                height: 39px;
+                width: 0.38rem;
+                height: 0.39rem;
                 background: url('/img/形状 3@2x.png') no-repeat;
                 background-size: 100% 100%;
             }
         }
 
         .price {
-            // width: 834px;
+            // width: 834rem;
             display: flex;
 
             p {
@@ -468,9 +475,9 @@
             >div {
                 >p:nth-child(1) {
                     i {
-                        width: 62px;
-                        height: 62px;
-
+                        width: 0.62rem;
+                        height: 0.62rem;
+                        display: flex;
                         img {
                             width: 100%;
                             height: 100%;
@@ -478,15 +485,15 @@
                     }
 
                     label {
-                        font-size: 45px;
+                        font-size: 0.45rem;
                         font-family: PingFangSC-Regular;
                         font-weight: 400;
                         color: rgba(255, 255, 255, 1);
-                        margin: 0 13px;
+                        margin: 0 0.13rem;
                     }
 
                     span {
-                        font-size: 66px;
+                        font-size: 0.66rem;
                         font-family: PingFangSC-Medium;
                         font-weight: 500;
                         color: rgba(255, 255, 255, 1);
@@ -494,10 +501,10 @@
                 }
 
                 >p:nth-child(2) {
-                    margin: 40px 0;
+                    // margin: 0.40rem 0;
 
                     label {
-                        font-size: 24px;
+                        font-size: 0.24rem;
                         font-family: PingFangSC-Regular;
                         font-weight: 400;
                         color: rgba(255, 255, 255, 1);
@@ -505,11 +512,11 @@
                     }
 
                     span {
-                        font-size: 24px;
+                        font-size: 0.24rem;
                         font-family: PingFangSC-Regular;
                         font-weight: 400;
                         color: rgba(145, 187, 255, 1);
-                        margin-left: 7px;
+                        margin-left: 0.07rem;
                     }
                 }
             }
@@ -521,13 +528,13 @@
             justify-content: space-between;
 
             button {
-                width: 183px;
-                height: 58px;
+                width: 1.83rem;
+                height: 0.58rem;
                 border: 0;
-                // border: 1px dashed;
+                // border: 1rem dashed;
                 outline: 0;
                 background: rgba(37, 89, 195, .5);
-                font-size: 24px;
+                font-size: 0.24rem;
                 font-family: PingFangSC-Regular;
                 font-weight: 400;
                 color: rgba(255, 255, 255, 1);
@@ -536,7 +543,7 @@
                 justify-content: center;
 
                 img {
-                    margin-right: 15px;
+                    margin-right: 0.15rem;
                 }
             }
         }
@@ -552,25 +559,25 @@
                 width: 100%;
                 display: flex;
                 justify-content: flex-end;
-                padding-right: 53px;
+                padding-right: 0.53rem;
                 box-sizing: border-box;
 
                 span {
-                    font-size: 21px;
+                    font-size: 0.21rem;
                     font-family: PingFangSC-Medium;
                     font-weight: 500;
                     color: rgba(42, 42, 42, 1);
-                    margin-bottom: 20px;
-                    margin-top: 20px;
+                    margin-bottom: 0.20rem;
+                    margin-top: 0.20rem;
                 }
             }
         }
 
         .listDEscr {
             width: 100%;
-            height: 84px;
+            height: 0.84rem;
             background: #FFF;
-            margin-bottom: 8px;
+            margin-bottom: 0.08rem;
             display: flex;
             align-items: center;
             display: flex;
@@ -578,7 +585,7 @@
             span {
                 padding: 0 6.5%;
                 box-sizing: border-box;
-                font-size: 27px;
+                font-size: 0.27rem;
                 font-family: PingFangSC-Regular;
                 font-weight: 400;
                 color: rgba(0, 12, 60, 1);
@@ -594,8 +601,8 @@
             >div {
                 >p:nth-child(1) {
                     img {
-                        width: 69px;
-                        height: 79px;
+                        width: 0.69rem;
+                        height: 0.79rem;
                     }
                 }
 
@@ -608,12 +615,13 @@
 
 
             p:nth-child(2) {
-                margin-top: 10px;
-                margin-bottom: 30px;
-                font-size: 24px;
+                margin-top: 0.10rem;
+                // margin-bottom: 0.30rem;
+                font-size: 0.24rem;
                 font-family: PingFangSC-Regular;
                 font-weight: 400;
                 color: rgba(255, 255, 255, 1);
+                word-break: break-all;
             }
 
             p:nth-child(3) {
@@ -621,13 +629,13 @@
                 align-items: flex-start;
 
                 label {
-                    font-size: 24px;
+                    font-size: 0.24rem;
                     font-family: PingFangSC-Regular;
                     font-weight: 400;
                     color: rgba(255, 255, 255, 1);
 
                     >p {
-                        font-size: 24px;
+                        font-size: 0.24rem;
                         font-family: PingFangSC-Regular;
                         font-weight: 400;
                         color: rgba(140, 183, 255, 1);
@@ -646,11 +654,11 @@
                 width: 100%;
                 display: flex;
                 justify-content: space-between;
-                padding: 0 10px;
+                padding: 0 0.10rem;
                 box-sizing: border-box;
 
                 >p {
-                    font-size: 20px;
+                    font-size: 0.20rem;
                     color: #666;
                 }
             }
@@ -660,10 +668,10 @@
             width: 100%;
             display: flex;
             justify-content: space-between;
-
+            align-items: center;
             >span {
-                width: 50px;
-                height: 40px;
+                width: 0.50rem;
+                height: 0.40rem;
                 background: url('/img/形状复制 4@2x.png') no-repeat;
                 background-size: 100% 100%;
 
@@ -673,13 +681,26 @@
             }
 
             ul {
-                width: 40%;
-                margin: 10px;
-
+                width:6rem;
+                margin-top: 0.20rem;
+                padding-right: 0.33rem;
+                box-sizing: border-box;
+                margin-left: 0.3rem;
                 li {
+                    height: 0.50rem;
+                    display: flex;
+                    align-items: center;
+                    padding: 0.10rem 0;
+                    box-sizing: border-box;
+                    margin-top: 0.1rem;
                     label {
+                        line-height: 0.3rem;
+                        font-size: 0.17rem;
+                        font-family: PingFangSC-Regular;
+                        font-weight: 400;
                         word-wrap: break-word;
                         color: #4187fe;
+                        word-break: break-all;
                     }
                 }
             }
@@ -688,7 +709,7 @@
         .price {
             display: flex;
             // flex-direction: column;
-            margin-top: 70px;
+            margin-top: 0.70rem;
 
             >div {
                 >span {
@@ -701,8 +722,8 @@
                 }
 
                 >p:nth-child(3) {
-                    width: 119px;
-                    height: 118px;
+                    width: 1.19rem;
+                    height: 1.18rem;
                     float: right;
                     margin-top: -14%;
 
@@ -722,14 +743,14 @@
         .abstractContent {
             width: 100%;
 
-            // padding-right: 114px;
+            // padding-right: 114rem;
             // box-sizing: border-box;
             >div {
                 display: flex;
                 justify-content: space-between;
 
                 p:nth-child(2) {
-                    margin-left: 100px;
+                    margin-left: 1rem;
                 }
             }
         }
@@ -989,15 +1010,15 @@
     }
 }
 
-// @media (max-width:1800px) {
+// @media (max-width:1800rem) {
 //     .libraContent {
 //         .addressBox {
 //             .price {
-//                 margin-top: 50px;
+//                 margin-top: 50rem;
 
 //                 >div {
 //                     p:nth-child(2) {
-//                         margin: 20px 0;
+//                         margin: 20rem 0;
 //                     }
 
 //                 }
@@ -1008,20 +1029,20 @@
 //             }
 
 //             .blockHeightAbstract {
-//                 margin-top: 29px;
+//                 margin-top: 29rem;
 //             }
 //         }
 //     }
 // }
 
 
-// @media (max-width:1600px) {
+// @media (max-width:1600rem) {
 
 //     .libraContent {
 
-//         // height: 1800px;
+//         // height: 1800rem;
 //         .contents1 {
-//             margin-top: -880px;
+//             margin-top: -880rem;
 //         }
 
 //         .contents {
@@ -1033,66 +1054,66 @@
 //             .pieceHash,
 //             .blockHeight {
 //                 .btns {
-//                     width: 200px;
-//                     height: 45px;
+//                     width: 200rem;
+//                     height: 45rem;
 
 //                     button {
-//                         font-size: 23px;
+//                         font-size: 23rem;
 //                     }
 //                 }
 
 //                 .form {
-//                     height: 50px !important;
-//                     padding: 0 15px !important;
+//                     height: 50rem !important;
+//                     padding: 0 15rem !important;
 //                     box-sizing: border-box;
-//                     margin-bottom: 20px !important;
+//                     margin-bottom: 20rem !important;
 
 //                     ::-webkit-input-placeholder {
-//                         font-size: 20px !important;
+//                         font-size: 20rem !important;
 //                     }
 
 //                     input {
-//                         // width:250px;
+//                         // width:250rem;
 //                         padding-top: 0;
 //                         box-sizing: border-box;
 //                     }
 
 //                     span {
-//                         width: 25px;
-//                         height: 25px;
+//                         width: 25rem;
+//                         height: 25rem;
 //                     }
 //                 }
 
 //                 .price {
-//                     margin-top: 30px;
+//                     margin-top: 30rem;
 
 //                     >div {
 //                         >span {
-//                             font-size: 16px;
+//                             font-size: 16rem;
 //                         }
 
 //                         >p:nth-child(1) {
 //                             i {
-//                                 width: 40px;
-//                                 height: 40px;
+//                                 width: 40rem;
+//                                 height: 40rem;
 //                             }
 
 //                             label {
-//                                 font-size: 30px;
+//                                 font-size: 30rem;
 //                             }
 
 //                             span {
-//                                 font-size: 35px;
+//                                 font-size: 35rem;
 //                             }
 //                         }
 
 //                         >p:nth-child(2) {
 //                             label {
-//                                 font-size: 20px;
+//                                 font-size: 20rem;
 //                             }
 
 //                             span {
-//                                 font-size: 17px;
+//                                 font-size: 17rem;
 //                             }
 //                         }
 //                     }
@@ -1100,13 +1121,13 @@
 
 //                 .btn {
 //                     button {
-//                         width: 150px;
-//                         height: 40px;
-//                         font-size: 20px;
+//                         width: 150rem;
+//                         height: 40rem;
+//                         font-size: 20rem;
 
 //                         img {
-//                             width: 20px;
-//                             margin-right: 8px;
+//                             width: 20rem;
+//                             margin-right: 8rem;
 //                         }
 //                     }
 //                 }
@@ -1117,20 +1138,20 @@
 
 //                 .blockHeightAbstract {
 //                     h2 {
-//                         font-size: 22px;
-//                         line-height: 65px;
+//                         font-size: 22rem;
+//                         line-height: 65rem;
 //                     }
 
 //                     .abstractContent {
 //                         p {
 
-//                             //    height: 38px;
+//                             //    height: 38rem;
 //                             label {
-//                                 font-size: 16px;
+//                                 font-size: 16rem;
 //                             }
 
 //                             span {
-//                                 font-size: 16px;
+//                                 font-size: 16rem;
 //                             }
 //                         }
 //                     }
@@ -1138,27 +1159,27 @@
 
 //                 .blockHeightDeal {
 //                     h2 {
-//                         font-size: 22px;
-//                         line-height: 65px;
+//                         font-size: 22rem;
+//                         line-height: 65rem;
 //                     }
 
 //                     .dealContents {
 //                         p {
-//                             font-size: 17px;
+//                             font-size: 17rem;
 //                         }
 
 //                         .dealAddress {
 //                             ul {
 //                                 li {
 //                                     label {
-//                                         font-size: 14px;
-//                                         height: 40px;
+//                                         font-size: 14rem;
+//                                         height: 40rem;
 //                                         word-wrap: break-word;
 //                                         word-break: normal;
 //                                     }
 
 //                                     span {
-//                                         font-size: 14px;
+//                                         font-size: 14rem;
 //                                     }
 //                                 }
 //                             }
@@ -1166,7 +1187,7 @@
 
 //                         .descrPrice {
 //                             span {
-//                                 font-size: 18px;
+//                                 font-size: 18rem;
 //                             }
 //                         }
 //                     }
@@ -1178,17 +1199,17 @@
 //             .dealBox {
 //                 .price {
 //                     >p:nth-child(2) {
-//                         font-size: 20px !important;
-//                         margin: 10px !important;
+//                         font-size: 20rem !important;
+//                         margin: 10rem !important;
 //                     }
 
 //                     >p:nth-child(3) {
 //                         label {
-//                             font-size: 20px;
+//                             font-size: 20rem;
 //                         }
 
 //                         p {
-//                             font-size: 20px;
+//                             font-size: 20rem;
 //                             margin-bottom: 0;
 //                         }
 //                     }
@@ -1196,7 +1217,7 @@
 
 //                 .listDEscr {
 //                     span {
-//                         font-size: 23px;
+//                         font-size: 23rem;
 //                         // margin-right:15%;
 //                     }
 //                 }
@@ -1206,10 +1227,10 @@
 
 // }
 
-// @media (max-width:1300px) {
+// @media (max-width:1300rem) {
 //     .libraContent {
 //         .contents1 {
-//             margin-top: -920px;
+//             margin-top: -920rem;
 //         }
 
 //         .contents {
@@ -1218,29 +1239,29 @@
 //             .textNet {
 //                 .searchBox {
 //                     h3 {
-//                         font-size: 27px;
+//                         font-size: 27rem;
 //                     }
 
 //                     .form {
-//                         width: 300px;
-//                         height: 45px;
-//                         padding: 0 15px;
+//                         width: 300rem;
+//                         height: 45rem;
+//                         padding: 0 15rem;
 //                         box-sizing: border-box;
 
 //                         input {
-//                             width: 260px;
-//                             font-size: 20px;
+//                             width: 260rem;
+//                             font-size: 20rem;
 //                             padding-top: 0;
 //                             box-sizing: border-box;
 //                         }
 
 //                         ::-webkit-input-placeholder {
-//                             font-size: 20px;
+//                             font-size: 20rem;
 //                         }
 
 //                         span {
-//                             width: 28px;
-//                             height: 28px;
+//                             width: 28rem;
+//                             height: 28rem;
 //                         }
 //                     }
 //                 }
@@ -1249,29 +1270,29 @@
 //                     margin-top: 15%;
 
 //                     .mainHead {
-//                         height: 80px;
+//                         height: 80rem;
 
 //                         i {
-//                             width: 30px;
+//                             width: 30rem;
 //                         }
 
 //                         span {
-//                             font-size: 30px;
+//                             font-size: 30rem;
 //                         }
 
 //                         label {
-//                             font-size: 16px;
+//                             font-size: 16rem;
 //                         }
 //                     }
 
 //                     .table {
 //                         table {
-//                             font-size: 16px;
+//                             font-size: 16rem;
 
 //                             tr:nth-child(1) {
 //                                 th {
-//                                     font-size: 21px;
-//                                     padding: 20px 5px;
+//                                     font-size: 21rem;
+//                                     padding: 20rem 5rem;
 //                                     box-sizing: border-box;
 //                                 }
 //                             }
@@ -1280,11 +1301,11 @@
 //                 }
 
 //                 .btn {
-//                     width: 200px;
-//                     height: 45px;
+//                     width: 200rem;
+//                     height: 45rem;
 
 //                     button {
-//                         font-size: 23px;
+//                         font-size: 23rem;
 //                     }
 
 //                 }
@@ -1294,9 +1315,9 @@
 
 // }
 
-// @media (max-width:1200px) {
+// @media (max-width:1200rem) {
 //     .libraContent {
-//         width: 1200px;
+//         width: 1200rem;
 
 //         .dealBox {
 //             .blockHeightAbstract {
@@ -1306,7 +1327,7 @@
 //     }
 // }
 
-// @media (max-width:950px) {
+// @media (max-width:950rem) {
 
 //     html,
 //     body {
@@ -1324,9 +1345,9 @@
 //         height: auto;
 
 //         .back {
-//             width: 13px !important;
-//             height: 13px !important;
-//             top: 12px;
+//             width: 13rem !important;
+//             height: 13rem !important;
+//             top: 12rem;
 //             right: 3% !important;
 //         }
 //     }
@@ -1335,11 +1356,11 @@
 //         .blockHeightDeal {
 //             p {
 //                 label {
-//                     font-size: 10px;
+//                     font-size: 10rem;
 //                 }
 
 //                 span {
-//                     font-size: 10px;
+//                     font-size: 10rem;
 //                 }
 //             }
 //         }
@@ -1348,11 +1369,11 @@
 //             >p {
 //                 display: flex;
 //                 justify-content: space-between;
-//                 margin-top: 10px;
+//                 margin-top: 10rem;
 
 //                 label {
 //                     width: auto !important;
-//                     margin-right: 5px;
+//                     margin-right: 5rem;
 //                 }
 
 //                 span {
@@ -1365,11 +1386,11 @@
 //     }
 
 //     .height {
-//         height: 1000px;
+//         height: 1000rem;
 //     }
 
 //     .libraContent {
-//         // height: 1122px;
+//         // height: 1122rem;
 
 //         // .netToBack {
 //         //     background: url('/img/蒙版2 (2).png') no-repeat;
@@ -1382,35 +1403,35 @@
 //         // }
 
 //         header {
-//             height: 294px;
+//             height: 294rem;
 //         }
 
 //         .head {
 //             width: 93% !important;
-//             height: 44px !important;
+//             height: 44rem !important;
 
 //             .logo {
-//                 width: 102px !important;
+//                 width: 102rem !important;
 //             }
 
 //             .price {
-//                 width: 135px !important;
+//                 width: 135rem !important;
 //                 height: auto !important;
 //                 margin-right: 0 !important;
-//                 margin-left: 15px;
+//                 margin-left: 15rem;
 
 //                 >div {
-//                     width: 27px !important;
+//                     width: 27rem !important;
 //                 }
 
 //                 .priceContent {
-//                     margin-left: 3px !important;
+//                     margin-left: 3rem !important;
 
 //                     p {
-//                         font-size: 12px !important;
+//                         font-size: 12rem !important;
 
 //                         span {
-//                             font-size: 10px !important;
+//                             font-size: 10rem !important;
 //                         }
 //                     }
 //                 }
@@ -1419,42 +1440,42 @@
 
 //         .contents {
 //             // width: 94%;
-//             // top: 77px;
+//             // top: 77rem;
 //             // left: 50%;
 //             // margin-left: -47%;
 
 //             // z-index: 999;
 //             // margin:0 auto;
-//             margin-top: -200px;
+//             margin-top: -200rem;
 
 //             .mainNet,
 //             .textNet {
 //                 .searchBox {
 //                     h3 {
-//                         font-size: 15px;
-//                         margin-bottom: 10px;
+//                         font-size: 15rem;
+//                         margin-bottom: 10rem;
 //                     }
 
 //                     .form {
-//                         width: 163px;
-//                         height: 24px;
-//                         padding: 0 10px;
+//                         width: 163rem;
+//                         height: 24rem;
+//                         padding: 0 10rem;
 //                         box-sizing: border-box;
 
 //                         input {
-//                             font-size: 10px;
+//                             font-size: 10rem;
 //                             padding-top: 0;
 //                             box-sizing: border-box;
-//                             width: 100px;
+//                             width: 100rem;
 //                         }
 
 //                         ::-webkit-input-placeholder {
-//                             font-size: 10px;
+//                             font-size: 10rem;
 //                         }
 
 //                         span {
-//                             width: 12px;
-//                             height: 13px;
+//                             width: 12rem;
+//                             height: 13rem;
 //                         }
 //                     }
 //                 }
@@ -1463,23 +1484,23 @@
 //                     margin-top: 15%;
 
 //                     .mainHead {
-//                         height: 40px;
-//                         padding-left: 12px;
+//                         height: 40rem;
+//                         padding-left: 12rem;
 //                         box-sizing: border-box;
 
 //                         i {
-//                             width: 16px;
+//                             width: 16rem;
 //                         }
 
 //                         span {
-//                             font-size: 13px;
-//                             margin: 0 5px;
+//                             font-size: 13rem;
+//                             margin: 0 5rem;
 //                             font-size: 500;
 //                         }
 
 //                         label {
-//                             font-size: 10px;
-//                             margin-top: 8px;
+//                             font-size: 10rem;
+//                             margin-top: 8rem;
 //                         }
 //                     }
 
@@ -1487,9 +1508,9 @@
 //                         table {
 //                             tr:nth-child(1) {
 //                                 th {
-//                                     border-bottom: 1.5px solid #4187fe;
-//                                     font-size: 10px;
-//                                     padding: 5px;
+//                                     border-bottom: 1.5rem solid #4187fe;
+//                                     font-size: 10rem;
+//                                     padding: 5rem;
 //                                     box-sizing: border-box;
 //                                 }
 //                             }
@@ -1505,8 +1526,8 @@
 //                             }
 
 //                             tr td {
-//                                 font-size: 8px;
-//                                 padding: 3px;
+//                                 font-size: 8rem;
+//                                 padding: 3rem;
 //                                 box-sizing: border-box;
 //                             }
 
@@ -1521,22 +1542,22 @@
 //                     }
 
 //                     .btn {
-//                         width: 150px;
-//                         height: 30px;
+//                         width: 150rem;
+//                         height: 30rem;
 
 //                         button {
-//                             font-size: 16px;
+//                             font-size: 16rem;
 //                         }
 
 //                     }
 //                 }
 
 //                 .btn {
-//                     width: 200px;
-//                     height: 45px;
+//                     width: 200rem;
+//                     height: 45rem;
 
 //                     button {
-//                         font-size: 23px;
+//                         font-size: 23rem;
 //                     }
 
 //                 }
@@ -1549,11 +1570,11 @@
 //                 margin-top: -2%;
 
 //                 .btns {
-//                     width: 150px;
-//                     height: 30px;
+//                     width: 150rem;
+//                     height: 30rem;
 
 //                     button {
-//                         font-size: 16px;
+//                         font-size: 16rem;
 //                     }
 
 //                 }
@@ -1561,9 +1582,9 @@
 //                 .blockHeightContent {
 //                     .blockHeightDeal {
 //                         h2 {
-//                             line-height: 29px;
-//                             font-size: 12px;
-//                             padding-left: 9px;
+//                             line-height: 29rem;
+//                             font-size: 12rem;
+//                             padding-left: 9rem;
 //                             box-sizing: border-box;
 //                         }
 
@@ -1572,19 +1593,19 @@
 //                                 .dealContents {
 //                                     >p {
 //                                         width: 95%;
-//                                         font-size: 10px;
-//                                         margin-top: 11px;
-//                                         margin-bottom: 13px !important;
+//                                         font-size: 10rem;
+//                                         margin-top: 11rem;
+//                                         margin-bottom: 13rem !important;
 //                                         word-wrap: break-word;
 //                                     }
 
 //                                     .dealAddress {
 //                                         >span {
-//                                             width: 15px;
-//                                             height: 12px;
+//                                             width: 15rem;
+//                                             height: 12rem;
 //                                             background: url('/img/形状复制 5@2x.png') no-repeat;
 //                                             background-size: 100% 100%;
-//                                             // margin-left: 15px;
+//                                             // margin-left: 15rem;
 //                                         }
 
 //                                         ul {
@@ -1594,26 +1615,26 @@
 //                                             margin-top: 0;
 
 //                                             p {
-//                                                 margin-right: 100px;
+//                                                 margin-right: 100rem;
 
 //                                                 span {
-//                                                     width: 59px;
-//                                                     height: 21px;
-//                                                     font-size: 10px;
-//                                                     line-height: 20px;
-//                                                     border: 1px solid rgba(19, 71, 184, 1);
+//                                                     width: 59rem;
+//                                                     height: 21rem;
+//                                                     font-size: 10rem;
+//                                                     line-height: 20rem;
+//                                                     border: 1rem solid rgba(19, 71, 184, 1);
 
 //                                                 }
 //                                             }
 
 //                                             li {
-//                                                 height: 30px;
+//                                                 height: 30rem;
 //                                                 padding: 0 !important;
 //                                                 box-sizing: border-box;
 
 //                                                 label {
-//                                                     // width: 75px;
-//                                                     font-size: 10px;
+//                                                     // width: 75rem;
+//                                                     font-size: 10rem;
 //                                                     // word-break: break-all;
 //                                                     // white-space: nowrap;
 //                                                     // overflow: hidden; 
@@ -1621,7 +1642,7 @@
 //                                                 }
 
 //                                                 span {
-//                                                     font-size: 10px;
+//                                                     font-size: 10rem;
 //                                                 }
 //                                             }
 //                                         }
@@ -1631,13 +1652,13 @@
 //                                         padding-right: 0;
 
 //                                         span {
-//                                             font-size: 10px;
+//                                             font-size: 10rem;
 
 //                                             i {
-//                                                 width: 4px;
-//                                                 height: 4px;
-//                                                 margin-right: 2px;
-//                                                 margin-top: 6px;
+//                                                 width: 4rem;
+//                                                 height: 4rem;
+//                                                 margin-right: 2rem;
+//                                                 margin-top: 6rem;
 //                                             }
 //                                         }
 //                                     }
@@ -1648,7 +1669,7 @@
 //                                 .dealContents {
 //                                     .pp {
 //                                         p {
-//                                             font-size: 14px;
+//                                             font-size: 14rem;
 //                                         }
 //                                     }
 
@@ -1660,25 +1681,25 @@
 
 //                                             li {
 //                                                 label {
-//                                                     font-size: 10px;
+//                                                     font-size: 10rem;
 //                                                     // white-space: nowrap;
 //                                                     // overflow: hidden; 
 //                                                     // text-overflow: ellipsis;
 //                                                 }
 
 //                                                 span {
-//                                                     font-size: 10px;
+//                                                     font-size: 10rem;
 //                                                 }
 //                                             }
 //                                         }
 
 //                                         >span {
-//                                             width: 15px;
-//                                             height: 12px;
-//                                             margin-top: 10px;
+//                                             width: 15rem;
+//                                             height: 12rem;
+//                                             margin-top: 10rem;
 //                                             background: url('/img/形状复制 5@2x.png') no-repeat;
 //                                             background-size: 100% 100%;
-//                                             // margin-left: 15px;
+//                                             // margin-left: 15rem;
 //                                         }
 //                                     }
 
@@ -1686,21 +1707,21 @@
 //                                         padding-right: 0;
 
 //                                         span {
-//                                             font-size: 10px;
+//                                             font-size: 10rem;
 
 //                                             i {
-//                                                 width: 4px;
-//                                                 height: 4px;
-//                                                 margin-right: 2px;
-//                                                 margin-top: 6px;
+//                                                 width: 4rem;
+//                                                 height: 4rem;
+//                                                 margin-right: 2rem;
+//                                                 margin-top: 6rem;
 //                                             }
 //                                         }
 //                                     }
 
 //                                     >p {
 //                                         width: 95%;
-//                                         font-size: 10px;
-//                                         margin-top: 10px;
+//                                         font-size: 10rem;
+//                                         margin-top: 10rem;
 //                                         margin-bottom: 0;
 //                                         word-wrap: break-word;
 //                                     }
@@ -1708,46 +1729,46 @@
 //                             }
 
 //                             .line {
-//                                 margin-top: 8px;
+//                                 margin-top: 8rem;
 //                             }
 //                         }
 //                     }
 
 //                     .blockHeightAbstract {
-//                         margin-top: 15px;
-//                         padding: 6px 0;
+//                         margin-top: 15rem;
+//                         padding: 6rem 0;
 //                         box-sizing: border-box;
 
 //                         h2 {
-//                             line-height: 29px;
-//                             font-size: 12px;
-//                             padding-left: 9px;
+//                             line-height: 29rem;
+//                             font-size: 12rem;
+//                             padding-left: 9rem;
 //                             box-sizing: border-box;
 //                         }
 
 //                         .abstract {
 //                             .abstractContent:nth-child(3) {
-//                                 margin-left: 15px;
+//                                 margin-left: 15rem;
 //                             }
 
 //                             .abstractContent {
 //                                 width: 100%;
-//                                 padding-left: 5px;
+//                                 padding-left: 5rem;
 //                                 box-sizing: border-box;
 
 //                                 p {
 //                                     width: 100%;
-//                                     height: 30px;
+//                                     height: 30rem;
 
 //                                     label {
-//                                         font-size: 10px;
+//                                         font-size: 10rem;
 //                                     }
 
 //                                     span {
 //                                         // width:90%;
 //                                         // flex: 1;
-//                                         font-size: 10px;
-//                                         // margin-left:-18px;
+//                                         font-size: 10rem;
+//                                         // margin-left:-18rem;
 //                                         // word-wrap: break-word;
 //                                         // word-break: normal;
 //                                     }
@@ -1755,7 +1776,7 @@
 //                             }
 
 //                             .line {
-//                                 height: 89px;
+//                                 height: 89rem;
 //                             }
 //                         }
 //                     }
@@ -1766,13 +1787,13 @@
 //                     margin: 0 auto;
 
 //                     button {
-//                         width: 70px;
-//                         height: 20px;
-//                         font-size: 10px;
+//                         width: 70rem;
+//                         height: 20rem;
+//                         font-size: 10rem;
 
 //                         img {
-//                             width: 7px;
-//                             margin-right: 4px;
+//                             width: 7rem;
+//                             margin-right: 4rem;
 //                         }
 //                     }
 //                 }
@@ -1783,31 +1804,31 @@
 
 //                     p:nth-child(1) {
 //                         i {
-//                             width: 18px;
-//                             height: 18px;
+//                             width: 18rem;
+//                             height: 18rem;
 //                         }
 
 //                         label {
-//                             font-size: 13px;
-//                             margin: 0 4px;
+//                             font-size: 13rem;
+//                             margin: 0 4rem;
 //                         }
 
 //                         span {
-//                             font-size: 20px;
+//                             font-size: 20rem;
 //                         }
 //                     }
 
 //                     p:nth-child(2) {
 //                         align-items: flex-start;
-//                         margin: 0 0 8px 0;
+//                         margin: 0 0 8rem 0;
 
 //                         label {
-//                             font-size: 10px;
+//                             font-size: 10rem;
 //                         }
 
 //                         span {
 //                             width: 95%;
-//                             font-size: 10px;
+//                             font-size: 10rem;
 //                             word-wrap: break-word
 //                         }
 //                     }
@@ -1815,27 +1836,27 @@
 
 //                 .form {
 //                     width: 80%;
-//                     height: 23px !important;
-//                     padding: 0 8px !important;
+//                     height: 23rem !important;
+//                     padding: 0 8rem !important;
 //                     box-sizing: border-box;
-//                     border-radius: 1px;
-//                     margin-bottom: 9px !important;
+//                     border-radius: 1rem;
+//                     margin-bottom: 9rem !important;
 //                     margin: 0 auto;
 
 //                     input {
 //                         width: 50%;
-//                         font-size: 8px !important;
-//                         padding-right: 5px !important;
+//                         font-size: 8rem !important;
+//                         padding-right: 5rem !important;
 //                         box-sizing: border-box;
 //                     }
 
 //                     ::-webkit-input-placeholder {
-//                         font-size: 8px !important;
+//                         font-size: 8rem !important;
 //                     }
 
 //                     span {
-//                         width: 12px;
-//                         height: 12px;
+//                         width: 12rem;
+//                         height: 12rem;
 //                     }
 //                 }
 //             }
@@ -1845,7 +1866,7 @@
 //             .dealBox {
 //                 .descrPrice {
 //                     span {
-//                         margin-bottom: 15px;
+//                         margin-bottom: 15rem;
 //                     }
 //                 }
 
@@ -1859,39 +1880,39 @@
 //                     >p:nth-child(2) {
 //                         width: 90%;
 //                         display: inline-block;
-//                         font-size: 10px !important;
+//                         font-size: 10rem !important;
 //                         margin: 0 !important;
-//                         margin-left: 55px !important;
-//                         margin-top: -25px !important;
+//                         margin-left: 55rem !important;
+//                         margin-top: -25rem !important;
 //                         word-wrap: break-word !important;
 //                     }
 
 //                     >p:nth-child(3) {
 //                         // width: 100%;
 //                         flex-direction: row;
-//                         margin-top: 10px;
-//                         margin-left: 15px;
+//                         margin-top: 10rem;
+//                         margin-left: 15rem;
 
 //                         label {
-//                             font-size: 10px;
+//                             font-size: 10rem;
 //                         }
 
 //                         p {
 //                             display: inline-block;
 //                             width: 90%;
 //                             word-wrap: break-word;
-//                             margin-left: 5px;
-//                             font-size: 10px;
+//                             margin-left: 5rem;
+//                             font-size: 10rem;
 //                             color: rgba(140, 183, 255, 1);
 //                         }
 //                     }
 //                 }
 
 //                 .listDEscr {
-//                     height: 44px;
+//                     height: 44rem;
 
 //                     span {
-//                         font-size: 12px;
+//                         font-size: 12rem;
 //                         padding: 0 4.5%;
 //                         box-sizing: border-box;
 //                     }
@@ -1901,18 +1922,18 @@
 //             .addressBox {
 //                 .price {
 //                     .balance {
-//                         margin-top: -10px;
+//                         margin-top: -10rem;
 //                     }
 
 //                     >p:nth-child(2) {
 //                         display: inline-block;
 //                         // width: 75%;
 //                         word-wrap: break-word;
-//                         font-size: 10px !important;
+//                         font-size: 10rem !important;
 //                     }
 
 //                     >p:nth-child(3) {
-//                         width: 40px;
+//                         width: 40rem;
 //                         margin-top: 0;
 //                     }
 //                 }
@@ -1922,25 +1943,25 @@
 //                         .abstractContent {
 //                             p {
 //                                 span {
-//                                     margin-left: -15px !important;
+//                                     margin-left: -15rem !important;
 //                                 }
 //                             }
 
 //                             >p:nth-child(1) {
 //                                 span {
 //                                     display: inline-block;
-//                                     // width: 400px!important;
-//                                     // margin-left:30px!important;
+//                                     // width: 400rem!important;
+//                                     // margin-left:30rem!important;
 //                                     word-wrap: break-word;
 //                                     word-break: normal;
-//                                     margin-left: 30px;
+//                                     margin-left: 30rem;
 //                                 }
 
 //                             }
 
 //                             // >div{
 //                             //     p:nth-child(2){
-//                             //       margin-left:5px;
+//                             //       margin-left:5rem;
 //                             //     }
 //                             // }
 //                         }
@@ -1951,7 +1972,7 @@
 //     }
 
 //     footer {
-//         height: 121px;
+//         height: 121rem;
 //         background: url('/img/Rectangle 22@2x (1).png')no-repeat;
 //         background-size: 100% 100%;
 //         position: absolute;
@@ -1964,42 +1985,42 @@
 //             .footDescr {
 //                 .developer {
 //                     h3 {
-//                         font-size: 12px;
-//                         margin-right: 15px;
+//                         font-size: 12rem;
+//                         margin-right: 15rem;
 //                     }
 
 //                     p {
-//                         margin-top: 9px;
-//                         font-size: 10px;
+//                         margin-top: 9rem;
+//                         font-size: 10rem;
 //                     }
 //                 }
 
 //                 .contact {
 //                     h3 {
-//                         font-size: 12px;
+//                         font-size: 12rem;
 
 //                     }
 
 //                     .way {
-//                         margin-top: 9px;
+//                         margin-top: 9rem;
 //                         align-items: center;
 
 //                         >div:nth-child(1) {
-//                             width: 140px;
+//                             width: 140rem;
 //                         }
 
 //                         >div {
 //                             p {
-//                                 font-size: 10px;
+//                                 font-size: 10rem;
 //                             }
 //                         }
 
 //                         div:nth-child(2) {
-//                             margin-left: 10px;
+//                             margin-left: 10rem;
 
 //                             p {
-//                                 width: 11px;
-//                                 margin-right: 6px;
+//                                 width: 11rem;
+//                                 margin-right: 6rem;
 //                             }
 
 //                         }
@@ -2008,12 +2029,12 @@
 //             }
 
 //             .footLogo {
-//                 width: 21px;
+//                 width: 21rem;
 
 //                 img:nth-child(2) {
 //                     width: 100%;
-//                     margin-top: -26px;
-//                     margin-left: 20px;
+//                     margin-top: -26rem;
+//                     margin-left: 20rem;
 //                     display: block;
 //                 }
 
@@ -2025,20 +2046,20 @@
 //     }
 // }
 
-// @media (max-width:330px) {
+// @media (max-width:330rem) {
 //     footer {
 //         .foot {
 //             width: 90%;
 
 //             .footDescr .developer {
 //                 h3 {
-//                     margin-right: 10px;
+//                     margin-right: 10rem;
 //                 }
 //             }
 
 //             .footLogo {
 //                 img:nth-child(2) {
-//                     margin-left: 15px;
+//                     margin-left: 15rem;
 //                 }
 //             }
 //         }
