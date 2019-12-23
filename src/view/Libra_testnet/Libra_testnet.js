@@ -37,10 +37,10 @@ class Libra_testnet extends Component {
     }
   }
 
-  returnStatus=(_num)=>{
-    if(_num==4001){
+  returnStatus = (_num) => {
+    if (_num == 4001) {
       return "success"
-    }else{
+    } else {
       return "failed"
     }
   }

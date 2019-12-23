@@ -1,4 +1,5 @@
 import App from "../view/app";
+import axios from "axios"
 import Libra_testnet from "../view/Libra_testnet/Libra_testnet";
 import DealBox from "../view/Libra_testnet/deal";
 import AddressBox from "../view/Libra_testnet/address";
@@ -21,6 +22,9 @@ import BTC_testnet_transaction from "../view/BTC_testnet/deal";
 import Violas from "../view/Violas/Violas";
 import Violas_version from "../view/Violas/deal";
 import Violas_address from "../view/Violas/address";
+import Currency from "../view/Violas/Currency";
+import { async } from "q";
+const wallet_api = 'http://52.27.228.84:4000';
 let routes = [
     //首页
     {
@@ -83,6 +87,10 @@ let routes = [
                 path: '/app/tBTC_address/:address',
                 component: BTC_testnet_address
             },
+            {
+                path: '/app/Currency/:module_name',
+                component: Currency
+            },
             // {
             //     path: '/app/blockHeight/:block',
             //     component: BlockHeight
@@ -126,5 +134,27 @@ let routes = [
         redirect: '/app'
     }
 ]
+
+// let currency = async _ => {
+//     let result = await axios.get(wallet_api + '/1.0/violas/currency')
+//         .then(res => { return res.data.data })
+//     return result
+// }
+
+// let addRouter = async (_currency) => {
+//     let _currency_temp=await _currency;
+//     let _routes=routes;
+//     if(_currency_temp){
+//         for(let i in _currency_temp){
+//             let temp={
+//                 path:'/app/'+_currency_temp[i].name+'/:address',
+//                 component:Violas_address
+//             }
+//             _routes[0].children.push(temp)
+//         }
+//     }
+//     return _routes
+// }
+// addRouter(currency());
 
 export default routes

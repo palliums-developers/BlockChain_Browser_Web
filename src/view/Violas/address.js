@@ -16,11 +16,11 @@ class Address extends Component {
     }
   }
   goToAddress = (address) => {
-    this.props.history.push('/app/Libra_addressBox/' + address)
+    this.props.history.push('/app/violas_address/' + address)
   }
   goToDeal = (txid) => {
     this.props.history.push({
-      pathname: '/app/Libra_dealbox/' + txid
+      pathname: '/app/Violas_version/' + txid
     })
   }
   componentDidMount() {
@@ -30,20 +30,46 @@ class Address extends Component {
     // this.props.getCurDetailsAddress({
     //   address: this.props.match.params.address
     // })
-    this.props.get_libra_address(this.props.match.params.address)
+    this.props.getViolas_address(this.props.match.params.address)
+    this.props.getCurrency();
   }
   getCurValue = (e) => {
     this.setState({
       iptValue: e.target.value
     })
   }
-
+  module2name = (_module_address) => {
+    let result = "vtoken";
+    for (let i in this.props.currency) {
+      if (_module_address == this.props.currency[i].address) {
+        result = this.props.currency[i].name.toLowerCase();
+        break;
+      }
+    }
+    return result
+  }
+  returnStatus = (_num) => {
+    if (_num == 4001) {
+      return "success"
+    } else {
+      return "failed"
+    }
+  }
   getSearch = () => {
     search_box('mainnet', this.state.iptValue, this.props)
   }
-
+  returnType = (_num) => {
+    switch (_num) {
+      case 0:
+        return "vtoken p2p";
+      case 1:
+        return "publish";
+      case 2:
+        return "stable coin p2p"
+    }
+  }
   render() {
-    let { libra_address } = this.props
+    let { violas_address } = this.props;
     return (
       <div className="violasContent">
         <ViolasHeader back="netTo"></ViolasHeader>
@@ -59,7 +85,7 @@ class Address extends Component {
                 <label>address</label>
               </p>
               <p>{this.props.match.params.address}</p>
-              <span className="balance">Banlance: {libra_address.balance} LBR</span>
+              <span className="balance">Banlance: {violas_address.balance} vtoken</span>
               <QRcode value={this.props.match.params.address}></QRcode>
             </div>
             <div className="blockHeightContent">
@@ -68,7 +94,7 @@ class Address extends Component {
                 <div className="abstract">
                   <div className="abstractContent">
                     <p><label>Address</label><span>{this.props.match.params.address}</span></p>
-                    <p><label>Banlance</label><span>{libra_address.balance} LBR</span></p>
+                    <p><label>Banlance</label><span>{violas_address.balance} vtoken</span></p>
                     {/* <p><label>Recent transactions</label><span>{txs.length}</span></p> */}
                   </div>
                 </div>
@@ -77,11 +103,12 @@ class Address extends Component {
                 <h2>Recent transactions</h2>
                 <div className="deal">
                   {
-                    libra_address.transactions && libra_address.transactions.map((item, index) => {
+                    violas_address.transactions && violas_address.transactions.map((item, index) => {
                       return <div key={index}><div className="dealContent1 dealContent2">
                         <div className="dealContents">
                           <div className="pp" onClick={() => this.goToDeal(item.version)}>
-                            <p>ID: {item.version}</p>
+                            <p>Version: {item.version}</p>
+                            <p>Type:{this.returnType(item.type)}</p>
                             <p>Time: {timeStamp2String(item.expiration_time + '000')}</p>
                           </div>
                           <div className="dealAddress">
@@ -95,7 +122,8 @@ class Address extends Component {
                             </ul>
                           </div>
                           <div className="descrPrice">
-                            <span><i></i>{item.amount} LBR</span>
+                            <p>{this.returnStatus(item.status)}</p>
+                            <span>{item.amount}{item.amount} {this.module2name(item.module_address)}</span>
                           </div>
                         </div>
 

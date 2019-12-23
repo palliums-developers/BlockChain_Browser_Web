@@ -12,29 +12,57 @@ class Violas extends Component {
     this.state = {
       changeBack: 'light',
       list: [],
-      limit: 20,
+      limit: 10,
       offset: 0,
       iptValue: ''
     }
   }
-  componentDidMount() {
+  async componentDidMount() {
     // this.props.getCurListBlock()
-    this.props.getViolas(10,0);
-    // console.log(this.props.violas_list);
+    this.props.getViolas(this.state.limit, this.state.offset);
+    this.props.getCurrency();
+    this.setState({limit:this.state.limit+10})
   }
-
+  returnType = (_num) => {
+    switch (_num) {
+      case 0:
+        return "vtoken p2p";
+      case 1:
+        return "publish";
+      case 2:
+        return "stable coin p2p"
+    }
+  }
+  returnStatus = (_num) => {
+    if (_num == 4001) {
+      return "success"
+    } else {
+      return "failed"
+    }
+  }
   getCurValue = (e) => {
     this.setState({
       iptValue: e.target.value
     })
   }
-
+  module2name = (_module_address) => {
+    let result= "vtoken";
+    for (let i in this.props.currency) {
+      if (_module_address == this.props.currency[i].address) {
+        result= this.props.currency[i].name.toLowerCase();
+        break;
+      }
+    }
+    return result
+  }
   getSearch = () => {
     search_box('mainnet', this.state.iptValue, this.props)
   }
-
+  loadMore=()=>{
+    this.setState({limit:this.state.limit+10});
+    this.props.getViolas(this.state.limit, this.state.offset);
+  }
   render() {
-    // console.log(this.props.netTableList)
     return (
       <div className='violasContent'>
         <ViolasHeader back="net"></ViolasHeader>
@@ -55,7 +83,7 @@ class Violas extends Component {
                 <table bgcolor="rgba(247, 248, 251, 1)">
                   <thead>
                     <tr>
-                    <th colSpan="2">TXID</th>
+                      <th colSpan="2">Version</th>
                       <th colSpan="3">Time</th>
                       <th colSpan="3">Currency</th>
                       <th colSpan="2">Type</th>
@@ -67,33 +95,36 @@ class Violas extends Component {
                     </tr>
                   </thead>
                   <tbody>
-                    {/* {
+                    {
                       this.props.violas_list && this.props.violas_list.map((item, index) => {
                         return <tr key={index}>
                           <td colSpan="2" onClick={() => {
-                            this.props.history.push('/app/Libra_dealbox/' + item.version)
+                            this.props.history.push('/app/Violas_version/' + item.version)
                           }}>{item.version}</td>
                           <td colSpan="3">
                             {timeStamp2String(item.expiration_time + '000')}
                           </td>
-                        <td colSpan="3">{item.currency}</td>
-                          <td colSpan="2">{this.returnType(item.transaction_type)}</td>
-                          <td colSpan="4" onClick={() => {
-                            this.props.history.push('/app/Libra_addressBox/' + item.sender)
-                          }}>{(item.sender).slice(0, 20) + '...'}</td>
-                          <td colSpan="3">{this.returnStatus(item.transaction_status)}</td>
-                          <td colSpan="4" onClick={() => {
-                            this.props.history.push('/app/Libra_addressBox/' + item.receiver)
-                          }}>{(item.receiver).slice(0, 20) + '...'}</td>
+                          <td colSpan="3" onClick={() => {
+                            this.props.history.push('/app/Currency/' + this.module2name(item.module_address).toUpperCase())
+                          }}>{this.module2name(item.module_address)}</td>
+                          <td colSpan="2">{this.returnType(item.type)}</td>
+                          <td colSpan="4" onClick={() => {item.sender&&
+                            this.props.history.push('/app/Violas_address/' + item.sender)
+                          }}>{item.sender?(item.sender).slice(0, 20) + '...':'Unparsed address'}</td>
+                          <td colSpan="3">{this.returnStatus(item.status)}</td>
+                          <td colSpan="4" onClick={() => {item.receiver&&
+                            this.props.history.push('/app/Violas_address/' + item.receiver)
+                          }}>{item.receiver?(item.receiver).slice(0, 20) + '...':'Unparsed address'}</td>
                           <td colSpan="4">{item.amount}</td>
-                          <td colSpan="2">{item.gas_fee}</td>
+                          <td colSpan="2">{item.gas}</td>
                         </tr>
                       })
-                    } */}
+                    }
                   </tbody>
                 </table>
               </div>
             </div>
+            <p onClick={this.loadMore}>load more</p>
           </div>
         </div>
       </div>

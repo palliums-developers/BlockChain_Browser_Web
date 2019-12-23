@@ -2,6 +2,7 @@
 import axios from 'axios'
 // let url = 'http://192.168.1.253:30001/open/1.0'
 // let libra_api = 'http://47.52.66.26:10080';
+const wallet_api = 'http://52.27.228.84:4000';
 const libra_api = 'http://52.27.228.84:4001/libra';
 const violas_api = 'http://52.27.228.84:4001/violas';
 const BTC_api = 'http://localhost:30001/open/1.0';
@@ -177,25 +178,25 @@ export let getBTCMainBlock = (_net, _type, _value, _limit, _offset) => {
     }
 }
 
-export let getBTCMainTx=(_net,_txid)=>{
-    return dispatch=>{
-        axios.get(BTC_api+'/search_txid?net='+_net+'&txid='+_txid).then(res=>{
+export let getBTCMainTx = (_net, _txid) => {
+    return dispatch => {
+        axios.get(BTC_api + '/search_txid?net=' + _net + '&txid=' + _txid).then(res => {
             // console.log(res)
             dispatch({
-                type:'BTC_main_txid',
-                data:res.data
+                type: 'BTC_main_txid',
+                data: res.data
             })
         })
     }
 }
 
-export let getBTCMainAddress=(_net,_address,_page)=>{
-    return dispatch=>{
-        axios.get(BTC_api+'/search_address?net='+_net+"&address="+_address+"&page="+_page).then(res=>{
+export let getBTCMainAddress = (_net, _address, _page) => {
+    return dispatch => {
+        axios.get(BTC_api + '/search_address?net=' + _net + "&address=" + _address + "&page=" + _page).then(res => {
             // console.log(res.data)
             dispatch({
-                type:'BTC_main_address',
-                data:res.data
+                type: 'BTC_main_address',
+                data: res.data
             })
         })
     }
@@ -224,63 +225,99 @@ export let getBTCTestBlock = (_net, _type, _value, _limit, _offset) => {
     }
 }
 
-export let getBTCTestTx=(_net,_txid)=>{
-    return dispatch=>{
-        axios.get(BTC_api+'/search_txid?net='+_net+'&txid='+_txid).then(res=>{
+export let getBTCTestTx = (_net, _txid) => {
+    return dispatch => {
+        axios.get(BTC_api + '/search_txid?net=' + _net + '&txid=' + _txid).then(res => {
             // console.log(res)
             dispatch({
-                type:'BTC_Test_txid',
-                data:res.data
+                type: 'BTC_Test_txid',
+                data: res.data
             })
         })
     }
 }
 
-export let getBTCTestAddress=(_net,_address,_page)=>{
-    return dispatch=>{
-        axios.get(BTC_api+'/search_address?net='+_net+"&address="+_address+"&page="+_page).then(res=>{
+export let getBTCTestAddress = (_net, _address, _page) => {
+    return dispatch => {
+        axios.get(BTC_api + '/search_address?net=' + _net + "&address=" + _address + "&page=" + _page).then(res => {
             // console.log(res.data)
             dispatch({
-                type:'BTC_Test_address',
-                data:res.data
+                type: 'BTC_Test_address',
+                data: res.data
             })
         })
     }
 }
 
-export let getViolas=(_limit,_offset)=>{
-    return dispatch=>{
+export let getViolas = (_limit, _offset) => {
+    return dispatch => {
         // console.log(violas_api+'/recent_txn?limit='+_limit+'&offset='+_offset)
-        axios.get(violas_api+'/recent_txn?limit='+_limit+'&offset='+_offset)
-        .then(res=>{
-            dispatch({
-                type:'violas_list',
-                data:res.data.data
+        axios.get(violas_api + '/recent_txn?limit=' + _limit + '&offset=' + _offset)
+            .then(res => {
+                dispatch({
+                    type: 'violas_list',
+                    data: res.data.data
+                })
             })
-        })
     }
 }
 
-export let getViolas_version=(_version)=>{
-    return dispatch=>{
-        axios.get(violas_api+'/txn_info?version='+_version)
-        .then(res=>{
-            dispatch({
-                type:'violas_version',
-                data:res.data
+export let getViolas_version = (_version) => {
+    return dispatch => {
+        axios.get(violas_api + '/txn_info?version=' + _version)
+            .then(res => {
+                dispatch({
+                    type: 'violas_version',
+                    data: res.data.data
+                })
             })
-        })
     }
 }
 
-export let getViolas_address=(_address)=>{
-    return dispatch=>{
-        axios.get(violas_api+'/address_info?address='+_address)
-        .then(res=>{
-            dispatch({
-                type:'violas_address',
-                data:res.data
+export let getViolas_address = (_address) => {
+    return dispatch => {
+        axios.get(violas_api + '/address_info?address=' + _address)
+            .then(res => {
+                dispatch({
+                    type: 'violas_address',
+                    data: res.data.data
+                })
             })
-        })
+    }
+}
+
+export let getViolas_address_module = (_module, _address) => {
+    return dispatch => {
+        axios.get(violas_api + '/address_info/' + _module + '?address=' + _address)
+            .then(res => {
+                dispatch({
+                    type: 'violas_address_module',
+                    data: res.data
+                })
+            })
+    }
+}
+
+export let getCurrency = _ => {
+    return dispatch => {
+        axios.get(wallet_api + '/1.0/violas/currency')
+            .then(res => {
+                dispatch({
+                    type: 'currency',
+                    data: res.data.data
+                })
+            })
+    }
+}
+
+export let getModuleList = (_module_address, _limit, _offset) => {
+    return dispatch => {
+        axios.get(violas_api + "/recent_txn/" + _module_address + "?limit=" + _limit + "&offset=" + _offset)
+            .then(res => {
+                dispatch({
+                    type: 'module_list',
+                    data: res.data.data
+                })
+            })
     }
 }
