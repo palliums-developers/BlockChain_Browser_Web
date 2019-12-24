@@ -72,11 +72,13 @@ class Deal extends Component {
               <span onClick={this.getSearch}></span>
             </div>
             <div className="price">
-              <p>
-                <i><img src="/img/编组 30@2x.png" /></i>
-                <label>Transaction</label>
-              </p>
-              <p>{this.props.match.params.txid}</p>
+              <div>
+                <p>
+                  <i><img src="/img/编组 30@2x.png" /></i>
+                  <label>Transaction</label>
+                </p>
+                <p>{this.props.match.params.txid}</p>
+              </div>
             </div>
             <div className="blockHeightContent">
               <div className="blockHeightAbstract">

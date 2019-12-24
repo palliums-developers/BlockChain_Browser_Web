@@ -138,8 +138,33 @@ class Violas extends Component {
                                     </tbody>
                                 </table>
                             </div>
+                            <div className="tableList">
+                                {
+                                    this.props.module_list && this.props.module_list.map((v, i) => {
+                                        return <div className="listContent" key={i}>
+                                            <p><label>Version</label><span onClick={() => {
+                                                this.props.history.push('/app/Violas_version/' + v.version)
+                                            }}>{v.version}</span></p>
+                                            <p><label>Time</label><span>{timeStamp2String(v.expiration_time + '000')}</span></p>
+                                            <p><label>Currency</label><span onClick={() => {
+                                                this.props.history.push('/app/Currency/' + this.module2name(v.module_address).toUpperCase())
+                                            }}>{this.module2name(v.module_address)}</span></p>
+                                            <p><label>Type</label><span>{this.returnType(v.type)}}</span></p>
+                                            <p><label>From</label><span onClick={() => {
+                                                v.sender && this.props.history.push('/app/Violas_address/' + v.sender)
+                                            }}>{v.sender ? (v.sender).slice(0, 20) + '...' : 'Unparsed address'}</span></p>
+                                            <p><label>Status</label><span>{this.returnStatus(v.status)}</span></p>
+                                            <p><label>To</label><span onClick={() => {
+                                                v.receiver && this.props.history.push('/app/Violas_address/' + v.receiver)
+                                            }}>{v.receiver ? (v.receiver).slice(0, 20) + '...' : 'Unparsed address'}</span></p>
+                                            <p><label>Amount</label><span>{v.amount}</span></p>
+                                            <p><label>Fee</label><span>{v.gas}</span></p>
+                                        </div>
+                                    })
+                                }
+                            </div>
                         </div>
-                        <p onClick={this.loadMore}>Load more</p>
+                        <p id="more" onClick={this.loadMore}>Load more</p>
                     </div>
                 </div>
             </div>
