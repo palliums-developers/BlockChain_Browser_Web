@@ -50,7 +50,7 @@ class Libra_testnet extends Component {
   }
 
   render() {
-    // console.log(this.props.netTableList)
+    // console.log(this.props.libra_testnet)
     return (
       <div className='libraContent'>
         <LibraHeader back="net"></LibraHeader>
@@ -107,7 +107,30 @@ class Libra_testnet extends Component {
                   </tbody>
                 </table>
               </div>
+              <div className="tableList">
+                {
+                  this.props.libra_testnet && this.props.libra_testnet.map((v, i) => {
+                    return <div className="listContent" key={i}>
+                      <p><label>TXID</label><span onClick={() => {
+                        this.props.history.push('/app/Libra_dealbox/' + v.version)
+                      }}>{v.version}</span></p>
+                      <p><label>Time</label><span>{timeStamp2String(v.expiration_time + '000')}</span></p>
+                      <p><label>Type</label><span>{this.returnType(v.transaction_type)}</span></p>
+                      <p><label>From</label><span onClick={() => {
+                        this.props.history.push('/app/Libra_addressBox/' + v.sender)
+                      }}>{(v.sender).slice(0, 20) + '...'}</span></p>
+                      <p><label>Status</label><span>{this.returnStatus(v.transaction_status)}</span></p>
+                      <p><label>To</label><span onClick={() => {
+                        this.props.history.push('/app/Libra_addressBox/' + v.receiver)
+                      }}>{(v.receiver).slice(0, 20) + '...'}</span></p>
+                      <p><label>Amount</label><span>{v.amount}</span></p>
+                      <p><label>Fee</label><span>{v.gas_fee}</span></p>
+                    </div>
+                  })
+                }
+              </div>
             </div>
+            <p id="more" onClick={this.loadMore}>load more</p>
           </div>
         </div>
       </div>

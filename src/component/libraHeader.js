@@ -33,7 +33,6 @@ class LibraHeader extends Component {
   }
   render() {
     this.addCurrencyList();
-    console.log(this.props.currency)
     return (
       <header className={this.props.back == 'net' ? "netBack" : "netToBack"}>
         <div className="head">

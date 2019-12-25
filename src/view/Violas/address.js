@@ -80,12 +80,14 @@ class Address extends Component {
               <span onClick={this.getSearch}></span>
             </div>
             <div className="price">
-              <p>
-                <i><img src="/img/address@2x.png" /></i>
-                <label>address</label>
-              </p>
-              <p>{this.props.match.params.address}</p>
-              <span className="balance">Banlance: {violas_address.balance} vtoken</span>
+             <div>
+                <p>
+                  <i><img src="/img/address@2x.png" /></i>
+                  <label>address</label>
+                </p>
+                <p>{this.props.match.params.address}</p>
+                <span className="balance">Banlance: {violas_address.balance} vtoken</span>
+             </div>
               <QRcode value={this.props.match.params.address}></QRcode>
             </div>
             <div className="blockHeightContent">
@@ -123,7 +125,7 @@ class Address extends Component {
                           </div>
                           <div className="descrPrice">
                             <p>{this.returnStatus(item.status)}</p>
-                            <span>{item.amount}{item.amount} {this.module2name(item.module_address)}</span>
+                            <span>{item.amount} {this.module2name(item.module_address)}</span>
                           </div>
                         </div>
 
