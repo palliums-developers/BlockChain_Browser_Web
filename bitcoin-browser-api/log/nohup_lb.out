@@ -2176,3 +2176,21 @@ error FetchError: request to https://apiv2.bitcoinaverage.com/indices/global/tic
     at processTicksAndRejections (internal/process/task_queues.js:93:5)
     at async Timeout._onTimeout (/home/huangw/CODING/React_project/BlockChain_Browser_Web/bitcoin-browser-api/src/lb.js:15:16)
 (node:4238) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 114)
+error FetchError: request to https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUSD failed, reason: connect ETIMEDOUT 159.203.144.149:443
+    at ClientRequest.<anonymous> (/home/huangw/CODING/React_project/BlockChain_Browser_Web/node_modules/node-fetch/lib/index.js:1455:11)
+    at ClientRequest.emit (events.js:210:5)
+    at TLSSocket.socketErrorListener (_http_client.js:406:9)
+    at TLSSocket.emit (events.js:210:5)
+    at emitErrorNT (internal/streams/destroy.js:92:8)
+    at emitErrorAndCloseNT (internal/streams/destroy.js:60:3)
+    at processTicksAndRejections (internal/process/task_queues.js:80:21) {
+  message: 'request to https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUSD failed, reason: connect ETIMEDOUT 159.203.144.149:443',
+  type: 'system',
+  errno: 'ETIMEDOUT',
+  code: 'ETIMEDOUT'
+}
+(node:4238) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'last' of undefined
+    at Object.list_block (/home/huangw/CODING/React_project/BlockChain_Browser_Web/bitcoin-browser-api/src/list_block.js:25:24)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async Timeout._onTimeout (/home/huangw/CODING/React_project/BlockChain_Browser_Web/bitcoin-browser-api/src/lb.js:15:16)
+(node:4238) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 115)
