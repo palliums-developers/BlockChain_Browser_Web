@@ -91,38 +91,6 @@ let routes = [
                 path: '/app/Currency/:module_name',
                 component: Currency
             },
-            // {
-            //     path: '/app/blockHeight/:block',
-            //     component: BlockHeight
-            // },
-            // {
-            //     path: '/app/addressBox/:address',
-            //     component: AddressBox
-            // },
-            // {
-            //     path: '/app/dealbox/:txid',
-            //     component: DealBox
-            // },
-            // {
-            //     path: '/app/pieceHash/:hash',
-            //     component: PieceHash
-            // },
-            // {
-            //     path: '/app/blockHeight1/:block',
-            //     component: BlockHeight1
-            // },
-            // {
-            //     path: '/app/addressBox1/:address',
-            //     component: AddressBox1
-            // },
-            // {
-            //     path: '/app/dealbox1/:txid',
-            //     component: DealBox1
-            // },
-            // {
-            //     path: '/app/pieceHash1/:hash',
-            //     component: PieceHash1
-            // },
             {
                 path: '/app',
                 redirect: '/app/Violas'

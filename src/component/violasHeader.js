@@ -8,6 +8,8 @@ class ViolasHeader extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      showMenuViolas: false,
+      showMenuBTC: false,
       vCoin: [
         { pathname: '/app/Currency/VTOKEN', type: 'vtoken' }
       ],
@@ -15,19 +17,41 @@ class ViolasHeader extends Component {
         { pathname: '/app/BTC', type: 'BTC' },
         { pathname: '/app/tBTC', type: 'BTC testnet' }
       ]
-    }
+    };
+    this.showMenu=this.showMenu.bind(this);
+    this.closeMenu=this.closeMenu.bind(this);
   }
-  componentDidMount(){
+  componentDidMount() {
     // this.props.getCurrency();
     // console.log(this.props.match.params.module_name)
   }
-  addCurrencyList(){
-    if(this.props.currency.length>0&&this.state.vCoin.length==1){
-      let vCoin_temp=this.state.vCoin;
-      for(let i in this.props.currency){
+  showMenu = (event) => {
+    // this.setState({ showMenuViolas: true });
+    switch (event) {
+      case 'violas':
+        this.setState({ showMenuViolas: true }, () => {
+          document.addEventListener('click', this.closeMenu);
+        });
+        break;
+      case 'BTC':
+        this.setState({showMenuBTC:true},()=>{
+          document.addEventListener('click',this.closeMenu);
+        })
+        break;
+    }
+  }
+  closeMenu = _ => {
+    this.setState({showMenuBTC:false,showMenuViolas:false},()=>{
+      document.removeEventListener('click',this.closeMenu)
+    })
+  }
+  addCurrencyList() {
+    if (this.props.currency.length > 0 && this.state.vCoin.length == 1) {
+      let vCoin_temp = this.state.vCoin;
+      for (let i in this.props.currency) {
         vCoin_temp.push({
-          pathname:'/app/Currency/'+this.props.currency[i].name,
-          type:this.props.currency[i].name.toLowerCase()
+          pathname: '/app/Currency/' + this.props.currency[i].name,
+          type: this.props.currency[i].name.toLowerCase()
         })
       }
     }
@@ -42,26 +66,20 @@ class ViolasHeader extends Component {
           </div>
           <div className="navList">
             <div className='dropdown1'>
-              <span>Violas</span>
+              <span onClick={() => this.showMenu('violas')}>Violas</span>
               <div className='dropdown-content1'>
-                {
-                  this.state.vCoin.map((v, i) => {
-                    return <NavLink
-                      to={v.pathname}
-                      activeClassName='active' key={i}>{v.type}</NavLink>
-                  })
+                {this.state.showMenuViolas ? (this.state.vCoin.map((v, i) => {
+                  return <NavLink to={v.pathname} activeClassName='active' key={i}>{v.type}</NavLink>
+                })) : (null)
                 }
               </div>
             </div>
             <div className='dropdown2'>
-              <span>BTC</span>
+              <span onClick={() => this.showMenu('BTC')}>BTC</span>
               <div className='dropdown-content2'>
-                {
-                  this.state.bCoin.map((v, i) => {
-                    return <NavLink
-                      to={v.pathname}
-                      activeClassName='active' key={i}>{v.type}</NavLink>
-                  })
+                {this.state.showMenuBTC ? (this.state.bCoin.map((v, i) => {
+                  return <NavLink to={v.pathname} activeClassName='active' key={i}>{v.type}</NavLink>
+                })) : (null)
                 }
               </div>
             </div>
@@ -73,7 +91,6 @@ class ViolasHeader extends Component {
             <img src="/img/编组 162@2x.png" />
           </div> : null
         }
-
       </header>
     );
   }

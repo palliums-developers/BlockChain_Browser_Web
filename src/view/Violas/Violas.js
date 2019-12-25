@@ -21,7 +21,7 @@ class Violas extends Component {
     // this.props.getCurListBlock()
     this.props.getViolas(this.state.limit, this.state.offset);
     this.props.getCurrency();
-    this.setState({limit:this.state.limit+10})
+    this.setState({ limit: this.state.limit + 10 })
   }
   returnType = (_num) => {
     switch (_num) {
@@ -46,10 +46,10 @@ class Violas extends Component {
     })
   }
   module2name = (_module_address) => {
-    let result= "vtoken";
+    let result = "vtoken";
     for (let i in this.props.currency) {
       if (_module_address == this.props.currency[i].address) {
-        result= this.props.currency[i].name.toLowerCase();
+        result = this.props.currency[i].name.toLowerCase();
         break;
       }
     }
@@ -58,8 +58,8 @@ class Violas extends Component {
   getSearch = () => {
     search_box('mainnet', this.state.iptValue, this.props)
   }
-  loadMore=()=>{
-    this.setState({limit:this.state.limit+10});
+  loadMore = () => {
+    this.setState({ limit: this.state.limit + 10 });
     this.props.getViolas(this.state.limit, this.state.offset);
   }
   render() {
@@ -108,13 +108,15 @@ class Violas extends Component {
                             this.props.history.push('/app/Currency/' + this.module2name(item.module_address).toUpperCase())
                           }}>{this.module2name(item.module_address)}</td>
                           <td colSpan="2">{this.returnType(item.type)}</td>
-                          <td colSpan="4" onClick={() => {item.sender&&
+                          <td colSpan="4" onClick={() => {
+                          item.sender &&
                             this.props.history.push('/app/Violas_address/' + item.sender)
-                          }}>{item.sender?(item.sender).slice(0, 30) + '...':'Unparsed address'}</td>
+                          }}>{item.sender ? (item.sender).slice(0, 30) + '...' : 'Unparsed address'}</td>
                           <td colSpan="3">{this.returnStatus(item.status)}</td>
-                          <td colSpan="4" onClick={() => {item.receiver&&
+                          <td colSpan="4" onClick={() => {
+                          item.receiver &&
                             this.props.history.push('/app/Violas_address/' + item.receiver)
-                          }}>{item.receiver?(item.receiver).slice(0, 30) + '...':'Unparsed address'}</td>
+                          }}>{item.receiver ? (item.receiver).slice(0, 30) + '...' : 'Unparsed address'}</td>
                           <td colSpan="4">{item.amount}</td>
                           <td colSpan="3">{item.gas}</td>
                         </tr>
@@ -125,7 +127,7 @@ class Violas extends Component {
               </div>
               <div className="tableList">
                 {
-                  this.props.violas_list && this.props.violas_list.map((v,i)=>{
+                  this.props.violas_list && this.props.violas_list.map((v, i) => {
                     return <div className="listContent" key={i}>
                       <p><label>Version</label><span onClick={() => {
                         this.props.history.push('/app/Violas_version/' + v.version)
@@ -143,7 +145,7 @@ class Violas extends Component {
                         v.receiver && this.props.history.push('/app/Violas_address/' + v.receiver)
                       }}>{v.receiver ? (v.receiver).slice(0, 20) + '...' : 'Unparsed address'}</span></p>
                       <p><label>Amount</label><span>{v.amount}</span></p>
-                     <p><label>Fee</label><span>{v.gas}</span></p>
+                      <p><label>Fee</label><span>{v.gas}</span></p>
                     </div>
                   })
                 }

@@ -66,6 +66,7 @@ header {
       height: 100%;
       display: flex;
       align-items: center;
+
       // margin-right:3.71rem;
       .dropdown2 {
         margin: 0 0.8rem;
@@ -79,10 +80,11 @@ header {
         align-items: center;
         position: relative;
         font-size: 0.18rem;
-        
+
         .dropdown-content1 {
           width: 1.8rem;
-          display: none;
+          display: block;
+          // display: none;
           position: absolute;
           top: 0.9rem;
           left: 0;
@@ -101,6 +103,10 @@ header {
             line-height: 0.42rem;
             text-align: center;
           }
+
+          a:hover {
+            background: RGBA(204, 222, 253, 1);
+          }
         }
 
         .dropdown-content2 {
@@ -108,7 +114,8 @@ header {
           top: 0.9rem;
           left: 0;
           background: #fff;
-          display: none;
+          display: block;
+
           a {
             display: inline-block;
             width: 100%;
@@ -119,9 +126,10 @@ header {
             line-height: 0.42rem;
             text-align: center;
           }
-        }
-        .dropdown-content2{
-            display: none;
+
+          a:hover {
+            background: RGBA(204, 222, 253, 1);
+          }
         }
 
         .activeW {
@@ -133,18 +141,10 @@ header {
         }
       }
 
-      .dropdown1:hover .dropdown-content1 {
-        display: block;
-      }
-
-      .dropdown2:hover .dropdown-content2 {
-        display: block;
-      }
-
       span,
       a {
         font-size: 0.18rem;
-        font-family: PingFangSC-Regular;
+        // font-family: PingFangSC-Regular;
         font-weight: 400;
         color: rgba(255, 255, 255, 1);
         line-height: 0.22rem;
@@ -160,67 +160,82 @@ header {
       width: 320px;
       height: 40px;
       position: relative;
-      z-index: 99;
+      z-index: 9999;
+
       .logo {
         width: 102px;
       }
+
       .navList {
+
         .dropdown1,
         .dropdown2 {
-          width:40px;
+          width: 40px;
           font-size: 10px;
-           >span{
-               border-bottom: 0;
-           }
+
+          >span {
+            border-bottom: 0;
+          }
+
           .dropdown-content1 {
-            width: 60px;
+            width: 120px;
             // line-height: 29px;
-            display: none;
-            top: 40px;
+            display: block;
+            top: 35px;
+
             a {
-                width: 100%;
-                height: 29px;
-                font-size: 12px;
-                line-height: 29px;
-            //   display: inline-block;
+              width: 60px;
+              height: 29px;
+              font-size: 12px;
+              line-height: 29px;
             }
           }
 
           .dropdown-content2 {
-            display: none;
+            display: block;
             width: 70px;
             top: 40px;
+
             a {
               width: 100%;
-              font-size:12px;
+              font-size: 12px;
               height: 29px;
               text-align: center;
               line-height: 29px;
             }
           }
         }
+
         span,
         a {
-            height: 100%;
-            font-size: 10px;
-            line-height: 10px;
-            display: flex;
-            align-items: center;
+          height: 100%;
+          font-size: 10px;
+          line-height: 10px;
+          display: flex;
+          align-items: center;
         }
       }
     }
   }
-  #wrap{
-      .contents{
-        width: 320px;
+
+  #wrap {
+    .contents {
+      width: 320px;
     }
-    .mainNet{
-        width: 320px;
-        #more{
-            width: 100px;
-            height: 30px;
-            line-height: 30px;
-            font-size: 12px;
+
+    .mainNet {
+      width: 320px;
+
+      #more {
+        width: 100px;
+        height: 30px;
+        line-height: 30px;
+        font-size: 12px;
+      }
+
+      .searchBox {
+        h3 {
+          font-size: 14px;
         }
         .searchBox{
              h3 {
@@ -241,26 +256,31 @@ header {
                  }
              }
         }
-        .mainContent{
-             .mainHead{
-                 height: 34px;
-                 i{
-                     width: 16px;
-                 }
-                 span{
-                     font-size:10px;
-                 }
-             }
-             .table{
-                  table{
-                       tr:nth-child(1){
-                            th{
-                                font-size: 10px;
-                            }
-                       }
-                  }
-             }
+      }
+
+      .mainContent {
+        .mainHead {
+          height: 34px;
+
+          i {
+            width: 16px;
+          }
+
+          span {
+            font-size: 10px;
+          }
         }
+
+        .table {
+          table {
+            tr:nth-child(1) {
+              th {
+                font-size: 10px;
+              }
+            }
+          }
+        }
+      }
     }
   }
 }
