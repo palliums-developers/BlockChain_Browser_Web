@@ -1,1762 +1,258 @@
-error { FetchError: request to https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUSD failed, reason: connect ETIMEDOUT 159.203.144.149:443
-    at ClientRequest.<anonymous> (C:\Users\user\Desktop\BlockChain_Browser_Web\node_modules\node-fetch\lib\index.js:1455:11)
-    at ClientRequest.emit (events.js:198:13)
-    at TLSSocket.socketErrorListener (_http_client.js:392:9)
-    at TLSSocket.emit (events.js:198:13)
-    at emitErrorNT (internal/streams/destroy.js:91:8)
-    at emitErrorAndCloseNT (internal/streams/destroy.js:59:3)
-    at process._tickCallback (internal/process/next_tick.js:63:19)
-  message:
-   'request to https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUSD failed, reason: connect ETIMEDOUT 159.203.144.149:443',
-  type: 'system',
-  errno: 'ETIMEDOUT',
-  code: 'ETIMEDOUT' }
-(node:1140) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'last' of undefined
-    at Object.list_block (C:\Users\user\Desktop\BlockChain_Browser_Web\bitcoin-browser-api\src\list_block.js:25:24)
-    at process._tickCallback (internal/process/next_tick.js:68:7)
-(node:1140) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 1)
-(node:1140) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
-error { FetchError: request to https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUSD failed, reason: connect ETIMEDOUT 159.203.144.149:443
-    at ClientRequest.<anonymous> (C:\Users\user\Desktop\BlockChain_Browser_Web\node_modules\node-fetch\lib\index.js:1455:11)
-    at ClientRequest.emit (events.js:198:13)
-    at TLSSocket.socketErrorListener (_http_client.js:392:9)
-    at TLSSocket.emit (events.js:198:13)
-    at emitErrorNT (internal/streams/destroy.js:91:8)
-    at emitErrorAndCloseNT (internal/streams/destroy.js:59:3)
-    at process._tickCallback (internal/process/next_tick.js:63:19)
-  message:
-   'request to https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUSD failed, reason: connect ETIMEDOUT 159.203.144.149:443',
-  type: 'system',
-  errno: 'ETIMEDOUT',
-  code: 'ETIMEDOUT' }
-(node:1140) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'last' of undefined
-    at Object.list_block (C:\Users\user\Desktop\BlockChain_Browser_Web\bitcoin-browser-api\src\list_block.js:25:24)
-    at process._tickCallback (internal/process/next_tick.js:68:7)
-(node:1140) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 2)
-error { FetchError: request to https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUSD failed, reason: connect ETIMEDOUT 159.203.144.149:443
-    at ClientRequest.<anonymous> (C:\Users\user\Desktop\BlockChain_Browser_Web\node_modules\node-fetch\lib\index.js:1455:11)
-    at ClientRequest.emit (events.js:198:13)
-    at TLSSocket.socketErrorListener (_http_client.js:392:9)
-    at TLSSocket.emit (events.js:198:13)
-    at emitErrorNT (internal/streams/destroy.js:91:8)
-    at emitErrorAndCloseNT (internal/streams/destroy.js:59:3)
-    at process._tickCallback (internal/process/next_tick.js:63:19)
-  message:
-   'request to https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUSD failed, reason: connect ETIMEDOUT 159.203.144.149:443',
-  type: 'system',
-  errno: 'ETIMEDOUT',
-  code: 'ETIMEDOUT' }
-(node:1140) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'last' of undefined
-    at Object.list_block (C:\Users\user\Desktop\BlockChain_Browser_Web\bitcoin-browser-api\src\list_block.js:25:24)
-    at process._tickCallback (internal/process/next_tick.js:68:7)
-(node:1140) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 3)
-error { FetchError: request to https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUSD failed, reason: connect ETIMEDOUT 159.203.144.149:443
-    at ClientRequest.<anonymous> (C:\Users\user\Desktop\BlockChain_Browser_Web\node_modules\node-fetch\lib\index.js:1455:11)
-    at ClientRequest.emit (events.js:198:13)
-    at TLSSocket.socketErrorListener (_http_client.js:392:9)
-    at TLSSocket.emit (events.js:198:13)
-    at emitErrorNT (internal/streams/destroy.js:91:8)
-    at emitErrorAndCloseNT (internal/streams/destroy.js:59:3)
-    at process._tickCallback (internal/process/next_tick.js:63:19)
-  message:
-   'request to https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUSD failed, reason: connect ETIMEDOUT 159.203.144.149:443',
-  type: 'system',
-  errno: 'ETIMEDOUT',
-  code: 'ETIMEDOUT' }
-(node:1140) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'last' of undefined
-    at Object.list_block (C:\Users\user\Desktop\BlockChain_Browser_Web\bitcoin-browser-api\src\list_block.js:25:24)
-    at process._tickCallback (internal/process/next_tick.js:68:7)
-(node:1140) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 4)
-error { FetchError: request to https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUSD failed, reason: connect ETIMEDOUT 159.203.144.149:443
-    at ClientRequest.<anonymous> (C:\Users\user\Desktop\BlockChain_Browser_Web\node_modules\node-fetch\lib\index.js:1455:11)
-    at ClientRequest.emit (events.js:198:13)
-    at TLSSocket.socketErrorListener (_http_client.js:392:9)
-    at TLSSocket.emit (events.js:198:13)
-    at emitErrorNT (internal/streams/destroy.js:91:8)
-    at emitErrorAndCloseNT (internal/streams/destroy.js:59:3)
-    at process._tickCallback (internal/process/next_tick.js:63:19)
-  message:
-   'request to https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUSD failed, reason: connect ETIMEDOUT 159.203.144.149:443',
-  type: 'system',
-  errno: 'ETIMEDOUT',
-  code: 'ETIMEDOUT' }
-(node:1140) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'last' of undefined
-    at Object.list_block (C:\Users\user\Desktop\BlockChain_Browser_Web\bitcoin-browser-api\src\list_block.js:25:24)
-    at process._tickCallback (internal/process/next_tick.js:68:7)
-(node:1140) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 5)
-error { FetchError: request to https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUSD failed, reason: connect ETIMEDOUT 159.203.144.149:443
-    at ClientRequest.<anonymous> (C:\Users\user\Desktop\BlockChain_Browser_Web\node_modules\node-fetch\lib\index.js:1455:11)
-    at ClientRequest.emit (events.js:198:13)
-    at TLSSocket.socketErrorListener (_http_client.js:392:9)
-    at TLSSocket.emit (events.js:198:13)
-    at emitErrorNT (internal/streams/destroy.js:91:8)
-    at emitErrorAndCloseNT (internal/streams/destroy.js:59:3)
-    at process._tickCallback (internal/process/next_tick.js:63:19)
-  message:
-   'request to https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUSD failed, reason: connect ETIMEDOUT 159.203.144.149:443',
-  type: 'system',
-  errno: 'ETIMEDOUT',
-  code: 'ETIMEDOUT' }
-(node:1140) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'last' of undefined
-    at Object.list_block (C:\Users\user\Desktop\BlockChain_Browser_Web\bitcoin-browser-api\src\list_block.js:25:24)
-    at process._tickCallback (internal/process/next_tick.js:68:7)
-(node:1140) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 6)
-error { Error: ESOCKETTIMEDOUT
-    at ClientRequest.<anonymous> (C:\Users\user\Desktop\BlockChain_Browser_Web\node_modules\request\request.js:816:19)
-    at Object.onceWrapper (events.js:286:20)
-    at ClientRequest.emit (events.js:198:13)
-    at Socket.emitRequestTimeout (_http_client.js:662:40)
-    at Object.onceWrapper (events.js:286:20)
-    at Socket.emit (events.js:198:13)
-    at Socket._onTimeout (net.js:442:8)
-    at ontimeout (timers.js:436:11)
-    at tryOnTimeout (timers.js:300:5)
-    at listOnTimeout (timers.js:263:5) code: 'ESOCKETTIMEDOUT', connect: false }
-(node:1140) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'height' of undefined
-    at list_some_block_info (C:\Users\user\Desktop\BlockChain_Browser_Web\bitcoin-browser-api\src\list_block.js:10:26)
-    at process._tickCallback (internal/process/next_tick.js:68:7)
-(node:1140) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 7)
-error { Error: ESOCKETTIMEDOUT
-    at ClientRequest.<anonymous> (C:\Users\user\Desktop\BlockChain_Browser_Web\node_modules\request\request.js:816:19)
-    at Object.onceWrapper (events.js:286:20)
-    at ClientRequest.emit (events.js:198:13)
-    at Socket.emitRequestTimeout (_http_client.js:662:40)
-    at Object.onceWrapper (events.js:286:20)
-    at Socket.emit (events.js:198:13)
-    at Socket._onTimeout (net.js:442:8)
-    at ontimeout (timers.js:436:11)
-    at tryOnTimeout (timers.js:300:5)
-    at listOnTimeout (timers.js:263:5) code: 'ESOCKETTIMEDOUT', connect: false }
-(node:1140) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'height' of undefined
-    at list_some_block_info (C:\Users\user\Desktop\BlockChain_Browser_Web\bitcoin-browser-api\src\list_block.js:10:26)
-    at process._tickCallback (internal/process/next_tick.js:68:7)
-(node:1140) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 8)
-error { Error: ESOCKETTIMEDOUT
-    at ClientRequest.<anonymous> (C:\Users\user\Desktop\BlockChain_Browser_Web\node_modules\request\request.js:816:19)
-    at Object.onceWrapper (events.js:286:20)
-    at ClientRequest.emit (events.js:198:13)
-    at Socket.emitRequestTimeout (_http_client.js:662:40)
-    at Object.onceWrapper (events.js:286:20)
-    at Socket.emit (events.js:198:13)
-    at Socket._onTimeout (net.js:442:8)
-    at ontimeout (timers.js:436:11)
-    at tryOnTimeout (timers.js:300:5)
-    at listOnTimeout (timers.js:263:5) code: 'ESOCKETTIMEDOUT', connect: false }
-(node:1140) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'height' of undefined
-    at list_some_block_info (C:\Users\user\Desktop\BlockChain_Browser_Web\bitcoin-browser-api\src\list_block.js:10:26)
-    at process._tickCallback (internal/process/next_tick.js:68:7)
-(node:1140) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 9)
-error { FetchError: request to https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUSD failed, reason: connect ETIMEDOUT 159.203.144.149:443
-    at ClientRequest.<anonymous> (C:\Users\user\Desktop\BlockChain_Browser_Web\node_modules\node-fetch\lib\index.js:1455:11)
-    at ClientRequest.emit (events.js:198:13)
-    at TLSSocket.socketErrorListener (_http_client.js:392:9)
-    at TLSSocket.emit (events.js:198:13)
-    at emitErrorNT (internal/streams/destroy.js:91:8)
-    at emitErrorAndCloseNT (internal/streams/destroy.js:59:3)
-    at process._tickCallback (internal/process/next_tick.js:63:19)
-  message:
-   'request to https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUSD failed, reason: connect ETIMEDOUT 159.203.144.149:443',
-  type: 'system',
-  errno: 'ETIMEDOUT',
-  code: 'ETIMEDOUT' }
-(node:1140) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'last' of undefined
-    at Object.list_block (C:\Users\user\Desktop\BlockChain_Browser_Web\bitcoin-browser-api\src\list_block.js:25:24)
-    at process._tickCallback (internal/process/next_tick.js:68:7)
-(node:1140) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 10)
-error { FetchError: request to https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUSD failed, reason: connect ETIMEDOUT 159.203.144.149:443
-    at ClientRequest.<anonymous> (C:\Users\user\Desktop\BlockChain_Browser_Web\node_modules\node-fetch\lib\index.js:1455:11)
-    at ClientRequest.emit (events.js:198:13)
-    at TLSSocket.socketErrorListener (_http_client.js:392:9)
-    at TLSSocket.emit (events.js:198:13)
-    at emitErrorNT (internal/streams/destroy.js:91:8)
-    at emitErrorAndCloseNT (internal/streams/destroy.js:59:3)
-    at process._tickCallback (internal/process/next_tick.js:63:19)
-  message:
-   'request to https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUSD failed, reason: connect ETIMEDOUT 159.203.144.149:443',
-  type: 'system',
-  errno: 'ETIMEDOUT',
-  code: 'ETIMEDOUT' }
-(node:1140) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'last' of undefined
-    at Object.list_block (C:\Users\user\Desktop\BlockChain_Browser_Web\bitcoin-browser-api\src\list_block.js:25:24)
-    at process._tickCallback (internal/process/next_tick.js:68:7)
-(node:1140) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 11)
-error { FetchError: request to https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUSD failed, reason: connect ETIMEDOUT 159.203.144.149:443
-    at ClientRequest.<anonymous> (C:\Users\user\Desktop\BlockChain_Browser_Web\node_modules\node-fetch\lib\index.js:1455:11)
-    at ClientRequest.emit (events.js:198:13)
-    at TLSSocket.socketErrorListener (_http_client.js:392:9)
-    at TLSSocket.emit (events.js:198:13)
-    at emitErrorNT (internal/streams/destroy.js:91:8)
-    at emitErrorAndCloseNT (internal/streams/destroy.js:59:3)
-    at process._tickCallback (internal/process/next_tick.js:63:19)
-  message:
-   'request to https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUSD failed, reason: connect ETIMEDOUT 159.203.144.149:443',
-  type: 'system',
-  errno: 'ETIMEDOUT',
-  code: 'ETIMEDOUT' }
-(node:1140) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'last' of undefined
-    at Object.list_block (C:\Users\user\Desktop\BlockChain_Browser_Web\bitcoin-browser-api\src\list_block.js:25:24)
-    at process._tickCallback (internal/process/next_tick.js:68:7)
-(node:1140) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 12)
-error { Error: ESOCKETTIMEDOUT
-    at ClientRequest.<anonymous> (C:\Users\user\Desktop\BlockChain_Browser_Web\node_modules\request\request.js:816:19)
-    at Object.onceWrapper (events.js:286:20)
-    at ClientRequest.emit (events.js:198:13)
-    at Socket.emitRequestTimeout (_http_client.js:662:40)
-    at Object.onceWrapper (events.js:286:20)
-    at Socket.emit (events.js:198:13)
-    at Socket._onTimeout (net.js:442:8)
-    at ontimeout (timers.js:436:11)
-    at tryOnTimeout (timers.js:300:5)
-    at listOnTimeout (timers.js:263:5) code: 'ESOCKETTIMEDOUT', connect: false }
-(node:1140) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'height' of undefined
-    at list_some_block_info (C:\Users\user\Desktop\BlockChain_Browser_Web\bitcoin-browser-api\src\list_block.js:10:26)
-    at process._tickCallback (internal/process/next_tick.js:68:7)
-(node:1140) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 13)
-error { Error: ESOCKETTIMEDOUT
-    at ClientRequest.<anonymous> (C:\Users\user\Desktop\BlockChain_Browser_Web\node_modules\request\request.js:816:19)
-    at Object.onceWrapper (events.js:286:20)
-    at ClientRequest.emit (events.js:198:13)
-    at Socket.emitRequestTimeout (_http_client.js:662:40)
-    at Object.onceWrapper (events.js:286:20)
-    at Socket.emit (events.js:198:13)
-    at Socket._onTimeout (net.js:442:8)
-    at ontimeout (timers.js:436:11)
-    at tryOnTimeout (timers.js:300:5)
-    at listOnTimeout (timers.js:263:5) code: 'ESOCKETTIMEDOUT', connect: false }
-(node:1140) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'tx' of undefined
-    at Object.getBlockHashProfit (C:\Users\user\Desktop\BlockChain_Browser_Web\bitcoin-browser-api\src\bitcoin-core-function.js:82:48)
-    at process._tickCallback (internal/process/next_tick.js:68:7)
-(node:1140) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 14)
-error { Error: ESOCKETTIMEDOUT
-    at ClientRequest.<anonymous> (C:\Users\user\Desktop\BlockChain_Browser_Web\node_modules\request\request.js:816:19)
-    at Object.onceWrapper (events.js:286:20)
-    at ClientRequest.emit (events.js:198:13)
-    at Socket.emitRequestTimeout (_http_client.js:662:40)
-    at Object.onceWrapper (events.js:286:20)
-    at Socket.emit (events.js:198:13)
-    at Socket._onTimeout (net.js:442:8)
-    at ontimeout (timers.js:436:11)
-    at tryOnTimeout (timers.js:300:5)
-    at listOnTimeout (timers.js:263:5) code: 'ESOCKETTIMEDOUT', connect: false }
-(node:1140) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'height' of undefined
-    at list_some_block_info (C:\Users\user\Desktop\BlockChain_Browser_Web\bitcoin-browser-api\src\list_block.js:10:26)
-    at process._tickCallback (internal/process/next_tick.js:68:7)
-(node:1140) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 15)
-error { FetchError: request to https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUSD failed, reason: connect ETIMEDOUT 159.203.144.149:443
-    at ClientRequest.<anonymous> (C:\Users\user\Desktop\BlockChain_Browser_Web\node_modules\node-fetch\lib\index.js:1455:11)
-    at ClientRequest.emit (events.js:198:13)
-    at TLSSocket.socketErrorListener (_http_client.js:392:9)
-    at TLSSocket.emit (events.js:198:13)
-    at emitErrorNT (internal/streams/destroy.js:91:8)
-    at emitErrorAndCloseNT (internal/streams/destroy.js:59:3)
-    at process._tickCallback (internal/process/next_tick.js:63:19)
-  message:
-   'request to https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUSD failed, reason: connect ETIMEDOUT 159.203.144.149:443',
-  type: 'system',
-  errno: 'ETIMEDOUT',
-  code: 'ETIMEDOUT' }
-(node:1140) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'last' of undefined
-    at Object.list_block (C:\Users\user\Desktop\BlockChain_Browser_Web\bitcoin-browser-api\src\list_block.js:25:24)
-    at process._tickCallback (internal/process/next_tick.js:68:7)
-(node:1140) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 16)
-error { FetchError: request to https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUSD failed, reason: connect ETIMEDOUT 159.203.144.149:443
-    at ClientRequest.<anonymous> (C:\Users\user\Desktop\BlockChain_Browser_Web\node_modules\node-fetch\lib\index.js:1455:11)
-    at ClientRequest.emit (events.js:198:13)
-    at TLSSocket.socketErrorListener (_http_client.js:392:9)
-    at TLSSocket.emit (events.js:198:13)
-    at emitErrorNT (internal/streams/destroy.js:91:8)
-    at emitErrorAndCloseNT (internal/streams/destroy.js:59:3)
-    at process._tickCallback (internal/process/next_tick.js:63:19)
-  message:
-   'request to https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUSD failed, reason: connect ETIMEDOUT 159.203.144.149:443',
-  type: 'system',
-  errno: 'ETIMEDOUT',
-  code: 'ETIMEDOUT' }
-(node:1140) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'last' of undefined
-    at Object.list_block (C:\Users\user\Desktop\BlockChain_Browser_Web\bitcoin-browser-api\src\list_block.js:25:24)
-    at process._tickCallback (internal/process/next_tick.js:68:7)
-(node:1140) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 17)
-error { FetchError: request to https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUSD failed, reason: connect ETIMEDOUT 159.203.144.149:443
-    at ClientRequest.<anonymous> (C:\Users\user\Desktop\BlockChain_Browser_Web\node_modules\node-fetch\lib\index.js:1455:11)
-    at ClientRequest.emit (events.js:198:13)
-    at TLSSocket.socketErrorListener (_http_client.js:392:9)
-    at TLSSocket.emit (events.js:198:13)
-    at emitErrorNT (internal/streams/destroy.js:91:8)
-    at emitErrorAndCloseNT (internal/streams/destroy.js:59:3)
-    at process._tickCallback (internal/process/next_tick.js:63:19)
-  message:
-   'request to https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUSD failed, reason: connect ETIMEDOUT 159.203.144.149:443',
-  type: 'system',
-  errno: 'ETIMEDOUT',
-  code: 'ETIMEDOUT' }
-(node:1140) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'last' of undefined
-    at Object.list_block (C:\Users\user\Desktop\BlockChain_Browser_Web\bitcoin-browser-api\src\list_block.js:25:24)
-    at process._tickCallback (internal/process/next_tick.js:68:7)
-(node:1140) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 18)
-error { FetchError: request to https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUSD failed, reason: connect ETIMEDOUT 159.203.144.149:443
-    at ClientRequest.<anonymous> (C:\Users\user\Desktop\BlockChain_Browser_Web\node_modules\node-fetch\lib\index.js:1455:11)
-    at ClientRequest.emit (events.js:198:13)
-    at TLSSocket.socketErrorListener (_http_client.js:392:9)
-    at TLSSocket.emit (events.js:198:13)
-    at emitErrorNT (internal/streams/destroy.js:91:8)
-    at emitErrorAndCloseNT (internal/streams/destroy.js:59:3)
-    at process._tickCallback (internal/process/next_tick.js:63:19)
-  message:
-   'request to https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUSD failed, reason: connect ETIMEDOUT 159.203.144.149:443',
-  type: 'system',
-  errno: 'ETIMEDOUT',
-  code: 'ETIMEDOUT' }
-(node:1140) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'last' of undefined
-    at Object.list_block (C:\Users\user\Desktop\BlockChain_Browser_Web\bitcoin-browser-api\src\list_block.js:25:24)
-    at process._tickCallback (internal/process/next_tick.js:68:7)
-(node:1140) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 19)
-error { FetchError: request to https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUSD failed, reason: connect ETIMEDOUT 159.203.144.149:443
-    at ClientRequest.<anonymous> (C:\Users\user\Desktop\BlockChain_Browser_Web\node_modules\node-fetch\lib\index.js:1455:11)
-    at ClientRequest.emit (events.js:198:13)
-    at TLSSocket.socketErrorListener (_http_client.js:392:9)
-    at TLSSocket.emit (events.js:198:13)
-    at emitErrorNT (internal/streams/destroy.js:91:8)
-    at emitErrorAndCloseNT (internal/streams/destroy.js:59:3)
-    at process._tickCallback (internal/process/next_tick.js:63:19)
-  message:
-   'request to https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUSD failed, reason: connect ETIMEDOUT 159.203.144.149:443',
-  type: 'system',
-  errno: 'ETIMEDOUT',
-  code: 'ETIMEDOUT' }
-(node:1140) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'last' of undefined
-    at Object.list_block (C:\Users\user\Desktop\BlockChain_Browser_Web\bitcoin-browser-api\src\list_block.js:25:24)
-    at process._tickCallback (internal/process/next_tick.js:68:7)
-(node:1140) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 20)
-error { FetchError: request to https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUSD failed, reason: connect ETIMEDOUT 159.203.144.149:443
-    at ClientRequest.<anonymous> (C:\Users\user\Desktop\BlockChain_Browser_Web\node_modules\node-fetch\lib\index.js:1455:11)
-    at ClientRequest.emit (events.js:198:13)
-    at TLSSocket.socketErrorListener (_http_client.js:392:9)
-    at TLSSocket.emit (events.js:198:13)
-    at emitErrorNT (internal/streams/destroy.js:91:8)
-    at emitErrorAndCloseNT (internal/streams/destroy.js:59:3)
-    at process._tickCallback (internal/process/next_tick.js:63:19)
-  message:
-   'request to https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUSD failed, reason: connect ETIMEDOUT 159.203.144.149:443',
-  type: 'system',
-  errno: 'ETIMEDOUT',
-  code: 'ETIMEDOUT' }
-(node:1140) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'last' of undefined
-    at Object.list_block (C:\Users\user\Desktop\BlockChain_Browser_Web\bitcoin-browser-api\src\list_block.js:25:24)
-    at process._tickCallback (internal/process/next_tick.js:68:7)
-(node:1140) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 21)
-error { FetchError: request to https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUSD failed, reason: connect ETIMEDOUT 159.203.144.149:443
-    at ClientRequest.<anonymous> (C:\Users\user\Desktop\BlockChain_Browser_Web\node_modules\node-fetch\lib\index.js:1455:11)
-    at ClientRequest.emit (events.js:198:13)
-    at TLSSocket.socketErrorListener (_http_client.js:392:9)
-    at TLSSocket.emit (events.js:198:13)
-    at emitErrorNT (internal/streams/destroy.js:91:8)
-    at emitErrorAndCloseNT (internal/streams/destroy.js:59:3)
-    at process._tickCallback (internal/process/next_tick.js:63:19)
-  message:
-   'request to https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUSD failed, reason: connect ETIMEDOUT 159.203.144.149:443',
-  type: 'system',
-  errno: 'ETIMEDOUT',
-  code: 'ETIMEDOUT' }
-(node:1140) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'last' of undefined
-    at Object.list_block (C:\Users\user\Desktop\BlockChain_Browser_Web\bitcoin-browser-api\src\list_block.js:25:24)
-    at process._tickCallback (internal/process/next_tick.js:68:7)
-(node:1140) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 22)
-error { FetchError: request to https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUSD failed, reason: connect ETIMEDOUT 159.203.144.149:443
-    at ClientRequest.<anonymous> (C:\Users\user\Desktop\BlockChain_Browser_Web\node_modules\node-fetch\lib\index.js:1455:11)
-    at ClientRequest.emit (events.js:198:13)
-    at TLSSocket.socketErrorListener (_http_client.js:392:9)
-    at TLSSocket.emit (events.js:198:13)
-    at emitErrorNT (internal/streams/destroy.js:91:8)
-    at emitErrorAndCloseNT (internal/streams/destroy.js:59:3)
-    at process._tickCallback (internal/process/next_tick.js:63:19)
-  message:
-   'request to https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUSD failed, reason: connect ETIMEDOUT 159.203.144.149:443',
-  type: 'system',
-  errno: 'ETIMEDOUT',
-  code: 'ETIMEDOUT' }
-(node:1140) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'last' of undefined
-    at Object.list_block (C:\Users\user\Desktop\BlockChain_Browser_Web\bitcoin-browser-api\src\list_block.js:25:24)
-    at process._tickCallback (internal/process/next_tick.js:68:7)
-(node:1140) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 23)
-error { FetchError: request to https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUSD failed, reason: connect ETIMEDOUT 159.203.144.149:443
-    at ClientRequest.<anonymous> (C:\Users\user\Desktop\BlockChain_Browser_Web\node_modules\node-fetch\lib\index.js:1455:11)
-    at ClientRequest.emit (events.js:198:13)
-    at TLSSocket.socketErrorListener (_http_client.js:392:9)
-    at TLSSocket.emit (events.js:198:13)
-    at emitErrorNT (internal/streams/destroy.js:91:8)
-    at emitErrorAndCloseNT (internal/streams/destroy.js:59:3)
-    at process._tickCallback (internal/process/next_tick.js:63:19)
-  message:
-   'request to https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUSD failed, reason: connect ETIMEDOUT 159.203.144.149:443',
-  type: 'system',
-  errno: 'ETIMEDOUT',
-  code: 'ETIMEDOUT' }
-(node:1140) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'last' of undefined
-    at Object.list_block (C:\Users\user\Desktop\BlockChain_Browser_Web\bitcoin-browser-api\src\list_block.js:25:24)
-    at process._tickCallback (internal/process/next_tick.js:68:7)
-(node:1140) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 24)
-error { FetchError: request to https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUSD failed, reason: connect ETIMEDOUT 159.203.144.149:443
-    at ClientRequest.<anonymous> (C:\Users\user\Desktop\BlockChain_Browser_Web\node_modules\node-fetch\lib\index.js:1455:11)
-    at ClientRequest.emit (events.js:198:13)
-    at TLSSocket.socketErrorListener (_http_client.js:392:9)
-    at TLSSocket.emit (events.js:198:13)
-    at emitErrorNT (internal/streams/destroy.js:91:8)
-    at emitErrorAndCloseNT (internal/streams/destroy.js:59:3)
-    at process._tickCallback (internal/process/next_tick.js:63:19)
-  message:
-   'request to https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUSD failed, reason: connect ETIMEDOUT 159.203.144.149:443',
-  type: 'system',
-  errno: 'ETIMEDOUT',
-  code: 'ETIMEDOUT' }
-(node:1140) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'last' of undefined
-    at Object.list_block (C:\Users\user\Desktop\BlockChain_Browser_Web\bitcoin-browser-api\src\list_block.js:25:24)
-    at process._tickCallback (internal/process/next_tick.js:68:7)
-(node:1140) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 25)
-error { FetchError: request to https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUSD failed, reason: connect ETIMEDOUT 159.203.144.149:443
-    at ClientRequest.<anonymous> (C:\Users\user\Desktop\BlockChain_Browser_Web\node_modules\node-fetch\lib\index.js:1455:11)
-    at ClientRequest.emit (events.js:198:13)
-    at TLSSocket.socketErrorListener (_http_client.js:392:9)
-    at TLSSocket.emit (events.js:198:13)
-    at emitErrorNT (internal/streams/destroy.js:91:8)
-    at emitErrorAndCloseNT (internal/streams/destroy.js:59:3)
-    at process._tickCallback (internal/process/next_tick.js:63:19)
-  message:
-   'request to https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUSD failed, reason: connect ETIMEDOUT 159.203.144.149:443',
-  type: 'system',
-  errno: 'ETIMEDOUT',
-  code: 'ETIMEDOUT' }
-(node:1140) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'last' of undefined
-    at Object.list_block (C:\Users\user\Desktop\BlockChain_Browser_Web\bitcoin-browser-api\src\list_block.js:25:24)
-    at process._tickCallback (internal/process/next_tick.js:68:7)
-(node:1140) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 26)
-error { FetchError: request to https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUSD failed, reason: connect ETIMEDOUT 159.203.144.149:443
-    at ClientRequest.<anonymous> (C:\Users\user\Desktop\BlockChain_Browser_Web\node_modules\node-fetch\lib\index.js:1455:11)
-    at ClientRequest.emit (events.js:198:13)
-    at TLSSocket.socketErrorListener (_http_client.js:392:9)
-    at TLSSocket.emit (events.js:198:13)
-    at emitErrorNT (internal/streams/destroy.js:91:8)
-    at emitErrorAndCloseNT (internal/streams/destroy.js:59:3)
-    at process._tickCallback (internal/process/next_tick.js:63:19)
-  message:
-   'request to https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUSD failed, reason: connect ETIMEDOUT 159.203.144.149:443',
-  type: 'system',
-  errno: 'ETIMEDOUT',
-  code: 'ETIMEDOUT' }
-(node:1140) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'last' of undefined
-    at Object.list_block (C:\Users\user\Desktop\BlockChain_Browser_Web\bitcoin-browser-api\src\list_block.js:25:24)
-    at process._tickCallback (internal/process/next_tick.js:68:7)
-(node:1140) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 27)
-error { FetchError: request to https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUSD failed, reason: connect ETIMEDOUT 159.203.144.149:443
-    at ClientRequest.<anonymous> (C:\Users\user\Desktop\BlockChain_Browser_Web\node_modules\node-fetch\lib\index.js:1455:11)
-    at ClientRequest.emit (events.js:198:13)
-    at TLSSocket.socketErrorListener (_http_client.js:392:9)
-    at TLSSocket.emit (events.js:198:13)
-    at emitErrorNT (internal/streams/destroy.js:91:8)
-    at emitErrorAndCloseNT (internal/streams/destroy.js:59:3)
-    at process._tickCallback (internal/process/next_tick.js:63:19)
-  message:
-   'request to https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUSD failed, reason: connect ETIMEDOUT 159.203.144.149:443',
-  type: 'system',
-  errno: 'ETIMEDOUT',
-  code: 'ETIMEDOUT' }
-(node:1140) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'last' of undefined
-    at Object.list_block (C:\Users\user\Desktop\BlockChain_Browser_Web\bitcoin-browser-api\src\list_block.js:25:24)
-    at process._tickCallback (internal/process/next_tick.js:68:7)
-(node:1140) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 28)
-error { FetchError: request to https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUSD failed, reason: connect ETIMEDOUT 159.203.144.149:443
-    at ClientRequest.<anonymous> (C:\Users\user\Desktop\BlockChain_Browser_Web\node_modules\node-fetch\lib\index.js:1455:11)
-    at ClientRequest.emit (events.js:198:13)
-    at TLSSocket.socketErrorListener (_http_client.js:392:9)
-    at TLSSocket.emit (events.js:198:13)
-    at emitErrorNT (internal/streams/destroy.js:91:8)
-    at emitErrorAndCloseNT (internal/streams/destroy.js:59:3)
-    at process._tickCallback (internal/process/next_tick.js:63:19)
-  message:
-   'request to https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUSD failed, reason: connect ETIMEDOUT 159.203.144.149:443',
-  type: 'system',
-  errno: 'ETIMEDOUT',
-  code: 'ETIMEDOUT' }
-(node:1140) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'last' of undefined
-    at Object.list_block (C:\Users\user\Desktop\BlockChain_Browser_Web\bitcoin-browser-api\src\list_block.js:25:24)
-    at process._tickCallback (internal/process/next_tick.js:68:7)
-(node:1140) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 29)
-error { FetchError: request to https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUSD failed, reason: connect ETIMEDOUT 159.203.144.149:443
-    at ClientRequest.<anonymous> (C:\Users\user\Desktop\BlockChain_Browser_Web\node_modules\node-fetch\lib\index.js:1455:11)
-    at ClientRequest.emit (events.js:198:13)
-    at TLSSocket.socketErrorListener (_http_client.js:392:9)
-    at TLSSocket.emit (events.js:198:13)
-    at emitErrorNT (internal/streams/destroy.js:91:8)
-    at emitErrorAndCloseNT (internal/streams/destroy.js:59:3)
-    at process._tickCallback (internal/process/next_tick.js:63:19)
-  message:
-   'request to https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUSD failed, reason: connect ETIMEDOUT 159.203.144.149:443',
-  type: 'system',
-  errno: 'ETIMEDOUT',
-  code: 'ETIMEDOUT' }
-(node:1140) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'last' of undefined
-    at Object.list_block (C:\Users\user\Desktop\BlockChain_Browser_Web\bitcoin-browser-api\src\list_block.js:25:24)
-    at process._tickCallback (internal/process/next_tick.js:68:7)
-(node:1140) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 30)
-error { FetchError: request to https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUSD failed, reason: connect ETIMEDOUT 159.203.144.149:443
-    at ClientRequest.<anonymous> (C:\Users\user\Desktop\BlockChain_Browser_Web\node_modules\node-fetch\lib\index.js:1455:11)
-    at ClientRequest.emit (events.js:198:13)
-    at TLSSocket.socketErrorListener (_http_client.js:392:9)
-    at TLSSocket.emit (events.js:198:13)
-    at emitErrorNT (internal/streams/destroy.js:91:8)
-    at emitErrorAndCloseNT (internal/streams/destroy.js:59:3)
-    at process._tickCallback (internal/process/next_tick.js:63:19)
-  message:
-   'request to https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUSD failed, reason: connect ETIMEDOUT 159.203.144.149:443',
-  type: 'system',
-  errno: 'ETIMEDOUT',
-  code: 'ETIMEDOUT' }
-(node:1140) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'last' of undefined
-    at Object.list_block (C:\Users\user\Desktop\BlockChain_Browser_Web\bitcoin-browser-api\src\list_block.js:25:24)
-    at process._tickCallback (internal/process/next_tick.js:68:7)
-(node:1140) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 31)
-error { FetchError: request to https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUSD failed, reason: connect ETIMEDOUT 159.203.144.149:443
-    at ClientRequest.<anonymous> (C:\Users\user\Desktop\BlockChain_Browser_Web\node_modules\node-fetch\lib\index.js:1455:11)
-    at ClientRequest.emit (events.js:198:13)
-    at TLSSocket.socketErrorListener (_http_client.js:392:9)
-    at TLSSocket.emit (events.js:198:13)
-    at emitErrorNT (internal/streams/destroy.js:91:8)
-    at emitErrorAndCloseNT (internal/streams/destroy.js:59:3)
-    at process._tickCallback (internal/process/next_tick.js:63:19)
-  message:
-   'request to https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUSD failed, reason: connect ETIMEDOUT 159.203.144.149:443',
-  type: 'system',
-  errno: 'ETIMEDOUT',
-  code: 'ETIMEDOUT' }
-(node:1140) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'last' of undefined
-    at Object.list_block (C:\Users\user\Desktop\BlockChain_Browser_Web\bitcoin-browser-api\src\list_block.js:25:24)
-    at process._tickCallback (internal/process/next_tick.js:68:7)
-(node:1140) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 32)
-error { FetchError: request to https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUSD failed, reason: connect ETIMEDOUT 159.203.144.149:443
-    at ClientRequest.<anonymous> (C:\Users\user\Desktop\BlockChain_Browser_Web\node_modules\node-fetch\lib\index.js:1455:11)
-    at ClientRequest.emit (events.js:198:13)
-    at TLSSocket.socketErrorListener (_http_client.js:392:9)
-    at TLSSocket.emit (events.js:198:13)
-    at emitErrorNT (internal/streams/destroy.js:91:8)
-    at emitErrorAndCloseNT (internal/streams/destroy.js:59:3)
-    at process._tickCallback (internal/process/next_tick.js:63:19)
-  message:
-   'request to https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUSD failed, reason: connect ETIMEDOUT 159.203.144.149:443',
-  type: 'system',
-  errno: 'ETIMEDOUT',
-  code: 'ETIMEDOUT' }
-(node:1140) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'last' of undefined
-    at Object.list_block (C:\Users\user\Desktop\BlockChain_Browser_Web\bitcoin-browser-api\src\list_block.js:25:24)
-    at process._tickCallback (internal/process/next_tick.js:68:7)
-(node:1140) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 33)
-error { FetchError: request to https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUSD failed, reason: connect ETIMEDOUT 159.203.144.149:443
-    at ClientRequest.<anonymous> (C:\Users\user\Desktop\BlockChain_Browser_Web\node_modules\node-fetch\lib\index.js:1455:11)
-    at ClientRequest.emit (events.js:198:13)
-    at TLSSocket.socketErrorListener (_http_client.js:392:9)
-    at TLSSocket.emit (events.js:198:13)
-    at emitErrorNT (internal/streams/destroy.js:91:8)
-    at emitErrorAndCloseNT (internal/streams/destroy.js:59:3)
-    at process._tickCallback (internal/process/next_tick.js:63:19)
-  message:
-   'request to https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUSD failed, reason: connect ETIMEDOUT 159.203.144.149:443',
-  type: 'system',
-  errno: 'ETIMEDOUT',
-  code: 'ETIMEDOUT' }
-(node:1140) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'last' of undefined
-    at Object.list_block (C:\Users\user\Desktop\BlockChain_Browser_Web\bitcoin-browser-api\src\list_block.js:25:24)
-    at process._tickCallback (internal/process/next_tick.js:68:7)
-(node:1140) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 34)
-error { FetchError: request to https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUSD failed, reason: connect ETIMEDOUT 159.203.144.149:443
-    at ClientRequest.<anonymous> (C:\Users\user\Desktop\BlockChain_Browser_Web\node_modules\node-fetch\lib\index.js:1455:11)
-    at ClientRequest.emit (events.js:198:13)
-    at TLSSocket.socketErrorListener (_http_client.js:392:9)
-    at TLSSocket.emit (events.js:198:13)
-    at emitErrorNT (internal/streams/destroy.js:91:8)
-    at emitErrorAndCloseNT (internal/streams/destroy.js:59:3)
-    at process._tickCallback (internal/process/next_tick.js:63:19)
-  message:
-   'request to https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUSD failed, reason: connect ETIMEDOUT 159.203.144.149:443',
-  type: 'system',
-  errno: 'ETIMEDOUT',
-  code: 'ETIMEDOUT' }
-(node:1140) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'last' of undefined
-    at Object.list_block (C:\Users\user\Desktop\BlockChain_Browser_Web\bitcoin-browser-api\src\list_block.js:25:24)
-    at process._tickCallback (internal/process/next_tick.js:68:7)
-(node:1140) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 35)
-error { FetchError: request to https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUSD failed, reason: connect ETIMEDOUT 159.203.144.149:443
-    at ClientRequest.<anonymous> (C:\Users\user\Desktop\BlockChain_Browser_Web\node_modules\node-fetch\lib\index.js:1455:11)
-    at ClientRequest.emit (events.js:198:13)
-    at TLSSocket.socketErrorListener (_http_client.js:392:9)
-    at TLSSocket.emit (events.js:198:13)
-    at emitErrorNT (internal/streams/destroy.js:91:8)
-    at emitErrorAndCloseNT (internal/streams/destroy.js:59:3)
-    at process._tickCallback (internal/process/next_tick.js:63:19)
-  message:
-   'request to https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUSD failed, reason: connect ETIMEDOUT 159.203.144.149:443',
-  type: 'system',
-  errno: 'ETIMEDOUT',
-  code: 'ETIMEDOUT' }
-(node:1140) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'last' of undefined
-    at Object.list_block (C:\Users\user\Desktop\BlockChain_Browser_Web\bitcoin-browser-api\src\list_block.js:25:24)
-    at process._tickCallback (internal/process/next_tick.js:68:7)
-(node:1140) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 36)
-error { FetchError: request to https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUSD failed, reason: connect ETIMEDOUT 159.203.144.149:443
-    at ClientRequest.<anonymous> (C:\Users\user\Desktop\BlockChain_Browser_Web\node_modules\node-fetch\lib\index.js:1455:11)
-    at ClientRequest.emit (events.js:198:13)
-    at TLSSocket.socketErrorListener (_http_client.js:392:9)
-    at TLSSocket.emit (events.js:198:13)
-    at emitErrorNT (internal/streams/destroy.js:91:8)
-    at emitErrorAndCloseNT (internal/streams/destroy.js:59:3)
-    at process._tickCallback (internal/process/next_tick.js:63:19)
-  message:
-   'request to https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUSD failed, reason: connect ETIMEDOUT 159.203.144.149:443',
-  type: 'system',
-  errno: 'ETIMEDOUT',
-  code: 'ETIMEDOUT' }
-(node:1140) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'last' of undefined
-    at Object.list_block (C:\Users\user\Desktop\BlockChain_Browser_Web\bitcoin-browser-api\src\list_block.js:25:24)
-    at process._tickCallback (internal/process/next_tick.js:68:7)
-(node:1140) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 37)
-error { FetchError: request to https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUSD failed, reason: connect ETIMEDOUT 159.203.144.149:443
-    at ClientRequest.<anonymous> (C:\Users\user\Desktop\BlockChain_Browser_Web\node_modules\node-fetch\lib\index.js:1455:11)
-    at ClientRequest.emit (events.js:198:13)
-    at TLSSocket.socketErrorListener (_http_client.js:392:9)
-    at TLSSocket.emit (events.js:198:13)
-    at emitErrorNT (internal/streams/destroy.js:91:8)
-    at emitErrorAndCloseNT (internal/streams/destroy.js:59:3)
-    at process._tickCallback (internal/process/next_tick.js:63:19)
-  message:
-   'request to https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUSD failed, reason: connect ETIMEDOUT 159.203.144.149:443',
-  type: 'system',
-  errno: 'ETIMEDOUT',
-  code: 'ETIMEDOUT' }
-(node:1140) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'last' of undefined
-    at Object.list_block (C:\Users\user\Desktop\BlockChain_Browser_Web\bitcoin-browser-api\src\list_block.js:25:24)
-    at process._tickCallback (internal/process/next_tick.js:68:7)
-(node:1140) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 38)
-error { FetchError: request to https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUSD failed, reason: connect ETIMEDOUT 159.203.144.149:443
-    at ClientRequest.<anonymous> (C:\Users\user\Desktop\BlockChain_Browser_Web\node_modules\node-fetch\lib\index.js:1455:11)
-    at ClientRequest.emit (events.js:198:13)
-    at TLSSocket.socketErrorListener (_http_client.js:392:9)
-    at TLSSocket.emit (events.js:198:13)
-    at emitErrorNT (internal/streams/destroy.js:91:8)
-    at emitErrorAndCloseNT (internal/streams/destroy.js:59:3)
-    at process._tickCallback (internal/process/next_tick.js:63:19)
-  message:
-   'request to https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUSD failed, reason: connect ETIMEDOUT 159.203.144.149:443',
-  type: 'system',
-  errno: 'ETIMEDOUT',
-  code: 'ETIMEDOUT' }
-(node:1140) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'last' of undefined
-    at Object.list_block (C:\Users\user\Desktop\BlockChain_Browser_Web\bitcoin-browser-api\src\list_block.js:25:24)
-    at process._tickCallback (internal/process/next_tick.js:68:7)
-(node:1140) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 39)
-error { FetchError: request to https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUSD failed, reason: connect ETIMEDOUT 159.203.144.149:443
-    at ClientRequest.<anonymous> (C:\Users\user\Desktop\BlockChain_Browser_Web\node_modules\node-fetch\lib\index.js:1455:11)
-    at ClientRequest.emit (events.js:198:13)
-    at TLSSocket.socketErrorListener (_http_client.js:392:9)
-    at TLSSocket.emit (events.js:198:13)
-    at emitErrorNT (internal/streams/destroy.js:91:8)
-    at emitErrorAndCloseNT (internal/streams/destroy.js:59:3)
-    at process._tickCallback (internal/process/next_tick.js:63:19)
-  message:
-   'request to https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUSD failed, reason: connect ETIMEDOUT 159.203.144.149:443',
-  type: 'system',
-  errno: 'ETIMEDOUT',
-  code: 'ETIMEDOUT' }
-(node:1140) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'last' of undefined
-    at Object.list_block (C:\Users\user\Desktop\BlockChain_Browser_Web\bitcoin-browser-api\src\list_block.js:25:24)
-    at process._tickCallback (internal/process/next_tick.js:68:7)
-(node:1140) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 40)
-error { FetchError: request to https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUSD failed, reason: connect ETIMEDOUT 159.203.144.149:443
-    at ClientRequest.<anonymous> (C:\Users\user\Desktop\BlockChain_Browser_Web\node_modules\node-fetch\lib\index.js:1455:11)
-    at ClientRequest.emit (events.js:198:13)
-    at TLSSocket.socketErrorListener (_http_client.js:392:9)
-    at TLSSocket.emit (events.js:198:13)
-    at emitErrorNT (internal/streams/destroy.js:91:8)
-    at emitErrorAndCloseNT (internal/streams/destroy.js:59:3)
-    at process._tickCallback (internal/process/next_tick.js:63:19)
-  message:
-   'request to https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUSD failed, reason: connect ETIMEDOUT 159.203.144.149:443',
-  type: 'system',
-  errno: 'ETIMEDOUT',
-  code: 'ETIMEDOUT' }
-(node:1140) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'last' of undefined
-    at Object.list_block (C:\Users\user\Desktop\BlockChain_Browser_Web\bitcoin-browser-api\src\list_block.js:25:24)
-    at process._tickCallback (internal/process/next_tick.js:68:7)
-(node:1140) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 41)
-error { FetchError: request to https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUSD failed, reason: connect ETIMEDOUT 159.203.144.149:443
-    at ClientRequest.<anonymous> (C:\Users\user\Desktop\BlockChain_Browser_Web\node_modules\node-fetch\lib\index.js:1455:11)
-    at ClientRequest.emit (events.js:198:13)
-    at TLSSocket.socketErrorListener (_http_client.js:392:9)
-    at TLSSocket.emit (events.js:198:13)
-    at emitErrorNT (internal/streams/destroy.js:91:8)
-    at emitErrorAndCloseNT (internal/streams/destroy.js:59:3)
-    at process._tickCallback (internal/process/next_tick.js:63:19)
-  message:
-   'request to https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUSD failed, reason: connect ETIMEDOUT 159.203.144.149:443',
-  type: 'system',
-  errno: 'ETIMEDOUT',
-  code: 'ETIMEDOUT' }
-(node:1140) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'last' of undefined
-    at Object.list_block (C:\Users\user\Desktop\BlockChain_Browser_Web\bitcoin-browser-api\src\list_block.js:25:24)
-    at process._tickCallback (internal/process/next_tick.js:68:7)
-(node:1140) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 42)
-error { FetchError: request to https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUSD failed, reason: connect ETIMEDOUT 159.203.144.149:443
-    at ClientRequest.<anonymous> (C:\Users\user\Desktop\BlockChain_Browser_Web\node_modules\node-fetch\lib\index.js:1455:11)
-    at ClientRequest.emit (events.js:198:13)
-    at TLSSocket.socketErrorListener (_http_client.js:392:9)
-    at TLSSocket.emit (events.js:198:13)
-    at emitErrorNT (internal/streams/destroy.js:91:8)
-    at emitErrorAndCloseNT (internal/streams/destroy.js:59:3)
-    at process._tickCallback (internal/process/next_tick.js:63:19)
-  message:
-   'request to https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUSD failed, reason: connect ETIMEDOUT 159.203.144.149:443',
-  type: 'system',
-  errno: 'ETIMEDOUT',
-  code: 'ETIMEDOUT' }
-(node:1140) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'last' of undefined
-    at Object.list_block (C:\Users\user\Desktop\BlockChain_Browser_Web\bitcoin-browser-api\src\list_block.js:25:24)
-    at process._tickCallback (internal/process/next_tick.js:68:7)
-(node:1140) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 43)
-error { FetchError: request to https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUSD failed, reason: connect ETIMEDOUT 159.203.144.149:443
-    at ClientRequest.<anonymous> (C:\Users\user\Desktop\BlockChain_Browser_Web\node_modules\node-fetch\lib\index.js:1455:11)
-    at ClientRequest.emit (events.js:198:13)
-    at TLSSocket.socketErrorListener (_http_client.js:392:9)
-    at TLSSocket.emit (events.js:198:13)
-    at emitErrorNT (internal/streams/destroy.js:91:8)
-    at emitErrorAndCloseNT (internal/streams/destroy.js:59:3)
-    at process._tickCallback (internal/process/next_tick.js:63:19)
-  message:
-   'request to https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUSD failed, reason: connect ETIMEDOUT 159.203.144.149:443',
-  type: 'system',
-  errno: 'ETIMEDOUT',
-  code: 'ETIMEDOUT' }
-(node:1140) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'last' of undefined
-    at Object.list_block (C:\Users\user\Desktop\BlockChain_Browser_Web\bitcoin-browser-api\src\list_block.js:25:24)
-    at process._tickCallback (internal/process/next_tick.js:68:7)
-(node:1140) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 44)
-error { FetchError: request to https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUSD failed, reason: connect ETIMEDOUT 159.203.144.149:443
-    at ClientRequest.<anonymous> (C:\Users\user\Desktop\BlockChain_Browser_Web\node_modules\node-fetch\lib\index.js:1455:11)
-    at ClientRequest.emit (events.js:198:13)
-    at TLSSocket.socketErrorListener (_http_client.js:392:9)
-    at TLSSocket.emit (events.js:198:13)
-    at emitErrorNT (internal/streams/destroy.js:91:8)
-    at emitErrorAndCloseNT (internal/streams/destroy.js:59:3)
-    at process._tickCallback (internal/process/next_tick.js:63:19)
-  message:
-   'request to https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUSD failed, reason: connect ETIMEDOUT 159.203.144.149:443',
-  type: 'system',
-  errno: 'ETIMEDOUT',
-  code: 'ETIMEDOUT' }
-(node:1140) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'last' of undefined
-    at Object.list_block (C:\Users\user\Desktop\BlockChain_Browser_Web\bitcoin-browser-api\src\list_block.js:25:24)
-    at process._tickCallback (internal/process/next_tick.js:68:7)
-(node:1140) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 45)
-error { FetchError: request to https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUSD failed, reason: connect ETIMEDOUT 159.203.144.149:443
-    at ClientRequest.<anonymous> (C:\Users\user\Desktop\BlockChain_Browser_Web\node_modules\node-fetch\lib\index.js:1455:11)
-    at ClientRequest.emit (events.js:198:13)
-    at TLSSocket.socketErrorListener (_http_client.js:392:9)
-    at TLSSocket.emit (events.js:198:13)
-    at emitErrorNT (internal/streams/destroy.js:91:8)
-    at emitErrorAndCloseNT (internal/streams/destroy.js:59:3)
-    at process._tickCallback (internal/process/next_tick.js:63:19)
-  message:
-   'request to https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUSD failed, reason: connect ETIMEDOUT 159.203.144.149:443',
-  type: 'system',
-  errno: 'ETIMEDOUT',
-  code: 'ETIMEDOUT' }
-(node:1140) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'last' of undefined
-    at Object.list_block (C:\Users\user\Desktop\BlockChain_Browser_Web\bitcoin-browser-api\src\list_block.js:25:24)
-    at process._tickCallback (internal/process/next_tick.js:68:7)
-(node:1140) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 46)
-error { FetchError: request to https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUSD failed, reason: connect ETIMEDOUT 159.203.144.149:443
-    at ClientRequest.<anonymous> (C:\Users\user\Desktop\BlockChain_Browser_Web\node_modules\node-fetch\lib\index.js:1455:11)
-    at ClientRequest.emit (events.js:198:13)
-    at TLSSocket.socketErrorListener (_http_client.js:392:9)
-    at TLSSocket.emit (events.js:198:13)
-    at emitErrorNT (internal/streams/destroy.js:91:8)
-    at emitErrorAndCloseNT (internal/streams/destroy.js:59:3)
-    at process._tickCallback (internal/process/next_tick.js:63:19)
-  message:
-   'request to https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUSD failed, reason: connect ETIMEDOUT 159.203.144.149:443',
-  type: 'system',
-  errno: 'ETIMEDOUT',
-  code: 'ETIMEDOUT' }
-(node:1140) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'last' of undefined
-    at Object.list_block (C:\Users\user\Desktop\BlockChain_Browser_Web\bitcoin-browser-api\src\list_block.js:25:24)
-    at process._tickCallback (internal/process/next_tick.js:68:7)
-(node:1140) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 47)
-error { FetchError: request to https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUSD failed, reason: connect ETIMEDOUT 159.203.144.149:443
-    at ClientRequest.<anonymous> (C:\Users\user\Desktop\BlockChain_Browser_Web\node_modules\node-fetch\lib\index.js:1455:11)
-    at ClientRequest.emit (events.js:198:13)
-    at TLSSocket.socketErrorListener (_http_client.js:392:9)
-    at TLSSocket.emit (events.js:198:13)
-    at emitErrorNT (internal/streams/destroy.js:91:8)
-    at emitErrorAndCloseNT (internal/streams/destroy.js:59:3)
-    at process._tickCallback (internal/process/next_tick.js:63:19)
-  message:
-   'request to https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUSD failed, reason: connect ETIMEDOUT 159.203.144.149:443',
-  type: 'system',
-  errno: 'ETIMEDOUT',
-  code: 'ETIMEDOUT' }
-(node:1140) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'last' of undefined
-    at Object.list_block (C:\Users\user\Desktop\BlockChain_Browser_Web\bitcoin-browser-api\src\list_block.js:25:24)
-    at process._tickCallback (internal/process/next_tick.js:68:7)
-(node:1140) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 48)
-error { FetchError: request to https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUSD failed, reason: connect ETIMEDOUT 159.203.144.149:443
-    at ClientRequest.<anonymous> (C:\Users\user\Desktop\BlockChain_Browser_Web\node_modules\node-fetch\lib\index.js:1455:11)
-    at ClientRequest.emit (events.js:198:13)
-    at TLSSocket.socketErrorListener (_http_client.js:392:9)
-    at TLSSocket.emit (events.js:198:13)
-    at emitErrorNT (internal/streams/destroy.js:91:8)
-    at emitErrorAndCloseNT (internal/streams/destroy.js:59:3)
-    at process._tickCallback (internal/process/next_tick.js:63:19)
-  message:
-   'request to https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUSD failed, reason: connect ETIMEDOUT 159.203.144.149:443',
-  type: 'system',
-  errno: 'ETIMEDOUT',
-  code: 'ETIMEDOUT' }
-(node:1140) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'last' of undefined
-    at Object.list_block (C:\Users\user\Desktop\BlockChain_Browser_Web\bitcoin-browser-api\src\list_block.js:25:24)
-    at process._tickCallback (internal/process/next_tick.js:68:7)
-(node:1140) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 49)
-error { FetchError: request to https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUSD failed, reason: connect ETIMEDOUT 159.203.144.149:443
-    at ClientRequest.<anonymous> (C:\Users\user\Desktop\BlockChain_Browser_Web\node_modules\node-fetch\lib\index.js:1455:11)
-    at ClientRequest.emit (events.js:198:13)
-    at TLSSocket.socketErrorListener (_http_client.js:392:9)
-    at TLSSocket.emit (events.js:198:13)
-    at emitErrorNT (internal/streams/destroy.js:91:8)
-    at emitErrorAndCloseNT (internal/streams/destroy.js:59:3)
-    at process._tickCallback (internal/process/next_tick.js:63:19)
-  message:
-   'request to https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUSD failed, reason: connect ETIMEDOUT 159.203.144.149:443',
-  type: 'system',
-  errno: 'ETIMEDOUT',
-  code: 'ETIMEDOUT' }
-(node:1140) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'last' of undefined
-    at Object.list_block (C:\Users\user\Desktop\BlockChain_Browser_Web\bitcoin-browser-api\src\list_block.js:25:24)
-    at process._tickCallback (internal/process/next_tick.js:68:7)
-(node:1140) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 50)
-error { FetchError: request to https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUSD failed, reason: connect ETIMEDOUT 159.203.144.149:443
-    at ClientRequest.<anonymous> (C:\Users\user\Desktop\BlockChain_Browser_Web\node_modules\node-fetch\lib\index.js:1455:11)
-    at ClientRequest.emit (events.js:198:13)
-    at TLSSocket.socketErrorListener (_http_client.js:392:9)
-    at TLSSocket.emit (events.js:198:13)
-    at emitErrorNT (internal/streams/destroy.js:91:8)
-    at emitErrorAndCloseNT (internal/streams/destroy.js:59:3)
-    at process._tickCallback (internal/process/next_tick.js:63:19)
-  message:
-   'request to https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUSD failed, reason: connect ETIMEDOUT 159.203.144.149:443',
-  type: 'system',
-  errno: 'ETIMEDOUT',
-  code: 'ETIMEDOUT' }
-(node:1140) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'last' of undefined
-    at Object.list_block (C:\Users\user\Desktop\BlockChain_Browser_Web\bitcoin-browser-api\src\list_block.js:25:24)
-    at process._tickCallback (internal/process/next_tick.js:68:7)
-(node:1140) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 51)
-error { FetchError: request to https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUSD failed, reason: connect ETIMEDOUT 159.203.144.149:443
-    at ClientRequest.<anonymous> (C:\Users\user\Desktop\BlockChain_Browser_Web\node_modules\node-fetch\lib\index.js:1455:11)
-    at ClientRequest.emit (events.js:198:13)
-    at TLSSocket.socketErrorListener (_http_client.js:392:9)
-    at TLSSocket.emit (events.js:198:13)
-    at emitErrorNT (internal/streams/destroy.js:91:8)
-    at emitErrorAndCloseNT (internal/streams/destroy.js:59:3)
-    at process._tickCallback (internal/process/next_tick.js:63:19)
-  message:
-   'request to https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUSD failed, reason: connect ETIMEDOUT 159.203.144.149:443',
-  type: 'system',
-  errno: 'ETIMEDOUT',
-  code: 'ETIMEDOUT' }
-(node:1140) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'last' of undefined
-    at Object.list_block (C:\Users\user\Desktop\BlockChain_Browser_Web\bitcoin-browser-api\src\list_block.js:25:24)
-    at process._tickCallback (internal/process/next_tick.js:68:7)
-(node:1140) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 52)
-error { FetchError: request to https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUSD failed, reason: connect ETIMEDOUT 159.203.144.149:443
-    at ClientRequest.<anonymous> (C:\Users\user\Desktop\BlockChain_Browser_Web\node_modules\node-fetch\lib\index.js:1455:11)
-    at ClientRequest.emit (events.js:198:13)
-    at TLSSocket.socketErrorListener (_http_client.js:392:9)
-    at TLSSocket.emit (events.js:198:13)
-    at emitErrorNT (internal/streams/destroy.js:91:8)
-    at emitErrorAndCloseNT (internal/streams/destroy.js:59:3)
-    at process._tickCallback (internal/process/next_tick.js:63:19)
-  message:
-   'request to https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUSD failed, reason: connect ETIMEDOUT 159.203.144.149:443',
-  type: 'system',
-  errno: 'ETIMEDOUT',
-  code: 'ETIMEDOUT' }
-(node:1140) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'last' of undefined
-    at Object.list_block (C:\Users\user\Desktop\BlockChain_Browser_Web\bitcoin-browser-api\src\list_block.js:25:24)
-    at process._tickCallback (internal/process/next_tick.js:68:7)
-(node:1140) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 53)
-error { Error: ESOCKETTIMEDOUT
-    at ClientRequest.<anonymous> (C:\Users\user\Desktop\BlockChain_Browser_Web\node_modules\request\request.js:816:19)
-    at Object.onceWrapper (events.js:286:20)
-    at ClientRequest.emit (events.js:198:13)
-    at Socket.emitRequestTimeout (_http_client.js:662:40)
-    at Object.onceWrapper (events.js:286:20)
-    at Socket.emit (events.js:198:13)
-    at Socket._onTimeout (net.js:442:8)
-    at ontimeout (timers.js:436:11)
-    at tryOnTimeout (timers.js:300:5)
-    at listOnTimeout (timers.js:263:5) code: 'ESOCKETTIMEDOUT', connect: false }
-(node:1140) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'tx' of undefined
-    at Object.getBlockHashProfit (C:\Users\user\Desktop\BlockChain_Browser_Web\bitcoin-browser-api\src\bitcoin-core-function.js:82:48)
-    at process._tickCallback (internal/process/next_tick.js:68:7)
-(node:1140) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 54)
-error { Error: ESOCKETTIMEDOUT
-    at ClientRequest.<anonymous> (C:\Users\user\Desktop\BlockChain_Browser_Web\node_modules\request\request.js:816:19)
-    at Object.onceWrapper (events.js:286:20)
-    at ClientRequest.emit (events.js:198:13)
-    at Socket.emitRequestTimeout (_http_client.js:662:40)
-    at Object.onceWrapper (events.js:286:20)
-    at Socket.emit (events.js:198:13)
-    at Socket._onTimeout (net.js:442:8)
-    at ontimeout (timers.js:436:11)
-    at tryOnTimeout (timers.js:300:5)
-    at listOnTimeout (timers.js:263:5) code: 'ESOCKETTIMEDOUT', connect: false }
-(node:1140) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'height' of undefined
-    at list_some_block_info (C:\Users\user\Desktop\BlockChain_Browser_Web\bitcoin-browser-api\src\list_block.js:10:26)
-    at process._tickCallback (internal/process/next_tick.js:68:7)
-(node:1140) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 55)
-error { FetchError: request to https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUSD failed, reason: connect ETIMEDOUT 159.203.144.149:443
-    at ClientRequest.<anonymous> (C:\Users\user\Desktop\BlockChain_Browser_Web\node_modules\node-fetch\lib\index.js:1455:11)
-    at ClientRequest.emit (events.js:198:13)
-    at TLSSocket.socketErrorListener (_http_client.js:392:9)
-    at TLSSocket.emit (events.js:198:13)
-    at emitErrorNT (internal/streams/destroy.js:91:8)
-    at emitErrorAndCloseNT (internal/streams/destroy.js:59:3)
-    at process._tickCallback (internal/process/next_tick.js:63:19)
-  message:
-   'request to https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUSD failed, reason: connect ETIMEDOUT 159.203.144.149:443',
-  type: 'system',
-  errno: 'ETIMEDOUT',
-  code: 'ETIMEDOUT' }
-(node:1140) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'last' of undefined
-    at Object.list_block (C:\Users\user\Desktop\BlockChain_Browser_Web\bitcoin-browser-api\src\list_block.js:25:24)
-    at process._tickCallback (internal/process/next_tick.js:68:7)
-(node:1140) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 56)
-error { FetchError: request to https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUSD failed, reason: connect ETIMEDOUT 159.203.144.149:443
-    at ClientRequest.<anonymous> (C:\Users\user\Desktop\BlockChain_Browser_Web\node_modules\node-fetch\lib\index.js:1455:11)
-    at ClientRequest.emit (events.js:198:13)
-    at TLSSocket.socketErrorListener (_http_client.js:392:9)
-    at TLSSocket.emit (events.js:198:13)
-    at emitErrorNT (internal/streams/destroy.js:91:8)
-    at emitErrorAndCloseNT (internal/streams/destroy.js:59:3)
-    at process._tickCallback (internal/process/next_tick.js:63:19)
-  message:
-   'request to https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUSD failed, reason: connect ETIMEDOUT 159.203.144.149:443',
-  type: 'system',
-  errno: 'ETIMEDOUT',
-  code: 'ETIMEDOUT' }
-(node:1140) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'last' of undefined
-    at Object.list_block (C:\Users\user\Desktop\BlockChain_Browser_Web\bitcoin-browser-api\src\list_block.js:25:24)
-    at process._tickCallback (internal/process/next_tick.js:68:7)
-(node:1140) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 57)
-error { FetchError: request to https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUSD failed, reason: connect ETIMEDOUT 159.203.144.149:443
-    at ClientRequest.<anonymous> (C:\Users\user\Desktop\BlockChain_Browser_Web\node_modules\node-fetch\lib\index.js:1455:11)
-    at ClientRequest.emit (events.js:198:13)
-    at TLSSocket.socketErrorListener (_http_client.js:392:9)
-    at TLSSocket.emit (events.js:198:13)
-    at emitErrorNT (internal/streams/destroy.js:91:8)
-    at emitErrorAndCloseNT (internal/streams/destroy.js:59:3)
-    at process._tickCallback (internal/process/next_tick.js:63:19)
-  message:
-   'request to https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUSD failed, reason: connect ETIMEDOUT 159.203.144.149:443',
-  type: 'system',
-  errno: 'ETIMEDOUT',
-  code: 'ETIMEDOUT' }
-(node:1140) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'last' of undefined
-    at Object.list_block (C:\Users\user\Desktop\BlockChain_Browser_Web\bitcoin-browser-api\src\list_block.js:25:24)
-    at process._tickCallback (internal/process/next_tick.js:68:7)
-(node:1140) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 58)
-error { FetchError: request to https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUSD failed, reason: connect ETIMEDOUT 159.203.144.149:443
-    at ClientRequest.<anonymous> (C:\Users\user\Desktop\BlockChain_Browser_Web\node_modules\node-fetch\lib\index.js:1455:11)
-    at ClientRequest.emit (events.js:198:13)
-    at TLSSocket.socketErrorListener (_http_client.js:392:9)
-    at TLSSocket.emit (events.js:198:13)
-    at emitErrorNT (internal/streams/destroy.js:91:8)
-    at emitErrorAndCloseNT (internal/streams/destroy.js:59:3)
-    at process._tickCallback (internal/process/next_tick.js:63:19)
-  message:
-   'request to https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUSD failed, reason: connect ETIMEDOUT 159.203.144.149:443',
-  type: 'system',
-  errno: 'ETIMEDOUT',
-  code: 'ETIMEDOUT' }
-(node:1140) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'last' of undefined
-    at Object.list_block (C:\Users\user\Desktop\BlockChain_Browser_Web\bitcoin-browser-api\src\list_block.js:25:24)
-    at process._tickCallback (internal/process/next_tick.js:68:7)
-(node:1140) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 59)
-error { Error: ESOCKETTIMEDOUT
-    at ClientRequest.<anonymous> (C:\Users\user\Desktop\BlockChain_Browser_Web\node_modules\request\request.js:816:19)
-    at Object.onceWrapper (events.js:286:20)
-    at ClientRequest.emit (events.js:198:13)
-    at Socket.emitRequestTimeout (_http_client.js:662:40)
-    at Object.onceWrapper (events.js:286:20)
-    at Socket.emit (events.js:198:13)
-    at Socket._onTimeout (net.js:442:8)
-    at ontimeout (timers.js:436:11)
-    at tryOnTimeout (timers.js:300:5)
-    at listOnTimeout (timers.js:263:5) code: 'ESOCKETTIMEDOUT', connect: false }
-(node:1140) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'height' of undefined
-    at list_some_block_info (C:\Users\user\Desktop\BlockChain_Browser_Web\bitcoin-browser-api\src\list_block.js:10:26)
-    at process._tickCallback (internal/process/next_tick.js:68:7)
-(node:1140) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 60)
-error { FetchError: request to https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUSD failed, reason: connect ETIMEDOUT 159.203.144.149:443
-    at ClientRequest.<anonymous> (C:\Users\user\Desktop\BlockChain_Browser_Web\node_modules\node-fetch\lib\index.js:1455:11)
-    at ClientRequest.emit (events.js:198:13)
-    at TLSSocket.socketErrorListener (_http_client.js:392:9)
-    at TLSSocket.emit (events.js:198:13)
-    at emitErrorNT (internal/streams/destroy.js:91:8)
-    at emitErrorAndCloseNT (internal/streams/destroy.js:59:3)
-    at process._tickCallback (internal/process/next_tick.js:63:19)
-  message:
-   'request to https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUSD failed, reason: connect ETIMEDOUT 159.203.144.149:443',
-  type: 'system',
-  errno: 'ETIMEDOUT',
-  code: 'ETIMEDOUT' }
-(node:1140) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'last' of undefined
-    at Object.list_block (C:\Users\user\Desktop\BlockChain_Browser_Web\bitcoin-browser-api\src\list_block.js:25:24)
-    at process._tickCallback (internal/process/next_tick.js:68:7)
-(node:1140) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 61)
-error { FetchError: request to https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUSD failed, reason: connect ETIMEDOUT 159.203.144.149:443
-    at ClientRequest.<anonymous> (C:\Users\user\Desktop\BlockChain_Browser_Web\node_modules\node-fetch\lib\index.js:1455:11)
-    at ClientRequest.emit (events.js:198:13)
-    at TLSSocket.socketErrorListener (_http_client.js:392:9)
-    at TLSSocket.emit (events.js:198:13)
-    at emitErrorNT (internal/streams/destroy.js:91:8)
-    at emitErrorAndCloseNT (internal/streams/destroy.js:59:3)
-    at process._tickCallback (internal/process/next_tick.js:63:19)
-  message:
-   'request to https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUSD failed, reason: connect ETIMEDOUT 159.203.144.149:443',
-  type: 'system',
-  errno: 'ETIMEDOUT',
-  code: 'ETIMEDOUT' }
-(node:1140) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'last' of undefined
-    at Object.list_block (C:\Users\user\Desktop\BlockChain_Browser_Web\bitcoin-browser-api\src\list_block.js:25:24)
-    at process._tickCallback (internal/process/next_tick.js:68:7)
-(node:1140) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 62)
-error { FetchError: request to https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUSD failed, reason: connect ETIMEDOUT 159.203.144.149:443
-    at ClientRequest.<anonymous> (C:\Users\user\Desktop\BlockChain_Browser_Web\node_modules\node-fetch\lib\index.js:1455:11)
-    at ClientRequest.emit (events.js:198:13)
-    at TLSSocket.socketErrorListener (_http_client.js:392:9)
-    at TLSSocket.emit (events.js:198:13)
-    at emitErrorNT (internal/streams/destroy.js:91:8)
-    at emitErrorAndCloseNT (internal/streams/destroy.js:59:3)
-    at process._tickCallback (internal/process/next_tick.js:63:19)
-  message:
-   'request to https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUSD failed, reason: connect ETIMEDOUT 159.203.144.149:443',
-  type: 'system',
-  errno: 'ETIMEDOUT',
-  code: 'ETIMEDOUT' }
-(node:1140) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'last' of undefined
-    at Object.list_block (C:\Users\user\Desktop\BlockChain_Browser_Web\bitcoin-browser-api\src\list_block.js:25:24)
-    at process._tickCallback (internal/process/next_tick.js:68:7)
-(node:1140) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 63)
-error { FetchError: request to https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUSD failed, reason: connect ETIMEDOUT 159.203.144.149:443
-    at ClientRequest.<anonymous> (C:\Users\user\Desktop\BlockChain_Browser_Web\node_modules\node-fetch\lib\index.js:1455:11)
-    at ClientRequest.emit (events.js:198:13)
-    at TLSSocket.socketErrorListener (_http_client.js:392:9)
-    at TLSSocket.emit (events.js:198:13)
-    at emitErrorNT (internal/streams/destroy.js:91:8)
-    at emitErrorAndCloseNT (internal/streams/destroy.js:59:3)
-    at process._tickCallback (internal/process/next_tick.js:63:19)
-  message:
-   'request to https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUSD failed, reason: connect ETIMEDOUT 159.203.144.149:443',
-  type: 'system',
-  errno: 'ETIMEDOUT',
-  code: 'ETIMEDOUT' }
-(node:1140) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'last' of undefined
-    at Object.list_block (C:\Users\user\Desktop\BlockChain_Browser_Web\bitcoin-browser-api\src\list_block.js:25:24)
-    at process._tickCallback (internal/process/next_tick.js:68:7)
-(node:1140) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 64)
-error { FetchError: request to https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUSD failed, reason: connect ETIMEDOUT 159.203.144.149:443
-    at ClientRequest.<anonymous> (C:\Users\user\Desktop\BlockChain_Browser_Web\node_modules\node-fetch\lib\index.js:1455:11)
-    at ClientRequest.emit (events.js:198:13)
-    at TLSSocket.socketErrorListener (_http_client.js:392:9)
-    at TLSSocket.emit (events.js:198:13)
-    at emitErrorNT (internal/streams/destroy.js:91:8)
-    at emitErrorAndCloseNT (internal/streams/destroy.js:59:3)
-    at process._tickCallback (internal/process/next_tick.js:63:19)
-  message:
-   'request to https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUSD failed, reason: connect ETIMEDOUT 159.203.144.149:443',
-  type: 'system',
-  errno: 'ETIMEDOUT',
-  code: 'ETIMEDOUT' }
-(node:1140) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'last' of undefined
-    at Object.list_block (C:\Users\user\Desktop\BlockChain_Browser_Web\bitcoin-browser-api\src\list_block.js:25:24)
-    at process._tickCallback (internal/process/next_tick.js:68:7)
-(node:1140) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 65)
-error { Error: ESOCKETTIMEDOUT
-    at ClientRequest.<anonymous> (C:\Users\user\Desktop\BlockChain_Browser_Web\node_modules\request\request.js:816:19)
-    at Object.onceWrapper (events.js:286:20)
-    at ClientRequest.emit (events.js:198:13)
-    at Socket.emitRequestTimeout (_http_client.js:662:40)
-    at Object.onceWrapper (events.js:286:20)
-    at Socket.emit (events.js:198:13)
-    at Socket._onTimeout (net.js:442:8)
-    at ontimeout (timers.js:436:11)
-    at tryOnTimeout (timers.js:300:5)
-    at listOnTimeout (timers.js:263:5) code: 'ESOCKETTIMEDOUT', connect: false }
-(node:1140) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'height' of undefined
-    at list_some_block_info (C:\Users\user\Desktop\BlockChain_Browser_Web\bitcoin-browser-api\src\list_block.js:10:26)
-    at process._tickCallback (internal/process/next_tick.js:68:7)
-(node:1140) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 66)
-error { Error: ESOCKETTIMEDOUT
-    at ClientRequest.<anonymous> (C:\Users\user\Desktop\BlockChain_Browser_Web\node_modules\request\request.js:816:19)
-    at Object.onceWrapper (events.js:286:20)
-    at ClientRequest.emit (events.js:198:13)
-    at Socket.emitRequestTimeout (_http_client.js:662:40)
-    at Object.onceWrapper (events.js:286:20)
-    at Socket.emit (events.js:198:13)
-    at Socket._onTimeout (net.js:442:8)
-    at ontimeout (timers.js:436:11)
-    at tryOnTimeout (timers.js:300:5)
-    at listOnTimeout (timers.js:263:5) code: 'ESOCKETTIMEDOUT', connect: false }
-(node:1140) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'height' of undefined
-    at list_some_block_info (C:\Users\user\Desktop\BlockChain_Browser_Web\bitcoin-browser-api\src\list_block.js:10:26)
-    at process._tickCallback (internal/process/next_tick.js:68:7)
-(node:1140) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 67)
-error { FetchError: request to https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUSD failed, reason: connect ETIMEDOUT 159.203.144.149:443
-    at ClientRequest.<anonymous> (C:\Users\user\Desktop\BlockChain_Browser_Web\node_modules\node-fetch\lib\index.js:1455:11)
-    at ClientRequest.emit (events.js:198:13)
-    at TLSSocket.socketErrorListener (_http_client.js:392:9)
-    at TLSSocket.emit (events.js:198:13)
-    at emitErrorNT (internal/streams/destroy.js:91:8)
-    at emitErrorAndCloseNT (internal/streams/destroy.js:59:3)
-    at process._tickCallback (internal/process/next_tick.js:63:19)
-  message:
-   'request to https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUSD failed, reason: connect ETIMEDOUT 159.203.144.149:443',
-  type: 'system',
-  errno: 'ETIMEDOUT',
-  code: 'ETIMEDOUT' }
-(node:1140) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'last' of undefined
-    at Object.list_block (C:\Users\user\Desktop\BlockChain_Browser_Web\bitcoin-browser-api\src\list_block.js:25:24)
-    at process._tickCallback (internal/process/next_tick.js:68:7)
-(node:1140) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 68)
-error { FetchError: request to https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUSD failed, reason: connect ETIMEDOUT 159.203.144.149:443
-    at ClientRequest.<anonymous> (C:\Users\user\Desktop\BlockChain_Browser_Web\node_modules\node-fetch\lib\index.js:1455:11)
-    at ClientRequest.emit (events.js:198:13)
-    at TLSSocket.socketErrorListener (_http_client.js:392:9)
-    at TLSSocket.emit (events.js:198:13)
-    at emitErrorNT (internal/streams/destroy.js:91:8)
-    at emitErrorAndCloseNT (internal/streams/destroy.js:59:3)
-    at process._tickCallback (internal/process/next_tick.js:63:19)
-  message:
-   'request to https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUSD failed, reason: connect ETIMEDOUT 159.203.144.149:443',
-  type: 'system',
-  errno: 'ETIMEDOUT',
-  code: 'ETIMEDOUT' }
-(node:1140) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'last' of undefined
-    at Object.list_block (C:\Users\user\Desktop\BlockChain_Browser_Web\bitcoin-browser-api\src\list_block.js:25:24)
-    at process._tickCallback (internal/process/next_tick.js:68:7)
-(node:1140) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 69)
-error { FetchError: request to https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUSD failed, reason: connect ETIMEDOUT 159.203.144.149:443
-    at ClientRequest.<anonymous> (C:\Users\user\Desktop\BlockChain_Browser_Web\node_modules\node-fetch\lib\index.js:1455:11)
-    at ClientRequest.emit (events.js:198:13)
-    at TLSSocket.socketErrorListener (_http_client.js:392:9)
-    at TLSSocket.emit (events.js:198:13)
-    at emitErrorNT (internal/streams/destroy.js:91:8)
-    at emitErrorAndCloseNT (internal/streams/destroy.js:59:3)
-    at process._tickCallback (internal/process/next_tick.js:63:19)
-  message:
-   'request to https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUSD failed, reason: connect ETIMEDOUT 159.203.144.149:443',
-  type: 'system',
-  errno: 'ETIMEDOUT',
-  code: 'ETIMEDOUT' }
-(node:1140) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'last' of undefined
-    at Object.list_block (C:\Users\user\Desktop\BlockChain_Browser_Web\bitcoin-browser-api\src\list_block.js:25:24)
-    at process._tickCallback (internal/process/next_tick.js:68:7)
-(node:1140) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 70)
-error { Error: ESOCKETTIMEDOUT
-    at ClientRequest.<anonymous> (C:\Users\user\Desktop\BlockChain_Browser_Web\node_modules\request\request.js:816:19)
-    at Object.onceWrapper (events.js:286:20)
-    at ClientRequest.emit (events.js:198:13)
-    at Socket.emitRequestTimeout (_http_client.js:662:40)
-    at Object.onceWrapper (events.js:286:20)
-    at Socket.emit (events.js:198:13)
-    at Socket._onTimeout (net.js:442:8)
-    at ontimeout (timers.js:436:11)
-    at tryOnTimeout (timers.js:300:5)
-    at listOnTimeout (timers.js:263:5) code: 'ESOCKETTIMEDOUT', connect: false }
-(node:1140) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'height' of undefined
-    at list_some_block_info (C:\Users\user\Desktop\BlockChain_Browser_Web\bitcoin-browser-api\src\list_block.js:10:26)
-    at process._tickCallback (internal/process/next_tick.js:68:7)
-(node:1140) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 71)
-error { FetchError: request to https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUSD failed, reason: connect ETIMEDOUT 159.203.144.149:443
-    at ClientRequest.<anonymous> (C:\Users\user\Desktop\BlockChain_Browser_Web\node_modules\node-fetch\lib\index.js:1455:11)
-    at ClientRequest.emit (events.js:198:13)
-    at TLSSocket.socketErrorListener (_http_client.js:392:9)
-    at TLSSocket.emit (events.js:198:13)
-    at emitErrorNT (internal/streams/destroy.js:91:8)
-    at emitErrorAndCloseNT (internal/streams/destroy.js:59:3)
-    at process._tickCallback (internal/process/next_tick.js:63:19)
-  message:
-   'request to https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUSD failed, reason: connect ETIMEDOUT 159.203.144.149:443',
-  type: 'system',
-  errno: 'ETIMEDOUT',
-  code: 'ETIMEDOUT' }
-(node:1140) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'last' of undefined
-    at Object.list_block (C:\Users\user\Desktop\BlockChain_Browser_Web\bitcoin-browser-api\src\list_block.js:25:24)
-    at process._tickCallback (internal/process/next_tick.js:68:7)
-(node:1140) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 72)
-error { FetchError: request to https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUSD failed, reason: connect ETIMEDOUT 159.203.144.149:443
-    at ClientRequest.<anonymous> (C:\Users\user\Desktop\BlockChain_Browser_Web\node_modules\node-fetch\lib\index.js:1455:11)
-    at ClientRequest.emit (events.js:198:13)
-    at TLSSocket.socketErrorListener (_http_client.js:392:9)
-    at TLSSocket.emit (events.js:198:13)
-    at emitErrorNT (internal/streams/destroy.js:91:8)
-    at emitErrorAndCloseNT (internal/streams/destroy.js:59:3)
-    at process._tickCallback (internal/process/next_tick.js:63:19)
-  message:
-   'request to https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUSD failed, reason: connect ETIMEDOUT 159.203.144.149:443',
-  type: 'system',
-  errno: 'ETIMEDOUT',
-  code: 'ETIMEDOUT' }
-(node:1140) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'last' of undefined
-    at Object.list_block (C:\Users\user\Desktop\BlockChain_Browser_Web\bitcoin-browser-api\src\list_block.js:25:24)
-    at process._tickCallback (internal/process/next_tick.js:68:7)
-(node:1140) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 73)
-error { FetchError: request to https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUSD failed, reason: connect ETIMEDOUT 159.203.144.149:443
-    at ClientRequest.<anonymous> (C:\Users\user\Desktop\BlockChain_Browser_Web\node_modules\node-fetch\lib\index.js:1455:11)
-    at ClientRequest.emit (events.js:198:13)
-    at TLSSocket.socketErrorListener (_http_client.js:392:9)
-    at TLSSocket.emit (events.js:198:13)
-    at emitErrorNT (internal/streams/destroy.js:91:8)
-    at emitErrorAndCloseNT (internal/streams/destroy.js:59:3)
-    at process._tickCallback (internal/process/next_tick.js:63:19)
-  message:
-   'request to https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUSD failed, reason: connect ETIMEDOUT 159.203.144.149:443',
-  type: 'system',
-  errno: 'ETIMEDOUT',
-  code: 'ETIMEDOUT' }
-(node:1140) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'last' of undefined
-    at Object.list_block (C:\Users\user\Desktop\BlockChain_Browser_Web\bitcoin-browser-api\src\list_block.js:25:24)
-    at process._tickCallback (internal/process/next_tick.js:68:7)
-(node:1140) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 74)
-error { FetchError: request to https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUSD failed, reason: connect ETIMEDOUT 159.203.144.149:443
-    at ClientRequest.<anonymous> (C:\Users\user\Desktop\BlockChain_Browser_Web\node_modules\node-fetch\lib\index.js:1455:11)
-    at ClientRequest.emit (events.js:198:13)
-    at TLSSocket.socketErrorListener (_http_client.js:392:9)
-    at TLSSocket.emit (events.js:198:13)
-    at emitErrorNT (internal/streams/destroy.js:91:8)
-    at emitErrorAndCloseNT (internal/streams/destroy.js:59:3)
-    at process._tickCallback (internal/process/next_tick.js:63:19)
-  message:
-   'request to https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUSD failed, reason: connect ETIMEDOUT 159.203.144.149:443',
-  type: 'system',
-  errno: 'ETIMEDOUT',
-  code: 'ETIMEDOUT' }
-(node:1140) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'last' of undefined
-    at Object.list_block (C:\Users\user\Desktop\BlockChain_Browser_Web\bitcoin-browser-api\src\list_block.js:25:24)
-    at process._tickCallback (internal/process/next_tick.js:68:7)
-(node:1140) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 75)
-error { FetchError: request to https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUSD failed, reason: connect ETIMEDOUT 159.203.144.149:443
-    at ClientRequest.<anonymous> (C:\Users\user\Desktop\BlockChain_Browser_Web\node_modules\node-fetch\lib\index.js:1455:11)
-    at ClientRequest.emit (events.js:198:13)
-    at TLSSocket.socketErrorListener (_http_client.js:392:9)
-    at TLSSocket.emit (events.js:198:13)
-    at emitErrorNT (internal/streams/destroy.js:91:8)
-    at emitErrorAndCloseNT (internal/streams/destroy.js:59:3)
-    at process._tickCallback (internal/process/next_tick.js:63:19)
-  message:
-   'request to https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUSD failed, reason: connect ETIMEDOUT 159.203.144.149:443',
-  type: 'system',
-  errno: 'ETIMEDOUT',
-  code: 'ETIMEDOUT' }
-(node:1140) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'last' of undefined
-    at Object.list_block (C:\Users\user\Desktop\BlockChain_Browser_Web\bitcoin-browser-api\src\list_block.js:25:24)
-    at process._tickCallback (internal/process/next_tick.js:68:7)
-(node:1140) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 76)
-error { Error: ESOCKETTIMEDOUT
-    at ClientRequest.<anonymous> (C:\Users\user\Desktop\BlockChain_Browser_Web\node_modules\request\request.js:816:19)
-    at Object.onceWrapper (events.js:286:20)
-    at ClientRequest.emit (events.js:198:13)
-    at Socket.emitRequestTimeout (_http_client.js:662:40)
-    at Object.onceWrapper (events.js:286:20)
-    at Socket.emit (events.js:198:13)
-    at Socket._onTimeout (net.js:442:8)
-    at ontimeout (timers.js:436:11)
-    at tryOnTimeout (timers.js:300:5)
-    at listOnTimeout (timers.js:263:5) code: 'ESOCKETTIMEDOUT', connect: false }
-(node:1140) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'height' of undefined
-    at list_some_block_info (C:\Users\user\Desktop\BlockChain_Browser_Web\bitcoin-browser-api\src\list_block.js:10:26)
-    at process._tickCallback (internal/process/next_tick.js:68:7)
-(node:1140) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 77)
-error { Error: ESOCKETTIMEDOUT
-    at ClientRequest.<anonymous> (C:\Users\user\Desktop\BlockChain_Browser_Web\node_modules\request\request.js:816:19)
-    at Object.onceWrapper (events.js:286:20)
-    at ClientRequest.emit (events.js:198:13)
-    at Socket.emitRequestTimeout (_http_client.js:662:40)
-    at Object.onceWrapper (events.js:286:20)
-    at Socket.emit (events.js:198:13)
-    at Socket._onTimeout (net.js:442:8)
-    at ontimeout (timers.js:436:11)
-    at tryOnTimeout (timers.js:300:5)
-    at listOnTimeout (timers.js:263:5) code: 'ESOCKETTIMEDOUT', connect: false }
-(node:1140) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'tx' of undefined
-    at Object.getBlockHashProfit (C:\Users\user\Desktop\BlockChain_Browser_Web\bitcoin-browser-api\src\bitcoin-core-function.js:82:48)
-    at process._tickCallback (internal/process/next_tick.js:68:7)
-(node:1140) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 78)
-error { Error: ESOCKETTIMEDOUT
-    at ClientRequest.<anonymous> (C:\Users\user\Desktop\BlockChain_Browser_Web\node_modules\request\request.js:816:19)
-    at Object.onceWrapper (events.js:286:20)
-    at ClientRequest.emit (events.js:198:13)
-    at Socket.emitRequestTimeout (_http_client.js:662:40)
-    at Object.onceWrapper (events.js:286:20)
-    at Socket.emit (events.js:198:13)
-    at Socket._onTimeout (net.js:442:8)
-    at ontimeout (timers.js:436:11)
-    at tryOnTimeout (timers.js:300:5)
-    at listOnTimeout (timers.js:263:5) code: 'ESOCKETTIMEDOUT', connect: false }
-(node:1140) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'tx' of undefined
-    at Object.getBlockHashProfit (C:\Users\user\Desktop\BlockChain_Browser_Web\bitcoin-browser-api\src\bitcoin-core-function.js:82:48)
-    at process._tickCallback (internal/process/next_tick.js:68:7)
-(node:1140) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 79)
-error { Error: ESOCKETTIMEDOUT
-    at ClientRequest.<anonymous> (C:\Users\user\Desktop\BlockChain_Browser_Web\node_modules\request\request.js:816:19)
-    at Object.onceWrapper (events.js:286:20)
-    at ClientRequest.emit (events.js:198:13)
-    at Socket.emitRequestTimeout (_http_client.js:662:40)
-    at Object.onceWrapper (events.js:286:20)
-    at Socket.emit (events.js:198:13)
-    at Socket._onTimeout (net.js:442:8)
-    at ontimeout (timers.js:436:11)
-    at tryOnTimeout (timers.js:300:5)
-    at listOnTimeout (timers.js:263:5) code: 'ESOCKETTIMEDOUT', connect: false }
-(node:1140) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'tx' of undefined
-    at Object.getBlockHashProfit (C:\Users\user\Desktop\BlockChain_Browser_Web\bitcoin-browser-api\src\bitcoin-core-function.js:82:48)
-    at process._tickCallback (internal/process/next_tick.js:68:7)
-(node:1140) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 80)
-error { Error: ESOCKETTIMEDOUT
-    at ClientRequest.<anonymous> (C:\Users\user\Desktop\BlockChain_Browser_Web\node_modules\request\request.js:816:19)
-    at Object.onceWrapper (events.js:286:20)
-    at ClientRequest.emit (events.js:198:13)
-    at Socket.emitRequestTimeout (_http_client.js:662:40)
-    at Object.onceWrapper (events.js:286:20)
-    at Socket.emit (events.js:198:13)
-    at Socket._onTimeout (net.js:442:8)
-    at ontimeout (timers.js:436:11)
-    at tryOnTimeout (timers.js:300:5)
-    at listOnTimeout (timers.js:263:5) code: 'ESOCKETTIMEDOUT', connect: false }
-(node:1140) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'height' of undefined
-    at list_some_block_info (C:\Users\user\Desktop\BlockChain_Browser_Web\bitcoin-browser-api\src\list_block.js:10:26)
-    at process._tickCallback (internal/process/next_tick.js:68:7)
-(node:1140) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 81)
-error { Error: ESOCKETTIMEDOUT
-    at ClientRequest.<anonymous> (C:\Users\user\Desktop\BlockChain_Browser_Web\node_modules\request\request.js:816:19)
-    at Object.onceWrapper (events.js:286:20)
-    at ClientRequest.emit (events.js:198:13)
-    at Socket.emitRequestTimeout (_http_client.js:662:40)
-    at Object.onceWrapper (events.js:286:20)
-    at Socket.emit (events.js:198:13)
-    at Socket._onTimeout (net.js:442:8)
-    at ontimeout (timers.js:436:11)
-    at tryOnTimeout (timers.js:300:5)
-    at listOnTimeout (timers.js:263:5) code: 'ESOCKETTIMEDOUT', connect: false }
-(node:1140) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'height' of undefined
-    at list_some_block_info (C:\Users\user\Desktop\BlockChain_Browser_Web\bitcoin-browser-api\src\list_block.js:10:26)
-    at process._tickCallback (internal/process/next_tick.js:68:7)
-(node:1140) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 82)
-error { FetchError: request to https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUSD failed, reason: getaddrinfo ENOTFOUND apiv2.bitcoinaverage.com apiv2.bitcoinaverage.com:443
-    at ClientRequest.<anonymous> (C:\Users\user\Desktop\BlockChain_Browser_Web\node_modules\node-fetch\lib\index.js:1455:11)
-    at ClientRequest.emit (events.js:198:13)
-    at TLSSocket.socketErrorListener (_http_client.js:392:9)
-    at TLSSocket.emit (events.js:198:13)
-    at emitErrorNT (internal/streams/destroy.js:91:8)
-    at emitErrorAndCloseNT (internal/streams/destroy.js:59:3)
-    at process._tickCallback (internal/process/next_tick.js:63:19)
-  message:
-   'request to https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUSD failed, reason: getaddrinfo ENOTFOUND apiv2.bitcoinaverage.com apiv2.bitcoinaverage.com:443',
-  type: 'system',
-  errno: 'ENOTFOUND',
-  code: 'ENOTFOUND' }
-(node:1140) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'last' of undefined
-    at Object.list_block (C:\Users\user\Desktop\BlockChain_Browser_Web\bitcoin-browser-api\src\list_block.js:25:24)
-    at process._tickCallback (internal/process/next_tick.js:68:7)
-(node:1140) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 83)
-error { Error: ESOCKETTIMEDOUT
-    at ClientRequest.<anonymous> (C:\Users\user\Desktop\BlockChain_Browser_Web\node_modules\request\request.js:816:19)
-    at Object.onceWrapper (events.js:286:20)
-    at ClientRequest.emit (events.js:198:13)
-    at Socket.emitRequestTimeout (_http_client.js:662:40)
-    at Object.onceWrapper (events.js:286:20)
-    at Socket.emit (events.js:198:13)
-    at Socket._onTimeout (net.js:442:8)
-    at ontimeout (timers.js:436:11)
-    at tryOnTimeout (timers.js:300:5)
-    at listOnTimeout (timers.js:263:5) code: 'ESOCKETTIMEDOUT', connect: false }
-(node:1140) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'height' of undefined
-    at list_some_block_info (C:\Users\user\Desktop\BlockChain_Browser_Web\bitcoin-browser-api\src\list_block.js:10:26)
-    at process._tickCallback (internal/process/next_tick.js:68:7)
-(node:1140) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 84)
-error { Error: ESOCKETTIMEDOUT
-    at ClientRequest.<anonymous> (C:\Users\user\Desktop\BlockChain_Browser_Web\node_modules\request\request.js:816:19)
-    at Object.onceWrapper (events.js:286:20)
-    at ClientRequest.emit (events.js:198:13)
-    at Socket.emitRequestTimeout (_http_client.js:662:40)
-    at Object.onceWrapper (events.js:286:20)
-    at Socket.emit (events.js:198:13)
-    at Socket._onTimeout (net.js:442:8)
-    at ontimeout (timers.js:436:11)
-    at tryOnTimeout (timers.js:300:5)
-    at listOnTimeout (timers.js:263:5) code: 'ESOCKETTIMEDOUT', connect: false }
-(node:1140) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'tx' of undefined
-    at Object.getBlockHashProfit (C:\Users\user\Desktop\BlockChain_Browser_Web\bitcoin-browser-api\src\bitcoin-core-function.js:82:48)
-    at process._tickCallback (internal/process/next_tick.js:68:7)
-(node:1140) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 85)
-error { Error: ESOCKETTIMEDOUT
-    at ClientRequest.<anonymous> (C:\Users\user\Desktop\BlockChain_Browser_Web\node_modules\request\request.js:816:19)
-    at Object.onceWrapper (events.js:286:20)
-    at ClientRequest.emit (events.js:198:13)
-    at Socket.emitRequestTimeout (_http_client.js:662:40)
-    at Object.onceWrapper (events.js:286:20)
-    at Socket.emit (events.js:198:13)
-    at Socket._onTimeout (net.js:442:8)
-    at ontimeout (timers.js:436:11)
-    at tryOnTimeout (timers.js:300:5)
-    at listOnTimeout (timers.js:263:5) code: 'ESOCKETTIMEDOUT', connect: false }
-(node:1140) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'tx' of undefined
-    at Object.getBlockHashProfit (C:\Users\user\Desktop\BlockChain_Browser_Web\bitcoin-browser-api\src\bitcoin-core-function.js:82:48)
-    at process._tickCallback (internal/process/next_tick.js:68:7)
-(node:1140) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 86)
-error { Error: ESOCKETTIMEDOUT
-    at ClientRequest.<anonymous> (C:\Users\user\Desktop\BlockChain_Browser_Web\node_modules\request\request.js:816:19)
-    at Object.onceWrapper (events.js:286:20)
-    at ClientRequest.emit (events.js:198:13)
-    at Socket.emitRequestTimeout (_http_client.js:662:40)
-    at Object.onceWrapper (events.js:286:20)
-    at Socket.emit (events.js:198:13)
-    at Socket._onTimeout (net.js:442:8)
-    at ontimeout (timers.js:436:11)
-    at tryOnTimeout (timers.js:300:5)
-    at listOnTimeout (timers.js:263:5) code: 'ESOCKETTIMEDOUT', connect: false }
-(node:1140) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'tx' of undefined
-    at Object.getBlockHashProfit (C:\Users\user\Desktop\BlockChain_Browser_Web\bitcoin-browser-api\src\bitcoin-core-function.js:82:48)
-    at process._tickCallback (internal/process/next_tick.js:68:7)
-(node:1140) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 87)
-error { Error: ESOCKETTIMEDOUT
-    at ClientRequest.<anonymous> (C:\Users\user\Desktop\BlockChain_Browser_Web\node_modules\request\request.js:816:19)
-    at Object.onceWrapper (events.js:286:20)
-    at ClientRequest.emit (events.js:198:13)
-    at Socket.emitRequestTimeout (_http_client.js:662:40)
-    at Object.onceWrapper (events.js:286:20)
-    at Socket.emit (events.js:198:13)
-    at Socket._onTimeout (net.js:442:8)
-    at ontimeout (timers.js:436:11)
-    at tryOnTimeout (timers.js:300:5)
-    at listOnTimeout (timers.js:263:5) code: 'ESOCKETTIMEDOUT', connect: false }
-(node:1140) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'tx' of undefined
-    at Object.getBlockHashProfit (C:\Users\user\Desktop\BlockChain_Browser_Web\bitcoin-browser-api\src\bitcoin-core-function.js:82:48)
-    at process._tickCallback (internal/process/next_tick.js:68:7)
-(node:1140) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 88)
-error { Error: ESOCKETTIMEDOUT
-    at ClientRequest.<anonymous> (C:\Users\user\Desktop\BlockChain_Browser_Web\node_modules\request\request.js:816:19)
-    at Object.onceWrapper (events.js:286:20)
-    at ClientRequest.emit (events.js:198:13)
-    at Socket.emitRequestTimeout (_http_client.js:662:40)
-    at Object.onceWrapper (events.js:286:20)
-    at Socket.emit (events.js:198:13)
-    at Socket._onTimeout (net.js:442:8)
-    at ontimeout (timers.js:436:11)
-    at tryOnTimeout (timers.js:300:5)
-    at listOnTimeout (timers.js:263:5) code: 'ESOCKETTIMEDOUT', connect: false }
-(node:1140) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'height' of undefined
-    at list_some_block_info (C:\Users\user\Desktop\BlockChain_Browser_Web\bitcoin-browser-api\src\list_block.js:10:26)
-    at process._tickCallback (internal/process/next_tick.js:68:7)
-(node:1140) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 89)
-error { Error: ESOCKETTIMEDOUT
-    at ClientRequest.<anonymous> (C:\Users\user\Desktop\BlockChain_Browser_Web\node_modules\request\request.js:816:19)
-    at Object.onceWrapper (events.js:286:20)
-    at ClientRequest.emit (events.js:198:13)
-    at Socket.emitRequestTimeout (_http_client.js:662:40)
-    at Object.onceWrapper (events.js:286:20)
-    at Socket.emit (events.js:198:13)
-    at Socket._onTimeout (net.js:442:8)
-    at ontimeout (timers.js:436:11)
-    at tryOnTimeout (timers.js:300:5)
-    at listOnTimeout (timers.js:263:5) code: 'ESOCKETTIMEDOUT', connect: false }
-(node:1140) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'tx' of undefined
-    at Object.getBlockHashProfit (C:\Users\user\Desktop\BlockChain_Browser_Web\bitcoin-browser-api\src\bitcoin-core-function.js:82:48)
-    at process._tickCallback (internal/process/next_tick.js:68:7)
-(node:1140) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 90)
-error { Error: ESOCKETTIMEDOUT
-    at ClientRequest.<anonymous> (C:\Users\user\Desktop\BlockChain_Browser_Web\node_modules\request\request.js:816:19)
-    at Object.onceWrapper (events.js:286:20)
-    at ClientRequest.emit (events.js:198:13)
-    at Socket.emitRequestTimeout (_http_client.js:662:40)
-    at Object.onceWrapper (events.js:286:20)
-    at Socket.emit (events.js:198:13)
-    at Socket._onTimeout (net.js:442:8)
-    at ontimeout (timers.js:436:11)
-    at tryOnTimeout (timers.js:300:5)
-    at listOnTimeout (timers.js:263:5) code: 'ESOCKETTIMEDOUT', connect: false }
-(node:1140) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'tx' of undefined
-    at Object.getBlockHashProfit (C:\Users\user\Desktop\BlockChain_Browser_Web\bitcoin-browser-api\src\bitcoin-core-function.js:82:48)
-    at process._tickCallback (internal/process/next_tick.js:68:7)
-(node:1140) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 91)
-error { Error: ESOCKETTIMEDOUT
-    at ClientRequest.<anonymous> (C:\Users\user\Desktop\BlockChain_Browser_Web\node_modules\request\request.js:816:19)
-    at Object.onceWrapper (events.js:286:20)
-    at ClientRequest.emit (events.js:198:13)
-    at Socket.emitRequestTimeout (_http_client.js:662:40)
-    at Object.onceWrapper (events.js:286:20)
-    at Socket.emit (events.js:198:13)
-    at Socket._onTimeout (net.js:442:8)
-    at ontimeout (timers.js:436:11)
-    at tryOnTimeout (timers.js:300:5)
-    at listOnTimeout (timers.js:263:5) code: 'ESOCKETTIMEDOUT', connect: false }
-(node:1140) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'height' of undefined
-    at list_some_block_info (C:\Users\user\Desktop\BlockChain_Browser_Web\bitcoin-browser-api\src\list_block.js:10:26)
-    at process._tickCallback (internal/process/next_tick.js:68:7)
-(node:1140) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 92)
-error { Error: ESOCKETTIMEDOUT
-    at ClientRequest.<anonymous> (C:\Users\user\Desktop\BlockChain_Browser_Web\node_modules\request\request.js:816:19)
-    at Object.onceWrapper (events.js:286:20)
-    at ClientRequest.emit (events.js:198:13)
-    at Socket.emitRequestTimeout (_http_client.js:662:40)
-    at Object.onceWrapper (events.js:286:20)
-    at Socket.emit (events.js:198:13)
-    at Socket._onTimeout (net.js:442:8)
-    at ontimeout (timers.js:436:11)
-    at tryOnTimeout (timers.js:300:5)
-    at listOnTimeout (timers.js:263:5) code: 'ESOCKETTIMEDOUT', connect: false }
-(node:1140) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'tx' of undefined
-    at Object.getBlockHashProfit (C:\Users\user\Desktop\BlockChain_Browser_Web\bitcoin-browser-api\src\bitcoin-core-function.js:82:48)
-    at process._tickCallback (internal/process/next_tick.js:68:7)
-(node:1140) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 93)
-error { Error: ESOCKETTIMEDOUT
-    at ClientRequest.<anonymous> (C:\Users\user\Desktop\BlockChain_Browser_Web\node_modules\request\request.js:816:19)
-    at Object.onceWrapper (events.js:286:20)
-    at ClientRequest.emit (events.js:198:13)
-    at Socket.emitRequestTimeout (_http_client.js:662:40)
-    at Object.onceWrapper (events.js:286:20)
-    at Socket.emit (events.js:198:13)
-    at Socket._onTimeout (net.js:442:8)
-    at ontimeout (timers.js:436:11)
-    at tryOnTimeout (timers.js:300:5)
-    at listOnTimeout (timers.js:263:5) code: 'ESOCKETTIMEDOUT', connect: false }
-(node:1140) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'tx' of undefined
-    at Object.getBlockHashProfit (C:\Users\user\Desktop\BlockChain_Browser_Web\bitcoin-browser-api\src\bitcoin-core-function.js:82:48)
-    at process._tickCallback (internal/process/next_tick.js:68:7)
-(node:1140) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 94)
-error { Error: ESOCKETTIMEDOUT
-    at ClientRequest.<anonymous> (C:\Users\user\Desktop\BlockChain_Browser_Web\node_modules\request\request.js:816:19)
-    at Object.onceWrapper (events.js:286:20)
-    at ClientRequest.emit (events.js:198:13)
-    at Socket.emitRequestTimeout (_http_client.js:662:40)
-    at Object.onceWrapper (events.js:286:20)
-    at Socket.emit (events.js:198:13)
-    at Socket._onTimeout (net.js:442:8)
-    at ontimeout (timers.js:436:11)
-    at tryOnTimeout (timers.js:300:5)
-    at listOnTimeout (timers.js:263:5) code: 'ESOCKETTIMEDOUT', connect: false }
-(node:1140) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'tx' of undefined
-    at Object.getBlockHashProfit (C:\Users\user\Desktop\BlockChain_Browser_Web\bitcoin-browser-api\src\bitcoin-core-function.js:82:48)
-    at process._tickCallback (internal/process/next_tick.js:68:7)
-(node:1140) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 95)
-error { Error: ESOCKETTIMEDOUT
-    at ClientRequest.<anonymous> (C:\Users\user\Desktop\BlockChain_Browser_Web\node_modules\request\request.js:816:19)
-    at Object.onceWrapper (events.js:286:20)
-    at ClientRequest.emit (events.js:198:13)
-    at Socket.emitRequestTimeout (_http_client.js:662:40)
-    at Object.onceWrapper (events.js:286:20)
-    at Socket.emit (events.js:198:13)
-    at Socket._onTimeout (net.js:442:8)
-    at ontimeout (timers.js:436:11)
-    at tryOnTimeout (timers.js:300:5)
-    at listOnTimeout (timers.js:263:5) code: 'ESOCKETTIMEDOUT', connect: false }
-(node:1140) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'tx' of undefined
-    at Object.getBlockHashProfit (C:\Users\user\Desktop\BlockChain_Browser_Web\bitcoin-browser-api\src\bitcoin-core-function.js:82:48)
-    at process._tickCallback (internal/process/next_tick.js:68:7)
-(node:1140) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 96)
-error { Error: ESOCKETTIMEDOUT
-    at ClientRequest.<anonymous> (C:\Users\user\Desktop\BlockChain_Browser_Web\node_modules\request\request.js:816:19)
-    at Object.onceWrapper (events.js:286:20)
-    at ClientRequest.emit (events.js:198:13)
-    at Socket.emitRequestTimeout (_http_client.js:662:40)
-    at Object.onceWrapper (events.js:286:20)
-    at Socket.emit (events.js:198:13)
-    at Socket._onTimeout (net.js:442:8)
-    at ontimeout (timers.js:436:11)
-    at tryOnTimeout (timers.js:300:5)
-    at listOnTimeout (timers.js:263:5) code: 'ESOCKETTIMEDOUT', connect: false }
-(node:1140) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'height' of undefined
-    at list_some_block_info (C:\Users\user\Desktop\BlockChain_Browser_Web\bitcoin-browser-api\src\list_block.js:10:26)
-    at process._tickCallback (internal/process/next_tick.js:68:7)
-(node:1140) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 97)
-error { Error: ESOCKETTIMEDOUT
-    at ClientRequest.<anonymous> (C:\Users\user\Desktop\BlockChain_Browser_Web\node_modules\request\request.js:816:19)
-    at Object.onceWrapper (events.js:286:20)
-    at ClientRequest.emit (events.js:198:13)
-    at Socket.emitRequestTimeout (_http_client.js:662:40)
-    at Object.onceWrapper (events.js:286:20)
-    at Socket.emit (events.js:198:13)
-    at Socket._onTimeout (net.js:442:8)
-    at ontimeout (timers.js:436:11)
-    at tryOnTimeout (timers.js:300:5)
-    at listOnTimeout (timers.js:263:5) code: 'ESOCKETTIMEDOUT', connect: false }
-(node:1140) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'tx' of undefined
-    at Object.getBlockHashProfit (C:\Users\user\Desktop\BlockChain_Browser_Web\bitcoin-browser-api\src\bitcoin-core-function.js:82:48)
-    at process._tickCallback (internal/process/next_tick.js:68:7)
-(node:1140) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 98)
-error { Error: ESOCKETTIMEDOUT
-    at ClientRequest.<anonymous> (C:\Users\user\Desktop\BlockChain_Browser_Web\node_modules\request\request.js:816:19)
-    at Object.onceWrapper (events.js:286:20)
-    at ClientRequest.emit (events.js:198:13)
-    at Socket.emitRequestTimeout (_http_client.js:662:40)
-    at Object.onceWrapper (events.js:286:20)
-    at Socket.emit (events.js:198:13)
-    at Socket._onTimeout (net.js:442:8)
-    at ontimeout (timers.js:436:11)
-    at tryOnTimeout (timers.js:300:5)
-    at listOnTimeout (timers.js:263:5) code: 'ESOCKETTIMEDOUT', connect: false }
-(node:1140) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'height' of undefined
-    at list_some_block_info (C:\Users\user\Desktop\BlockChain_Browser_Web\bitcoin-browser-api\src\list_block.js:10:26)
-    at process._tickCallback (internal/process/next_tick.js:68:7)
-(node:1140) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 99)
-error { Error: ESOCKETTIMEDOUT
-    at ClientRequest.<anonymous> (C:\Users\user\Desktop\BlockChain_Browser_Web\node_modules\request\request.js:816:19)
-    at Object.onceWrapper (events.js:286:20)
-    at ClientRequest.emit (events.js:198:13)
-    at Socket.emitRequestTimeout (_http_client.js:662:40)
-    at Object.onceWrapper (events.js:286:20)
-    at Socket.emit (events.js:198:13)
-    at Socket._onTimeout (net.js:442:8)
-    at ontimeout (timers.js:436:11)
-    at tryOnTimeout (timers.js:300:5)
-    at listOnTimeout (timers.js:263:5) code: 'ESOCKETTIMEDOUT', connect: false }
-(node:1140) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'height' of undefined
-    at list_some_block_info (C:\Users\user\Desktop\BlockChain_Browser_Web\bitcoin-browser-api\src\list_block.js:10:26)
-    at process._tickCallback (internal/process/next_tick.js:68:7)
-(node:1140) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 100)
-error { Error: ESOCKETTIMEDOUT
-    at ClientRequest.<anonymous> (C:\Users\user\Desktop\BlockChain_Browser_Web\node_modules\request\request.js:816:19)
-    at Object.onceWrapper (events.js:286:20)
-    at ClientRequest.emit (events.js:198:13)
-    at Socket.emitRequestTimeout (_http_client.js:662:40)
-    at Object.onceWrapper (events.js:286:20)
-    at Socket.emit (events.js:198:13)
-    at Socket._onTimeout (net.js:442:8)
-    at ontimeout (timers.js:436:11)
-    at tryOnTimeout (timers.js:300:5)
-    at listOnTimeout (timers.js:263:5) code: 'ESOCKETTIMEDOUT', connect: false }
-(node:1140) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'height' of undefined
-    at list_some_block_info (C:\Users\user\Desktop\BlockChain_Browser_Web\bitcoin-browser-api\src\list_block.js:10:26)
-    at process._tickCallback (internal/process/next_tick.js:68:7)
-(node:1140) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 101)
-error { Error: ESOCKETTIMEDOUT
-    at ClientRequest.<anonymous> (C:\Users\user\Desktop\BlockChain_Browser_Web\node_modules\request\request.js:816:19)
-    at Object.onceWrapper (events.js:286:20)
-    at ClientRequest.emit (events.js:198:13)
-    at Socket.emitRequestTimeout (_http_client.js:662:40)
-    at Object.onceWrapper (events.js:286:20)
-    at Socket.emit (events.js:198:13)
-    at Socket._onTimeout (net.js:442:8)
-    at ontimeout (timers.js:436:11)
-    at tryOnTimeout (timers.js:300:5)
-    at listOnTimeout (timers.js:263:5) code: 'ESOCKETTIMEDOUT', connect: false }
-(node:1140) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'tx' of undefined
-    at Object.getBlockHashProfit (C:\Users\user\Desktop\BlockChain_Browser_Web\bitcoin-browser-api\src\bitcoin-core-function.js:82:48)
-    at process._tickCallback (internal/process/next_tick.js:68:7)
-(node:1140) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 102)
-error { Error: ESOCKETTIMEDOUT
-    at ClientRequest.<anonymous> (C:\Users\user\Desktop\BlockChain_Browser_Web\node_modules\request\request.js:816:19)
-    at Object.onceWrapper (events.js:286:20)
-    at ClientRequest.emit (events.js:198:13)
-    at Socket.emitRequestTimeout (_http_client.js:662:40)
-    at Object.onceWrapper (events.js:286:20)
-    at Socket.emit (events.js:198:13)
-    at Socket._onTimeout (net.js:442:8)
-    at ontimeout (timers.js:436:11)
-    at tryOnTimeout (timers.js:300:5)
-    at listOnTimeout (timers.js:263:5) code: 'ESOCKETTIMEDOUT', connect: false }
-(node:1140) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'height' of undefined
-    at list_some_block_info (C:\Users\user\Desktop\BlockChain_Browser_Web\bitcoin-browser-api\src\list_block.js:10:26)
-    at process._tickCallback (internal/process/next_tick.js:68:7)
-(node:1140) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 103)
-error { Error: ESOCKETTIMEDOUT
-    at ClientRequest.<anonymous> (C:\Users\user\Desktop\BlockChain_Browser_Web\node_modules\request\request.js:816:19)
-    at Object.onceWrapper (events.js:286:20)
-    at ClientRequest.emit (events.js:198:13)
-    at Socket.emitRequestTimeout (_http_client.js:662:40)
-    at Object.onceWrapper (events.js:286:20)
-    at Socket.emit (events.js:198:13)
-    at Socket._onTimeout (net.js:442:8)
-    at ontimeout (timers.js:436:11)
-    at tryOnTimeout (timers.js:300:5)
-    at listOnTimeout (timers.js:263:5) code: 'ESOCKETTIMEDOUT', connect: false }
-(node:1140) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'tx' of undefined
-    at Object.getBlockHashProfit (C:\Users\user\Desktop\BlockChain_Browser_Web\bitcoin-browser-api\src\bitcoin-core-function.js:82:48)
-    at process._tickCallback (internal/process/next_tick.js:68:7)
-(node:1140) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 104)
-error { Error: ESOCKETTIMEDOUT
-    at ClientRequest.<anonymous> (C:\Users\user\Desktop\BlockChain_Browser_Web\node_modules\request\request.js:816:19)
-    at Object.onceWrapper (events.js:286:20)
-    at ClientRequest.emit (events.js:198:13)
-    at Socket.emitRequestTimeout (_http_client.js:662:40)
-    at Object.onceWrapper (events.js:286:20)
-    at Socket.emit (events.js:198:13)
-    at Socket._onTimeout (net.js:442:8)
-    at ontimeout (timers.js:436:11)
-    at tryOnTimeout (timers.js:300:5)
-    at listOnTimeout (timers.js:263:5) code: 'ESOCKETTIMEDOUT', connect: false }
-(node:1140) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'tx' of undefined
-    at Object.getBlockHashProfit (C:\Users\user\Desktop\BlockChain_Browser_Web\bitcoin-browser-api\src\bitcoin-core-function.js:82:48)
-    at process._tickCallback (internal/process/next_tick.js:68:7)
-(node:1140) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 105)
-error { Error: ESOCKETTIMEDOUT
-    at ClientRequest.<anonymous> (C:\Users\user\Desktop\BlockChain_Browser_Web\node_modules\request\request.js:816:19)
-    at Object.onceWrapper (events.js:286:20)
-    at ClientRequest.emit (events.js:198:13)
-    at Socket.emitRequestTimeout (_http_client.js:662:40)
-    at Object.onceWrapper (events.js:286:20)
-    at Socket.emit (events.js:198:13)
-    at Socket._onTimeout (net.js:442:8)
-    at ontimeout (timers.js:436:11)
-    at tryOnTimeout (timers.js:300:5)
-    at listOnTimeout (timers.js:263:5) code: 'ESOCKETTIMEDOUT', connect: false }
-(node:1140) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'height' of undefined
-    at list_some_block_info (C:\Users\user\Desktop\BlockChain_Browser_Web\bitcoin-browser-api\src\list_block.js:10:26)
-    at process._tickCallback (internal/process/next_tick.js:68:7)
-(node:1140) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 106)
-error { Error: connect ETIMEDOUT 47.92.49.137:8332
-    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1106:14)
-  errno: 'ETIMEDOUT',
-  code: 'ETIMEDOUT',
-  syscall: 'connect',
-  address: '47.92.49.137',
-  port: 8332 }
-(node:1140) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'height' of undefined
-    at list_some_block_info (C:\Users\user\Desktop\BlockChain_Browser_Web\bitcoin-browser-api\src\list_block.js:10:26)
-    at process._tickCallback (internal/process/next_tick.js:68:7)
-(node:1140) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 107)
-error { Error: ESOCKETTIMEDOUT
-    at ClientRequest.<anonymous> (C:\Users\user\Desktop\BlockChain_Browser_Web\node_modules\request\request.js:816:19)
-    at Object.onceWrapper (events.js:286:20)
-    at ClientRequest.emit (events.js:198:13)
-    at Socket.emitRequestTimeout (_http_client.js:662:40)
-    at Object.onceWrapper (events.js:286:20)
-    at Socket.emit (events.js:198:13)
-    at Socket._onTimeout (net.js:442:8)
-    at ontimeout (timers.js:436:11)
-    at tryOnTimeout (timers.js:300:5)
-    at listOnTimeout (timers.js:263:5) code: 'ESOCKETTIMEDOUT', connect: false }
-(node:1140) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'tx' of undefined
-    at Object.getBlockHashProfit (C:\Users\user\Desktop\BlockChain_Browser_Web\bitcoin-browser-api\src\bitcoin-core-function.js:82:48)
-    at process._tickCallback (internal/process/next_tick.js:68:7)
-(node:1140) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 108)
-error { Error: ESOCKETTIMEDOUT
-    at ClientRequest.<anonymous> (C:\Users\user\Desktop\BlockChain_Browser_Web\node_modules\request\request.js:816:19)
-    at Object.onceWrapper (events.js:286:20)
-    at ClientRequest.emit (events.js:198:13)
-    at Socket.emitRequestTimeout (_http_client.js:662:40)
-    at Object.onceWrapper (events.js:286:20)
-    at Socket.emit (events.js:198:13)
-    at Socket._onTimeout (net.js:442:8)
-    at ontimeout (timers.js:436:11)
-    at tryOnTimeout (timers.js:300:5)
-    at listOnTimeout (timers.js:263:5) code: 'ESOCKETTIMEDOUT', connect: false }
-(node:1140) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'tx' of undefined
-    at Object.getBlockHashProfit (C:\Users\user\Desktop\BlockChain_Browser_Web\bitcoin-browser-api\src\bitcoin-core-function.js:82:48)
-    at process._tickCallback (internal/process/next_tick.js:68:7)
-(node:1140) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 109)
+error Error: ESOCKETTIMEDOUT
+    at ClientRequest.<anonymous> (/home/huangw/CODING/React_project/BlockChain_Browser_Web/node_modules/request/request.js:816:19)
+    at Object.onceWrapper (events.js:299:28)
+    at ClientRequest.emit (events.js:210:5)
+    at Socket.emitRequestTimeout (_http_client.js:690:9)
+    at Object.onceWrapper (events.js:299:28)
+    at Socket.emit (events.js:210:5)
+    at Socket._onTimeout (net.js:468:8)
+    at listOnTimeout (internal/timers.js:531:17)
+    at processTimers (internal/timers.js:475:7) {
+  code: 'ESOCKETTIMEDOUT',
+  connect: false
+}
+(node:23765) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'tx' of undefined
+    at Object.getBlockHashProfit (/home/huangw/CODING/React_project/BlockChain_Browser_Web/bitcoin-browser-api/src/bitcoin-core-function.js:82:48)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async list_some_block_info (/home/huangw/CODING/React_project/BlockChain_Browser_Web/bitcoin-browser-api/src/list_block.js:12:20)
+    at async Object.list_block (/home/huangw/CODING/React_project/BlockChain_Browser_Web/bitcoin-browser-api/src/list_block.js:29:15)
+    at async Timeout._onTimeout (/home/huangw/CODING/React_project/BlockChain_Browser_Web/bitcoin-browser-api/src/lb.js:15:16)
+(node:23765) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 1)
+(node:23765) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+error Error: ESOCKETTIMEDOUT
+    at ClientRequest.<anonymous> (/home/huangw/CODING/React_project/BlockChain_Browser_Web/node_modules/request/request.js:816:19)
+    at Object.onceWrapper (events.js:299:28)
+    at ClientRequest.emit (events.js:210:5)
+    at Socket.emitRequestTimeout (_http_client.js:690:9)
+    at Object.onceWrapper (events.js:299:28)
+    at Socket.emit (events.js:210:5)
+    at Socket._onTimeout (net.js:468:8)
+    at listOnTimeout (internal/timers.js:531:17)
+    at processTimers (internal/timers.js:475:7) {
+  code: 'ESOCKETTIMEDOUT',
+  connect: false
+}
+(node:23765) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'height' of undefined
+    at list_some_block_info (/home/huangw/CODING/React_project/BlockChain_Browser_Web/bitcoin-browser-api/src/list_block.js:10:26)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async Object.list_block (/home/huangw/CODING/React_project/BlockChain_Browser_Web/bitcoin-browser-api/src/list_block.js:29:15)
+    at async Timeout._onTimeout (/home/huangw/CODING/React_project/BlockChain_Browser_Web/bitcoin-browser-api/src/lb.js:15:16)
+(node:23765) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 2)
+error Error: ESOCKETTIMEDOUT
+    at ClientRequest.<anonymous> (/home/huangw/CODING/React_project/BlockChain_Browser_Web/node_modules/request/request.js:816:19)
+    at Object.onceWrapper (events.js:299:28)
+    at ClientRequest.emit (events.js:210:5)
+    at Socket.emitRequestTimeout (_http_client.js:690:9)
+    at Object.onceWrapper (events.js:299:28)
+    at Socket.emit (events.js:210:5)
+    at Socket._onTimeout (net.js:468:8)
+    at listOnTimeout (internal/timers.js:531:17)
+    at processTimers (internal/timers.js:475:7) {
+  code: 'ESOCKETTIMEDOUT',
+  connect: false
+}
+(node:23765) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'height' of undefined
+    at list_some_block_info (/home/huangw/CODING/React_project/BlockChain_Browser_Web/bitcoin-browser-api/src/list_block.js:10:26)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async Object.list_block (/home/huangw/CODING/React_project/BlockChain_Browser_Web/bitcoin-browser-api/src/list_block.js:29:15)
+    at async Timeout._onTimeout (/home/huangw/CODING/React_project/BlockChain_Browser_Web/bitcoin-browser-api/src/lb.js:15:16)
+(node:23765) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 3)
+error Error: ESOCKETTIMEDOUT
+    at ClientRequest.<anonymous> (/home/huangw/CODING/React_project/BlockChain_Browser_Web/node_modules/request/request.js:816:19)
+    at Object.onceWrapper (events.js:299:28)
+    at ClientRequest.emit (events.js:210:5)
+    at Socket.emitRequestTimeout (_http_client.js:690:9)
+    at Object.onceWrapper (events.js:299:28)
+    at Socket.emit (events.js:210:5)
+    at Socket._onTimeout (net.js:468:8)
+    at listOnTimeout (internal/timers.js:531:17)
+    at processTimers (internal/timers.js:475:7) {
+  code: 'ESOCKETTIMEDOUT',
+  connect: false
+}
+(node:23765) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'height' of undefined
+    at list_some_block_info (/home/huangw/CODING/React_project/BlockChain_Browser_Web/bitcoin-browser-api/src/list_block.js:10:26)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async Object.list_block (/home/huangw/CODING/React_project/BlockChain_Browser_Web/bitcoin-browser-api/src/list_block.js:29:15)
+    at async Timeout._onTimeout (/home/huangw/CODING/React_project/BlockChain_Browser_Web/bitcoin-browser-api/src/lb.js:15:16)
+(node:23765) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 4)
+error Error: ESOCKETTIMEDOUT
+    at ClientRequest.<anonymous> (/home/huangw/CODING/React_project/BlockChain_Browser_Web/node_modules/request/request.js:816:19)
+    at Object.onceWrapper (events.js:299:28)
+    at ClientRequest.emit (events.js:210:5)
+    at Socket.emitRequestTimeout (_http_client.js:690:9)
+    at Object.onceWrapper (events.js:299:28)
+    at Socket.emit (events.js:210:5)
+    at Socket._onTimeout (net.js:468:8)
+    at listOnTimeout (internal/timers.js:531:17)
+    at processTimers (internal/timers.js:475:7) {
+  code: 'ESOCKETTIMEDOUT',
+  connect: false
+}
+(node:23765) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'height' of undefined
+    at list_some_block_info (/home/huangw/CODING/React_project/BlockChain_Browser_Web/bitcoin-browser-api/src/list_block.js:10:26)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async Object.list_block (/home/huangw/CODING/React_project/BlockChain_Browser_Web/bitcoin-browser-api/src/list_block.js:29:15)
+    at async Timeout._onTimeout (/home/huangw/CODING/React_project/BlockChain_Browser_Web/bitcoin-browser-api/src/lb.js:15:16)
+(node:23765) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 5)
+error Error: ESOCKETTIMEDOUT
+    at ClientRequest.<anonymous> (/home/huangw/CODING/React_project/BlockChain_Browser_Web/node_modules/request/request.js:816:19)
+    at Object.onceWrapper (events.js:299:28)
+    at ClientRequest.emit (events.js:210:5)
+    at Socket.emitRequestTimeout (_http_client.js:690:9)
+    at Object.onceWrapper (events.js:299:28)
+    at Socket.emit (events.js:210:5)
+    at Socket._onTimeout (net.js:468:8)
+    at listOnTimeout (internal/timers.js:531:17)
+    at processTimers (internal/timers.js:475:7) {
+  code: 'ESOCKETTIMEDOUT',
+  connect: false
+}
+(node:23765) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'height' of undefined
+    at list_some_block_info (/home/huangw/CODING/React_project/BlockChain_Browser_Web/bitcoin-browser-api/src/list_block.js:10:26)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async Object.list_block (/home/huangw/CODING/React_project/BlockChain_Browser_Web/bitcoin-browser-api/src/list_block.js:29:15)
+    at async Timeout._onTimeout (/home/huangw/CODING/React_project/BlockChain_Browser_Web/bitcoin-browser-api/src/lb.js:15:16)
+(node:23765) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 6)
+error Error: ESOCKETTIMEDOUT
+    at ClientRequest.<anonymous> (/home/huangw/CODING/React_project/BlockChain_Browser_Web/node_modules/request/request.js:816:19)
+    at Object.onceWrapper (events.js:299:28)
+    at ClientRequest.emit (events.js:210:5)
+    at Socket.emitRequestTimeout (_http_client.js:690:9)
+    at Object.onceWrapper (events.js:299:28)
+    at Socket.emit (events.js:210:5)
+    at Socket._onTimeout (net.js:468:8)
+    at listOnTimeout (internal/timers.js:531:17)
+    at processTimers (internal/timers.js:475:7) {
+  code: 'ESOCKETTIMEDOUT',
+  connect: false
+}
+(node:23765) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'tx' of undefined
+    at Object.getBlockHashProfit (/home/huangw/CODING/React_project/BlockChain_Browser_Web/bitcoin-browser-api/src/bitcoin-core-function.js:82:48)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async list_some_block_info (/home/huangw/CODING/React_project/BlockChain_Browser_Web/bitcoin-browser-api/src/list_block.js:12:20)
+    at async Object.list_block (/home/huangw/CODING/React_project/BlockChain_Browser_Web/bitcoin-browser-api/src/list_block.js:29:15)
+    at async Timeout._onTimeout (/home/huangw/CODING/React_project/BlockChain_Browser_Web/bitcoin-browser-api/src/lb.js:15:16)
+(node:23765) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 7)
+error Error: ESOCKETTIMEDOUT
+    at ClientRequest.<anonymous> (/home/huangw/CODING/React_project/BlockChain_Browser_Web/node_modules/request/request.js:816:19)
+    at Object.onceWrapper (events.js:299:28)
+    at ClientRequest.emit (events.js:210:5)
+    at Socket.emitRequestTimeout (_http_client.js:690:9)
+    at Object.onceWrapper (events.js:299:28)
+    at Socket.emit (events.js:210:5)
+    at Socket._onTimeout (net.js:468:8)
+    at listOnTimeout (internal/timers.js:531:17)
+    at processTimers (internal/timers.js:475:7) {
+  code: 'ESOCKETTIMEDOUT',
+  connect: false
+}
+(node:23765) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'tx' of undefined
+    at Object.getBlockHashProfit (/home/huangw/CODING/React_project/BlockChain_Browser_Web/bitcoin-browser-api/src/bitcoin-core-function.js:82:48)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async list_some_block_info (/home/huangw/CODING/React_project/BlockChain_Browser_Web/bitcoin-browser-api/src/list_block.js:12:20)
+    at async Object.list_block (/home/huangw/CODING/React_project/BlockChain_Browser_Web/bitcoin-browser-api/src/list_block.js:29:15)
+    at async Timeout._onTimeout (/home/huangw/CODING/React_project/BlockChain_Browser_Web/bitcoin-browser-api/src/lb.js:15:16)
+(node:23765) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 8)
+error Error: ESOCKETTIMEDOUT
+    at ClientRequest.<anonymous> (/home/huangw/CODING/React_project/BlockChain_Browser_Web/node_modules/request/request.js:816:19)
+    at Object.onceWrapper (events.js:299:28)
+    at ClientRequest.emit (events.js:210:5)
+    at Socket.emitRequestTimeout (_http_client.js:690:9)
+    at Object.onceWrapper (events.js:299:28)
+    at Socket.emit (events.js:210:5)
+    at Socket._onTimeout (net.js:468:8)
+    at listOnTimeout (internal/timers.js:531:17)
+    at processTimers (internal/timers.js:475:7) {
+  code: 'ESOCKETTIMEDOUT',
+  connect: false
+}
+(node:23765) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'tx' of undefined
+    at Object.getBlockHashProfit (/home/huangw/CODING/React_project/BlockChain_Browser_Web/bitcoin-browser-api/src/bitcoin-core-function.js:82:48)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async list_some_block_info (/home/huangw/CODING/React_project/BlockChain_Browser_Web/bitcoin-browser-api/src/list_block.js:12:20)
+    at async Object.list_block (/home/huangw/CODING/React_project/BlockChain_Browser_Web/bitcoin-browser-api/src/list_block.js:29:15)
+    at async Timeout._onTimeout (/home/huangw/CODING/React_project/BlockChain_Browser_Web/bitcoin-browser-api/src/lb.js:15:16)
+(node:23765) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 9)
+error Error: ESOCKETTIMEDOUT
+    at ClientRequest.<anonymous> (/home/huangw/CODING/React_project/BlockChain_Browser_Web/node_modules/request/request.js:816:19)
+    at Object.onceWrapper (events.js:299:28)
+    at ClientRequest.emit (events.js:210:5)
+    at Socket.emitRequestTimeout (_http_client.js:690:9)
+    at Object.onceWrapper (events.js:299:28)
+    at Socket.emit (events.js:210:5)
+    at Socket._onTimeout (net.js:468:8)
+    at listOnTimeout (internal/timers.js:531:17)
+    at processTimers (internal/timers.js:475:7) {
+  code: 'ESOCKETTIMEDOUT',
+  connect: false
+}
+(node:23765) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'tx' of undefined
+    at Object.getBlockHashProfit (/home/huangw/CODING/React_project/BlockChain_Browser_Web/bitcoin-browser-api/src/bitcoin-core-function.js:82:48)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async list_some_block_info (/home/huangw/CODING/React_project/BlockChain_Browser_Web/bitcoin-browser-api/src/list_block.js:12:20)
+    at async Object.list_block (/home/huangw/CODING/React_project/BlockChain_Browser_Web/bitcoin-browser-api/src/list_block.js:29:15)
+    at async Timeout._onTimeout (/home/huangw/CODING/React_project/BlockChain_Browser_Web/bitcoin-browser-api/src/lb.js:15:16)
+(node:23765) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 10)
+error Error: ESOCKETTIMEDOUT
+    at ClientRequest.<anonymous> (/home/huangw/CODING/React_project/BlockChain_Browser_Web/node_modules/request/request.js:816:19)
+    at Object.onceWrapper (events.js:299:28)
+    at ClientRequest.emit (events.js:210:5)
+    at Socket.emitRequestTimeout (_http_client.js:690:9)
+    at Object.onceWrapper (events.js:299:28)
+    at Socket.emit (events.js:210:5)
+    at Socket._onTimeout (net.js:468:8)
+    at listOnTimeout (internal/timers.js:531:17)
+    at processTimers (internal/timers.js:475:7) {
+  code: 'ESOCKETTIMEDOUT',
+  connect: false
+}
+(node:23765) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'height' of undefined
+    at list_some_block_info (/home/huangw/CODING/React_project/BlockChain_Browser_Web/bitcoin-browser-api/src/list_block.js:10:26)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async Object.list_block (/home/huangw/CODING/React_project/BlockChain_Browser_Web/bitcoin-browser-api/src/list_block.js:29:15)
+    at async Timeout._onTimeout (/home/huangw/CODING/React_project/BlockChain_Browser_Web/bitcoin-browser-api/src/lb.js:15:16)
+(node:23765) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 11)
+error Error: ESOCKETTIMEDOUT
+    at ClientRequest.<anonymous> (/home/huangw/CODING/React_project/BlockChain_Browser_Web/node_modules/request/request.js:816:19)
+    at Object.onceWrapper (events.js:299:28)
+    at ClientRequest.emit (events.js:210:5)
+    at Socket.emitRequestTimeout (_http_client.js:690:9)
+    at Object.onceWrapper (events.js:299:28)
+    at Socket.emit (events.js:210:5)
+    at Socket._onTimeout (net.js:468:8)
+    at listOnTimeout (internal/timers.js:531:17)
+    at processTimers (internal/timers.js:475:7) {
+  code: 'ESOCKETTIMEDOUT',
+  connect: false
+}
+(node:23765) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'height' of undefined
+    at list_some_block_info (/home/huangw/CODING/React_project/BlockChain_Browser_Web/bitcoin-browser-api/src/list_block.js:10:26)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async Object.list_block (/home/huangw/CODING/React_project/BlockChain_Browser_Web/bitcoin-browser-api/src/list_block.js:29:15)
+    at async Timeout._onTimeout (/home/huangw/CODING/React_project/BlockChain_Browser_Web/bitcoin-browser-api/src/lb.js:15:16)
+(node:23765) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 12)
+error Error: ESOCKETTIMEDOUT
+    at ClientRequest.<anonymous> (/home/huangw/CODING/React_project/BlockChain_Browser_Web/node_modules/request/request.js:816:19)
+    at Object.onceWrapper (events.js:299:28)
+    at ClientRequest.emit (events.js:210:5)
+    at Socket.emitRequestTimeout (_http_client.js:690:9)
+    at Object.onceWrapper (events.js:299:28)
+    at Socket.emit (events.js:210:5)
+    at Socket._onTimeout (net.js:468:8)
+    at listOnTimeout (internal/timers.js:531:17)
+    at processTimers (internal/timers.js:475:7) {
+  code: 'ESOCKETTIMEDOUT',
+  connect: false
+}
+(node:23765) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'tx' of undefined
+    at Object.getBlockHashProfit (/home/huangw/CODING/React_project/BlockChain_Browser_Web/bitcoin-browser-api/src/bitcoin-core-function.js:82:48)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async list_some_block_info (/home/huangw/CODING/React_project/BlockChain_Browser_Web/bitcoin-browser-api/src/list_block.js:12:20)
+    at async Object.list_block (/home/huangw/CODING/React_project/BlockChain_Browser_Web/bitcoin-browser-api/src/list_block.js:29:15)
+    at async Timeout._onTimeout (/home/huangw/CODING/React_project/BlockChain_Browser_Web/bitcoin-browser-api/src/lb.js:15:16)
+(node:23765) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 13)

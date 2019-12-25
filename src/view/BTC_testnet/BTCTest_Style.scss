@@ -51,19 +51,20 @@
     }
 
     .mainNet {
-        #more{
-        width: 3.11rem;
-        height: 0.7rem;
-        background: linear-gradient(RGBA(48, 90, 169, 1),RGBA(33, 66, 136, 1));
-        
-        font-size: 0.27rem;
-        font-weight: 400;
-        color: #FFF;
-        border-radius: 5px;
-        line-height: 0.7rem;
-        text-align: center;
-        margin: 1rem auto;
+        #more {
+            width: 3.11rem;
+            height: 0.7rem;
+            background: linear-gradient(RGBA(48, 90, 169, 1), RGBA(33, 66, 136, 1));
+
+            font-size: 0.27rem;
+            font-weight: 400;
+            color: #FFF;
+            border-radius: 5px;
+            line-height: 0.7rem;
+            text-align: center;
+            margin: 1rem auto;
         }
+
         .searchBox {
             h3 {
                 font-size: 35px;
@@ -156,13 +157,16 @@
                     margin-top: 20px;
                 }
             }
-            .tableList{
+
+            .tableList {
                 display: none;
             }
+
             .table {
                 width: 100%;
                 display: flex;
                 flex-direction: column;
+
                 table {
                     width: 100%;
                     border-collapse: separate;
@@ -266,7 +270,7 @@
         }
 
         .price {
-            
+
             >p:nth-child(1) {
                 label {
                     white-space: nowrap;
@@ -309,505 +313,510 @@
                 box-sizing: border-box;
             }
         }
-            .deal {
-                width: 100%;
-                background: #fff;
 
-                >div:last-child {
-                    >div:last-child {
-                        display: none;
-                    }
-
-                    >div:first-child {
-                        display: block;
-                    }
-                }
-
-                .dealContent2 {
-                    width: 100%;
-                    // height: 404px;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-
-                    .dealContents {
-                        width: 95%;
-                        height: 87%;
-                        display: flex;
-                        flex-direction: column;
-                        margin: 0 auto;
-
-                        .descrPrice {
-                            width: 100%;
-                            display: flex;
-                            justify-content: flex-end;
-                            padding-right: 33px;
-                            box-sizing: border-box;
-                            margin-bottom: 20px;
-
-                            span {
-                                font-size: 21px;
-                                font-family: PingFangSC-Medium;
-                                font-weight: 500;
-                                color: rgba(42, 42, 42, 1);
-                                display: flex;
-
-                                i {
-                                    width: 8px;
-                                    height: 8px;
-                                    margin-right: 5px;
-                                    margin-top: 9px;
-                                    background: url('/img/椭圆形 2@2x.png') no-repeat;
-                                    background-size: 100% 100%;
-                                }
-                            }
-                        }
-
-                        p {
-                            font-size: 21px;
-                            font-family: PingFangSC-Regular;
-                            font-weight: 400;
-                            color: rgba(65, 135, 254, 1);
-                            margin-bottom: 10px;
-                            margin-top: 25px;
-                            cursor: pointer;
-                        }
-
-                        .dealAddress {
-                            flex: 1;
-                            display: flex;
-                            align-items: center;
-                            justify-content: space-between;
-
-                            >span:nth-child(2) {
-                                width: 45px;
-                                height: 37px;
-                                background: url('/img/形状复制 4@2x.png') no-repeat;
-                                background-size: 100% 100%;
-                            }
-
-                            >ul {
-                                width: 43%;
-                                margin-top: 20px;
-                                padding-right: 33px;
-                                box-sizing: border-box;
-                                display: flex;
-                                flex-direction: column;
-                                align-items: center;
-
-                                li {
-                                    width: 100%;
-                                    display: flex;
-                                    justify-content: space-between;
-                                    padding: 10px 0;
-                                    box-sizing: border-box;
-
-                                    label {
-                                        width: 59%;
-                                        display: inline-block;
-                                        height: 50px;
-                                        font-size: 17px;
-                                        font-family: PingFangSC-Regular;
-                                        font-weight: 400;
-                                        color: rgba(65, 135, 254, 1);
-                                        ;
-                                        word-break: break-all;
-                                        word-wrap: break-word;
-                                        cursor: pointer;
-                                    }
-
-                                    span {
-                                        text-align: right;
-                                        font-size: 17px;
-                                        font-family: PingFangSC-Medium;
-                                        font-weight: 500;
-                                        color: rgba(42, 42, 42, 1);
-                                        white-space: nowrap;
-                                    }
-                                }
-
-                                .addBlue {
-                                    color: rgba(65, 135, 254, 1);
-                                }
-                            }
-                        }
-                    }
-                }
-
-                .dealContent1 {
-                    width: 100%;
-                    // height: 366px;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-
-                    .dealContents {
-                        width: 95%;
-                        // height: 87%;
-                        display: flex;
-                        flex-direction: column;
-
-                        .descrPrice {
-                            width: 100%;
-                            display: flex;
-                            justify-content: flex-end;
-                            padding-right: 33px;
-                            box-sizing: border-box;
-
-                            span {
-                                font-size: 21px;
-                                font-family: PingFangSC-Medium;
-                                font-weight: 500;
-                                color: rgba(42, 42, 42, 1);
-                                display: flex;
-
-                                i {
-                                    width: 8px;
-                                    height: 8px;
-                                    margin-right: 5px;
-                                    margin-top: 9px;
-                                    background: url('/img/椭圆形 2@2x.png') no-repeat;
-                                    background-size: 100% 100%;
-                                }
-                            }
-                        }
-
-                        p {
-                            font-size: 21px;
-                            font-family: PingFangSC-Regular;
-                            font-weight: 400;
-                            color: rgba(65, 135, 254, 1);
-                            margin-bottom: 29px;
-                            margin-top: 25px;
-                            cursor: pointer;
-                        }
-
-                        .dealAddress {
-                            flex: 1;
-                            display: flex;
-                            align-items: center;
-                            justify-content: space-between;
-
-                            >ul {
-                                width: 43%;
-                                margin-top: 20px;
-                                padding-right: 33px;
-                                box-sizing: border-box;
-
-                                >p {
-                                    width: 40%;
-                                    margin-right: 210px;
-
-                                    span {
-                                        display: inline-block;
-                                        width: 96px;
-                                        height: 34px;
-                                        border: 1px solid rgba(0, 35, 132, 1);
-                                        font-size: 15px;
-                                        font-family: PingFangSC-Regular;
-                                        font-weight: 400;
-                                        color: rgba(0, 35, 132, 1);
-                                        line-height: 34px;
-                                        text-align: center;
-                                    }
-                                }
-
-                                li {
-                                    width: 100%;
-                                    display: flex;
-                                    justify-content: space-between;
-                                    padding: 10px 0;
-                                    box-sizing: border-box;
-
-                                    label {
-                                        width: 59%;
-                                        display: inline-block;
-                                        height: 50px;
-                                        font-size: 17px;
-                                        font-family: PingFangSC-Regular;
-                                        font-weight: 400;
-                                        color: rgba(0, 0, 0, .5);
-                                        word-break: break-all;
-                                        word-wrap: break-word;
-                                    }
-
-                                    span {
-                                        text-align: right;
-                                        font-size: 17px;
-                                        font-family: PingFangSC-Medium;
-                                        font-weight: 500;
-                                        color: rgba(42, 42, 42, 1);
-                                        white-space: nowrap;
-                                    }
-                                }
-
-                                .addBlue {
-                                    color: rgba(65, 135, 254, 1);
-                                }
-                            }
-
-                            >span:nth-child(2) {
-                                width: 45px;
-                                height: 37px;
-                                background: url('/img/形状复制 4@2x.png') no-repeat;
-                                background-size: 100% 100%;
-                            }
-                        }
-                    }
-                }
-
-                .line {
-                    width: 100%;
-                    height: 2px;
-                    background: url('/img/直线 2@2x.png') no-repeat;
-                    background-size: 100% 100%;
-                }
-            }
-
-            >p {
-                width: 100%;
-                height: 58px;
-                line-height: 60px;
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                margin-top: 25px;
-
-                label {
-                    width: 10%;
-                    font-size: 18px;
-                    font-family: PingFangSC-Regular;
-                    font-weight: 400;
-                    color: rgba(0, 0, 0, .5);
-                    // white-space: nowrap;
-                }
-
-                span {
-                    width: 75%;
-                    font-size: 18px;
-                    font-family: PingFangSC-Medium;
-                    font-weight: 500;
-                    color: rgba(42, 42, 42, 1);
-                    margin-left: 118px;
-                    color: rgba(0, 0, 0, .5);
-                    margin-left: 60px;
-                    word-wrap: break-word;
-                    word-break: normal;
-                }
-            }
-
-        }
-
-        .blockHeightAbstract {
+        .deal {
             width: 100%;
-            padding: 18px 0;
-            box-sizing: border-box;
-            margin-top: 79px;
-            background: rgba(247, 248, 251, 1);
+            background: #fff;
 
-            .abstract {
-                width: 100%;
-                // height: 298px;
-                display: flex;
-                align-items: center;
-                background: rgba(255, 255, 255, 1);
-
-                .line {
-                    width: 3px;
-                    height: 295px;
-                    background: url('/img/矩形@2x.png') no-repeat;
-                    background-size: 100% 100%;
+            >div:last-child {
+                >div:last-child {
+                    display: none;
                 }
 
-                .abstractContent {
-                    width: 48%;
-                    padding-left: 32px;
-                    box-sizing: border-box;
-                 
-                    p {
-                        height: 58px;
-                        padding: 5px 0;
-                        box-sizing: border-box;
+                >div:first-child {
+                    display: block;
+                }
+            }
+
+            .dealContent2 {
+                width: 100%;
+                // height: 404px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                .dealContents {
+                    width: 95%;
+                    height: 87%;
+                    display: flex;
+                    flex-direction: column;
+                    margin: 0 auto;
+
+                    .descrPrice {
+                        width: 100%;
                         display: flex;
-                        align-items: center;
-
-                        // justify-content: space-between;
-                        .from,
-                        .to {
-                            color: #4187fe;
-                        }
-
-                        label {
-                            width: 100px;
-                            font-size: 18px;
-                            font-family: PingFangSC-Regular;
-                            font-weight: 400;
-                            color: rgba(0, 0, 0, .5);
-                            white-space: nowrap;
-                        }
+                        justify-content: flex-end;
+                        padding-right: 33px;
+                        box-sizing: border-box;
+                        margin-bottom: 20px;
 
                         span {
-                            flex: 1;
-                            // flex: 1;
-                            font-size: 18px;
+                            font-size: 21px;
                             font-family: PingFangSC-Medium;
                             font-weight: 500;
                             color: rgba(42, 42, 42, 1);
-                            margin-left: 118px;
-                            // white-space: nowrap;
-                            margin-left: 60px;
+                            display: flex;
+
+                            i {
+                                width: 8px;
+                                height: 8px;
+                                margin-right: 5px;
+                                margin-top: 9px;
+                                background: url('/img/椭圆形 2@2x.png') no-repeat;
+                                background-size: 100% 100%;
+                            }
+                        }
+                    }
+
+                    p {
+                        font-size: 21px;
+                        font-family: PingFangSC-Regular;
+                        font-weight: 400;
+                        color: rgba(65, 135, 254, 1);
+                        margin-bottom: 10px;
+                        margin-top: 25px;
+                        cursor: pointer;
+                    }
+
+                    .dealAddress {
+                        flex: 1;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+
+                        >span:nth-child(2) {
+                            width: 45px;
+                            height: 37px;
+                            background: url('/img/形状复制 4@2x.png') no-repeat;
+                            background-size: 100% 100%;
+                        }
+
+                        >ul {
+                            width: 43%;
+                            margin-top: 20px;
+                            padding-right: 33px;
+                            box-sizing: border-box;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+
+                            li {
+                                width: 100%;
+                                display: flex;
+                                justify-content: space-between;
+                                padding: 10px 0;
+                                box-sizing: border-box;
+
+                                label {
+                                    width: 59%;
+                                    display: inline-block;
+                                    height: 50px;
+                                    font-size: 17px;
+                                    font-family: PingFangSC-Regular;
+                                    font-weight: 400;
+                                    color: rgba(65, 135, 254, 1);
+                                    ;
+                                    word-break: break-all;
+                                    word-wrap: break-word;
+                                    cursor: pointer;
+                                }
+
+                                span {
+                                    text-align: right;
+                                    font-size: 17px;
+                                    font-family: PingFangSC-Medium;
+                                    font-weight: 500;
+                                    color: rgba(42, 42, 42, 1);
+                                    white-space: nowrap;
+                                }
+                            }
+
+                            .addBlue {
+                                color: rgba(65, 135, 254, 1);
+                            }
                         }
                     }
                 }
+            }
 
-                .abstractContent:nth-child(3) {
-                    padding-left: 71px;
-                    box-sizing: border-box;
+            .dealContent1 {
+                width: 100%;
+                // height: 366px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                .dealContents {
+                    width: 95%;
+                    // height: 87%;
+                    display: flex;
+                    flex-direction: column;
+
+                    .descrPrice {
+                        width: 100%;
+                        display: flex;
+                        justify-content: flex-end;
+                        padding-right: 33px;
+                        box-sizing: border-box;
+
+                        span {
+                            font-size: 21px;
+                            font-family: PingFangSC-Medium;
+                            font-weight: 500;
+                            color: rgba(42, 42, 42, 1);
+                            display: flex;
+
+                            i {
+                                width: 8px;
+                                height: 8px;
+                                margin-right: 5px;
+                                margin-top: 9px;
+                                background: url('/img/椭圆形 2@2x.png') no-repeat;
+                                background-size: 100% 100%;
+                            }
+                        }
+                    }
+
+                    p {
+                        font-size: 21px;
+                        font-family: PingFangSC-Regular;
+                        font-weight: 400;
+                        color: rgba(65, 135, 254, 1);
+                        margin-bottom: 29px;
+                        margin-top: 25px;
+                        cursor: pointer;
+                    }
+
+                    .dealAddress {
+                        flex: 1;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+
+                        >ul {
+                            width: 43%;
+                            margin-top: 20px;
+                            padding-right: 33px;
+                            box-sizing: border-box;
+
+                            >p {
+                                width: 40%;
+                                margin-right: 210px;
+
+                                span {
+                                    display: inline-block;
+                                    width: 96px;
+                                    height: 34px;
+                                    border: 1px solid rgba(0, 35, 132, 1);
+                                    font-size: 15px;
+                                    font-family: PingFangSC-Regular;
+                                    font-weight: 400;
+                                    color: rgba(0, 35, 132, 1);
+                                    line-height: 34px;
+                                    text-align: center;
+                                }
+                            }
+
+                            li {
+                                width: 100%;
+                                display: flex;
+                                justify-content: space-between;
+                                padding: 10px 0;
+                                box-sizing: border-box;
+
+                                label {
+                                    width: 59%;
+                                    display: inline-block;
+                                    height: 50px;
+                                    font-size: 17px;
+                                    font-family: PingFangSC-Regular;
+                                    font-weight: 400;
+                                    color: rgba(0, 0, 0, .5);
+                                    word-break: break-all;
+                                    word-wrap: break-word;
+                                }
+
+                                span {
+                                    text-align: right;
+                                    font-size: 17px;
+                                    font-family: PingFangSC-Medium;
+                                    font-weight: 500;
+                                    color: rgba(42, 42, 42, 1);
+                                    white-space: nowrap;
+                                }
+                            }
+
+                            .addBlue {
+                                color: rgba(65, 135, 254, 1);
+                            }
+                        }
+
+                        >span:nth-child(2) {
+                            width: 45px;
+                            height: 37px;
+                            background: url('/img/形状复制 4@2x.png') no-repeat;
+                            background-size: 100% 100%;
+                        }
+                    }
                 }
             }
-        }
 
-        .form {
-            width: 1032px;
-            height: 80px;
-            background: #FFF;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 0 25px;
-            box-sizing: border-box;
-            margin-bottom: 40px;
-
-            input {
+            .line {
                 width: 100%;
-                flex: 1;
-                height: 100%;
-                border: 0;
-                outline: 0;
-                padding-top: 10px;
-                box-sizing: border-box;
-                font-size: 27px;
-            }
-
-            ::-webkit-input-placeholder {
-                font-size: 27px;
-                font-family: PingFangSC-Regular;
-                font-weight: 400;
-                color: rgba(0, 0, 0, .49);
-                font-weight: 400;
-                line-height: 100px;
-            }
-
-            span {
-                width: 38px;
-                height: 39px;
-                background: url('/img/形状 3@2x.png') no-repeat;
+                height: 2px;
+                background: url('/img/直线 2@2x.png') no-repeat;
                 background-size: 100% 100%;
             }
         }
 
-        .price {
-            width: 1032px;
-            margin: 0 auto;
+        >p {
+            width: 100%;
+            height: 58px;
+            line-height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 25px;
 
-            p {
-                display: flex;
-                align-items: center;
-            }
-            p {
-                display: flex;
-                align-items: center;
-            }
             label {
-                font-size: 25px;
+                width: 10%;
+                font-size: 18px;
+                font-family: PingFangSC-Regular;
+                font-weight: 400;
+                color: rgba(0, 0, 0, .5);
+                // white-space: nowrap;
+            }
+
+            span {
+                width: 75%;
+                font-size: 18px;
+                font-family: PingFangSC-Medium;
+                font-weight: 500;
+                color: rgba(42, 42, 42, 1);
+                margin-left: 118px;
+                color: rgba(0, 0, 0, .5);
+                margin-left: 60px;
+                word-wrap: break-word;
+                word-break: normal;
+            }
+        }
+
+    }
+
+    .blockHeightAbstract {
+        width: 100%;
+        padding: 18px 0;
+        box-sizing: border-box;
+        margin-top: 79px;
+        background: rgba(247, 248, 251, 1);
+
+        .abstract {
+            width: 100%;
+            // height: 298px;
+            display: flex;
+            align-items: center;
+            background: rgba(255, 255, 255, 1);
+
+            .line {
+                width: 3px;
+                height: 295px;
+                background: url('/img/矩形@2x.png') no-repeat;
+                background-size: 100% 100%;
+            }
+
+            .abstractContent {
+                width: 48%;
+                padding-left: 32px;
+                box-sizing: border-box;
+
+                p {
+                    height: 58px;
+                    padding: 5px 0;
+                    box-sizing: border-box;
+                    display: flex;
+                    align-items: center;
+
+                    // justify-content: space-between;
+                    .from,
+                    .to {
+                        color: #4187fe;
+                    }
+
+                    label {
+                        width: 100px;
+                        font-size: 18px;
+                        font-family: PingFangSC-Regular;
+                        font-weight: 400;
+                        color: rgba(0, 0, 0, .5);
+                        white-space: nowrap;
+                    }
+
+                    span {
+                        flex: 1;
+                        // flex: 1;
+                        font-size: 18px;
+                        font-family: PingFangSC-Medium;
+                        font-weight: 500;
+                        color: rgba(42, 42, 42, 1);
+                        margin-left: 118px;
+                        // white-space: nowrap;
+                        margin-left: 60px;
+                    }
+                }
+            }
+
+            .abstractContent:nth-child(3) {
+                padding-left: 71px;
+                box-sizing: border-box;
+            }
+        }
+    }
+
+    .form {
+        width: 1032px;
+        height: 80px;
+        background: #FFF;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 25px;
+        box-sizing: border-box;
+        margin-bottom: 40px;
+
+        input {
+            width: 100%;
+            flex: 1;
+            height: 100%;
+            border: 0;
+            outline: 0;
+            padding-top: 10px;
+            box-sizing: border-box;
+            font-size: 27px;
+        }
+
+        ::-webkit-input-placeholder {
+            font-size: 27px;
+            font-family: PingFangSC-Regular;
+            font-weight: 400;
+            color: rgba(0, 0, 0, .49);
+            font-weight: 400;
+            line-height: 100px;
+        }
+
+        span {
+            width: 38px;
+            height: 39px;
+            background: url('/img/形状 3@2x.png') no-repeat;
+            background-size: 100% 100%;
+        }
+    }
+
+    .price {
+        width: 1032px;
+        margin: 0 auto;
+
+        p {
+            display: flex;
+            align-items: center;
+        }
+
+        p {
+            display: flex;
+            align-items: center;
+        }
+
+        label {
+            font-size: 25px;
+            font-family: PingFangSC-Regular;
+            font-weight: 400;
+            color: rgba(255, 255, 255, 1);
+            margin: 0 13px;
+        }
+
+        .hash {
+            font-size: 20px;
+            font-family: PingFangSC-Regular;
+            color: rgba(255, 255, 255, 1);
+            font-weight: 400;
+            margin-top: 10px;
+        }
+
+        >p:nth-child(1) {
+            i {
+                width: 62px;
+                height: 62px;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+            label {
+                font-size: 45px;
                 font-family: PingFangSC-Regular;
                 font-weight: 400;
                 color: rgba(255, 255, 255, 1);
                 margin: 0 13px;
             }
-            .hash{
-                font-size: 20px;
-                font-family: PingFangSC-Regular;
+
+            span {
+                font-size: 66px;
+                font-family: PingFangSC-Medium;
+                font-weight: 500;
                 color: rgba(255, 255, 255, 1);
-                font-weight: 400;
-                margin-top: 10px;
-            }
-        
-            >p:nth-child(1) {
-                i {
-                    width: 62px;
-                    height: 62px;
-
-                    img {
-                        width: 100%;
-                        height: 100%;
-                    }
-                }
-
-                label {
-                    font-size: 45px;
-                    font-family: PingFangSC-Regular;
-                    font-weight: 400;
-                    color: rgba(255, 255, 255, 1);
-                    margin: 0 13px;
-                }
-
-                span {
-                    font-size: 66px;
-                    font-family: PingFangSC-Medium;
-                    font-weight: 500;
-                    color: rgba(255, 255, 255, 1);
-                }
-            }
-
-            >p:nth-child(2) {
-                margin: 40px 0;
-
-                label {
-                    font-size: 24px;
-                    font-family: PingFangSC-Regular;
-                    font-weight: 400;
-                    color: rgba(255, 255, 255, 1);
-                    white-space: nowrap;
-                }
-
-                span {
-                    font-size: 24px;
-                    font-family: PingFangSC-Regular;
-                    font-weight: 400;
-                    color: rgba(145, 187, 255, 1);
-                    margin-left: 7px;
-                }
             }
         }
 
-        .btn {
-            width: 1032px;
-            display: flex;
-            justify-content: space-between;
-            margin: 0 auto;
+        >p:nth-child(2) {
+            margin: 40px 0;
 
-            button {
-                width: 183px;
-                height: 58px;
-                border: 0;
-                // border: 1px dashed;
-                outline: 0;
-                background: rgba(37, 89, 195, .5);
+            label {
                 font-size: 24px;
                 font-family: PingFangSC-Regular;
                 font-weight: 400;
                 color: rgba(255, 255, 255, 1);
-                display: flex;
-                align-items: center;
-                justify-content: center;
+                white-space: nowrap;
+            }
 
-                img {
-                    margin-right: 15px;
-                }
+            span {
+                font-size: 24px;
+                font-family: PingFangSC-Regular;
+                font-weight: 400;
+                color: rgba(145, 187, 255, 1);
+                margin-left: 7px;
             }
         }
-        //交易  地址
+    }
+
+    .btn {
+        width: 1032px;
+        display: flex;
+        justify-content: space-between;
+        margin: 0 auto;
+
+        button {
+            width: 183px;
+            height: 58px;
+            border: 0;
+            // border: 1px dashed;
+            outline: 0;
+            background: rgba(37, 89, 195, .5);
+            font-size: 24px;
+            font-family: PingFangSC-Regular;
+            font-weight: 400;
+            color: rgba(255, 255, 255, 1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            img {
+                margin-right: 15px;
+            }
+        }
+    }
+
+    //交易  地址
     .addressBox,
     .dealBox {
         .dealContent1 {
@@ -898,20 +907,22 @@
             }
         }
     }
-    .dealBox{
-     .deal{
-        .dealContent1{
-           .dealContents{
-             .dealAddress{
-               p{
-               color: #000;
-               white-space: nowrap;
-             }
-             }
-           }
+
+    .dealBox {
+        .deal {
+            .dealContent1 {
+                .dealContents {
+                    .dealAddress {
+                        p {
+                            color: #000;
+                            white-space: nowrap;
+                        }
+                    }
+                }
+            }
         }
-     }
-  }
+    }
+
     //地址
     .addressBox {
 
@@ -1008,668 +1019,746 @@
     }
 
 
-.wrapBox {
-    background: RGBA(17, 30, 64, 1) !important;
-
-    .BTCTestNetContent {
+    .wrapBox {
         background: RGBA(17, 30, 64, 1) !important;
 
-        .contents {
+        .BTCTestNetContent {
+            background: RGBA(17, 30, 64, 1) !important;
 
-            .dealBox,
-            .addressBox,
-            .pieceHash,
-            .blockHeight {
-                .price {
-                    p:nth-child(2) {
-                        span {
-                            color: rgba(74, 232, 236, 1);
-                        }
-                    }
-                }
+            .contents {
 
-                .blockHeightAbstract,
-                .blockHeightDeal {
-                    background: RGBA(9, 20, 51, 1);
-
-                    h2 {
-                        background: rgba(255, 255, 255, .15);
-                        color: rgba(255, 255, 255, 1);
-                    }
-
-                    .deal {
-                        background: rgba(255, 255, 255, .15);
-
-                        .dealContent1 {
-                            .dealContents {
-                                p {
-                                    color: rgba(74, 232, 236, 1);
-                                }
-
-                                .descrPrice {
-                                    span {
-                                        color: rgba(255, 255, 255, .8);
-
-                                        i {
-                                            background: url('/img/椭圆形复制 4@2x.png') no-repeat;
-                                            background-size: 100% 100%;
-                                        }
-                                    }
-                                }
-
-                                .dealAddress {
-                                    p {
-                                        span {
-                                            border-color: rgba(75, 144, 252, 1);
-                                            color: rgba(75, 144, 252, 1);
-                                        }
-                                    }
-
-                                    >span {
-                                        background: url('/img/形状复制 42@2x.png') no-repeat;
-                                        background-size: 100% 100%;
-                                    }
-
-                                    >ul {
-                                        li {
-                                            label {
-                                                color: rgba(255, 255, 255, .5);
-                                            }
-
-                                            span {
-                                                color: rgba(255, 255, 255, .8);
-                                            }
-                                        }
-
-                                        .addBlue {
-                                            color: rgba(74, 232, 236, 1);
-                                        }
-                                    }
-                                }
-                            }
-                        }
-
-                        .dealContent2 {
-                            .dealContents {
-                                p {
-                                    color: rgba(74, 232, 236, 1);
-                                }
-
-                                .dealAddress {
-                                    ul {
-                                        li {
-                                            label {
-                                                color: rgba(74, 232, 236, 1);
-                                            }
-
-                                            span {
-                                                color: rgba(255, 255, 255, .8);
-                                            }
-                                        }
-                                    }
-
-                                    >span {
-                                        background: url('/img/形状复制 42@2x.png') no-repeat;
-                                        background-size: 100% 100%;
-                                    }
-                                }
-
-                                .descrPrice {
-                                    span {
-                                        i {
-                                            background: url('/img/椭圆形复制 4@2x.png') no-repeat;
-                                            background-size: 100% 100%;
-                                        }
-
-                                        color: rgba(255, 255, 255, .8);
-                                    }
-                                }
+                .dealBox,
+                .addressBox,
+                .pieceHash,
+                .blockHeight {
+                    .price {
+                        p:nth-child(2) {
+                            span {
+                                color: rgba(74, 232, 236, 1);
                             }
                         }
                     }
 
-                    .abstract {
-                        background: rgba(255, 255, 255, .15);
+                    .blockHeightAbstract,
+                    .blockHeightDeal {
+                        background: RGBA(9, 20, 51, 1);
 
-                        .line {
-                            background: url('/img/直线 2@2x.png') no-repeat;
-                            background-size: 100% 100%;
-                        }
-
-                        .abstractContent {
-                            p {
-                                label {
-                                    color: rgba(255, 255, 255, .5);
-                                }
-
-                                span {
-                                    color: rgba(255, 255, 255, .8);
-                                }
-                            }
-                        }
-                    }
-                }
-
-                .form {
-                    background: rgba(1, 28, 119, 1);
-
-                    input {
-                        background: rgba(1, 28, 119, 1);
-                    }
-
-                    ::-webkit-input-placeholder {
-                        color: rgba(255, 255, 255, .49);
-                    }
-
-                    span {
-                        background: url('/img/形状 21@2x.png') no-repeat;
-                        background-size: 100% 100%;
-                    }
-                }
-            }
-
-            .dealBox {
-                .price {
-                    p:nth-child(3) {
-                        >p {
-                            color: rgba(74, 232, 236, 1);
-                        }
-                    }
-                }
-
-                .blockHeightDeal {
-                    .listDEscr {
-                        background: rgba(255, 255, 255, .15);
-
-                        span {
+                        h2 {
+                            background: rgba(255, 255, 255, .15);
                             color: rgba(255, 255, 255, 1);
                         }
+
+                        .deal {
+                            background: rgba(255, 255, 255, .15);
+
+                            .dealContent1 {
+                                .dealContents {
+                                    p {
+                                        color: rgba(74, 232, 236, 1);
+                                    }
+
+                                    .descrPrice {
+                                        span {
+                                            color: rgba(255, 255, 255, .8);
+
+                                            i {
+                                                background: url('/img/椭圆形复制 4@2x.png') no-repeat;
+                                                background-size: 100% 100%;
+                                            }
+                                        }
+                                    }
+
+                                    .dealAddress {
+                                        p {
+                                            span {
+                                                border-color: rgba(75, 144, 252, 1);
+                                                color: rgba(75, 144, 252, 1);
+                                            }
+                                        }
+
+                                        >span {
+                                            background: url('/img/形状复制 42@2x.png') no-repeat;
+                                            background-size: 100% 100%;
+                                        }
+
+                                        >ul {
+                                            li {
+                                                label {
+                                                    color: rgba(255, 255, 255, .5);
+                                                }
+
+                                                span {
+                                                    color: rgba(255, 255, 255, .8);
+                                                }
+                                            }
+
+                                            .addBlue {
+                                                color: rgba(74, 232, 236, 1);
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+
+                            .dealContent2 {
+                                .dealContents {
+                                    p {
+                                        color: rgba(74, 232, 236, 1);
+                                    }
+
+                                    .dealAddress {
+                                        ul {
+                                            li {
+                                                label {
+                                                    color: rgba(74, 232, 236, 1);
+                                                }
+
+                                                span {
+                                                    color: rgba(255, 255, 255, .8);
+                                                }
+                                            }
+                                        }
+
+                                        >span {
+                                            background: url('/img/形状复制 42@2x.png') no-repeat;
+                                            background-size: 100% 100%;
+                                        }
+                                    }
+
+                                    .descrPrice {
+                                        span {
+                                            i {
+                                                background: url('/img/椭圆形复制 4@2x.png') no-repeat;
+                                                background-size: 100% 100%;
+                                            }
+
+                                            color: rgba(255, 255, 255, .8);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        .abstract {
+                            background: rgba(255, 255, 255, .15);
+
+                            .line {
+                                background: url('/img/直线 2@2x.png') no-repeat;
+                                background-size: 100% 100%;
+                            }
+
+                            .abstractContent {
+                                p {
+                                    label {
+                                        color: rgba(255, 255, 255, .5);
+                                    }
+
+                                    span {
+                                        color: rgba(255, 255, 255, .8);
+                                    }
+                                }
+                            }
+                        }
                     }
-                }
-            }
 
-            .mainContent {
-                background: rgba(17, 30, 64, 1);
-            }
-
-            .mainHead {
-                background: rgba(17, 30, 64, 1);
-
-                span {
-                    color: rgba(255, 255, 255, 1) !important;
-                }
-
-                label {
-                    color: rgba(255, 255, 255, 1) !important;
-                }
-
-            }
-
-            .searchBox {
-                .form {
-                    background: rgba(1, 28, 119, 1);
-
-                    input {
+                    .form {
                         background: rgba(1, 28, 119, 1);
+
+                        input {
+                            background: rgba(1, 28, 119, 1);
+                        }
+
+                        ::-webkit-input-placeholder {
+                            color: rgba(255, 255, 255, .49);
+                        }
+
+                        span {
+                            background: url('/img/形状 21@2x.png') no-repeat;
+                            background-size: 100% 100%;
+                        }
+                    }
+                }
+
+                .dealBox {
+                    .price {
+                        p:nth-child(3) {
+                            >p {
+                                color: rgba(74, 232, 236, 1);
+                            }
+                        }
                     }
 
-                    ::-webkit-input-placeholder {
-                        color: rgba(255, 255, 255, .49);
+                    .blockHeightDeal {
+                        .listDEscr {
+                            background: rgba(255, 255, 255, .15);
+
+                            span {
+                                color: rgba(255, 255, 255, 1);
+                            }
+                        }
                     }
+                }
+
+                .mainContent {
+                    background: rgba(17, 30, 64, 1);
+                }
+
+                .mainHead {
+                    background: rgba(17, 30, 64, 1);
 
                     span {
-                        background: url('/img/形状 21@2x.png') no-repeat;
-                        background-size: 100% 100%;
+                        color: rgba(255, 255, 255, 1) !important;
+                    }
+
+                    label {
+                        color: rgba(255, 255, 255, 1) !important;
+                    }
+
+                }
+
+                .searchBox {
+                    .form {
+                        background: rgba(1, 28, 119, 1);
+
+                        input {
+                            background: rgba(1, 28, 119, 1);
+                        }
+
+                        ::-webkit-input-placeholder {
+                            color: rgba(255, 255, 255, .49);
+                        }
+
+                        span {
+                            background: url('/img/形状 21@2x.png') no-repeat;
+                            background-size: 100% 100%;
+                        }
                     }
                 }
-            }
 
-            .table {
-                table {
-                    background: RGBA(17, 30, 64, 1) !important;
+                .table {
+                    table {
+                        background: RGBA(17, 30, 64, 1) !important;
 
-                    tr th {
-                        background: RGBA(9, 20, 50, 1) !important;
-                        color: rgba(255, 255, 255, .6);
-                    }
+                        tr th {
+                            background: RGBA(9, 20, 50, 1) !important;
+                            color: rgba(255, 255, 255, .6);
+                        }
 
-                    tr td {
-                        background: rgba(255, 255, 255, .15);
-                        color: rgba(255, 255, 255, .8);
-                    }
+                        tr td {
+                            background: rgba(255, 255, 255, .15);
+                            color: rgba(255, 255, 255, .8);
+                        }
 
-                    // tr th:nth-child(4) {
-                    //     display: none;
-                    // }
+                        // tr th:nth-child(4) {
+                        //     display: none;
+                        // }
 
-                    // tr td:nth-child(4) {
-                    //     display: none;
-                    // }
+                        // tr td:nth-child(4) {
+                        //     display: none;
+                        // }
 
-                    tr td:nth-child(1) {
-                        color: rgba(74, 232, 236, 1);
-                        cursor: pointer;
-                    }
+                        tr td:nth-child(1) {
+                            color: rgba(74, 232, 236, 1);
+                            cursor: pointer;
+                        }
 
-                    tr td:last-child {
-                        color: rgba(74, 232, 236, 1);
-                        cursor: pointer;
+                        tr td:last-child {
+                            color: rgba(74, 232, 236, 1);
+                            cursor: pointer;
+                        }
                     }
                 }
             }
         }
     }
 }
-    }
 
 @media (max-width: 750px) {
-  .BTCTestNetContent {
-    .netBack {
-      background: url("/img/路径 55@2x.png") no-repeat;
-      background-size: 100%;
-    }
-    .mainNet {
-      .mainContent {
-         .mainHead{
-                 border-bottom:1px solid #4187fe;
-             }
-          .table {
-            display: none;
-          }
-          .tableList {
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            padding: 0 6px;
-            box-sizing: border-box;
-            .listContent {
-              border-bottom: 4px solid rgba(247, 248, 251, 1);
-            }
-            p {
-              height: 50px;
-              display: flex;
-              align-items: center;
-              justify-content: space-between;
+    .BTCTestNetContent {
+        .netBack {
+            background: url("/img/路径 55@2x.png") no-repeat;
+            background-size: 100%;
+        }
 
-              label {
-                font-size: 12px;
-              }
-              span {
-                width: 70%;
-                font-size: 12px;
-              }
-              // span:nth-child(1),
-              // span:nth-child(3),
-              // span:nth-child(5),
-              // span:nth-child(7){
-              //     color: rgba(49, 158, 237, 1);
-              // }
-            }
-            p:nth-child(1),
-            p:nth-child(3),
-            p:nth-child(5),
-            p:nth-child(7) {
-              span {
-                color: rgba(49, 158, 237, 1);
-              }
-            }
-          }
-        }
-      }
-    .dealBox{
-        .form{
-            width:320px;
-            height:27px;
-            background:rgba(255,255,255,1);
-            border-radius:2px;
-            input{
-                font-size:10px;
-            }
-            span{
-                width: 14px;
-                height: 14px;
-            }
-            
-        }
-        .price{
-            width: 320px;
-                p:nth-child(1){
-                    i{
-                        width: 13px;
-                        height: 15px;
-                    }
-                    label{
-                        font-size: 12px;
-                    }
-                    
+        .mainNet {
+            .mainContent {
+                width: 100%;
+                .mainHead {
+                    border-bottom: 1px solid #4187fe;
                 }
-                p:nth-child(2),
-                p:nth-child(4){
-                   font-size: 12px;
-                   word-break: break-all;
-                    
+
+                .table {
+                    display: none;
                 }
-        }
-        .blockHeightDeal{
-             >p{
-                 label{
-                     font-size: 12px;
-                 }
-                 span{
-                     width: 70%;
-                     font-size: 12px;
-                 }
-             }
-        }
-        .blockHeightAbstract{
-            padding: 6px 0;
-            box-sizing: border-box;
-            h2{
-                font-size: 12px;
-                line-height: 29px;
-                margin-bottom: 2px;
-            }
-            .abstract {
-              flex-direction: column;
-              align-items: flex-start;
-              .line{
-                display: none;
-              }
-                .abstractContent{
+
+                .tableList {
                     width: 100%;
-                    padding: 0 5px;
-                    box-sizing: border-box;
                     display: flex;
                     flex-direction: column;
-                    justify-content: space-between;
-                    p {
-                      padding: 5px 0;
-                      box-sizing: border-box;
-                        label{
-                            font-size: 10px;
-                        }
-                        span{
-                            width: 60%;
-                            font-size: 10px;
-                        }
-                    }
-                }
-                    
-            }
-        }
-         .deal{
-              .dealContent1{
-                .dealContents{
-                  >p{
-                     word-break: break-all;
-                   }
-                  .descrPrice{
-                    span{
-                      font-size: 10px;
-                      i{
-                        width: 3px;
-                        height: 3px;
-                        margin-top: 8px;
-                      }
-                    }
-                  }
-                   .dealAddress{
-                     >span:nth-child(2){
-                       width: 10px;
-                       height: 8px;
-                     }
-                     >ul{
-                       .addBlue{
-                         widows: 60px;
-                         overflow: hidden;
-                         white-space: nowrap;
-                         text-overflow: ellipsis
-                       }
-                       li{
-                         span{
-                           font-size: 10px;
-                         }
-                         label{
-                           font-size: 10px;
-                         }
-                       }
-                     }
-                   }
-                }
-              }
-            }
-    }
-    .addressBox{
-        .form{
-            width:320px;
-            height:27px;
-            background:rgba(255,255,255,1);
-            border-radius:2px;
-            input{
-                font-size:10px;
-            }
-            span{
-                width: 14px;
-                height: 14px;
-            }
-            
-        }
-        .price{
-            width: 320px;
-            >div{
-                width: 250px;
-                p:nth-child(1){
-                    i{
-                        width: 13px;
-                        height: 15px;
-                    }
-                    label{
-                        font-size: 12px;
-                    }
-                    
-                }
-                p:nth-child(2){
-                    font-size:12px;
-                }
-            }
-            canvas {
-                width: 60px!important;
-                height: 60px!important;
-            }
-        }
-        .blockHeightAbstract{
-            padding: 6px 0;
-            box-sizing: border-box;
-            h2{
-                font-size: 12px;
-                line-height: 29px;
-                margin-bottom: 2px;
-            }
-            .abstract {
-                .abstractContent{
-                    padding: 0 5px;
+                    padding: 0 6px;
                     box-sizing: border-box;
+
+                    .listContent {
+                        border-bottom: 4px solid rgba(247, 248, 251, 1);
+                    }
+
                     p {
-                        label{
+                        height: 50px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+
+                        label {
                             font-size: 12px;
                         }
-                        span{
+
+                        span {
                             width: 70%;
                             font-size: 12px;
                         }
+
+                        // span:nth-child(1),
+                        // span:nth-child(3),
+                        // span:nth-child(5),
+                        // span:nth-child(7){
+                        //     color: rgba(49, 158, 237, 1);
+                        // }
+                    }
+
+                    p:nth-child(1),
+                    p:nth-child(3),
+                    p:nth-child(5),
+                    p:nth-child(7) {
+                        span {
+                            color: rgba(49, 158, 237, 1);
+                        }
                     }
                 }
-                    
             }
         }
-        .blockHeightDeal{
-            h2{
-                font-size: 12px;
-                line-height: 29px;
-                margin-bottom: 2px;
+
+        .dealBox {
+            .form {
+                width: 320px;
+                height: 27px;
+                background: rgba(255, 255, 255, 1);
+                border-radius: 2px;
+
+                input {
+                    font-size: 10px;
+                }
+
+                span {
+                    width: 14px;
+                    height: 14px;
+                }
+
             }
-        }
-    }
-    
-    .blockHeight{
-      .btns{
-         width: 100px;
-         height: 30px;
-         font-size: 12px;
-      }
-      .form{
-            width:320px;
-            height:27px;
-            background:rgba(255,255,255,1);
-            border-radius:2px;
-            input{
-                font-size:10px;
-            }
-            span{
-                width: 14px;
-                height: 14px;
-            }
-            
-        }
-        .price{
-            width: 320px;
-                p:nth-child(1){
-                    i{
+
+            .price {
+                width: 320px;
+
+                p:nth-child(1) {
+                    i {
                         width: 13px;
                         height: 15px;
                     }
-                    label{
+
+                    label {
                         font-size: 12px;
                     }
-                    
+
                 }
-                 p:nth-child(2){
-                   align-items: flex-start;
-                    label{
+
+                p:nth-child(2),
+                p:nth-child(4) {
+                    font-size: 12px;
+                    word-break: break-all;
+
+                }
+            }
+
+            .blockHeightDeal {
+                >p {
+                    label {
                         font-size: 12px;
                     }
-                    span{
-                        font-size:10px;
+
+                    span {
+                        width: 70%;
+                        font-size: 12px;
+                    }
+                }
+            }
+
+            .blockHeightAbstract {
+                padding: 6px 0;
+                box-sizing: border-box;
+
+                h2 {
+                    font-size: 12px;
+                    line-height: 29px;
+                    margin-bottom: 2px;
+                }
+
+                .abstract {
+                    flex-direction: column;
+                    align-items: flex-start;
+
+                    .line {
+                        display: none;
+                    }
+
+                    .abstractContent {
+                        width: 100%;
+                        padding: 0 5px;
+                        box-sizing: border-box;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+
+                        p {
+                            padding: 5px 0;
+                            box-sizing: border-box;
+
+                            label {
+                                font-size: 10px;
+                            }
+
+                            span {
+                                width: 60%;
+                                font-size: 10px;
+                            }
+                        }
+                    }
+
+                }
+            }
+
+            .deal {
+                .dealContent1 {
+                    .dealContents {
+                        >p {
+                            word-break: break-all;
+                        }
+
+                        .descrPrice {
+                            span {
+                                font-size: 10px;
+
+                                i {
+                                    width: 3px;
+                                    height: 3px;
+                                    margin-top: 8px;
+                                }
+                            }
+                        }
+
+                        .dealAddress {
+                            >span:nth-child(2) {
+                                width: 10px;
+                                height: 8px;
+                            }
+
+                            >ul {
+                                .addBlue {
+                                    widows: 60px;
+                                    overflow: hidden;
+                                    white-space: nowrap;
+                                    text-overflow: ellipsis
+                                }
+
+                                li {
+                                    span {
+                                        font-size: 10px;
+                                    }
+
+                                    label {
+                                        font-size: 10px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .addressBox {
+            .form {
+                width: 320px;
+                height: 27px;
+                background: rgba(255, 255, 255, 1);
+                border-radius: 2px;
+
+                input {
+                    font-size: 10px;
+                }
+
+                span {
+                    width: 14px;
+                    height: 14px;
+                }
+
+            }
+
+            .price {
+                width: 320px;
+
+                >div {
+                    width: 250px;
+
+                    p:nth-child(1) {
+                        i {
+                            width: 13px;
+                            height: 15px;
+                        }
+
+                        label {
+                            font-size: 12px;
+                        }
+
+                    }
+
+                    p:nth-child(2) {
+                        font-size: 12px;
+                    }
+                }
+
+                canvas {
+                    width: 60px !important;
+                    height: 60px !important;
+                }
+            }
+
+            .blockHeightAbstract {
+                padding: 6px 0;
+                box-sizing: border-box;
+
+                h2 {
+                    font-size: 12px;
+                    line-height: 29px;
+                    margin-bottom: 2px;
+                }
+
+                .abstract {
+                    .abstractContent {
+                        padding: 0 5px;
+                        box-sizing: border-box;
+
+                        p {
+                            label {
+                                font-size: 12px;
+                            }
+
+                            span {
+                                width: 70%;
+                                font-size: 12px;
+                            }
+                        }
+                    }
+
+                }
+            }
+
+            .blockHeightDeal {
+                h2 {
+                    font-size: 12px;
+                    line-height: 29px;
+                    margin-bottom: 2px;
+                }
+            }
+        }
+
+        .blockHeight {
+            .btns {
+                width: 100px;
+                height: 30px;
+                font-size: 12px;
+            }
+
+            .form {
+                width: 320px;
+                height: 27px;
+                background: rgba(255, 255, 255, 1);
+                border-radius: 2px;
+
+                input {
+                    font-size: 10px;
+                }
+
+                span {
+                    width: 14px;
+                    height: 14px;
+                }
+
+            }
+
+            .price {
+                width: 320px;
+
+                p:nth-child(1) {
+                    i {
+                        width: 13px;
+                        height: 15px;
+                    }
+
+                    label {
+                        font-size: 12px;
+                    }
+
+                }
+
+                p:nth-child(2) {
+                    align-items: flex-start;
+
+                    label {
+                        font-size: 12px;
+                    }
+
+                    span {
+                        font-size: 10px;
                         word-break: break-all;
                     }
                 }
-        }
-      .btn{
-        width: 320px;
-        button{
-          width: 68px;
-          height: 20px;
-          font-size: 10px;
-          padding: 0 5px;
-          box-sizing: border-box;
-          img{
-            width: 9px;
-            height: 9px;
-          }
-        }
-      }
-      .blockHeightAbstract{
-            padding: 6px 0;
-            box-sizing: border-box;
-            h2{
-                font-size: 12px;
-                line-height: 29px;
-                margin-bottom: 2px;
             }
-            .abstract {
-              flex-direction: column;
-              align-items: flex-start;
-              .line{
-                display: none;
-              }
-                .abstractContent{
-                    width: 100%;
+
+            .btn {
+                width: 320px;
+
+                button {
+                    width: 68px;
+                    height: 20px;
+                    font-size: 10px;
                     padding: 0 5px;
                     box-sizing: border-box;
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: space-between;
-                    p {
-                      padding: 5px 0;
-                      box-sizing: border-box;
-                        label{
-                            font-size: 10px;
-                        }
-                        span{
-                            width: 60%;
-                            font-size: 10px;
-                        }
-                    }
-                }
-                    
-            }
-        }
-      .blockHeightDeal{
-            h2{
-                font-size: 12px;
-                line-height: 29px;
-                margin-bottom: 2px;
-            }
-            .deal{
-              .dealContent1{
-                .dealContents{
-                  .descrPrice{
-                    span{
-                      font-size: 10px;
-                      i{
-                        width: 3px;
-                        height: 3px;
-                        margin-top: 8px;
-                      }
-                    }
-                  }
-                   p{
-                     word-break: break-all;
-                   }
-                   .dealAddress{
-                     >span:nth-child(2){
-                       width: 10px;
-                       height: 8px;
-                     }
-                     >ul{
-                       .addBlue{
-                         widows: 60px;
-                         overflow: hidden;
-                         white-space: nowrap;
-                         text-overflow: ellipsis
-                       }
-                       li{
-                         span{
-                           font-size: 10px;
-                         }
-                         label{
-                           font-size: 10px;
-                         }
-                       }
-                     }
-                   }
-                }
-              }
-            }
-      }
-    }
-    }
-    header {
-      .bgLogo {
-        right: 8%;
-        top: 12%;
-      }
-      .head {
-        width: 320px;
-        height: 40px;
-        .navList {
-          .dropdown2 {
-            > span {
-              border-bottom: 0;
-            }
-          }
-        }
-      }
-    }
-  }    
 
+                    img {
+                        width: 9px;
+                        height: 9px;
+                    }
+                }
+            }
+
+            .blockHeightAbstract {
+                padding: 6px 0;
+                box-sizing: border-box;
+
+                h2 {
+                    font-size: 12px;
+                    line-height: 29px;
+                    margin-bottom: 2px;
+                }
+
+                .abstract {
+                    flex-direction: column;
+                    align-items: flex-start;
+
+                    .line {
+                        display: none;
+                    }
+
+                    .abstractContent {
+                        width: 100%;
+                        padding: 0 5px;
+                        box-sizing: border-box;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+
+                        p {
+                            padding: 5px 0;
+                            box-sizing: border-box;
+
+                            label {
+                                font-size: 10px;
+                            }
+
+                            span {
+                                width: 60%;
+                                font-size: 10px;
+                            }
+                        }
+                    }
+
+                }
+            }
+
+            .blockHeightDeal {
+                h2 {
+                    font-size: 12px;
+                    line-height: 29px;
+                    margin-bottom: 2px;
+                }
+
+                .deal {
+                    .dealContent1 {
+                        .dealContents {
+                            .descrPrice {
+                                span {
+                                    font-size: 10px;
+
+                                    i {
+                                        width: 3px;
+                                        height: 3px;
+                                        margin-top: 8px;
+                                    }
+                                }
+                            }
+
+                            p {
+                                word-break: break-all;
+                            }
+
+                            .dealAddress {
+                                >span:nth-child(2) {
+                                    width: 10px;
+                                    height: 8px;
+                                }
+
+                                >ul {
+                                    .addBlue {
+                                        widows: 60px;
+                                        overflow: hidden;
+                                        white-space: nowrap;
+                                        text-overflow: ellipsis
+                                    }
+
+                                    li {
+                                        span {
+                                            font-size: 10px;
+                                        }
+
+                                        label {
+                                            font-size: 10px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    header {
+        .bgLogo {
+            right: 8%;
+            top: 12%;
+        }
+
+        .head {
+            width: 320px;
+            height: 40px;
+
+            .navList {
+                .dropdown2 {
+                    >span {
+                        border-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+}
