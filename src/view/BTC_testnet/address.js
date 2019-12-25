@@ -121,7 +121,7 @@ class Address extends Component {
                                   //       <span>{vint.value} BTC</span></li>
                                   v.inputs.map((v1, i1) => {
                                   return v1.prev_addresses && v1.prev_addresses[i1]?<label><p className="addBlue" onClick={() => this.goToAddress(v1.prev_addresses)} key={i1}>{v1.prev_addresses+' '}</p>
-                                  <p>{v1.prev_value+" Sat"}</p></label>:<label className="addBlue">Unparsed address<p>0 Sat</p></label>
+                                    <p>{v1.prev_value + " Sat"}</p></label> : <label className={v1.prev_value ? "addBlue":''}>Unparsed address<p>0 Sat</p></label>
                                   })
                                 }
                               </ul>
@@ -137,7 +137,7 @@ class Address extends Component {
 
                                   // })
                                   v.outputs.map((v2,i2)=>{
-                                  return v2.addresses&&v2.addresses[i2]?<label><p className="addBlue" onClick={() => this.goToAddress(v2.addresses)} key={i2}>{v2.addresses}</p><p>{v2.value+" Sat"}</p></label>:<label className="addBlue">Unparsed address<p>0 Sat</p></label>
+                                    return v2.addresses && v2.addresses[i2] ? <label><p className="addBlue" onClick={() => this.goToAddress(v2.addresses)} key={i2}>{v2.addresses}</p><p>{v2.value + " Sat"}</p></label> : <label className={v2.prev_value ? "addBlue" : ''}>Unparsed address<p>0 Sat</p></label>
                                   })
                                 }
                               </ul>

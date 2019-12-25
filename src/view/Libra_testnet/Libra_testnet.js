@@ -59,7 +59,7 @@ class Libra_testnet extends Component {
             <div className="searchBox">
               <h3>Libra TestNet</h3>
               <div className="form">
-                <input onChange={(e) => this.getCurValue(e)} placeholder="address、txid" />
+                <input onChange={(e) => this.getCurValue(e)} placeholder="address、version" />
                 <span onClick={this.getSearch}></span>
               </div>
             </div>
@@ -71,7 +71,7 @@ class Libra_testnet extends Component {
                 <table bgcolor="rgba(247, 248, 251, 1)">
                   <thead>
                     <tr>
-                      <th colSpan="2">TXID</th>
+                      <th colSpan="2">Version</th>
                       <th colSpan="3">Time</th>
                       <th colSpan="2">Type</th>
                       <th colSpan="4">From</th>
@@ -111,7 +111,7 @@ class Libra_testnet extends Component {
                 {
                   this.props.libra_testnet && this.props.libra_testnet.map((v, i) => {
                     return <div className="listContent" key={i}>
-                      <p><label>TXID</label><span onClick={() => {
+                      <p><label>Version</label><span onClick={() => {
                         this.props.history.push('/app/Libra_dealbox/' + v.version)
                       }}>{v.version}</span></p>
                       <p><label>Time</label><span>{timeStamp2String(v.expiration_time + '000')}</span></p>

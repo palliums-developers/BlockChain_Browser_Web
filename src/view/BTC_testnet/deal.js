@@ -110,7 +110,7 @@ class Deal extends Component {
                             return v.value == 0 ? <p key={i}><span>{v.address}</span></p> :
                               <label key={i}>
                                 {
-                                  v.value == 0 ? <label>地址解析失败</label> : v.address.length == 34 ? <label className="addBlue" onClick={() => this.goToAddress(v.address)}>{v.address}</label> : <label>{v.address}</label>
+                                  v.value == 0 ? <label>Unparsed address</label> : v.address.length == 34 ? <label className="addBlue" onClick={() => this.goToAddress(v.address)}>{v.address}</label> : <label>{v.address}</label>
                                 }
                                 <p>{v.value}BTC</p></label>
                           })
@@ -121,7 +121,7 @@ class Deal extends Component {
                         {
                           BTC_Test_txid.nextaddress && BTC_Test_txid.nextaddress.map((v, i) => {
                             return <li key={i}>
-                              {v.value == 0 ? <label>地址解析失败</label> : v.address.length == 34 ? <label className="addBlue" onClick={() => this.goToAddress(v.address)}>{v.address}</label> : <label>{v.address}</label>
+                              {v.value == 0 ? <label>Unparsed address</label> : v.address.length == 34 ? <label className="addBlue" onClick={() => this.goToAddress(v.address)}>{v.address}</label> : <label>{v.address}</label>
                               }
                               <span>{v.value} BTC</span>
                             </li>

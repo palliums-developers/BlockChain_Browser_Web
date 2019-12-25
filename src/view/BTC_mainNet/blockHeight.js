@@ -123,7 +123,7 @@ class BlockHeight extends Component {
         <div className="contents contents1">
              <div className="blockHeight">
             <div className="form">
-              <input onChange={(e) => this.getCurValue(e)} placeholder="地址、txid、高度或哈希" />
+              <input onChange={(e) => this.getCurValue(e)} placeholder="address、txid" />
               <span onClick={this.getSearch}></span>
             </div>
             <div className="price">

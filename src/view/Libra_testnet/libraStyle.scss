@@ -1092,6 +1092,9 @@
             input{
                 font-size:10px;
             }
+            ::-webkit-input-placeholder{
+                font-size: 10px;
+            }
             span{
                 width: 14px;
                 height: 14px;
@@ -1100,7 +1103,8 @@
         }
         .price{
             width: 320px;
-                p:nth-child(1){
+            >div{
+                >p:nth-child(1){
                     i{
                         width: 13px;
                         height: 15px;
@@ -1116,6 +1120,7 @@
                    word-break: break-all;
                     
                 }
+            }
         }
         .blockHeightDeal{
              >p{
@@ -1215,6 +1220,9 @@
             input{
                 font-size:10px;
             }
+            ::-webkit-input-placeholder{
+                font-size: 10px;
+            }
             span{
                 width: 14px;
                 height: 14px;
@@ -1238,10 +1246,27 @@
                 p:nth-child(2){
                     font-size:12px;
                 }
+                .balance{
+                    font-size: 12px;
+                }
             }
             canvas {
                 width: 60px!important;
                 height: 60px!important;
+            }
+        }
+        .dealContent1{
+            .descrPrice{
+                span{
+                    font-size: 10px;
+                }
+            }
+        }
+        .dealContents{
+            >.pp{
+                >p{
+                    font-size: 10px;
+                }
             }
         }
         .blockHeightAbstract{
@@ -1287,6 +1312,7 @@
                     label{
                         width:130px;
                         line-height: 20px;
+                        font-size: 10px;
                     }
                 }
             }
@@ -1310,6 +1336,9 @@
             border-radius:2px;
             input{
                 font-size:10px;
+            }
+            ::-webkit-input-placeholder{
+                font-size: 10px;
             }
             span{
                 width: 14px;

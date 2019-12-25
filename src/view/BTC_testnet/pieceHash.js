@@ -60,7 +60,7 @@ class PieceHash extends Component {
         <div className="contents contents1">
           <div className="pieceHash">
             <div className="form">
-              <input onChange={(e) => this.getCurValue(e)} placeholder="地址、txid、高度或哈希" />
+              <input onChange={(e) => this.getCurValue(e)} placeholder="address、txid" />
               <span onClick={this.getSearch}></span>
             </div>
             <div className="price">
@@ -119,7 +119,7 @@ class PieceHash extends Component {
                             <ul>
                               {
                                 item.nextaddress.map((v, i) => {
-                                  return <li key={i}>{v.value == 0 ? <label>地址解析失败</label> : <label className="addBlue" onClick={() => {
+                                  return <li key={i}>{v.value == 0 ? <label>Unparsed address</label> : <label className="addBlue" onClick={() => {
                                     this.props.history.push('/app/addressBox')
                                   }}>{v.address}</label>}<span>{v.value} BTC</span></li>
 
