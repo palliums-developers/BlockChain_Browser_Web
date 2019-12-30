@@ -120,7 +120,7 @@ class Deal extends Component {
                           })
                         }
                       </ul>
-                      {/* <span> >>>>>>>>>>>>>>>>> </span> */}
+                      <span></span>
                       <ul>
                         {
                           BTC_Test_txid.nextaddress && BTC_Test_txid.nextaddress.map((v, i) => {

@@ -80,7 +80,7 @@ header {
         align-items: center;
         position: relative;
         font-size: 0.18rem;
-
+        z-index: 9999;
         .dropdown-content1 {
           width: 1.8rem;
           display: block;
@@ -224,7 +224,7 @@ header {
     }
 
     .mainNet {
-      width: 320px;
+      // width: 320px;
 
       #more {
         width: 100px;
@@ -240,6 +240,7 @@ header {
              .form{
                  width: 163px;
                  height: 24px;
+                 border-radius: 1px;
                  input{
                      font-size:10px ;
                  }
@@ -247,8 +248,8 @@ header {
                      font-size: 10px;
                  }
                  span{
-                     width: 11px;
-                     height: 12px;
+                     width: 12px;
+                     height: 13px;
                  }
              }
         }
@@ -258,6 +259,7 @@ header {
 
           i {
             width: 16px;
+            height: 19px;
           }
 
           span {
