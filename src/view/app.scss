@@ -233,30 +233,25 @@ header {
         font-size: 12px;
       }
 
-      .searchBox {
-        h3 {
-          font-size: 14px;
+        .searchBox{
+             h3 {
+                 font-size: 14px;
+             }
+             .form{
+                 width: 163px;
+                 height: 24px;
+                 input{
+                     font-size:10px ;
+                 }
+                 ::-webkit-input-placeholder{
+                     font-size: 10px;
+                 }
+                 span{
+                     width: 11px;
+                     height: 12px;
+                 }
+             }
         }
-
-        .form {
-          width: 163px;
-          height: 24px;
-
-          input {
-            font-size: 10px;
-          }
-
-          :-ms-input-placeholder {
-            font-size: 10px;
-          }
-
-          span {
-            width: 11px;
-            height: 12px;
-          }
-        }
-      }
-
       .mainContent {
         .mainHead {
           height: 34px;

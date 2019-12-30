@@ -104,7 +104,7 @@ class Deal extends Component {
                             return v.value == 0 ? <p key={i}><span>{v.address}</span></p> :
                               <li key={i}>
                                 {
-                                  v.value == 0 ? <label>地址解析失败</label> : v.address.length == 34 ? <label className="addBlue" onClick={() => this.goToAddress(v.address)}>{v.address}</label> : <label>{v.address}</label>
+                                  v.value == 0 ? <label>Unparsed address</label> : v.address.length == 34 ? <label className="addBlue" onClick={() => this.goToAddress(v.address)}>{v.address}</label> : <label>{v.address}</label>
                                 }
                                 <p>{v.value} BTC</p>
                               </li>
@@ -119,7 +119,7 @@ class Deal extends Component {
                         {
                           BTC_main_txid.nextaddress && BTC_main_txid.nextaddress.map((v, i) => {
                             return <li key={i}>
-                              {v.value == 0 ? <label>地址解析失败</label> : v.address.length == 34 ? <label className="addBlue" onClick={() => this.goToAddress(v.address)}>{v.address}</label> : <label>{v.address}</label>
+                              {v.value == 0 ? <label>Unparsed address</label> : v.address.length == 34 ? <label className="addBlue" onClick={() => this.goToAddress(v.address)}>{v.address}</label> : <label>{v.address}</label>
                               }
                               <p>{v.value} BTC</p>
                             </li>
@@ -129,7 +129,7 @@ class Deal extends Component {
                       </ul>
                     </div>
                     <div className="descrPrice">
-                      <span>确认数 {BTC_main_txid.confirmations}</span>
+                      <span>Confirmed  {BTC_main_txid.confirmations}</span>
                     </div>
                   </div>
                 </div>

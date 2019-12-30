@@ -117,7 +117,7 @@ class BlockHeight extends Component {
         <div className="contents contents1">
           <div className="blockHeight">
             <div className="form">
-              <input onChange={(e) => this.getCurValue(e)} placeholder="地址、txid、高度或哈希" />
+              <input onChange={(e) => this.getCurValue(e)} placeholder="address、txid" />
               <span onClick={this.getSearch}></span>
             </div>
             <div className="price">
@@ -174,7 +174,7 @@ class BlockHeight extends Component {
                             <ul>
                               {
                                 item.nextaddress.map((v, i) => {
-                                  return <li key={i}>{v.value == 0 ? <label className="addBlue">Unparsed address</label> : <label className="addBlue" onClick={() => this.goToAddress(v.address)}>{v.address}</label>}<p>{v.value}BTC</p></li>
+                                  return <li key={i}>{v.value == 0 ? <label>Unparsed address</label> : <label className="addBlue" onClick={() => this.goToAddress(v.address)}>{v.address}</label>}<p>{v.value}BTC</p></li>
                                 })
                               }
                             </ul>

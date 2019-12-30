@@ -87,13 +87,13 @@ class BTCTestNet extends Component {
                   this.props.BTC_Test_List && this.props.BTC_Test_List.map((v, i) => {
                     return <div className="listContent" key={i}>
                       <p><label>Height</label><span onClick={() => {
-                        this.props.history.push('/app/BTC_block/' + v.height);
+                        this.props.history.push('/app/tBTC_block/' + v.height);
                       }}>{v.height}</span></p>
                       <p><label>Size</label><span>{v.size}</span></p>
                       <p><label>Profit</label><span>{v.profit}</span></p>
                       <p><label>timeStamp</label><span>{timeStamp2String(v.timestamp + '000')}</span></p>
                       <p><label>Hash</label><span onClick={() => {
-                        this.props.history.push('/app/BTC_block/' + v.hash)
+                        this.props.history.push('/app/tBTC_block/' + v.hash)
                       }}>{(v.hash).slice(0, 30) + '...'}</span></p>
 
                     </div>

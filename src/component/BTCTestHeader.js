@@ -85,11 +85,11 @@ class BTCTestHeader extends Component {
             <NavLink to='/app/Libra'>Libra</NavLink>
           </div>
         </div>
-        {/* {
+        {
             this.props.back == 'net' ? <div className="bgLogo">
-           <img src="/img/编组 9@2x.png" />
+            <img src="/img/编组 5b@2x.png" />
           </div> : null
-          } */}
+          }
 
       </header>
     );
