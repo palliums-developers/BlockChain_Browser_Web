@@ -6,18 +6,20 @@
     width: 19.11rem;
     height: 10.92rem;
     position: relative;
+
     .bgLogo {
       width: 9.06rem;
       position: absolute;
       right: 18%;
       top: 5%;
       z-index: 1;
+
       img {
         width: 100%;
       }
     }
 
-    .navList .dropdown1 > span {
+    .navList .dropdown1>span {
       width: 0.2rem;
       height: 0.22rem;
       border-bottom: 2px solid rgba(130, 179, 255, 1);
@@ -42,6 +44,7 @@
     margin-top: -8.2rem;
     // margin-bottom: 2rem;
   }
+
   .mainNet {
     #more {
       width: 3.11rem;
@@ -55,6 +58,7 @@
       text-align: center;
       margin: 1rem auto;
     }
+
     .searchBox {
       h3 {
         font-size: 0.35rem;
@@ -125,6 +129,7 @@
         i {
           width: 0.4rem;
           display: flex;
+
           img {
             width: 100%;
           }
@@ -147,13 +152,16 @@
           margin-top: 0.2rem;
         }
       }
-      .tableList{
-          display: none;
+
+      .tableList {
+        display: none;
       }
+
       .table {
         width: 100%;
         display: flex;
         flex-direction: column;
+
         table {
           width: 100%;
           border-collapse: separate;
@@ -191,7 +199,69 @@
           tr td:nth-child(3),
           tr td:nth-child(5),
           tr td:nth-child(7) {
-            color: rgba(75, 25, 159, 1);
+            // color: rgba(75, 25, 159, 1);
+            color:rgba(49,158,237,1);
+            cursor: pointer;
+          }
+
+          tr:nth-child(1) th {
+            border-bottom: 3px solid rgba(75, 25, 159, 1);
+            background: rgba(247, 248, 251, 1);
+            font-size: 0.24rem;
+            font-family: PingFangSC-Regular;
+            font-weight: 400;
+            color: rgba(0, 12, 60, 1);
+            text-align: left;
+            padding: 0.2rem 0.05rem;
+            box-sizing: border-box;
+            white-space: nowrap;
+          }
+        }
+      }
+      .table1 {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+        table {
+          width: 100%;
+          border-collapse: separate;
+          border-spacing: 0 0.1rem;
+          table-layout: fixed;
+          font-size: 0.21rem;
+          background: rgba(247, 248, 251, 1);
+
+          th,
+          td {
+            padding: 0.1rem;
+          }
+
+          tr td {
+            width: 100%;
+            height: 1.2rem;
+            // padding: 0.05rem;
+            // box-sizing: border-box;
+            background: #fff;
+            word-wrap: break-word;
+          }
+
+          tr td:last-child {
+            span:nth-child(1) {
+              display: block;
+              word-wrap: break-word;
+            }
+
+            span:nth-child(2) {
+              display: none;
+            }
+          }
+
+          tr td:nth-child(1),
+          // tr td:nth-child(3),
+          tr td:nth-child(5),
+          tr td:nth-child(7) {
+            // color: rgba(75, 25, 159, 1);
+            color:rgba(49,158,237,1);
             cursor: pointer;
           }
 
@@ -218,11 +288,9 @@
         button {
           width: 100%;
           height: 100%;
-          background: linear-gradient(
-            180deg,
-            rgba(130, 179, 255, 1) 0%,
-            rgba(65, 135, 254, 1) 100%
-          );
+          background: linear-gradient(180deg,
+              rgba(130, 179, 255, 1) 0%,
+              rgba(65, 135, 254, 1) 100%);
           box-shadow: 0px 10px 20px 0px rgba(81, 146, 255, 0.22);
           border-radius: 5px;
           outline: 0;
@@ -251,11 +319,9 @@
       button {
         width: 100%;
         height: 100%;
-        background: linear-gradient(
-          180deg,
-          rgba(130, 179, 255, 1) 0%,
-          rgba(65, 135, 254, 1) 100%
-        );
+        background: linear-gradient(180deg,
+            rgba(130, 179, 255, 1) 0%,
+            rgba(65, 135, 254, 1) 100%);
         box-shadow: 0px 10px 20px 0px rgba(81, 146, 255, 0.22);
         border-radius: 5px;
         outline: 0;
@@ -272,9 +338,11 @@
       margin: 0 auto;
       display: flex;
       position: relative;
-      > div {
+
+      >div {
         width: 10rem;
-        > p:nth-child(1) {
+
+        >p:nth-child(1) {
           label {
             white-space: nowrap;
           }
@@ -290,8 +358,8 @@
       }
 
       canvas {
-        width: 1.5rem!important;
-        height: 1.5rem!important;
+        width: 1.5rem !important;
+        height: 1.5rem !important;
         position: absolute;
         right: 0;
       }
@@ -315,7 +383,8 @@
 
       .from,
       .to {
-        color: RGBA(132, 51, 189, 1);
+        // color: RGBA(132, 51, 189, 1);
+        color: #319eed;
         cursor: pointer;
       }
     }
@@ -325,10 +394,12 @@
       padding-left: 0.32rem;
       padding-right: 0.15rem;
       box-sizing: border-box;
-      >h2{
-          border-bottom: 2px solid rgba(247, 248, 251, 1);
+
+      >h2 {
+        border-bottom: 2px solid rgba(247, 248, 251, 1);
       }
-      > p {
+
+      >p {
         width: 100%;
         // height: 58rem;
         // line-height: 60rem;
@@ -338,7 +409,7 @@
         align-items: center;
         justify-content: space-between;
         margin-top: 0.25rem;
-   
+
         label {
           width: 1.5rem;
           font-size: 0.18rem;
@@ -399,9 +470,11 @@
             align-items: center;
 
             justify-content: space-between;
+
             .from,
             .to {
-              color: RGBA(132, 51, 189, 1);
+              // color: RGBA(132, 51, 189, 1);
+              color: #319eed;
             }
 
             label {
@@ -484,12 +557,13 @@
         align-items: center;
       }
 
-      > div {
+      >div {
         p:nth-child(1) {
           i {
             width: 0.62rem;
             height: 0.62rem;
             display: flex;
+
             img {
               width: 100%;
               height: 100%;
@@ -512,7 +586,7 @@
           }
         }
 
-        > p:nth-child(2) {
+        >p:nth-child(2) {
           // margin: 0.40rem 0;
 
           label {
@@ -575,11 +649,13 @@
         box-sizing: border-box;
         display: flex;
         align-items: center;
+
         p {
           font-size: 0.21rem;
           color: green;
           margin-right: 10px;
         }
+
         span {
           font-size: 0.21rem;
           font-family: PingFangSC-Medium;
@@ -616,15 +692,15 @@
     }
 
     .price {
-      > div {
-        > p:nth-child(1) {
+      >div {
+        >p:nth-child(1) {
           img {
             width: 0.69rem;
             height: 0.79rem;
           }
         }
 
-        > p {
+        >p {
           label {
             white-space: nowrap;
           }
@@ -651,7 +727,7 @@
           font-weight: 400;
           color: rgba(255, 255, 255, 1);
 
-          > p {
+          >p {
             font-size: 0.24rem;
             font-family: PingFangSC-Regular;
             font-weight: 400;
@@ -664,18 +740,20 @@
 
   //地址
   .addressBox {
+
     // background: #FFF;
     .dealContents {
-        padding: 0.1rem 0;
-        box-sizing: border-box;
-      > .pp {
+      padding: 0.1rem 0;
+      box-sizing: border-box;
+
+      >.pp {
         width: 100%;
         display: flex;
         justify-content: space-between;
         padding: 0 0.1rem;
         box-sizing: border-box;
 
-        > p {
+        >p {
           font-size: 0.2rem;
           color: #666;
         }
@@ -687,7 +765,8 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      > span {
+
+      >span {
         width: 0.5rem;
         height: 0.4rem;
         background: url("/img/形状复制 4@2x.png") no-repeat;
@@ -704,20 +783,23 @@
         padding-right: 0.33rem;
         box-sizing: border-box;
         margin-left: 0.3rem;
+
         li {
-        //   height: 0.5rem;
+          //   height: 0.5rem;
           display: flex;
           align-items: center;
           padding: 0.1rem 0;
           box-sizing: border-box;
           margin-top: 0.1rem;
+
           label {
             line-height: 0.3rem;
             font-size: 0.17rem;
             font-family: PingFangSC-Regular;
             font-weight: 400;
             word-wrap: break-word;
-            color: RGBA(132, 51, 189, 1);
+            // color: RGBA(132, 51, 189, 1);
+            color: #319eed;
             word-break: break-all;
           }
         }
@@ -729,17 +811,17 @@
       // flex-direction: column;
       margin-top: 0.7rem;
 
-      > div {
-        > span {
+      >div {
+        >span {
           width: 100%;
         }
 
-        > p:nth-child(2) {
+        >p:nth-child(2) {
           display: flex;
           width: 100%;
         }
 
-        > p:nth-child(3) {
+        >p:nth-child(3) {
           width: 1.19rem;
           height: 1.18rem;
           float: right;
@@ -762,7 +844,7 @@
 
       // padding-right: 114rem;
       // box-sizing: border-box;
-      > div {
+      >div {
         display: flex;
         justify-content: space-between;
 
@@ -780,6 +862,7 @@
       background: RGBA(17, 30, 64, 1) !important;
 
       .contents {
+
         .dealBox,
         .addressBox,
         .pieceHash,
@@ -829,12 +912,12 @@
                       }
                     }
 
-                    > span {
+                    >span {
                       background: url("/img/形状复制 42@2x.png") no-repeat;
                       background-size: 100% 100%;
                     }
 
-                    > ul {
+                    >ul {
                       li {
                         label {
                           color: rgba(255, 255, 255, 0.5);
@@ -872,7 +955,7 @@
                       }
                     }
 
-                    > span {
+                    >span {
                       background: url("/img/形状复制 42@2x.png") no-repeat;
                       background-size: 100% 100%;
                     }
@@ -935,7 +1018,7 @@
         .dealBox {
           .price {
             p:nth-child(3) {
-              > p {
+              >p {
                 color: rgba(74, 232, 236, 1);
               }
             }
@@ -1028,257 +1111,312 @@
 @media (max-width: 750px) {
   .violasContent {
     .netBack {
-        background: url("/img/路径 522@2x.png") no-repeat;
-        background-size: 100%;
+      background: url("/img/路径 522@2x.png") no-repeat;
+      background-size: 100%;
     }
+
     .netToBack {
-        background: url("/img/蒙版vm@2x.png") no-repeat;
-        background-size: 100%;
+      background: url("/img/蒙版vm@2x.png") no-repeat;
+      background-size: 100%;
     }
-    .contents{
-        margin-top: -150px;
+
+    .contents {
+      margin-top: -150px;
     }
-    .contents1{
-        margin-top: -8.2rem;
+
+    .contents1 {
+      margin-top: -8.2rem;
     }
-    .mainNet{
-         .mainContent{
-             .mainHead{
-                 border-bottom:1px solid rgba(75, 25, 159, 1);
-             }
-             .table{
-                 display: none;
-             }
-             .tableList{
-                width: 100%;
-                display: flex;
-                flex-direction: column;
-                padding: 0 6px;
-                box-sizing: border-box;
-                .listContent{
-                    border-bottom: 4px solid rgba(247,248,251,1);
-                }
-                p{
-                    height: 50px;
-                    display: flex;
-                    align-items: center;
-                    justify-content: space-between;
-                    
-                    label{
-                        font-size: 12px;
-                    }
-                    span{
-                        width: 70%;
-                        font-size:12px;
-                    }
-                    // span:nth-child(1),
-                    // span:nth-child(3),
-                    // span:nth-child(5),
-                    // span:nth-child(7){
-                    //     color: rgba(49, 158, 237, 1);
-                    // }
-                }
-                p:nth-child(1),
-                p:nth-child(3),
-                p:nth-child(5),
-                p:nth-child(7){
-                    span{
-                        color: rgba(75, 25, 159, 1);
-                    }
-                }
+
+    .mainNet {
+      .mainContent {
+        .mainHead {
+          border-bottom: 1px solid rgba(75, 25, 159, 1);
+        }
+
+        .table1 {
+          display: none;
+        }
+
+        .table {
+          display: none;
+        }
+
+        .tableList {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          padding: 0 6px;
+          box-sizing: border-box;
+
+          .listContent {
+            border-bottom: 4px solid rgba(247, 248, 251, 1);
+          }
+
+          p {
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            label {
+              font-size: 12px;
             }
-         }
-    }
-    header {
-      .bgLogo{
-          right: 8%;
-          top: 10%;
+
+            span {
+              width: 70%;
+              font-size: 12px;
+            }
+
+            // span:nth-child(1),
+            // span:nth-child(3),
+            // span:nth-child(5),
+            // span:nth-child(7){
+            //     color: rgba(49, 158, 237, 1);
+            // }
+          }
+
+          p:nth-child(1),
+          p:nth-child(3),
+          p:nth-child(5),
+          p:nth-child(7) {
+            span {
+              // color: rgba(75, 25, 159, 1);
+              color:rgba(49,158,237,1);
+            }
+          }
+        }
       }
+    }
+
+    header {
+      .bgLogo {
+        right: 8%;
+        top: 10%;
+      }
+
       .head {
         width: 320px;
         height: 40px;
+
         .navList {
-          .dropdown1{
-            > span {
+          .dropdown1 {
+            >span {
               border-bottom: 0;
             }
           }
         }
       }
     }
-    .dealBox{
-        .form{
-            width:320px;
-            height:27px;
-            background:rgba(255,255,255,1);
-            border-radius:2px;
-            input{
-                font-size:10px;
-            }
-            span{
-                width: 14px;
-                height: 14px;
-            }
-            
+
+    .dealBox {
+      .form {
+        width: 320px;
+        height: 27px;
+        background: rgba(255, 255, 255, 1);
+        border-radius: 2px;
+
+        input {
+          font-size: 10px;
         }
-        .price{
-            width: 320px;
-            >div{
-                p:nth-child(1){
-                    i{
-                        width: 13px;
-                        height: 15px;
-                    }
-                    label{
-                        font-size: 12px;
-                    }
-                    
-                }
-            }
+
+        span {
+          width: 14px;
+          height: 14px;
         }
-        .blockHeightDeal{
-             >p{
-                 label{
-                     font-size: 12px;
-                 }
-                 span{
-                     width: 70%;
-                     font-size: 12px;
-                 }
-             }
-        }
-        .blockHeightAbstract{
-            padding: 6px 0;
-            box-sizing: border-box;
-            h2{
-                font-size: 12px;
-                line-height: 29px;
-                margin-bottom: 2px;
-            }
-            .abstract {
-                .abstractContent{
-                    padding: 0 5px;
-                    box-sizing: border-box;
-                    p {
-                        label{
-                            font-size: 12px;
-                        }
-                        span{
-                            width: 70%;
-                            font-size: 12px;
-                        }
-                    }
-                }
-                    
-            }
-        }
-    }
-    .addressBox{
-      .dealContent1{
-         .descrPrice {
-           p,span{
-           font-size: 10px;
-         }
-         }
+
       }
-        .form{
-            width:320px;
-            height:27px;
-            background:rgba(255,255,255,1);
-            border-radius:2px;
-            input{
-                font-size:10px;
+
+      .price {
+        width: 320px;
+
+        >div {
+          p:nth-child(1) {
+            i {
+              width: 13px;
+              height: 15px;
             }
-            ::-webkit-input-placeholder{
-              font-size:10px;
+
+            label {
+              font-size: 12px;
             }
-            span{
-                width: 14px;
-                height: 14px;
-            }
-            
+
+          }
         }
-        .price{
-            width: 320px;
-            >div{
-                width: 250px;
-                p:nth-child(1){
-                    i{
-                        width: 13px;
-                        height: 15px;
-                    }
-                    label{
-                        font-size: 12px;
-                    }
-                    
-                }
-                p:nth-child(2){
-                    font-size:12px;
-                }
-                .balance{
-                  font-size: 12px;
-                }
-            }
-            canvas {
-                width: 60px!important;
-                height: 60px!important;
-            }
+      }
+
+      .blockHeightDeal {
+        >p {
+          label {
+            font-size: 12px;
+          }
+
+          span {
+            width: 70%;
+            font-size: 12px;
+          }
         }
-        .blockHeightAbstract{
-            padding: 6px 0;
+      }
+
+      .blockHeightAbstract {
+        padding: 6px 0;
+        box-sizing: border-box;
+
+        h2 {
+          font-size: 12px;
+          line-height: 29px;
+          margin-bottom: 2px;
+        }
+
+        .abstract {
+          .abstractContent {
+            padding: 0 5px;
             box-sizing: border-box;
-            h2{
+
+            p {
+              label {
                 font-size: 12px;
-                line-height: 29px;
-                margin-bottom: 2px;
-            }
-            .abstract {
-                .abstractContent{
-                    padding: 0 5px;
-                    box-sizing: border-box;
-                    p {
-                        label{
-                            font-size: 12px;
-                        }
-                        span{
-                            width: 70%;
-                            font-size: 12px;
-                        }
-                    }
-                }
-                    
-            }
-        }
-        .blockHeightDeal{
-            h2{
+              }
+
+              span {
+                width: 70%;
                 font-size: 12px;
-                line-height: 29px;
-                margin-bottom: 2px;
+              }
             }
+          }
+
         }
-        .dealContents{
-            >.pp{
-                >p{
-                    font-size: 10px;
-                    word-break: break-all;
-                }
-            }
+      }
+    }
+
+    .addressBox {
+      .dealContent1 {
+        .descrPrice {
+
+          p,
+          span {
+            font-size: 10px;
+          }
         }
-         .dealAddress{
-            ul{
-                li{
-                    label{
-                        width:130px;
-                        line-height: 20px;
-                        font-size: 10px;
-                    }
-                }
-            }
-            span{
-                width:16px;
-                height: 10px;
-            }
+      }
+
+      .form {
+        width: 320px;
+        height: 27px;
+        background: rgba(255, 255, 255, 1);
+        border-radius: 2px;
+
+        input {
+          font-size: 10px;
         }
+
+        ::-webkit-input-placeholder {
+          font-size: 10px;
+        }
+
+        span {
+          width: 14px;
+          height: 14px;
+        }
+
+      }
+
+      .price {
+        width: 320px;
+
+        >div {
+          width: 250px;
+
+          p:nth-child(1) {
+            i {
+              width: 13px;
+              height: 15px;
+            }
+
+            label {
+              font-size: 12px;
+            }
+
+          }
+
+          p:nth-child(2) {
+            font-size: 12px;
+          }
+
+          .balance {
+            font-size: 12px;
+          }
+        }
+
+        canvas {
+          width: 60px !important;
+          height: 60px !important;
+        }
+      }
+
+      .blockHeightAbstract {
+        padding: 6px 0;
+        box-sizing: border-box;
+
+        h2 {
+          font-size: 12px;
+          line-height: 29px;
+          margin-bottom: 2px;
+        }
+
+        .abstract {
+          .abstractContent {
+            padding: 0 5px;
+            box-sizing: border-box;
+
+            p {
+              label {
+                font-size: 12px;
+              }
+
+              span {
+                width: 70%;
+                font-size: 12px;
+              }
+            }
+          }
+
+        }
+      }
+
+      .blockHeightDeal {
+        h2 {
+          font-size: 12px;
+          line-height: 29px;
+          margin-bottom: 2px;
+        }
+      }
+
+      .dealContents {
+        >.pp {
+          >p {
+            font-size: 10px;
+            word-break: break-all;
+          }
+        }
+      }
+
+      .dealAddress {
+        ul {
+          li {
+            label {
+              width: 130px;
+              line-height: 20px;
+              font-size: 10px;
+            }
+          }
+        }
+
+        span {
+          width: 16px;
+          height: 10px;
+        }
+      }
     }
   }
 }

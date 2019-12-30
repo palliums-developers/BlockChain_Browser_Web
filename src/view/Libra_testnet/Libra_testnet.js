@@ -12,14 +12,15 @@ class Libra_testnet extends Component {
     this.state = {
       changeBack: 'light',
       list: [],
-      limit: 20,
+      limit: 10,
       offset: 0,
       iptValue: ''
     }
   }
   componentDidMount() {
     // this.props.getCurListBlock();
-    this.props.getCurTestListBlock();
+    this.props.getCurTestListBlock(this.state.limit,this.state.offset);
+    this.setState({ limit: this.state.limit + 10 })
   }
 
   getCurValue = (e) => {
@@ -44,7 +45,15 @@ class Libra_testnet extends Component {
       return "failed"
     }
   }
-
+  loadMore = () => {
+    this.setState({ limit: this.state.limit + 10 });
+    this.props.getCurTestListBlock(this.state.limit, this.state.offset);
+  }
+  onKeyup = (e) => {
+    if (e.keyCode === 13) {
+      this.getSearch();
+    }
+  }
   getSearch = () => {
     search_box(this.state.iptValue, this.props)
   }
@@ -59,7 +68,7 @@ class Libra_testnet extends Component {
             <div className="searchBox">
               <h3>Libra TestNet</h3>
               <div className="form">
-                <input onChange={(e) => this.getCurValue(e)} placeholder="address、version" />
+                <input onChange={(e) => this.getCurValue(e)}onKeyDown={(e) => this.onKeyup(e)} placeholder="address、version" />
                 <span onClick={this.getSearch}></span>
               </div>
             </div>

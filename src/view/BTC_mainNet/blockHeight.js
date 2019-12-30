@@ -70,16 +70,16 @@ class BlockHeight extends Component {
   //     this.forceUpdate()
   //   }
   // }
-  curBlock=(_type)=>{
-    if(this.props.BTC_main_block.detail){
-      let _height=this.props.BTC_main_block.detail.height
+  curBlock = (_type) => {
+    if (this.props.BTC_main_block.detail) {
+      let _height = this.props.BTC_main_block.detail.height
       switch (_type) {
         case 'prev':
-          this.props.history.push('/app/BTC_block/'+(_height-1))
+          this.props.history.push('/app/BTC_block/' + (_height - 1))
           break;
         case 'next':
-            this.props.history.push('/app/BTC_block/'+(_height+1))
-        break;
+          this.props.history.push('/app/BTC_block/' + (_height + 1))
+          break;
         default:
           break;
       }
@@ -91,15 +91,18 @@ class BlockHeight extends Component {
       iptValue: e.target.value
     })
   }
-
+  onKeyup = (e) => {
+    if (e.keyCode === 13) {
+      this.getSearch();
+    }
+  }
   getSearch = () => {
     search_box('mainnet', this.state.iptValue, this.props)
   }
-
   getCurMore = () => {
     this.setState({
-      limit: this.state.limit,
-      offset: this.state.offset + this.state.limit
+      limit: this.state.limit+ this.state.limit,
+      offset: this.state.offset
     }, () => {
       // this.props.getCurDetailBlock({
       //   net: 'mainnet',
@@ -115,24 +118,24 @@ class BlockHeight extends Component {
   render() {
     // console.log(this.props.match.params.block_hash)
     // console.log(this.props)
-    let { abstractDetail, dealsList, total, BTC_main_block} = this.props;
+    let { abstractDetail, dealsList, total, BTC_main_block } = this.props;
     // console.log(BTC_main_block)
     return (
       <div className="BTCMainNetContent">
         <BTCMainHeader back="netTo"></BTCMainHeader>
         <div className="contents contents1">
-             <div className="blockHeight">
+          <div className="blockHeight">
             <div className="form">
-              <input onChange={(e) => this.getCurValue(e)} placeholder="address、txid" />
+              <input onChange={(e) => this.getCurValue(e)} onKeyDown={(e) => this.onKeyup(e)} placeholder="address、txid、block" />
               <span onClick={this.getSearch}></span>
             </div>
             <div className="price">
-                <p>
-                  <i><img src="/img/编组 66@2x.png" /></i>
-                  <label>BTC MainNet Block</label>
-                  <span>{this.props.match.params.block}</span>
-                </p>
-                <p><label>BlockHash</label><span>{BTC_main_block.detail&&BTC_main_block.detail.hash}</span></p>
+              <p>
+                <i><img src="/img/编组 66@2x.png" /></i>
+                <label>BTC MainNet Block</label>
+                <span>{this.props.match.params.block}</span>
+              </p>
+              <p><label>BlockHash</label><span>{BTC_main_block.detail && BTC_main_block.detail.hash}</span></p>
             </div>
             <div className="btn">
               <button onClick={() => this.curBlock('prev')}><img src="/img/编组 7.png" />previous</button>
@@ -143,19 +146,19 @@ class BlockHeight extends Component {
                 <h2>Detail</h2>
                 <div className="abstract">
                   <div className="abstractContent">
-                    <p><label>Height</label><span>{BTC_main_block.detail&&BTC_main_block.detail.height}</span></p>
-                    <p><label>timestamp</label><span>{timeStamp2String(BTC_main_block.detail&&BTC_main_block.detail.timestamp + '000')}</span></p>
-                    <p><label>size</label><span>{BTC_main_block.detail&&BTC_main_block.detail.size} Bytes</span></p>
-                    <p><label>Weight</label><span>{BTC_main_block.detail&&BTC_main_block.detail.weight}</span></p>
-                    <p><label>confirmations</label><span>{BTC_main_block.detail&&BTC_main_block.detail.confirmations}</span></p>
+                    <p><label>Height</label><span>{BTC_main_block.detail && BTC_main_block.detail.height}</span></p>
+                    <p><label>timestamp</label><span>{timeStamp2String(BTC_main_block.detail && BTC_main_block.detail.timestamp + '000')}</span></p>
+                    <p><label>size</label><span>{BTC_main_block.detail && BTC_main_block.detail.size} Bytes</span></p>
+                    <p><label>Weight</label><span>{BTC_main_block.detail && BTC_main_block.detail.weight}</span></p>
+                    <p><label>confirmations</label><span>{BTC_main_block.detail && BTC_main_block.detail.confirmations}</span></p>
                   </div>
                   <div className="line"></div>
                   <div className="abstractContent">
-                    <p><label>nTx</label><span>{BTC_main_block.detail&&BTC_main_block.detail.nTx}</span></p>
-                    <p><label>version</label><span>{BTC_main_block.detail&&BTC_main_block.detail.version}</span></p>
-                    <p><label>difficulty</label><span>{BTC_main_block.detail&&BTC_main_block.detail.difficulty}</span></p>
-                    <p><label>Bits</label><span>{BTC_main_block.detail&&BTC_main_block.detail.bits}</span></p>
-                    <p><label>Nonce</label><span>{BTC_main_block.detail&&BTC_main_block.detail.nonce}</span></p>
+                    <p><label>nTx</label><span>{BTC_main_block.detail && BTC_main_block.detail.nTx}</span></p>
+                    <p><label>version</label><span>{BTC_main_block.detail && BTC_main_block.detail.version}</span></p>
+                    <p><label>difficulty</label><span>{BTC_main_block.detail && BTC_main_block.detail.difficulty}</span></p>
+                    <p><label>Bits</label><span>{BTC_main_block.detail && BTC_main_block.detail.bits}</span></p>
+                    <p><label>Nonce</label><span>{BTC_main_block.detail && BTC_main_block.detail.nonce}</span></p>
                   </div>
                 </div>
               </div>
