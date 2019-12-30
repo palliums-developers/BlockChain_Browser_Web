@@ -157,7 +157,7 @@ header {
 @media (max-width: 750px) {
   header {
     .head {
-      width: 320px;
+      width: 330px;
       height: 40px;
       position: relative;
       z-index: 9999;
@@ -220,7 +220,7 @@ header {
 
   #wrap {
     .contents {
-      width: 320px;
+      width: 330px;
     }
 
     .mainNet {
@@ -275,6 +275,16 @@ header {
           }
         }
       }
+    }
+  }
+}
+@media (max-width: 321px) {
+   #wrap .contents{
+     width: 320px;
+   }
+    header {
+    .head {
+      width: 320px;
     }
   }
 }

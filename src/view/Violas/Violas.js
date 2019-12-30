@@ -136,7 +136,7 @@ class Violas extends Component {
                       <p><label>Currency</label><span onClick={() => {
                         this.props.history.push('/app/Currency/' + this.module2name(v.module_address).toUpperCase())
                       }}>{this.module2name(v.module_address)}</span></p>
-                      <p><label>Type</label><span>{this.returnType(v.type)}}</span></p>
+                      <p><label>Type</label><span>{this.returnType(v.type)}</span></p>
                       <p><label>From</label><span onClick={() => {
                         v.sender && this.props.history.push('/app/Violas_address/' + v.sender)
                       }}>{v.sender ? (v.sender).slice(0, 20) + '...' : 'Unparsed address'}</span></p>

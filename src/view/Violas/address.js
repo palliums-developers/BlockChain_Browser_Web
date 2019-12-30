@@ -109,9 +109,9 @@ class Address extends Component {
                       return <div key={index}><div className="dealContent1 dealContent2">
                         <div className="dealContents">
                           <div className="pp" onClick={() => this.goToDeal(item.version)}>
-                            <p>Version: {item.version}</p>
+                            <p>Version:{item.version}</p>
                             <p>Type:{this.returnType(item.type)}</p>
-                            <p>Time: {timeStamp2String(item.expiration_time + '000')}</p>
+                            <p>Time:{timeStamp2String(item.expiration_time + '000')}</p>
                           </div>
                           <div className="dealAddress">
                             <ul>
