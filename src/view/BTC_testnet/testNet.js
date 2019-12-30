@@ -26,7 +26,11 @@ class BTCTestNet extends Component {
       iptValue: e.target.value
     })
   }
-
+  onKeyup = (e) => {
+    if (e.keyCode === 13) {
+      this.getSearch();
+    }
+  }
   getSearch = () => {
     search_box('testnet', this.state.iptValue, this.props)
   }
@@ -40,7 +44,7 @@ class BTCTestNet extends Component {
             <div className="searchBox">
               <h3>BTC testnet</h3>
               <div className="form">
-                <input onChange={(e) => this.getCurValue(e)} placeholder="address、txid" />
+                <input onChange={(e) => this.getCurValue(e)} onKeyDown={(e) => this.onKeyup(e)} placeholder="address、txid、block" />
                 <span onClick={this.getSearch}></span>
               </div>
             </div>
@@ -101,7 +105,7 @@ class BTCTestNet extends Component {
                 }
               </div>
             </div>
-            <p id="more" onClick={this.loadMore}>load more</p>
+            {/* <p id="more" onClick={this.loadMore}>load more</p> */}
           </div>
         </div>
       </div>

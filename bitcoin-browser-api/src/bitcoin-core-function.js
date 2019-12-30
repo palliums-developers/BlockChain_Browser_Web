@@ -5,6 +5,7 @@ const host_chongqing = "94.191.95.240";
 const username = "palliums";
 const password_uk = "qazpl,";
 const host_zhangjiakou = "47.92.49.137";
+const host_singapore = "18.136.139.151";
 const password_zhangjiakou = "qpalzm";
 const bitmain_mainnet = "https://chain.api.btc.com/v3/address/";
 const bitmain_testnet = "https://tchain.api.btc.com/v3/address/";
@@ -12,7 +13,7 @@ const bitmain_tail = "/tx?pagesize=10&page=";
 
 const mainnet = new Client({
   network: "mainnet",
-  host: host_zhangjiakou,
+  host: host_singapore,
   port: 8332,
   username: username,
   password: password_zhangjiakou
@@ -286,7 +287,7 @@ async function UTXO_TESTNET(_net, address) {
 
 const address_tx_mainnet_bitmain = async (_address, _page) => {
   let _data = await axios
-    .get(bitmain_mainnet + _address )
+    .get(bitmain_mainnet + _address)
     .then(res => { return res.data.data; });
   let url = bitmain_mainnet + _address + bitmain_tail + _page;
   let _list = await axios.get(url).then(res => {
@@ -298,7 +299,7 @@ const address_tx_mainnet_bitmain = async (_address, _page) => {
 
 const address_tx_testnet_bitmain = async (_address, _page) => {
   let _data = await axios
-    .get(bitmain_testnet + _address )
+    .get(bitmain_testnet + _address)
     .then(res => { return res.data.data; });
   let _list = await axios
     .get(bitmain_testnet + _address + bitmain_tail + _page)

@@ -34,7 +34,11 @@ class Deal extends Component {
       iptValue: e.target.value
     })
   }
-
+  onKeyup = (e) => {
+    if (e.keyCode === 13) {
+      this.getSearch();
+    }
+  }
   getSearch = () => {
     search_box('mainnet', this.state.iptValue, this.props)
   }
@@ -48,7 +52,7 @@ class Deal extends Component {
         <div className="contents contents1">
           <div className="dealBox">
             <div className="form">
-              <input onChange={(e) => this.getCurValue(e)} placeholder="address、txid" />
+              <input onChange={(e) => this.getCurValue(e)} onKeyDown={(e) => this.onKeyup(e)}placeholder="address、txid、block" />
               <span onClick={this.getSearch}></span>
             </div>
             <div className="price">

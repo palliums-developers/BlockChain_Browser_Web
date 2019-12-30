@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 import * as AllActions from '../../store/action/list_action'
 import { bindActionCreators } from 'redux'
 import { timeStamp2String } from '../../utils/timer'
-import search_box from '../../utils/iptVal'
+import search_box from '../../utils/search_violas'
 import './violasStyle.scss';
 class Deal extends Component {
   constructor(props) {
@@ -56,8 +56,13 @@ class Deal extends Component {
     }
     return result
   }
+  onKeyup = (e) => {
+    if (e.keyCode === 13) {
+      this.getSearch();
+    }
+  }
   getSearch = () => {
-    search_box('mainnet', this.state.iptValue, this.props)
+    search_box(this.state.iptValue, this.props)
   }
 
   render() {
@@ -68,7 +73,7 @@ class Deal extends Component {
         <div className="contents contents1">
           <div className="dealBox">
             <div className="form">
-              <input onChange={(e) => this.getCurValue(e)} placeholder="address、txid" />
+              <input onChange={(e) => this.getCurValue(e)} onKeyDown={(e) => this.onKeyup(e)} placeholder="address、version" />
               <span onClick={this.getSearch}></span>
             </div>
             <div className="price">

@@ -59,9 +59,9 @@ export let getCurListBlock = () => {
 
 //     }
 // }
-export let getCurTestListBlock = () => {
+export let getCurTestListBlock = (_limit,_offset) => {
     return dispatch => {
-        axios.get(libra_api + '/recent_txn?limit=10&offset=0').then(res => {
+        axios.get(libra_api + '/recent_txn?limit='+_limit+'&offset='+_offset).then(res => {
             // console.log(res.data.data)
             dispatch({
                 type: 'libra_testnet',
@@ -73,7 +73,6 @@ export let getCurTestListBlock = () => {
 //点击或者搜索块的hash/height 展示块的详情与列出交易
 export let getCurDetailBlock = (params) => {
     return dispatch => {
-
         axios.post(url + '/detail_block', params).then(res => {
             dispatch({
                 type: 'TOTAL',
