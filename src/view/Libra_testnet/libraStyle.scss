@@ -297,10 +297,19 @@
                     margin-top: 0.5rem;
                 }
             }
-
-            canvas {
-                position: absolute;;
+            .code{
+                width: 1.24rem;
+                height: 1.24rem;
+                background: #FFF;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: absolute;
                 right: 0;
+            }
+            canvas {
+                width: 1.2rem!important;
+                height: 1.2rem!important;
             }
 
         }
@@ -1259,6 +1268,10 @@
                 .balance{
                     font-size: 12px;
                 }
+            }
+            .code{
+              width: 62px;
+              height: 62px;
             }
             canvas {
                 width: 60px!important;
