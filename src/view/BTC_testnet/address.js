@@ -37,7 +37,11 @@ class Address extends Component {
       iptValue: e.target.value
     })
   }
-
+  onKeyup = (e) => {
+    if (e.keyCode === 13) {
+      this.getSearch();
+    }
+  }
   getSearch = () => {
     search_box('testnet', this.state.iptValue, this.props)
   }
@@ -50,7 +54,7 @@ class Address extends Component {
         <div className="contents contents1">
           <div className="addressBox">
             <div className="form">
-              <input onChange={(e) => this.getCurValue(e)} placeholder="address、txid" />
+              <input onChange={(e) => this.getCurValue(e)} onKeyDown={(e) => this.onKeyup(e)} placeholder="address、txid、block" />
               <span onClick={this.getSearch}></span>
             </div>
             <div className="price">
@@ -59,7 +63,10 @@ class Address extends Component {
                 <label>BTC Test Address</label>
               </p>
               <p>{this.props.match.params.address}</p>
-              <QRcode value={this.props.match.params.address}></QRcode>
+              <div className="code">
+                <QRcode value={this.props.match.params.address}></QRcode>
+              </div>
+              
             </div>
             <div className="blockHeightContent">
               <div className="blockHeightAbstract">

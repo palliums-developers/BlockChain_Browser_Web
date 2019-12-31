@@ -37,20 +37,24 @@ class Address extends Component {
       iptValue: e.target.value
     })
   }
-
+  onKeyup = (e) => {
+    if (e.keyCode === 13) {
+      this.getSearch();
+    }
+  }
   getSearch = () => {
     search_box(this.state.iptValue, this.props)
   }
 
   render() {
-    let { libra_address } = this.props
+    let { libra_address } = this.props;
     return (
       <div className="libraContent">
         <LibraHeader back="netTo"></LibraHeader>
         <div className="contents contents1">
           <div className="addressBox">
             <div className="form">
-              <input onChange={(e) => this.getCurValue(e)} placeholder="address、txid" />
+              <input onChange={(e) => this.getCurValue(e)} onKeyDown={(e) => this.onKeyup(e)}placeholder="address、version" />
               <span onClick={this.getSearch}></span>
             </div>
             <div className="price">

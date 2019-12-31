@@ -37,7 +37,11 @@ class Address extends Component {
       iptValue: e.target.value
     })
   }
-
+  onKeyup = (e) => {
+    if (e.keyCode === 13) {
+      this.getSearch();
+    }
+  }
   getSearch = () => {
     search_box('mainnet', this.state.iptValue, this.props)
   }
@@ -50,7 +54,7 @@ class Address extends Component {
         <div className="contents contents1">
           <div className="addressBox">
             <div className="form">
-              <input onChange={(e) => this.getCurValue(e)} placeholder="address、txid" />
+              <input onChange={(e) => this.getCurValue(e)} onKeyDown={(e) => this.onKeyup(e)} placeholder="address、txid、block" />
               <span onClick={this.getSearch}></span>
             </div>
             <div className="price">
@@ -59,7 +63,9 @@ class Address extends Component {
                 <label>BTC MainNet Address</label>
               </p>
               <p>{this.props.match.params.address}</p>
-              <QRcode value={this.props.match.params.address}></QRcode>
+              <div className="code">
+                <QRcode value={this.props.match.params.address}></QRcode>
+              </div>
             </div>
             <div className="blockHeightContent">
               <div className="blockHeightAbstract">
@@ -125,7 +131,6 @@ class Address extends Component {
                                   v.inputs.map((v1, i1) => {
                                     return v1.prev_addresses && v1.prev_addresses[i1] ? <li><p className="addBlue" onClick={() => this.goToAddress(v1.prev_addresses)} key={i1}>{v1.prev_addresses + ' '}</p>
                                       <p>{v1.prev_value + " Sat"}</p></li> : <li><label>Unparsed address</label><p className="blo">0 Sat</p></li>
-                                     
                                   })
                                 }
                               </ul>
@@ -142,7 +147,7 @@ class Address extends Component {
                                   // })
                                   v.outputs.map((v2, i2) => {
                                     return v2.addresses && v2.addresses[i2] ? <li><p className="addBlue" onClick={() => this.goToAddress(v2.addresses)} key={i2}>{v2.addresses}</p><p>{v2.value + " Sat"}</p></li> : <li><label>Unparsed address</label><p className="blo">0 Sat</p></li>
-                                      
+
                                   })
                                 }
                               </ul>

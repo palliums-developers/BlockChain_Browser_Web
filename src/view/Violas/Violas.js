@@ -4,7 +4,7 @@ import * as AllActions from '../../store/action/list_action'
 import { bindActionCreators } from 'redux'
 import ViolasHeader from '../../component/violasHeader'
 import { timeStamp2String } from '../../utils/timer'
-import search_box from '../../utils/iptVal'
+import search_box from '../../utils/search_violas'
 import './violasStyle.scss';
 class Violas extends Component {
   constructor(props) {
@@ -56,7 +56,12 @@ class Violas extends Component {
     return result
   }
   getSearch = () => {
-    search_box('mainnet', this.state.iptValue, this.props)
+    search_box(this.state.iptValue, this.props)
+  }
+  onKeyup = (e) => {
+    if (e.keyCode === 13) {
+      this.getSearch();
+    }
   }
   loadMore = () => {
     this.setState({ limit: this.state.limit + 10 });
@@ -71,7 +76,7 @@ class Violas extends Component {
             <div className="searchBox">
               <h3>Violas</h3>
               <div className="form">
-                <input onChange={(e) => this.getCurValue(e)} placeholder="address、txid" />
+                <input onChange={(e) => this.getCurValue(e)} onKeyDown={(e) => this.onKeyup(e)} placeholder="address、version" />
                 <span onClick={this.getSearch}></span>
               </div>
             </div>
@@ -109,15 +114,15 @@ class Violas extends Component {
                           }}>{this.module2name(item.module_address)}</td>
                           <td colSpan="2">{this.returnType(item.type)}</td>
                           <td colSpan="4" onClick={() => {
-                          item.sender &&
-                            this.props.history.push('/app/Violas_address/' + item.sender)
+                            item.sender &&
+                              this.props.history.push('/app/Violas_address/' + item.sender)
                           }}>{item.sender ? (item.sender).slice(0, 30) + '...' : 'Unparsed address'}</td>
                           <td colSpan="3">{this.returnStatus(item.status)}</td>
                           <td colSpan="4" onClick={() => {
-                          item.receiver &&
-                            this.props.history.push('/app/Violas_address/' + item.receiver)
+                            item.receiver &&
+                              this.props.history.push('/app/Violas_address/' + item.receiver)
                           }}>{item.receiver ? (item.receiver).slice(0, 30) + '...' : 'Unparsed address'}</td>
-                          <td colSpan="4">{item.amount}</td>
+                          <td colSpan="4">{item.amount / 1e6}</td>
                           <td colSpan="3">{item.gas}</td>
                         </tr>
                       })
@@ -136,7 +141,7 @@ class Violas extends Component {
                       <p><label>Currency</label><span onClick={() => {
                         this.props.history.push('/app/Currency/' + this.module2name(v.module_address).toUpperCase())
                       }}>{this.module2name(v.module_address)}</span></p>
-                      <p><label>Type</label><span>{this.returnType(v.type)}}</span></p>
+                      <p><label>Type</label><span>{this.returnType(v.type)}</span></p>
                       <p><label>From</label><span onClick={() => {
                         v.sender && this.props.history.push('/app/Violas_address/' + v.sender)
                       }}>{v.sender ? (v.sender).slice(0, 20) + '...' : 'Unparsed address'}</span></p>

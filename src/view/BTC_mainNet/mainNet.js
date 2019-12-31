@@ -27,7 +27,11 @@ class BTCMainNet extends Component {
       iptValue: e.target.value
     })
   }
-
+  onKeyup = (e) => {
+    if (e.keyCode === 13) {
+      this.getSearch();
+    }
+  }
   getSearch = () => {
     search_box('mainnet', this.state.iptValue, this.props)
   }
@@ -42,7 +46,7 @@ class BTCMainNet extends Component {
             <div className="searchBox">
               <h3>BTC MainNet</h3>
               <div className="form">
-                <input onChange={(e) => this.getCurValue(e)} placeholder="address、txid" />
+                <input onChange={(e) => this.getCurValue(e)} onKeyDown={(e) => this.onKeyup(e)} placeholder="address、txid、block" />
                 <span onClick={this.getSearch}></span>
               </div>
             </div>
@@ -67,7 +71,7 @@ class BTCMainNet extends Component {
                         return <tr key={index}>
                           <td colSpan="3" onClick={() => {
                             // console.log(item.height);
-                            this.props.history.push('/app/BTC_block/'+ item.height);
+                            this.props.history.push('/app/BTC_block/' + item.height);
                           }}>{item.height}</td>
                           <td colSpan="4">{item.size}</td>
                           <td colSpan="4">{item.profit}</td>
@@ -97,13 +101,12 @@ class BTCMainNet extends Component {
                       <p><label>Hash</label><span onClick={() => {
                         this.props.history.push('/app/BTC_block/' + v.hash)
                       }}>{(v.hash).slice(0, 30) + '...'}</span></p>
-                      
                     </div>
                   })
                 }
               </div>
             </div>
-            <p id="more" onClick={this.loadMore}>load more</p>
+            {/* <p id="more" onClick={this.loadMore}>load more</p> */}
           </div>
         </div>
       </div>

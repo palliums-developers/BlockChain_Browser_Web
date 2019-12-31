@@ -5,7 +5,8 @@ import axios from 'axios'
 const wallet_api = 'http://52.27.228.84:4000';
 const libra_api = 'http://52.27.228.84:4001/libra';
 const violas_api = 'http://52.27.228.84:4001/violas';
-const BTC_api = 'http://localhost:30001/open/1.0';
+const BTC_api = 'http://47.52.66.26:30001/open/1.0';
+// const BTC_api = 'http://localhost:30001/open/1.0';
 // const BTC_api = 'http://192.168.1.111:30001/open/1.0';
 //let url = 'http://192.168.1.112:10080';
 let url = 'https://wallet.violas.io';
@@ -59,9 +60,9 @@ export let getCurListBlock = () => {
 
 //     }
 // }
-export let getCurTestListBlock = () => {
+export let getCurTestListBlock = (_limit,_offset) => {
     return dispatch => {
-        axios.get(libra_api + '/recent_txn?limit=10&offset=0').then(res => {
+        axios.get(libra_api + '/recent_txn?limit='+_limit+'&offset='+_offset).then(res => {
             // console.log(res.data.data)
             dispatch({
                 type: 'libra_testnet',
@@ -73,7 +74,6 @@ export let getCurTestListBlock = () => {
 //点击或者搜索块的hash/height 展示块的详情与列出交易
 export let getCurDetailBlock = (params) => {
     return dispatch => {
-
         axios.post(url + '/detail_block', params).then(res => {
             dispatch({
                 type: 'TOTAL',
