@@ -22,7 +22,7 @@
 
     .navList .dropdown2 > span {
       width: 0.2rem;
-      height: 0.22rem;
+      height: 0.23rem;
       border-bottom: 2px solid rgba(130, 179, 255, 1);
     }
   }
@@ -287,7 +287,7 @@
         height: 100%;
         border: 0;
         outline: 0;
-        padding-top: 0.1rem;
+        // padding-top: 0.1rem;
         box-sizing: border-box;
         font-size: 0.27rem;
       }
@@ -686,6 +686,8 @@
     width: 12.32rem;
     margin: 0 auto;
     position: relative;
+    display: flex;
+    flex-direction: column;
     .code{
         width: 1.24rem;
         height: 1.24rem;
@@ -1740,8 +1742,8 @@
         top: 12%;
       }
       .head {
-        width: 320px;
-        height: 40px;
+        // width: 320px;
+        // height: 40px;
         .navList {
           .dropdown2 {
             > span {

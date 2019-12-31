@@ -106,7 +106,9 @@ class Libra_testnet extends Component {
                           }}>{(item.sender).slice(0, 20) + '...'}</td>
                           <td colSpan="2">{this.returnStatus(item.transaction_status)}</td>
                           <td colSpan="4" onClick={() => {
-                            this.props.history.push('/app/Libra_addressBox/' + item.receiver && item.receiver)
+                            if (item.receiver){
+                                this.props.history.push('/app/Libra_addressBox/' + item.receiver && item.receiver)
+                            }
                           }}>{item.receiver && (item.receiver).slice(0, 20) + '...'}</td>
                           <td colSpan="4">{item.amount}</td>
                           <td colSpan="2">{item.gas_fee}</td>

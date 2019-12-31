@@ -22,7 +22,7 @@
 
     .navList .dropdown2 > span {
       width: 0.2rem;
-      height: 0.22rem;
+      height: 0.23rem;
       border-bottom: 2px solid rgba(130, 179, 255, 1);
     }
   }
@@ -519,6 +519,8 @@
                 >p{
                     white-space: nowrap;
                     color: #000;
+                    padding-left: 0;
+                    box-sizing: border-box;
                 }
               }
               > p {
@@ -1771,8 +1773,8 @@
         top: 12%;
       }
       .head {
-        width: 320px;
-        height: 40px;
+        // width: 320px;
+        // height: 40px;
         .navList {
           .dropdown2 {
             > span {

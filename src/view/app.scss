@@ -68,8 +68,9 @@ header {
       height: 100%;
       display: flex;
       align-items: center;
-
-      // margin-right:3.71rem;
+      .arrows{
+        display: none;
+      }
       .dropdown2 {
         margin: 0 0.8rem;
       }
@@ -169,7 +170,14 @@ header {
       }
 
       .navList {
-
+        .arrows{
+          display: flex;
+          margin-left: 5px;
+          img{
+            width: 8px;
+            height: 8px;
+          }
+        }
         .dropdown1,
         .dropdown2 {
           width: 40px;

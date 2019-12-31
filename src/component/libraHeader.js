@@ -65,7 +65,9 @@ class LibraHeader extends Component {
           </div>
           <div className="navList">
             <div className='dropdown1'>
-              <span onClick={() => this.showMenu('violas')}>Violas</span>
+              <span onClick={() => this.showMenu('violas')}>Violas<i className="arrows">{
+                this.state.showMenuViolas ? <img src="/img/weibiaoti1备份 2@2x.png" /> : <img src="/img/weibiaoti1 2@2x.png" />
+              }</i></span>
               <div className='dropdown-content1'>
                 {this.state.showMenuViolas ? (this.state.vCoin.map((v, i) => {
                   return <NavLink to={v.pathname} activeClassName='active' key={i}>{v.type}</NavLink>
@@ -74,7 +76,9 @@ class LibraHeader extends Component {
               </div>
             </div>
             <div className='dropdown2'>
-              <span onClick={() => this.showMenu('BTC')}>BTC</span>
+              <span onClick={() => this.showMenu('BTC')}>BTC<i className="arrows">{
+                this.state.showMenuBTC ? <img src="/img/weibiaoti1备份 2@2x.png" /> : <img src="/img/weibiaoti1 2@2x.png" />
+              }</i></span>
               <div className='dropdown-content2'>
                 {this.state.showMenuBTC ? (this.state.bCoin.map((v, i) => {
                   return <NavLink to={v.pathname} activeClassName='active' key={i}>{v.type}</NavLink>

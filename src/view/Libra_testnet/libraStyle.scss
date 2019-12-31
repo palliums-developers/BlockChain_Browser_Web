@@ -21,8 +21,8 @@
         .navList {
             >a {
                width: 0.2rem;
-            height: 0.22rem;
-                border-bottom: 2px solid rgba(130, 179, 255, 1);
+               height: 0.23rem;
+               border-bottom: 2px solid rgba(130, 179, 255, 1);
             }
         }
     }
@@ -294,7 +294,7 @@
                 .balance {
                     color: #FFF;
                     font-size: 0.20rem;
-                    margin-top: 0.5rem;
+                    margin-top: 0.3rem;
                 }
             }
             .code{
@@ -363,7 +363,7 @@
                 }
 
                 span {
-                    width: 80%;
+                    width: 85%;
                     font-size: 0.18rem;
                     font-family: PingFangSC-Medium;
                     font-weight: 500;
@@ -472,8 +472,8 @@
                 height: 100%;
                 border: 0;
                 outline: 0;
-                padding-top: 0.10rem;
-                box-sizing: border-box;
+                // padding-top: 0.10rem;
+                // box-sizing: border-box;
                 font-size: 0.27rem;
             }
 
@@ -591,8 +591,8 @@
                 width: 100%;
                 display: flex;
                 justify-content: flex-end;
-                padding-right: 0.53rem;
-                box-sizing: border-box;
+                // padding-right: 0.53rem;
+                // box-sizing: border-box;
 
                 span {
                     font-size: 0.21rem;
@@ -702,8 +702,8 @@
             justify-content: space-between;
             align-items: center;
             >span {
-                width: 0.50rem;
-                height: 0.40rem;
+                width: 0.44rem;
+                height: 0.37rem;
                 background: url('/img/形状复制 4@2x.png') no-repeat;
                 background-size: 100% 100%;
 
@@ -713,8 +713,8 @@
             }
 
             ul {
-                // width:6rem;
-                margin-top: 0.20rem;
+                width:6rem;
+                // margin-top: 0.20rem;
                 // padding-right: 0.33rem;
                 // box-sizing: border-box;
                 // margin-left: 0.3rem;
@@ -1497,8 +1497,8 @@
           top: 9%;
       }
       .head {
-        width: 320px;
-        height: 40px;
+        // width: 320px;
+        // height: 40px;
         .navList {
           >a{
               width: 30px;
