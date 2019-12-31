@@ -47,7 +47,7 @@ class Address extends Component {
   }
 
   render() {
-    let { libra_address } = this.props
+    let { libra_address } = this.props;
     return (
       <div className="libraContent">
         <LibraHeader back="netTo"></LibraHeader>

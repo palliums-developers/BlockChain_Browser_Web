@@ -63,7 +63,10 @@ class Address extends Component {
                 <label>BTC Test Address</label>
               </p>
               <p>{this.props.match.params.address}</p>
-              <QRcode value={this.props.match.params.address}></QRcode>
+              <div className="code">
+                <QRcode value={this.props.match.params.address}></QRcode>
+              </div>
+              
             </div>
             <div className="blockHeightContent">
               <div className="blockHeightAbstract">

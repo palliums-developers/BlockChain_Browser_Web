@@ -93,7 +93,9 @@ render() {
               <p>{this.props.match.params.address}</p>
               <span className="balance">Banlance: {violas_address.balance / 1e6} vtoken</span>
             </div>
-            <QRcode value={this.props.match.params.address}></QRcode>
+            <div className="code">
+              <QRcode value={this.props.match.params.address}></QRcode>
+            </div>
           </div>
           <div className="blockHeightContent">
             <div className="blockHeightAbstract">
