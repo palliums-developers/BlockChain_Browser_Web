@@ -42,7 +42,8 @@ class Libra_testnet extends Component {
     if (_num == 4001) {
       return "success"
     } else {
-      return "failed"
+      return "success"
+      // return "failed"
     }
   }
   loadMore = () => {
@@ -106,9 +107,11 @@ class Libra_testnet extends Component {
                           }}>{(item.sender).slice(0, 20) + '...'}</td>
                           <td colSpan="2">{this.returnStatus(item.transaction_status)}</td>
                           <td colSpan="4" onClick={() => {
-                            this.props.history.push('/app/Libra_addressBox/' + item.receiver && item.receiver)
+                            if (item.receiver){
+                                this.props.history.push('/app/Libra_addressBox/' + item.receiver)
+                            }
                           }}>{item.receiver && (item.receiver).slice(0, 20) + '...'}</td>
-                          <td colSpan="4">{item.amount}</td>
+                          <td colSpan="4">{item.amount/1e6}</td>
                           <td colSpan="2">{item.gas_fee}</td>
                         </tr>
                       })
@@ -130,9 +133,9 @@ class Libra_testnet extends Component {
                       }}>{(v.sender).slice(0, 20) + '...'}</span></p>
                       <p><label>Status</label><span>{this.returnStatus(v.transaction_status)}</span></p>
                       <p><label>To</label><span onClick={() => {
-                        this.props.history.push('/app/Libra_addressBox/' + v.receiver && v.receiver)
+                        this.props.history.push('/app/Libra_addressBox/' + v.receiver)
                       }}>{v.receiver && (v.receiver).slice(0, 20) + '...'}</span></p>
-                      <p><label>Amount</label><span>{v.amount}</span></p>
+                      <p><label>Amount</label><span>{v.amount/1e6}</span></p>
                       <p><label>Fee</label><span>{v.gas_fee}</span></p>
                     </div>
                   })

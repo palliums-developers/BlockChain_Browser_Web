@@ -64,9 +64,11 @@ class Address extends Component {
                   <label>address</label>
                 </p>
                 <p>{this.props.match.params.address}</p>
-                <span className="balance">Banlance: {libra_address.balance} LBR</span>
+                <span className="balance">Banlance: {libra_address.balance/1e6} LBR</span>
               </div>
-              <QRcode value={this.props.match.params.address}></QRcode>
+              <div className="code">
+                <QRcode value={this.props.match.params.address}></QRcode>
+              </div>
             </div>
             <div className="blockHeightContent">
               <div className="blockHeightAbstract">
@@ -74,7 +76,7 @@ class Address extends Component {
                 <div className="abstract">
                   <div className="abstractContent">
                     <p><label>Address</label><span>{this.props.match.params.address}</span></p>
-                    <p><label>Banlance</label><span>{libra_address.balance} LBR</span></p>
+                    <p><label>Banlance</label><span>{libra_address.balance/1e6} LBR</span></p>
                     {/* <p><label>Recent transactions</label><span>{txs.length}</span></p> */}
                   </div>
                 </div>
@@ -101,7 +103,7 @@ class Address extends Component {
                             </ul>
                           </div>
                           <div className="descrPrice">
-                            <span><i></i>{item.amount} LBR</span>
+                            <span><i></i>{item.amount/1e6} LBR</span>
                           </div>
                         </div>
 

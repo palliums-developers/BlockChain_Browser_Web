@@ -91,12 +91,12 @@ class Deal extends Component {
                 <div className="abstract">
                   <div className="abstractContent">
                     <p><label>ID</label><span>{violas_version.version}</span></p>
-                    <p><label>From</label><span className="from" onClick={() => {
+                    <p><label>From</label><span className="from" onClick={() => {violas_version.sender&&
                       this.props.history.push('/app/Violas_address/' + violas_version.sender)
-                    }}>{violas_version.sender}</span></p>
-                    <p><label>To</label><span className="to" onClick={() => {
+                    }}>{violas_version.sender?violas_version.sender:'Null'}</span></p>
+                    <p><label>To</label><span className="to" onClick={() => {violas_version.receiver&&
                       this.props.history.push('/app/Violas_address/' + violas_version.receiver)
-                    }}>{violas_version.receiver}</span></p>
+                    }}>{violas_version.receiver?violas_version.receiver:'Null'}</span></p>
                     <p><label>Value</label><span>{violas_version.amount/1e6} {this.module2name(violas_version.module_address)}</span></p>
                     <p><label>Time</label><span>{timeStamp2String(violas_version.expiration_time + '000')}</span></p>
                     <p><label>Gas fee</label><span>{violas_version.gas_unit_price}</span></p>
