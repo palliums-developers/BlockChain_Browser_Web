@@ -9,11 +9,11 @@ error { Error: ESOCKETTIMEDOUT
     at ontimeout (timers.js:436:11)
     at tryOnTimeout (timers.js:300:5)
     at listOnTimeout (timers.js:263:5) code: 'ESOCKETTIMEDOUT', connect: false }
-(node:41284) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'height' of undefined
+(node:45644) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'height' of undefined
     at list_some_block_info (C:\Users\user\Desktop\BlockChain_Browser_Web\bitcoin-browser-api\src\list_block.js:10:26)
     at process._tickCallback (internal/process/next_tick.js:68:7)
-(node:41284) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 1)
-(node:41284) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+(node:45644) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 1)
+(node:45644) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
 error { Error: ESOCKETTIMEDOUT
     at ClientRequest.<anonymous> (C:\Users\user\Desktop\BlockChain_Browser_Web\node_modules\request\request.js:816:19)
     at Object.onceWrapper (events.js:286:20)
@@ -25,347 +25,109 @@ error { Error: ESOCKETTIMEDOUT
     at ontimeout (timers.js:436:11)
     at tryOnTimeout (timers.js:300:5)
     at listOnTimeout (timers.js:263:5) code: 'ESOCKETTIMEDOUT', connect: false }
-(node:41284) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'height' of undefined
+(node:45644) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'height' of undefined
     at list_some_block_info (C:\Users\user\Desktop\BlockChain_Browser_Web\bitcoin-browser-api\src\list_block.js:10:26)
     at process._tickCallback (internal/process/next_tick.js:68:7)
-(node:41284) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 2)
-error { Error: ESOCKETTIMEDOUT
-    at ClientRequest.<anonymous> (C:\Users\user\Desktop\BlockChain_Browser_Web\node_modules\request\request.js:816:19)
-    at Object.onceWrapper (events.js:286:20)
+(node:45644) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 2)
+error { FetchError: request to https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUSD failed, reason: connect ETIMEDOUT 159.203.144.149:443
+    at ClientRequest.<anonymous> (C:\Users\user\Desktop\BlockChain_Browser_Web\node_modules\node-fetch\lib\index.js:1455:11)
     at ClientRequest.emit (events.js:198:13)
-    at Socket.emitRequestTimeout (_http_client.js:662:40)
-    at Object.onceWrapper (events.js:286:20)
-    at Socket.emit (events.js:198:13)
-    at Socket._onTimeout (net.js:442:8)
-    at ontimeout (timers.js:436:11)
-    at tryOnTimeout (timers.js:300:5)
-    at listOnTimeout (timers.js:263:5) code: 'ESOCKETTIMEDOUT', connect: false }
-(node:41284) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'tx' of undefined
-    at Object.getBlockHashProfit (C:\Users\user\Desktop\BlockChain_Browser_Web\bitcoin-browser-api\src\bitcoin-core-function.js:83:48)
+    at TLSSocket.socketErrorListener (_http_client.js:392:9)
+    at TLSSocket.emit (events.js:198:13)
+    at emitErrorNT (internal/streams/destroy.js:91:8)
+    at emitErrorAndCloseNT (internal/streams/destroy.js:59:3)
+    at process._tickCallback (internal/process/next_tick.js:63:19)
+  message:
+   'request to https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUSD failed, reason: connect ETIMEDOUT 159.203.144.149:443',
+  type: 'system',
+  errno: 'ETIMEDOUT',
+  code: 'ETIMEDOUT' }
+(node:45644) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'last' of undefined
+    at Object.list_block (C:\Users\user\Desktop\BlockChain_Browser_Web\bitcoin-browser-api\src\list_block.js:25:24)
     at process._tickCallback (internal/process/next_tick.js:68:7)
-(node:41284) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 3)
-error { Error: read ECONNRESET
-    at TCP.onStreamRead (internal/stream_base_commons.js:111:27) errno: 'ECONNRESET', code: 'ECONNRESET', syscall: 'read' }
-(node:41284) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'vout' of undefined
-    at Object.getBlockHashProfit (C:\Users\user\Desktop\BlockChain_Browser_Web\bitcoin-browser-api\src\bitcoin-core-function.js:85:13)
-    at process._tickCallback (internal/process/next_tick.js:68:7)
-(node:41284) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 4)
-error { Error: ESOCKETTIMEDOUT
-    at ClientRequest.<anonymous> (C:\Users\user\Desktop\BlockChain_Browser_Web\node_modules\request\request.js:816:19)
-    at Object.onceWrapper (events.js:286:20)
+(node:45644) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 3)
+error { FetchError: request to https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUSD failed, reason: connect ETIMEDOUT 159.203.144.149:443
+    at ClientRequest.<anonymous> (C:\Users\user\Desktop\BlockChain_Browser_Web\node_modules\node-fetch\lib\index.js:1455:11)
     at ClientRequest.emit (events.js:198:13)
-    at Socket.emitRequestTimeout (_http_client.js:662:40)
-    at Object.onceWrapper (events.js:286:20)
-    at Socket.emit (events.js:198:13)
-    at Socket._onTimeout (net.js:442:8)
-    at ontimeout (timers.js:436:11)
-    at tryOnTimeout (timers.js:300:5)
-    at listOnTimeout (timers.js:263:5) code: 'ESOCKETTIMEDOUT', connect: false }
-(node:41284) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'tx' of undefined
-    at Object.getBlockHashProfit (C:\Users\user\Desktop\BlockChain_Browser_Web\bitcoin-browser-api\src\bitcoin-core-function.js:83:48)
+    at TLSSocket.socketErrorListener (_http_client.js:392:9)
+    at TLSSocket.emit (events.js:198:13)
+    at emitErrorNT (internal/streams/destroy.js:91:8)
+    at emitErrorAndCloseNT (internal/streams/destroy.js:59:3)
+    at process._tickCallback (internal/process/next_tick.js:63:19)
+  message:
+   'request to https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUSD failed, reason: connect ETIMEDOUT 159.203.144.149:443',
+  type: 'system',
+  errno: 'ETIMEDOUT',
+  code: 'ETIMEDOUT' }
+(node:45644) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'last' of undefined
+    at Object.list_block (C:\Users\user\Desktop\BlockChain_Browser_Web\bitcoin-browser-api\src\list_block.js:25:24)
     at process._tickCallback (internal/process/next_tick.js:68:7)
-(node:41284) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 5)
-error { Error: connect ETIMEDOUT 18.136.139.151:8332
-    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1106:14)
-  errno: 'ETIMEDOUT',
-  code: 'ETIMEDOUT',
-  syscall: 'connect',
-  address: '18.136.139.151',
-  port: 8332 }
-error { Error: connect ETIMEDOUT 18.136.139.151:8332
-    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1106:14)
-  errno: 'ETIMEDOUT',
-  code: 'ETIMEDOUT',
-  syscall: 'connect',
-  address: '18.136.139.151',
-  port: 8332 }
-error { Error: connect ETIMEDOUT 18.136.139.151:8332
-    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1106:14)
-  errno: 'ETIMEDOUT',
-  code: 'ETIMEDOUT',
-  syscall: 'connect',
-  address: '18.136.139.151',
-  port: 8332 }
-error { Error: connect ETIMEDOUT 18.136.139.151:8332
-    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1106:14)
-  errno: 'ETIMEDOUT',
-  code: 'ETIMEDOUT',
-  syscall: 'connect',
-  address: '18.136.139.151',
-  port: 8332 }
-error { Error: connect ETIMEDOUT 18.136.139.151:8332
-    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1106:14)
-  errno: 'ETIMEDOUT',
-  code: 'ETIMEDOUT',
-  syscall: 'connect',
-  address: '18.136.139.151',
-  port: 8332 }
-error { Error: connect ETIMEDOUT 18.136.139.151:8332
-    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1106:14)
-  errno: 'ETIMEDOUT',
-  code: 'ETIMEDOUT',
-  syscall: 'connect',
-  address: '18.136.139.151',
-  port: 8332 }
-error { Error: connect ETIMEDOUT 18.136.139.151:8332
-    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1106:14)
-  errno: 'ETIMEDOUT',
-  code: 'ETIMEDOUT',
-  syscall: 'connect',
-  address: '18.136.139.151',
-  port: 8332 }
-error { Error: connect ETIMEDOUT 18.136.139.151:8332
-    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1106:14)
-  errno: 'ETIMEDOUT',
-  code: 'ETIMEDOUT',
-  syscall: 'connect',
-  address: '18.136.139.151',
-  port: 8332 }
-error { Error: connect ETIMEDOUT 18.136.139.151:8332
-    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1106:14)
-  errno: 'ETIMEDOUT',
-  code: 'ETIMEDOUT',
-  syscall: 'connect',
-  address: '18.136.139.151',
-  port: 8332 }
-error { Error: connect ETIMEDOUT 18.136.139.151:8332
-    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1106:14)
-  errno: 'ETIMEDOUT',
-  code: 'ETIMEDOUT',
-  syscall: 'connect',
-  address: '18.136.139.151',
-  port: 8332 }
-error { Error: connect ETIMEDOUT 18.136.139.151:8332
-    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1106:14)
-  errno: 'ETIMEDOUT',
-  code: 'ETIMEDOUT',
-  syscall: 'connect',
-  address: '18.136.139.151',
-  port: 8332 }
-error { Error: connect ETIMEDOUT 18.136.139.151:8332
-    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1106:14)
-  errno: 'ETIMEDOUT',
-  code: 'ETIMEDOUT',
-  syscall: 'connect',
-  address: '18.136.139.151',
-  port: 8332 }
-error { Error: connect ETIMEDOUT 18.136.139.151:8332
-    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1106:14)
-  errno: 'ETIMEDOUT',
-  code: 'ETIMEDOUT',
-  syscall: 'connect',
-  address: '18.136.139.151',
-  port: 8332 }
-error { Error: connect ETIMEDOUT 18.136.139.151:8332
-    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1106:14)
-  errno: 'ETIMEDOUT',
-  code: 'ETIMEDOUT',
-  syscall: 'connect',
-  address: '18.136.139.151',
-  port: 8332 }
-error { Error: connect ETIMEDOUT 18.136.139.151:8332
-    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1106:14)
-  errno: 'ETIMEDOUT',
-  code: 'ETIMEDOUT',
-  syscall: 'connect',
-  address: '18.136.139.151',
-  port: 8332 }
-error { Error: connect ETIMEDOUT 18.136.139.151:8332
-    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1106:14)
-  errno: 'ETIMEDOUT',
-  code: 'ETIMEDOUT',
-  syscall: 'connect',
-  address: '18.136.139.151',
-  port: 8332 }
-error { Error: connect ETIMEDOUT 18.136.139.151:8332
-    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1106:14)
-  errno: 'ETIMEDOUT',
-  code: 'ETIMEDOUT',
-  syscall: 'connect',
-  address: '18.136.139.151',
-  port: 8332 }
-error { Error: connect ETIMEDOUT 18.136.139.151:8332
-    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1106:14)
-  errno: 'ETIMEDOUT',
-  code: 'ETIMEDOUT',
-  syscall: 'connect',
-  address: '18.136.139.151',
-  port: 8332 }
-error { Error: connect ETIMEDOUT 18.136.139.151:8332
-    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1106:14)
-  errno: 'ETIMEDOUT',
-  code: 'ETIMEDOUT',
-  syscall: 'connect',
-  address: '18.136.139.151',
-  port: 8332 }
-error { Error: connect ETIMEDOUT 18.136.139.151:8332
-    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1106:14)
-  errno: 'ETIMEDOUT',
-  code: 'ETIMEDOUT',
-  syscall: 'connect',
-  address: '18.136.139.151',
-  port: 8332 }
-error { Error: connect ETIMEDOUT 18.136.139.151:8332
-    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1106:14)
-  errno: 'ETIMEDOUT',
-  code: 'ETIMEDOUT',
-  syscall: 'connect',
-  address: '18.136.139.151',
-  port: 8332 }
-error { Error: connect ETIMEDOUT 18.136.139.151:8332
-    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1106:14)
-  errno: 'ETIMEDOUT',
-  code: 'ETIMEDOUT',
-  syscall: 'connect',
-  address: '18.136.139.151',
-  port: 8332 }
-error { Error: connect ETIMEDOUT 18.136.139.151:8332
-    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1106:14)
-  errno: 'ETIMEDOUT',
-  code: 'ETIMEDOUT',
-  syscall: 'connect',
-  address: '18.136.139.151',
-  port: 8332 }
-error { Error: connect ETIMEDOUT 18.136.139.151:8332
-    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1106:14)
-  errno: 'ETIMEDOUT',
-  code: 'ETIMEDOUT',
-  syscall: 'connect',
-  address: '18.136.139.151',
-  port: 8332 }
-error { Error: connect ETIMEDOUT 18.136.139.151:8332
-    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1106:14)
-  errno: 'ETIMEDOUT',
-  code: 'ETIMEDOUT',
-  syscall: 'connect',
-  address: '18.136.139.151',
-  port: 8332 }
-error { Error: connect ETIMEDOUT 18.136.139.151:8332
-    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1106:14)
-  errno: 'ETIMEDOUT',
-  code: 'ETIMEDOUT',
-  syscall: 'connect',
-  address: '18.136.139.151',
-  port: 8332 }
-error { Error: ESOCKETTIMEDOUT
-    at ClientRequest.<anonymous> (C:\Users\user\Desktop\BlockChain_Browser_Web\node_modules\request\request.js:816:19)
-    at Object.onceWrapper (events.js:286:20)
+(node:45644) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 4)
+error { FetchError: request to https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUSD failed, reason: connect ETIMEDOUT 159.203.144.149:443
+    at ClientRequest.<anonymous> (C:\Users\user\Desktop\BlockChain_Browser_Web\node_modules\node-fetch\lib\index.js:1455:11)
     at ClientRequest.emit (events.js:198:13)
-    at Socket.emitRequestTimeout (_http_client.js:662:40)
-    at Object.onceWrapper (events.js:286:20)
-    at Socket.emit (events.js:198:13)
-    at Socket._onTimeout (net.js:442:8)
-    at ontimeout (timers.js:436:11)
-    at tryOnTimeout (timers.js:300:5)
-    at listOnTimeout (timers.js:263:5) code: 'ESOCKETTIMEDOUT', connect: false }
-(node:41284) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'tx' of undefined
-    at Object.getBlockHashProfit (C:\Users\user\Desktop\BlockChain_Browser_Web\bitcoin-browser-api\src\bitcoin-core-function.js:83:48)
+    at TLSSocket.socketErrorListener (_http_client.js:392:9)
+    at TLSSocket.emit (events.js:198:13)
+    at emitErrorNT (internal/streams/destroy.js:91:8)
+    at emitErrorAndCloseNT (internal/streams/destroy.js:59:3)
+    at process._tickCallback (internal/process/next_tick.js:63:19)
+  message:
+   'request to https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUSD failed, reason: connect ETIMEDOUT 159.203.144.149:443',
+  type: 'system',
+  errno: 'ETIMEDOUT',
+  code: 'ETIMEDOUT' }
+(node:45644) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'last' of undefined
+    at Object.list_block (C:\Users\user\Desktop\BlockChain_Browser_Web\bitcoin-browser-api\src\list_block.js:25:24)
     at process._tickCallback (internal/process/next_tick.js:68:7)
-(node:41284) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 6)
-error { Error: connect ETIMEDOUT 18.136.139.151:8332
-    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1106:14)
-  errno: 'ETIMEDOUT',
-  code: 'ETIMEDOUT',
-  syscall: 'connect',
-  address: '18.136.139.151',
-  port: 8332 }
-error { Error: connect ETIMEDOUT 18.136.139.151:8332
-    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1106:14)
-  errno: 'ETIMEDOUT',
-  code: 'ETIMEDOUT',
-  syscall: 'connect',
-  address: '18.136.139.151',
-  port: 8332 }
-error { Error: connect ETIMEDOUT 18.136.139.151:8332
-    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1106:14)
-  errno: 'ETIMEDOUT',
-  code: 'ETIMEDOUT',
-  syscall: 'connect',
-  address: '18.136.139.151',
-  port: 8332 }
-error { Error: connect ETIMEDOUT 18.136.139.151:8332
-    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1106:14)
-  errno: 'ETIMEDOUT',
-  code: 'ETIMEDOUT',
-  syscall: 'connect',
-  address: '18.136.139.151',
-  port: 8332 }
-error { Error: connect ETIMEDOUT 18.136.139.151:8332
-    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1106:14)
-  errno: 'ETIMEDOUT',
-  code: 'ETIMEDOUT',
-  syscall: 'connect',
-  address: '18.136.139.151',
-  port: 8332 }
-error { Error: connect ETIMEDOUT 18.136.139.151:8332
-    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1106:14)
-  errno: 'ETIMEDOUT',
-  code: 'ETIMEDOUT',
-  syscall: 'connect',
-  address: '18.136.139.151',
-  port: 8332 }
-error { Error: connect ETIMEDOUT 18.136.139.151:8332
-    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1106:14)
-  errno: 'ETIMEDOUT',
-  code: 'ETIMEDOUT',
-  syscall: 'connect',
-  address: '18.136.139.151',
-  port: 8332 }
-error { Error: connect ETIMEDOUT 18.136.139.151:8332
-    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1106:14)
-  errno: 'ETIMEDOUT',
-  code: 'ETIMEDOUT',
-  syscall: 'connect',
-  address: '18.136.139.151',
-  port: 8332 }
-error { Error: ESOCKETTIMEDOUT
-    at ClientRequest.<anonymous> (C:\Users\user\Desktop\BlockChain_Browser_Web\node_modules\request\request.js:816:19)
-    at Object.onceWrapper (events.js:286:20)
+(node:45644) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 5)
+error { FetchError: request to https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUSD failed, reason: connect ETIMEDOUT 159.203.144.149:443
+    at ClientRequest.<anonymous> (C:\Users\user\Desktop\BlockChain_Browser_Web\node_modules\node-fetch\lib\index.js:1455:11)
     at ClientRequest.emit (events.js:198:13)
-    at Socket.emitRequestTimeout (_http_client.js:662:40)
-    at Object.onceWrapper (events.js:286:20)
-    at Socket.emit (events.js:198:13)
-    at Socket._onTimeout (net.js:442:8)
-    at ontimeout (timers.js:436:11)
-    at tryOnTimeout (timers.js:300:5)
-    at listOnTimeout (timers.js:263:5) code: 'ESOCKETTIMEDOUT', connect: false }
-(node:41284) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'tx' of undefined
-    at Object.getBlockHashProfit (C:\Users\user\Desktop\BlockChain_Browser_Web\bitcoin-browser-api\src\bitcoin-core-function.js:83:48)
+    at TLSSocket.socketErrorListener (_http_client.js:392:9)
+    at TLSSocket.emit (events.js:198:13)
+    at emitErrorNT (internal/streams/destroy.js:91:8)
+    at emitErrorAndCloseNT (internal/streams/destroy.js:59:3)
+    at process._tickCallback (internal/process/next_tick.js:63:19)
+  message:
+   'request to https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUSD failed, reason: connect ETIMEDOUT 159.203.144.149:443',
+  type: 'system',
+  errno: 'ETIMEDOUT',
+  code: 'ETIMEDOUT' }
+(node:45644) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'last' of undefined
+    at Object.list_block (C:\Users\user\Desktop\BlockChain_Browser_Web\bitcoin-browser-api\src\list_block.js:25:24)
     at process._tickCallback (internal/process/next_tick.js:68:7)
-(node:41284) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 7)
-error { Error: connect ETIMEDOUT 18.136.139.151:8332
-    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1106:14)
-  errno: 'ETIMEDOUT',
-  code: 'ETIMEDOUT',
-  syscall: 'connect',
-  address: '18.136.139.151',
-  port: 8332 }
-error { Error: connect ETIMEDOUT 18.136.139.151:8332
-    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1106:14)
-  errno: 'ETIMEDOUT',
-  code: 'ETIMEDOUT',
-  syscall: 'connect',
-  address: '18.136.139.151',
-  port: 8332 }
-error { Error: connect ETIMEDOUT 18.136.139.151:8332
-    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1106:14)
-  errno: 'ETIMEDOUT',
-  code: 'ETIMEDOUT',
-  syscall: 'connect',
-  address: '18.136.139.151',
-  port: 8332 }
-error { Error: ESOCKETTIMEDOUT
-    at ClientRequest.<anonymous> (C:\Users\user\Desktop\BlockChain_Browser_Web\node_modules\request\request.js:816:19)
-    at Object.onceWrapper (events.js:286:20)
+(node:45644) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 6)
+error { FetchError: request to https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUSD failed, reason: connect ETIMEDOUT 159.203.144.149:443
+    at ClientRequest.<anonymous> (C:\Users\user\Desktop\BlockChain_Browser_Web\node_modules\node-fetch\lib\index.js:1455:11)
     at ClientRequest.emit (events.js:198:13)
-    at Socket.emitRequestTimeout (_http_client.js:662:40)
-    at Object.onceWrapper (events.js:286:20)
-    at Socket.emit (events.js:198:13)
-    at Socket._onTimeout (net.js:442:8)
-    at ontimeout (timers.js:436:11)
-    at tryOnTimeout (timers.js:300:5)
-    at listOnTimeout (timers.js:263:5) code: 'ESOCKETTIMEDOUT', connect: false }
-(node:41284) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'tx' of undefined
-    at Object.getBlockHashProfit (C:\Users\user\Desktop\BlockChain_Browser_Web\bitcoin-browser-api\src\bitcoin-core-function.js:83:48)
+    at TLSSocket.socketErrorListener (_http_client.js:392:9)
+    at TLSSocket.emit (events.js:198:13)
+    at emitErrorNT (internal/streams/destroy.js:91:8)
+    at emitErrorAndCloseNT (internal/streams/destroy.js:59:3)
+    at process._tickCallback (internal/process/next_tick.js:63:19)
+  message:
+   'request to https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUSD failed, reason: connect ETIMEDOUT 159.203.144.149:443',
+  type: 'system',
+  errno: 'ETIMEDOUT',
+  code: 'ETIMEDOUT' }
+(node:45644) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'last' of undefined
+    at Object.list_block (C:\Users\user\Desktop\BlockChain_Browser_Web\bitcoin-browser-api\src\list_block.js:25:24)
     at process._tickCallback (internal/process/next_tick.js:68:7)
-(node:41284) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 8)
+(node:45644) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 7)
+error { FetchError: request to https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUSD failed, reason: connect ETIMEDOUT 159.203.144.149:443
+    at ClientRequest.<anonymous> (C:\Users\user\Desktop\BlockChain_Browser_Web\node_modules\node-fetch\lib\index.js:1455:11)
+    at ClientRequest.emit (events.js:198:13)
+    at TLSSocket.socketErrorListener (_http_client.js:392:9)
+    at TLSSocket.emit (events.js:198:13)
+    at emitErrorNT (internal/streams/destroy.js:91:8)
+    at emitErrorAndCloseNT (internal/streams/destroy.js:59:3)
+    at process._tickCallback (internal/process/next_tick.js:63:19)
+  message:
+   'request to https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUSD failed, reason: connect ETIMEDOUT 159.203.144.149:443',
+  type: 'system',
+  errno: 'ETIMEDOUT',
+  code: 'ETIMEDOUT' }
+(node:45644) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'last' of undefined
+    at Object.list_block (C:\Users\user\Desktop\BlockChain_Browser_Web\bitcoin-browser-api\src\list_block.js:25:24)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+(node:45644) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 8)

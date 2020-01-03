@@ -89,7 +89,7 @@ class Violas extends Component {
                         <div className="searchBox">
                             <h3>{this.props.match.params.module_name}</h3>
                             <div className="form">
-                                <input onChange={(e) => this.getCurValue(e)}onKeyDown={(e) => this.onKeyup(e)} placeholder="address、version" />
+                                <input onChange={(e) => this.getCurValue(e)} onKeyDown={(e) => this.onKeyup(e)} placeholder="address、version" />
                                 <span onClick={this.getSearch}></span>
                             </div>
                         </div>

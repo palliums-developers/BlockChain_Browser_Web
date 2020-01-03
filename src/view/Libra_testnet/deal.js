@@ -88,7 +88,7 @@ class Deal extends Component {
                     <p><label>To</label><span className="to" onClick={() => {
                       this.props.history.push('/app/Libra_addressBox/' + libra_version.receiver)
                     }}>{libra_version.receiver}</span></p>
-                    <p><label>Value</label><span>{libra_version.amount} LBR</span></p>
+                    <p><label>Value</label><span>{libra_version.amount/1e6} LBR</span></p>
                     <p><label>Time</label><span>{timeStamp2String(libra_version.expiration_time + '000')}</span></p>
                     <p><label>Gas fee</label><span>{libra_version.gas_fee}</span></p>
                     <p><label>Gas max</label><span>{libra_version.gas_max}</span></p>

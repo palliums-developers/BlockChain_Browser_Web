@@ -116,12 +116,12 @@ class Violas extends Component {
                           <td colSpan="4" onClick={() => {
                             item.sender &&
                               this.props.history.push('/app/Violas_address/' + item.sender)
-                          }}>{item.sender ? (item.sender).slice(0, 30) + '...' : 'Unparsed address'}</td>
+                          }}>{item.sender ? (item.sender).slice(0, 30) + '...' : 'Null'}</td>
                           <td colSpan="3">{this.returnStatus(item.status)}</td>
                           <td colSpan="4" onClick={() => {
                             item.receiver &&
                               this.props.history.push('/app/Violas_address/' + item.receiver)
-                          }}>{item.receiver ? (item.receiver).slice(0, 30) + '...' : 'Unparsed address'}</td>
+                          }}>{item.receiver ? (item.receiver).slice(0, 30) + '...' : 'Null'}</td>
                           <td colSpan="4">{item.amount / 1e6}</td>
                           <td colSpan="3">{item.gas}</td>
                         </tr>
@@ -144,11 +144,11 @@ class Violas extends Component {
                       <p><label>Type</label><span>{this.returnType(v.type)}</span></p>
                       <p><label>From</label><span onClick={() => {
                         v.sender && this.props.history.push('/app/Violas_address/' + v.sender)
-                      }}>{v.sender ? (v.sender).slice(0, 20) + '...' : 'Unparsed address'}</span></p>
+                      }}>{v.sender ? (v.sender).slice(0, 20) + '...' : 'Null'}</span></p>
                       <p><label>Status</label><span>{this.returnStatus(v.status)}</span></p>
                       <p><label>To</label><span onClick={() => {
                         v.receiver && this.props.history.push('/app/Violas_address/' + v.receiver)
-                      }}>{v.receiver ? (v.receiver).slice(0, 20) + '...' : 'Unparsed address'}</span></p>
+                      }}>{v.receiver ? (v.receiver).slice(0, 20) + '...' : 'Null'}</span></p>
                       <p><label>Amount</label><span>{v.amount}</span></p>
                       <p><label>Fee</label><span>{v.gas}</span></p>
                     </div>
