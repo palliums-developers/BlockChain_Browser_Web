@@ -60,9 +60,9 @@ export let getCurListBlock = () => {
 
 //     }
 // }
-export let getCurTestListBlock = (_limit,_offset) => {
+export let getCurTestListBlock = (_limit, _offset) => {
     return dispatch => {
-        axios.get(libra_api + '/recent?limit='+_limit+'&offset='+_offset).then(res => {
+        axios.get(libra_api + '/recent?limit=' + _limit + '&offset=' + _offset).then(res => {
             // console.log(res.data.data)
             dispatch({
                 type: 'libra_testnet',
@@ -274,21 +274,43 @@ export let getViolas_version = (_version) => {
     }
 }
 
-export let getViolas_address = (_address) => {
-    return dispatch => {
-        axios.get(violas_api + '/address_info?address=' + _address)
-            .then(res => {
-                dispatch({
-                    type: 'violas_address',
-                    data: res.data.data
+// export let getViolas_address = (_address) => {
+//     return dispatch => {
+//         axios.get(violas_api + '/address/' + _address)
+//             .then(res => {
+//                 dispatch({
+//                     type: 'violas_address',
+//                     data: res.data.data
+//                 })
+//             })
+//     }
+// }
+export let getViolas_address = (_address, _module) => {
+    if (_module) {
+        return dispatch => {
+            axios.get(violas_api + '/address/' + _address + '?module=' + _module)
+                .then(res => {
+                    dispatch({
+                        type: 'violas_address',
+                        data: res.data.data
+                    })
                 })
-            })
+        }
+    } else {
+        return dispatch => {
+            axios.get(violas_api + '/address/' + _address)
+                .then(res => {
+                    dispatch({
+                        type: 'violas_address',
+                        data: res.data.data
+                    })
+                })
+        }
     }
 }
-
 export let getViolas_address_module = (_module, _address) => {
     return dispatch => {
-        axios.get(violas_api + '/address_info/' + _module + '?address=' + _address)
+        axios.get(violas_api + '/address/' + _address + '?module=' + _module)
             .then(res => {
                 dispatch({
                     type: 'violas_address_module',
@@ -310,9 +332,20 @@ export let getCurrency = _ => {
     }
 }
 
+export let getAddressModule=(_address)=>{
+    return dispatch=>{
+        axios.get(wallet_api+'/1.0/violas/module?addr='+_address)
+        .then(res=>{
+            dispatch({
+                type:'violas_address_holding_module',
+                data:res.data.data
+            })
+        })
+    }
+}
 export let getModuleList = (_module_address, _limit, _offset) => {
     return dispatch => {
-        axios.get(violas_api + "/recent_txn/" + _module_address + "?limit=" + _limit + "&offset=" + _offset)
+        axios.get(violas_api + "/recent/" + _module_address + "?limit=" + _limit + "&offset=" + _offset)
             .then(res => {
                 dispatch({
                     type: 'module_list',

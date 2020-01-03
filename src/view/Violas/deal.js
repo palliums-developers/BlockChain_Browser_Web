@@ -91,18 +91,19 @@ class Deal extends Component {
                 <div className="abstract">
                   <div className="abstractContent">
                     <p><label>Version</label><span>{violas_version.version}</span></p>
+                    <p><label>Type</label><span>{violas_version.type}</span></p>
                     <p><label>From</label><span className="from" onClick={() => {
-                    violas_version.sender &&
-                      this.props.history.push('/app/Violas_address/' + violas_version.sender)
+                      violas_version.sender &&
+                        this.props.history.push('/app/Violas_address/' + violas_version.sender)
                     }}>{violas_version.sender ? violas_version.sender : 'Null'}</span></p>
                     <p><label>To</label><span className="to" onClick={() => {
-                    violas_version.receiver &&
-                      this.props.history.push('/app/Violas_address/' + violas_version.receiver)
+                      violas_version.receiver &&
+                        this.props.history.push('/app/Violas_address/' + violas_version.receiver)
                     }}>{violas_version.receiver ? violas_version.receiver : 'Null'}</span></p>
                     <p><label>Value</label><span>{violas_version.amount / 1e6} {this.module2name(violas_version.module_address)}</span></p>
                     <p><label>Time</label><span>{timeStamp2String(violas_version.expiration_time + '000')}</span></p>
-                    <p><label>Gas fee</label><span>{violas_version.gas_unit_price/1e6}</span></p>
-                    <p><label>Gas max</label><span>{violas_version.max_gas_amount/1e6}</span></p>
+                    <p><label>Gas fee</label><span>{violas_version.gas_unit_price / 1e6}</span></p>
+                    <p><label>Gas max</label><span>{violas_version.max_gas_amount / 1e6}</span></p>
                     <p><label>Sequence nr</label><span>{violas_version.sequence_number}</span></p>
                   </div>
                 </div>
@@ -111,8 +112,7 @@ class Deal extends Component {
                 <p><label>PublicKey</label><span>{violas_version.public_key}</span></p>
                 <p><label>Signature</label><span>{violas_version.signature}</span></p>
                 <p><label>Status</label><span>{this.returnStatus(violas_version.status)}</span></p>
-                  <p><label>Type</label><span>{violas_version.type}</span></p>
-                  <p><label>Data</label><span>{violas_version.data?violas_version.data:'Null'}</span></p>
+                <p><label>Data</label><span>{violas_version.data ? violas_version.data : 'Null'}</span></p>
               </div>
             </div>
           </div>

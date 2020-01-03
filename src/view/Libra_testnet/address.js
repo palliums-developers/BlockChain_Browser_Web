@@ -45,7 +45,13 @@ class Address extends Component {
   getSearch = () => {
     search_box(this.state.iptValue, this.props)
   }
-
+  returnStatus = (_num) => {
+    if (_num == 4017) {
+      return "success"
+    } else {
+      return "failed"
+    }
+  }
   render() {
     let { libra_address } = this.props;
     return (
@@ -54,7 +60,7 @@ class Address extends Component {
         <div className="contents contents1">
           <div className="addressBox">
             <div className="form">
-              <input onChange={(e) => this.getCurValue(e)} onKeyDown={(e) => this.onKeyup(e)}placeholder="address、version" />
+              <input onChange={(e) => this.getCurValue(e)} onKeyDown={(e) => this.onKeyup(e)} placeholder="address、version" />
               <span onClick={this.getSearch}></span>
             </div>
             <div className="price">
@@ -64,7 +70,7 @@ class Address extends Component {
                   <label>address</label>
                 </p>
                 <p>{this.props.match.params.address}</p>
-                <span className="balance">Banlance: {libra_address.balance/1e6} LBR</span>
+                <span className="balance">Banlance: {libra_address.balance / 1e6} LBR</span>
               </div>
               <div className="code">
                 <QRcode value={this.props.match.params.address}></QRcode>
@@ -76,7 +82,7 @@ class Address extends Component {
                 <div className="abstract">
                   <div className="abstractContent">
                     <p><label>Address</label><span>{this.props.match.params.address}</span></p>
-                    <p><label>Banlance</label><span>{libra_address.balance/1e6} LBR</span></p>
+                    <p><label>Banlance</label><span>{libra_address.balance / 1e6} LBR</span></p>
                     {/* <p><label>Recent transactions</label><span>{txs.length}</span></p> */}
                   </div>
                 </div>
@@ -85,29 +91,33 @@ class Address extends Component {
                 <h2>Recent transactions</h2>
                 <div className="deal">
                   {
-                    libra_address.transactions && libra_address.transactions.map((item, index) => {
-                      return <div key={index}><div className="dealContent1 dealContent2">
-                        <div className="dealContents">
-                          <div className="pp" onClick={() => this.goToDeal(item.version)}>
-                            <p>ID: {item.version}</p>
-                            <p>Time: {timeStamp2String(item.expiration_time + '000')}</p>
-                          </div>
-                          <div className="dealAddress">
-                            <ul>
+                    libra_address.length > 0 && libra_address.map((item, index) => {
+                      return <div key={index}>
+                        <div className="dealContent1 dealContent2">
+                          <div className="dealContents">
+                            <div className="pp" onClick={() => this.goToDeal(item.version)}>
+                              <p>Version: {item.version}</p>
+                              <p>Type:{item.type}</p>
+                              <p>Gas:{item.gas}</p>
+                              <p>Time: {timeStamp2String(item.expiration_time + '000')}</p>
+                            </div>
+                            <div className="dealAddress">
+                              <ul>
 
-                              <li><label onClick={() => this.goToAddress(item.sender)} className="addBlue">{item.sender}</label></li>
-                            </ul>
-                            <span></span>
-                            <ul>
-                              <li><label onClick={() => this.goToAddress(item.receiver)} className="addBlue">{item.receiver}</label></li>
-                            </ul>
+                                <li><label onClick={() => this.goToAddress(item.sender)} className="addBlue">{item.sender}</label></li>
+                              </ul>
+                              <span></span>
+                              <ul>
+                                <li><label onClick={() => this.goToAddress(item.receiver)} className="addBlue">{item.receiver}</label></li>
+                              </ul>
+                            </div>
+                            <div className="descrPrice">
+                              <p>{this.returnStatus(item.status)}</p>
+                              <span><i></i>{item.amount / 1e6} LBR</span>
+                            </div>
                           </div>
-                          <div className="descrPrice">
-                            <span><i></i>{item.amount/1e6} LBR</span>
-                          </div>
+
                         </div>
-
-                      </div>
                         <div className="line"></div>
                       </div>
                     })}
