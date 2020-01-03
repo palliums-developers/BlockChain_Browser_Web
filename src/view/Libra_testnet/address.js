@@ -66,7 +66,9 @@ class Address extends Component {
                 <p>{this.props.match.params.address}</p>
                 <span className="balance">Banlance: {libra_address.balance} LBR</span>
               </div>
-              <QRcode value={this.props.match.params.address}></QRcode>
+              <div className="code">
+                <QRcode value={this.props.match.params.address}></QRcode>
+              </div>
             </div>
             <div className="blockHeightContent">
               <div className="blockHeightAbstract">

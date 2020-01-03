@@ -1,0 +1,26 @@
+Bitcoin Browser API listening on port 30001!
+(node:29490) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'voutNum' of undefined
+    at Object.tx_info (/home/ops/huangw/BlockChain_Browser_Web/bitcoin-browser-api/src/bitcoin-core-function.js:196:63)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+(node:29490) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 1)
+(node:29490) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+(node:29490) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'voutNum' of undefined
+    at Object.tx_info (/home/ops/huangw/BlockChain_Browser_Web/bitcoin-browser-api/src/bitcoin-core-function.js:196:63)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+(node:29490) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 2)
+(node:29490) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'voutNum' of undefined
+    at Object.tx_info (/home/ops/huangw/BlockChain_Browser_Web/bitcoin-browser-api/src/bitcoin-core-function.js:196:63)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+(node:29490) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 3)
+(node:29490) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'voutNum' of undefined
+    at Object.tx_info (/home/ops/huangw/BlockChain_Browser_Web/bitcoin-browser-api/src/bitcoin-core-function.js:196:63)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+(node:29490) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 4)
+(node:29490) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'voutNum' of undefined
+    at Object.tx_info (/home/ops/huangw/BlockChain_Browser_Web/bitcoin-browser-api/src/bitcoin-core-function.js:196:63)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+(node:29490) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 5)
+(node:29490) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'voutNum' of undefined
+    at Object.tx_info (/home/ops/huangw/BlockChain_Browser_Web/bitcoin-browser-api/src/bitcoin-core-function.js:196:63)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+(node:29490) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 6)
