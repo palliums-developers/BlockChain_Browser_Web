@@ -77,6 +77,10 @@ class Address extends Component {
     }
   }
   select_sCoin=(_address)=>{
+    this.setState({
+
+      current_sCoin: _address
+    })
     console.log(_address)
   }
   getCurValue = (e) => {
@@ -158,15 +162,15 @@ class Address extends Component {
               <div className="blockHeightDeal">
                 <div className='recList'>
                   <div className='dropdown1'>
-                    <span onClick={() => this.showMenu('All')}>All<i className="arrows">{
-                      this.state.showMenuStableCoin ? <img src="/img/weibiaoti2 2@2x.png" /> : <img src="/img/weibiaoti2备份 2@2x.png" />
+                    <span onClick={() => this.showMenu('All')}>{this.state.current_sCoin}<i className="arrows">{
+                      this.state.showMenuStableCoin ? <img src="/img/weibiaoti1@2x.png" /> : <img src="/img/weibiaoti2备份 2@2x.png" />
                     }</i></span>
-                    <div className='dropdown-content1'>
-                      {this.state.showMenuStableCoin ? (this.state.sCoin.map((v, i) => {
-                        return <p key={i} onClick={()=>this.select_sCoin(v.address)}>{v.name}</p>
-                      })) : (null)
-                      }
-                    </div>
+                    {this.state.showMenuStableCoin ? <div className='dropdown-content1'>
+                      {this.state.sCoin.map((v, i) => {
+                        return <p key={i} onClick={()=>this.select_sCoin(v.name)}>{v.name}</p>
+                      }) 
+                    }
+                    </div>: (null)}
                   </div>
                   <h2>Recent transactions</h2>
                 </div>

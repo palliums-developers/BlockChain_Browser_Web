@@ -17,8 +17,8 @@
 .env.test.local
 .env.production.local
 
-/bitcoin-browser-api/log
-/sh/nohup.out
+lastblock_*
+nohup_*
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*

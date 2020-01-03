@@ -3,8 +3,8 @@ import axios from 'axios'
 // let url = 'http://192.168.1.253:30001/open/1.0'
 // let libra_api = 'http://47.52.66.26:10080';
 const wallet_api = 'http://52.27.228.84:4000';
-const libra_api = 'http://52.27.228.84:4001/libra';
-const violas_api = 'http://52.27.228.84:4001/violas';
+const libra_api = 'http://52.27.228.84:4000/explorer/libra';
+const violas_api = 'http://52.27.228.84:4000/explorer/violas';
 const BTC_api = 'http://47.52.66.26:30001/open/1.0';
 // const BTC_api = 'http://localhost:30001/open/1.0';
 // const BTC_api = 'http://192.168.1.111:30001/open/1.0';
@@ -62,7 +62,7 @@ export let getCurListBlock = () => {
 // }
 export let getCurTestListBlock = (_limit,_offset) => {
     return dispatch => {
-        axios.get(libra_api + '/recent_txn?limit='+_limit+'&offset='+_offset).then(res => {
+        axios.get(libra_api + '/recent?limit='+_limit+'&offset='+_offset).then(res => {
             // console.log(res.data.data)
             dispatch({
                 type: 'libra_testnet',
@@ -121,7 +121,7 @@ export let getCurDetailsAddress = (params) => {
 }
 export let get_libra_address = (_address) => {
     return dispatch => {
-        axios.get(libra_api + '/address_info?address=' + _address)
+        axios.get(libra_api + '/address/' + _address)
             .then(res => {
                 // console.log(res.data.data,'sdasd');
                 dispatch({
@@ -133,7 +133,7 @@ export let get_libra_address = (_address) => {
 }
 export let get_libra_version = (_version) => {
     return dispatch => {
-        axios.get(libra_api + '/txn_info?version=' + _version)
+        axios.get(libra_api + '/version/' + _version)
             .then(res => {
                 dispatch({
                     type: 'libra_version',
@@ -252,7 +252,7 @@ export let getBTCTestAddress = (_net, _address, _page) => {
 export let getViolas = (_limit, _offset) => {
     return dispatch => {
         // console.log(violas_api+'/recent_txn?limit='+_limit+'&offset='+_offset)
-        axios.get(violas_api + '/recent_txn?limit=' + _limit + '&offset=' + _offset)
+        axios.get(violas_api + '/recent?limit=' + _limit + '&offset=' + _offset)
             .then(res => {
                 dispatch({
                     type: 'violas_list',
@@ -264,7 +264,7 @@ export let getViolas = (_limit, _offset) => {
 
 export let getViolas_version = (_version) => {
     return dispatch => {
-        axios.get(violas_api + '/txn_info?version=' + _version)
+        axios.get(violas_api + '/version/' + _version)
             .then(res => {
                 dispatch({
                     type: 'violas_version',
