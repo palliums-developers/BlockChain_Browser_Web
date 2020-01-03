@@ -14,7 +14,7 @@ let initState = {
       violas_version: {},
       violas_address: {},
       libra_testnet: [],
-      libra_address: {},
+      libra_address: [],
       libra_version: {},
       BTC_main_List: [],
       BTC_main_block: {},
@@ -25,7 +25,8 @@ let initState = {
       BTC_Test_txid: {},
       BTC_Test_address: {},
       currency: [],
-      module_list: []
+      module_list: [],
+      violas_address_holding_module: []
 }
 
 let ListReducer = (state = initState, action) => {
@@ -63,7 +64,7 @@ let ListReducer = (state = initState, action) => {
             case 'libra_testnet':
                   return { ...state, libra_testnet: [...action.data] }
             case 'libra_address':
-                  return { ...state, libra_address: action.data }
+                  return { ...state, libra_address: [...action.data] }
             case 'libra_version':
                   return { ...state, libra_version: action.data }
             case 'BTC_main_List':
@@ -84,6 +85,8 @@ let ListReducer = (state = initState, action) => {
                   return { ...state, BTC_Test_address: action.data }
             case 'currency':
                   return { ...state, currency: [...action.data] }
+            case 'violas_address_holding_module':
+                  return { ...state, violas_address_holding_module: [...action.data] }
             case 'module_list':
                   return { ...state, module_list: [...action.data] }
             default:

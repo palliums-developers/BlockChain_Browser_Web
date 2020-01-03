@@ -66,7 +66,7 @@ class Address extends Component {
               <div className="code">
                 <QRcode value={this.props.match.params.address}></QRcode>
               </div>
-              
+
             </div>
             <div className="blockHeightContent">
               <div className="blockHeightAbstract">
@@ -75,7 +75,7 @@ class Address extends Component {
                   <div className="abstractContent">
                     <p><label>Address</label><span>{this.props.match.params.address}</span></p>
                     <p><label>Banlance</label><span>{BTC_Test_address.data && BTC_Test_address.data.balance} Sat</span></p>
-                    <p><label>Total Receive</label><span>{BTC_Test_address.data && BTC_Test_address.data.received}</span></p>
+                    <p><label>Total Receive</label><span>{BTC_Test_address.data && BTC_Test_address.data.received} Sat</span></p>
                     <p><label>Tx Count</label><span>{BTC_Test_address.data && BTC_Test_address.data.tx_count}</span></p>
                   </div>
                 </div>
@@ -110,7 +110,7 @@ class Address extends Component {
                         <div className="line"></div>
                       </div>
                     })} */}
-                    <div className="dealContent1">
+                  <div className="dealContent1">
                     <div className="dealContents">
                       {BTC_Test_address.list && BTC_Test_address.list.list.map((v, i) => {
                         return (
@@ -127,8 +127,8 @@ class Address extends Component {
                                   //       }
                                   //       <span>{vint.value} BTC</span></li>
                                   v.inputs.map((v1, i1) => {
-                                  return v1.prev_addresses && v1.prev_addresses[i1]?<label><p className="addBlue" onClick={() => this.goToAddress(v1.prev_addresses)} key={i1}>{v1.prev_addresses+' '}</p>
-                                    <p>{v1.prev_value + " Sat"}</p></label> : <label className={v1.prev_value ? "addBlue":''}>Unparsed address<p>0 Sat</p></label>
+                                    return v1.prev_addresses && v1.prev_addresses[i1] ? <label><p className="addBlue" onClick={() => this.goToAddress(v1.prev_addresses)} key={i1}>{v1.prev_addresses + ' '}</p>
+                                      <p>{v1.prev_value + " Sat"}</p></label> : <label className={v1.prev_value ? "addBlue" : ''}>Unparsed address<p>0 Sat</p></label>
                                   })
                                 }
                               </ul>
@@ -143,15 +143,15 @@ class Address extends Component {
                                   //   </li>
 
                                   // })
-                                  v.outputs.map((v2,i2)=>{
+                                  v.outputs.map((v2, i2) => {
                                     return v2.addresses && v2.addresses[i2] ? <label><p className="addBlue" onClick={() => this.goToAddress(v2.addresses)} key={i2}>{v2.addresses}</p><p>{v2.value + " Sat"}</p></label> : <label className={v2.prev_value ? "addBlue" : ''}>Unparsed address<p>0 Sat</p></label>
                                   })
                                 }
                               </ul>
                             </div>
-                              <div className="descrPrice">
-                                <span>Confirmed {v.confirmations}</span>
-                              </div>
+                            <div className="descrPrice">
+                              <span>Confirmed {v.confirmations}</span>
+                            </div>
                           </div>
                         )
                       })}

@@ -74,7 +74,7 @@ class Address extends Component {
                   <div className="abstractContent">
                     <p><label>Address</label><span>{this.props.match.params.address}</span></p>
                     <p><label>Banlance</label><span>{BTC_main_address.data && BTC_main_address.data.balance} Sat</span></p>
-                    <p><label>Total Receive</label><span>{BTC_main_address.data && BTC_main_address.data.received}</span></p>
+                    <p><label>Total Receive</label><span>{BTC_main_address.data && BTC_main_address.data.received} Sat</span></p>
                     <p><label>Tx Count</label><span>{BTC_main_address.data && BTC_main_address.data.tx_count}</span></p>
                     {/* <p><label>Recent transactions</label><span>{txs.length}</span></p> */}
                   </div>

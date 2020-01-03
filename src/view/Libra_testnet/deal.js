@@ -39,10 +39,10 @@ class Deal extends Component {
     })
   }
 
-  returnStatus=(_num)=>{
-    if(_num==4001){
+  returnStatus = (_num) => {
+    if (_num == 4001) {
       return "success";
-    }else{
+    } else {
       return "failed";
     }
   }
@@ -64,16 +64,16 @@ class Deal extends Component {
         <div className="contents contents1">
           <div className="dealBox">
             <div className="form">
-              <input onChange={(e) => this.getCurValue(e)} onKeyDown={(e) => this.onKeyup(e)}placeholder="address、version" />
+              <input onChange={(e) => this.getCurValue(e)} onKeyDown={(e) => this.onKeyup(e)} placeholder="address、version" />
               <span onClick={this.getSearch}></span>
             </div>
             <div className="price">
               <div>
-              <p>
-                <i><img src="/img/编组 30@2x.png" /></i>
-                <label>Transaction</label>
-              </p>
-              <p>{this.props.match.params.txid}</p>
+                <p>
+                  <i><img src="/img/编组 30@2x.png" /></i>
+                  <label>Transaction</label>
+                </p>
+                <p>{this.props.match.params.txid}</p>
               </div>
             </div>
             <div className="blockHeightContent">
@@ -82,16 +82,17 @@ class Deal extends Component {
                 <div className="abstract">
                   <div className="abstractContent">
                     <p><label>ID</label><span>{libra_version.version}</span></p>
+                    <p><label>Type</label><span>{libra_version.type}</span></p>
                     <p><label>From</label><span className="from" onClick={() => {
                       this.props.history.push('/app/Libra_addressBox/' + libra_version.sender)
                     }}>{libra_version.sender}</span></p>
                     <p><label>To</label><span className="to" onClick={() => {
                       this.props.history.push('/app/Libra_addressBox/' + libra_version.receiver)
                     }}>{libra_version.receiver}</span></p>
-                    <p><label>Value</label><span>{libra_version.amount} LBR</span></p>
+                    <p><label>Value</label><span>{libra_version.amount / 1e6} LBR</span></p>
                     <p><label>Time</label><span>{timeStamp2String(libra_version.expiration_time + '000')}</span></p>
-                    <p><label>Gas fee</label><span>{libra_version.gas_fee}</span></p>
-                    <p><label>Gas max</label><span>{libra_version.gas_max}</span></p>
+                    <p><label>Gas fee</label><span>{libra_version.gas_unit_price}</span></p>
+                    <p><label>Gas max</label><span>{libra_version.max_gas_amount}</span></p>
                     <p><label>Sequence nr</label><span>{libra_version.sequence_number}</span></p>
                   </div>
                 </div>
@@ -99,7 +100,7 @@ class Deal extends Component {
               <div className="blockHeightDeal">
                 <p><label>PublicKey</label><span>{libra_version.public_key}</span></p>
                 <p><label>Signature</label><span>{libra_version.signature}</span></p>
-                  <p><label>Status</label><span>{this.returnStatus(libra_version.transaction_status)}</span></p>
+                <p><label>Status</label><span>{this.returnStatus(libra_version.status)}</span></p>
                 {/* <p><label>signedTxnHash</label><span>{libra_version.signedTxnHash}</span></p>
                 <p><label>stateRootHash</label><span>{libra_version.stateRootHash}</span></p>
                 <p><label>eventRootHash</label><span>{libra_version.eventRootHash}</span></p>
