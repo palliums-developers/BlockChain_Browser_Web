@@ -1,6 +1,0 @@
-nohup: ignoring input
-
-> bittribe@0.1.0 start C:\Users\user\Desktop\BlockChain_Browser_Web
-> set PORT=30000 && react-scripts start
-
-Something is already running on port 30000.

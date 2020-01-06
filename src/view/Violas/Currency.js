@@ -23,16 +23,6 @@ class Violas extends Component {
     componentDidMount() {
         this.props.getCurrency();
     }
-    returnType = (_num) => {
-        switch (_num) {
-            case 0:
-                return "vtoken p2p";
-            case 1:
-                return "publish";
-            case 2:
-                return "stable coin p2p"
-        }
-    }
     returnStatus = (_num) => {
         if (_num == 4001) {
             return "success"
@@ -101,14 +91,14 @@ class Violas extends Component {
                                 <table bgcolor="rgba(247, 248, 251, 1)">
                                     <thead>
                                         <tr>
-                                            <th colSpan="2">Version</th>
+                                            <th colSpan="3">Version</th>
                                             <th colSpan="3">Time</th>
                                             <th colSpan="3">Currency</th>
-                                            <th colSpan="2">Type</th>
+                                            <th colSpan="4">Type</th>
                                             <th colSpan="4">From</th>
                                             <th colSpan="3">Status</th>
                                             <th colSpan="4">To</th>
-                                            <th colSpan="4">Amount</th>
+                                            <th colSpan="3">Amount</th>
                                             <th colSpan="2">Fee</th>
                                         </tr>
                                     </thead>
@@ -116,14 +106,14 @@ class Violas extends Component {
                                         {
                                             this.props.module_list && this.props.module_list.map((item, index) => {
                                                 return <tr key={index}>
-                                                    <td colSpan="2" onClick={() => {
+                                                    <td colSpan="3" onClick={() => {
                                                         this.props.history.push('/app/Violas_version/' + item.version)
                                                     }}>{item.version}</td>
                                                     <td colSpan="3">
                                                         {timeStamp2String(item.expiration_time + '000')}
                                                     </td>
                                                     <td colSpan="3">{this.module2name(item.module_address)}</td>
-                                                    <td colSpan="2">{this.returnType(item.type)}</td>
+                                                    <td colSpan="4">{(item.type)}</td>
                                                     <td colSpan="4" onClick={() => {
                                                         item.sender &&
                                                             this.props.history.push('/app/Violas_address/' + item.sender)
@@ -133,8 +123,8 @@ class Violas extends Component {
                                                         item.receiver &&
                                                             this.props.history.push('/app/Violas_address/' + item.receiver)
                                                     }}>{item.receiver ? (item.receiver).slice(0, 20) + '...' : 'Unparsed address'}</td>
-                                                    <td colSpan="4">{item.amount / 1e6}</td>
-                                                    <td colSpan="2">{item.gas}</td>
+                                                    <td colSpan="3">{item.amount / 1e6}</td>
+                                                    <td colSpan="2">{item.gas / 1e6}</td>
                                                 </tr>
                                             })
                                         }
@@ -152,7 +142,7 @@ class Violas extends Component {
                                             <p><label>Currency</label><span onClick={() => {
                                                 this.props.history.push('/app/Currency/' + this.module2name(v.module_address).toUpperCase())
                                             }}>{this.module2name(v.module_address)}</span></p>
-                                            <p><label>Type</label><span>{this.returnType(v.type)}</span></p>
+                                            <p><label>Type</label><span>{(v.type)}</span></p>
                                             <p><label>From</label><span onClick={() => {
                                                 v.sender && this.props.history.push('/app/Violas_address/' + v.sender)
                                             }}>{v.sender ? (v.sender).slice(0, 20) + '...' : 'Unparsed address'}</span></p>
@@ -161,7 +151,7 @@ class Violas extends Component {
                                                 v.receiver && this.props.history.push('/app/Violas_address/' + v.receiver)
                                             }}>{v.receiver ? (v.receiver).slice(0, 20) + '...' : 'Unparsed address'}</span></p>
                                             <p><label>Amount</label><span>{v.amount}</span></p>
-                                            <p><label>Fee</label><span>{v.gas}</span></p>
+                                            <p><label>Fee</label><span>{v.gas / 1e6}</span></p>
                                         </div>
                                     })
                                 }

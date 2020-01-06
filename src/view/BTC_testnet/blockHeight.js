@@ -10,7 +10,7 @@ class BlockHeight extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      limit: 2,
+      limit: 5,
       offset: 0,
       type: 'hash'
     }
@@ -20,8 +20,7 @@ class BlockHeight extends Component {
     // let { limit, offset } = this.state
     await this.hashOrHeight(this.props.match.params.block_hash)
     this.props.getBTCTestBlock('testnet', this.state.type, this.props.match.params.block_hash, this.state.limit, this.state.offset)
-
-
+    // this.setState({limit:limit+5});
     // this.props.getCurListBlock()
 
     // this.props.getCurDetailBlock({
@@ -100,16 +99,17 @@ class BlockHeight extends Component {
 
   getCurMore = () => {
     this.setState({
-      limit: this.state.limit,
-      offset: this.state.offset + this.state.limit
+      limit: this.state.limit+ this.state.limit
     }, () => {
-      this.props.getCurDetailBlock({
-        net: 'mainnet',
-        type: 'height',
-        value: this.props.match.params.block * 1,
-        limit: this.state.limit + 2,
-        offset: this.state.offset
-      })
+      this.props.getBTCTestBlock('testnet', this.state.type, this.props.match.params.block_hash, this.state.limit, this.state.offset)
+
+      // this.props.getCurDetailBlock({
+      //   net: 'mainnet',
+      //   type: 'height',
+      //   value: this.props.match.params.block * 1,
+      //   limit: this.state.limit + 2,
+      //   offset: this.state.offset
+      // })
     })
   }
 

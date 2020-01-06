@@ -17,7 +17,7 @@ class Address extends Component {
       showMenuViolas: false,
       showMenuStableCoin: false,
       sCoin: [{ address: 'all', name: 'All' }, { address: '0000000000000000000000000000000000000000000000000000000000000000', name: 'vtoken' }],
-      current_sCoin:'All'
+      current_sCoin: 'All'
     };
     this.showMenu = this.showMenu.bind(this);
     this.closeMenu = this.closeMenu.bind(this);
@@ -30,6 +30,10 @@ class Address extends Component {
       pathname: '/app/Violas_version/' + txid
     })
   }
+  componentWillMount(){
+    this.props.getCurrency();
+    this.props.getAddressModule(this.props.match.params.address);
+  }
   componentDidMount() {
     // this.props.getCurDetailAddress({
     //   address: this.props.match.params.address
@@ -38,7 +42,6 @@ class Address extends Component {
     //   address: this.props.match.params.address
     // })
     this.props.getViolas_address(this.props.match.params.address)
-    this.props.getCurrency();
   }
   showMenu = (event) => {
     // this.setState({ showMenuViolas: true });
@@ -65,23 +68,36 @@ class Address extends Component {
     })
   }
   holdingCurrencyList() {
-    if (this.props.currency.length > 0 && this.state.sCoin.length == 2) {
+    if (this.props.currency.length > 0 && this.state.sCoin.length == 2 && this.props.violas_address_holding_module.length>0) {
       let sCoin_temp = this.state.sCoin;
-      let holding=[];
       for (let i in this.props.currency) {
-        sCoin_temp.push({
-          address: this.props.currency[i].address,
-          name: this.props.currency[i].name.toLowerCase()
-        })
+        for(let j in this.props.violas_address_holding_module){
+          if(this.props.currency[i].address==this.props.violas_address_holding_module[j]){
+            // console.log(this.pro)
+            sCoin_temp.push({
+              address: this.props.currency[i].address,
+              name: this.props.currency[i].name.toLowerCase()
+            })
+          }
+        }
       }
     }
   }
-  select_sCoin=(_address)=>{
+  select_sCoin = (_name) => {
     this.setState({
-
-      current_sCoin: _address
+      current_sCoin: _name
     })
-    console.log(_address)
+    if(_name=='All'){
+      this.props.getViolas_address(this.props.match.params.address);
+    }else if(_name=='vtoken'){
+      this.props.getViolas_address(this.props.match.params.address,'0000000000000000000000000000000000000000000000000000000000000000');
+    }else{
+      for(let i in this.state.sCoin){
+        if(_name==this.state.sCoin[i].name){
+          this.props.getViolas_address(this.props.match.params.address,this.state.sCoin[i].address);
+        }
+      }
+    }
   }
   getCurValue = (e) => {
     this.setState({
@@ -112,16 +128,6 @@ class Address extends Component {
   }
   getSearch = () => {
     search_box(this.state.iptValue, this.props)
-  }
-  returnType = (_num) => {
-    switch (_num) {
-      case 0:
-        return "vtoken p2p";
-      case 1:
-        return "publish";
-      case 2:
-        return "stable coin p2p"
-    }
   }
   render() {
     let { violas_address } = this.props;
@@ -167,22 +173,23 @@ class Address extends Component {
                     }</i></span>
                     {this.state.showMenuStableCoin ? <div className='dropdown-content1'>
                       {this.state.sCoin.map((v, i) => {
-                        return <p key={i} onClick={()=>this.select_sCoin(v.name)}>{v.name}</p>
-                      }) 
-                    }
-                    </div>: (null)}
+                        return <p key={i} onClick={() => this.select_sCoin(v.name)}>{v.name}</p>
+                      })
+                      }
+                    </div> : (null)}
                   </div>
                   <h2>Recent transactions</h2>
                 </div>
                 <div className="deal">
                   {
-                    violas_address.transactions && violas_address.transactions.map((item, index) => {
+                    violas_address.length > 0 && violas_address.map((item, index) => {
                       return <div key={index}>
                         <div className="dealContent1 dealContent2">
                           <div className="dealContents">
                             <div className="pp" onClick={() => this.goToDeal(item.version)}>
                               <p>Version: {item.version}</p>
-                              <p>Type:{this.returnType(item.type)}</p>
+                              <p>Type:{(item.type)}</p>
+                              <p>Gas:{item.gas}</p>
                               <p>Time: {timeStamp2String(item.expiration_time + '000')}</p>
                             </div>
                             <div className="dealAddress">

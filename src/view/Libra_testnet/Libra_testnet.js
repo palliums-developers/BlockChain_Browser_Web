@@ -29,21 +29,11 @@ class Libra_testnet extends Component {
     })
   }
 
-  returnType = (_num) => {
-    switch (_num) {
-      case 1:
-        return "mint";
-      case 2:
-        return "p2p";
-    }
-  }
-
   returnStatus = (_num) => {
     if (_num == 4001) {
       return "success"
     } else {
-      return "success"
-      // return "failed"
+      return "failed"
     }
   }
   loadMore = () => {
@@ -101,18 +91,18 @@ class Libra_testnet extends Component {
                           <td colSpan="3">
                             {timeStamp2String(item.expiration_time + '000')}
                           </td>
-                          <td colSpan="2">{this.returnType(item.transaction_type)}</td>
+                          <td colSpan="2">{(item.type)}</td>
                           <td colSpan="4" onClick={() => {
                             this.props.history.push('/app/Libra_addressBox/' + item.sender)
                           }}>{(item.sender).slice(0, 20) + '...'}</td>
-                          <td colSpan="2">{this.returnStatus(item.transaction_status)}</td>
+                          <td colSpan="2">{this.returnStatus(item.status)}</td>
                           <td colSpan="4" onClick={() => {
                             if (item.receiver){
                                 this.props.history.push('/app/Libra_addressBox/' + item.receiver)
                             }
                           }}>{item.receiver && (item.receiver).slice(0, 20) + '...'}</td>
                           <td colSpan="4">{item.amount/1e6}</td>
-                          <td colSpan="2">{item.gas_fee}</td>
+                          <td colSpan="2">{item.gas}</td>
                         </tr>
                       })
                     }
@@ -127,16 +117,16 @@ class Libra_testnet extends Component {
                         this.props.history.push('/app/Libra_dealbox/' + v.version)
                       }}>{v.version}</span></p>
                       <p><label>Time</label><span>{timeStamp2String(v.expiration_time + '000')}</span></p>
-                      <p><label>Type</label><span>{this.returnType(v.transaction_type)}</span></p>
+                      <p><label>Type</label><span>{(v.type)}</span></p>
                       <p><label>From</label><span onClick={() => {
                         this.props.history.push('/app/Libra_addressBox/' + v.sender)
                       }}>{(v.sender).slice(0, 20) + '...'}</span></p>
-                      <p><label>Status</label><span>{this.returnStatus(v.transaction_status)}</span></p>
+                      <p><label>Status</label><span>{this.returnStatus(v.status)}</span></p>
                       <p><label>To</label><span onClick={() => {
                         this.props.history.push('/app/Libra_addressBox/' + v.receiver)
                       }}>{v.receiver && (v.receiver).slice(0, 20) + '...'}</span></p>
                       <p><label>Amount</label><span>{v.amount/1e6}</span></p>
-                      <p><label>Fee</label><span>{v.gas_fee}</span></p>
+                      <p><label>Fee</label><span>{v.gas}</span></p>
                     </div>
                   })
                 }
