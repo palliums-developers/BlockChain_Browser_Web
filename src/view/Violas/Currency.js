@@ -18,6 +18,7 @@ class Violas extends Component {
         }
     }
     componentWillMount() {
+        document.documentElement.scrollTop = document.body.scrollTop = 0;
         this.props.getModuleList();
     }
     componentDidMount() {

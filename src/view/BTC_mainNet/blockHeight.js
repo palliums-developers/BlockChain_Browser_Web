@@ -28,6 +28,7 @@ class BlockHeight extends Component {
     //   offset: offset
     // })
     // console.log(this.props.match.params.block_hash)
+    document.documentElement.scrollTop=document.body.scrollTop=0;
     this.props.getBTCMainBlock('mainnet', this.state.type, this.props.match.params.block_hash, this.state.limit, this.state.offset)
   }
 
@@ -138,8 +139,8 @@ class BlockHeight extends Component {
               <p><label>BlockHash</label><span>{BTC_main_block.detail && BTC_main_block.detail.hash}</span></p>
             </div>
             <div className="btn">
-              <button onClick={() => this.curBlock('prev')}><img src="/img/编组 7.png" />previous</button>
-              <button onClick={() => this.curBlock('next')}><img src="/img/编组 2.png" />next</button>
+              <button onClick={() => this.curBlock('prev')}><img src="/img/编组 7.png" />Previous</button>
+              <button onClick={() => this.curBlock('next')}><img src="/img/编组 2.png" />Next</button>
             </div>
             <div className="blockHeightContent">
               <div className="blockHeightAbstract">
