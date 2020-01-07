@@ -149,7 +149,7 @@ class Address extends Component {
                   <label>address</label>
                 </p>
                 <p>{this.props.match.params.address}</p>
-                <span className="balance">Banlance: {violas_address.balance / 1e6} vtoken</span>
+                <span className="balance">Banlance: {violas_address.balance /10/10/10/10/10/10} vtoken</span>
               </div>
               <div className="code">
                 <QRcode value={this.props.match.params.address}></QRcode>
@@ -161,7 +161,7 @@ class Address extends Component {
                 <div className="abstract">
                   <div className="abstractContent">
                     <p><label>Address</label><span>{this.props.match.params.address}</span></p>
-                    <p><label>Banlance</label><span>{violas_address.balance / 1e6} vtoken</span></p>
+                    <p><label>Banlance</label><span>{violas_address.balance /10/10/10/10/10/10} vtoken</span></p>
                     {/* <p><label>Recent transactions</label><span>{txs.length}</span></p> */}
                   </div>
                 </div>
@@ -204,7 +204,7 @@ class Address extends Component {
                             </div>
                             <div className="descrPrice">
                               <p>{this.returnStatus(item.status)}</p>
-                              <span>{item.amount / 1e6} {this.module2name(item.module_address)}</span>
+                              <span>{item.amount /10/10/10/10/10/10} {this.module2name(item.module_address)}</span>
                             </div>
                           </div>
                         </div>

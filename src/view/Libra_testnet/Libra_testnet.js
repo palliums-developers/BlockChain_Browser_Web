@@ -101,7 +101,7 @@ class Libra_testnet extends Component {
                                 this.props.history.push('/app/Libra_addressBox/' + item.receiver)
                             }
                           }}>{item.receiver && (item.receiver).slice(0, 20) + '...'}</td>
-                          <td colSpan="4">{item.amount/1e6}</td>
+                          <td colSpan="4">{item.amount/10/10/10/10/10/10}</td>
                           <td colSpan="2">{item.gas}</td>
                         </tr>
                       })
@@ -125,7 +125,7 @@ class Libra_testnet extends Component {
                       <p><label>To</label><span onClick={() => {
                         this.props.history.push('/app/Libra_addressBox/' + v.receiver)
                       }}>{v.receiver && (v.receiver).slice(0, 20) + '...'}</span></p>
-                      <p><label>Amount</label><span>{v.amount/1e6}</span></p>
+                      <p><label>Amount</label><span>{v.amount/10/10/10/10/10/10}</span></p>
                       <p><label>Fee</label><span>{v.gas}</span></p>
                     </div>
                   })

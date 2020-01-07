@@ -112,8 +112,8 @@ class Violas extends Component {
                             item.receiver &&
                               this.props.history.push('/app/Violas_address/' + item.receiver)
                           }}>{item.receiver ? (item.receiver).slice(0, 30) + '...' : 'Null'}</td>
-                          <td colSpan="2">{item.amount / 1e6}</td>
-                          <td colSpan="3">{item.gas /1e6}</td>
+                          <td colSpan="2">{item.amount /10/10/10/10/10/10}</td>
+                          <td colSpan="3">{item.gas /10/10/10/10/10/10}</td>
                         </tr>
                       })
                     }
@@ -140,7 +140,7 @@ class Violas extends Component {
                         v.receiver && this.props.history.push('/app/Violas_address/' + v.receiver)
                       }}>{v.receiver ? (v.receiver).slice(0, 20) + '...' : 'Null'}</span></p>
                       <p><label>Amount</label><span>{v.amount}</span></p>
-                      <p><label>Fee</label><span>{v.gas / 1e6}</span></p>
+                      <p><label>Fee</label><span>{v.gas /10/10/10/10/10/10}</span></p>
                     </div>
                   })
                 }

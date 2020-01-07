@@ -5,7 +5,7 @@ import axios from 'axios'
 const wallet_api = 'http://52.27.228.84:4000';
 const libra_api = 'http://52.27.228.84:4000/explorer/libra';
 const violas_api = 'http://52.27.228.84:4000/explorer/violas';
-const BTC_api = 'http://47.52.66.26:30001/open/1.0';
+const BTC_api = 'http://47.52.66.26:10080/open/1.0';
 // const BTC_api = 'http://localhost:30001/open/1.0';
 // const BTC_api = 'http://192.168.1.111:30001/open/1.0';
 //let url = 'http://192.168.1.112:10080';

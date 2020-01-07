@@ -101,10 +101,10 @@ class Deal extends Component {
                       violas_version.receiver &&
                         this.props.history.push('/app/Violas_address/' + violas_version.receiver)
                     }}>{violas_version.receiver ? violas_version.receiver : 'Null'}</span></p>
-                    <p><label>Value</label><span>{violas_version.amount / 1e6} {this.module2name(violas_version.module_address)}</span></p>
+                    <p><label>Value</label><span>{violas_version.amount /10/10/10/10/10/10} {this.module2name(violas_version.module_address)}</span></p>
                     <p><label>Time</label><span>{timeStamp2String(violas_version.expiration_time + '000')}</span></p>
-                    <p><label>Gas fee</label><span>{violas_version.gas_unit_price / 1e6}</span></p>
-                    <p><label>Gas max</label><span>{violas_version.max_gas_amount / 1e6}</span></p>
+                    <p><label>Gas fee</label><span>{violas_version.gas_unit_price /10/10/10/10/10/10}</span></p>
+                    <p><label>Gas max</label><span>{violas_version.max_gas_amount /10/10/10/10/10/10}</span></p>
                     <p><label>Sequence nr</label><span>{violas_version.sequence_number}</span></p>
                   </div>
                 </div>
