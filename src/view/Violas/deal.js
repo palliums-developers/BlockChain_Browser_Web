@@ -16,6 +16,7 @@ class Deal extends Component {
     // this.props.getCurSearchtx({
     //   txid: this.props.match.params.txid
     // })
+    document.documentElement.scrollTop = document.body.scrollTop =0;
     this.props.getViolas_version(this.props.match.params.version);
     this.props.getCurrency();
   }
@@ -109,8 +110,8 @@ class Deal extends Component {
                 </div>
               </div>
               <div className="blockHeightDeal">
-                <p><label>PublicKey</label><span>{violas_version.public_key}</span></p>
-                <p><label>Signature</label><span>{violas_version.signature}</span></p>
+                <p><label>PublicKey</label><span>{violas_version.public_key?violas_version.public_key:'Null'}</span></p>
+                <p><label>Signature</label><span>{violas_version.signature?violas_version.signature:'Null'}</span></p>
                 <p><label>Status</label><span>{this.returnStatus(violas_version.status)}</span></p>
                 <p><label>Data</label><span>{violas_version.data ? violas_version.data : 'Null'}</span></p>
               </div>

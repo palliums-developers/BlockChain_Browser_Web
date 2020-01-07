@@ -31,6 +31,7 @@ class Address extends Component {
     })
   }
   componentWillMount(){
+    document.documentElement.scrollTop = document.body.scrollTop =0;
     this.props.getCurrency();
     this.props.getAddressModule(this.props.match.params.address);
   }

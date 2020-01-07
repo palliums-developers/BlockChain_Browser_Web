@@ -11,8 +11,9 @@ class Address extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      limit: 2,
-      offset: 0
+      page: 1,
+      pageList: [1],
+      showPage: false
     }
   }
   goToAddress = (address) => {
@@ -30,6 +31,7 @@ class Address extends Component {
     // this.props.getCurDetailsAddress({
     //   address: this.props.match.params.address
     // })
+    document.documentElement.scrollTop = document.body.scrollTop = 0;
     this.props.getBTCTestAddress('testnet', this.props.match.params.address, 1)
   }
   getCurValue = (e) => {
@@ -45,9 +47,44 @@ class Address extends Component {
   getSearch = () => {
     search_box('testnet', this.state.iptValue, this.props)
   }
-
+  countPage = (_total_count) => {
+    let result = this.state.pageList;
+    let result_max = Math.ceil(_total_count / 10);
+    if (result.length < result_max - 1 && result_max > 2) {
+      for (let i = 2; i <= result_max; i++) {
+        result.push(i)
+      }
+    }
+  }
+  changePage = (_event, _page) => {
+    switch (_event) {
+      case 'pre':
+        this.setState({ page: this.state.page - 1 }, () => { this.props.getBTCTestAddress('testnet', this.props.match.params.address, this.state.page); })
+        break;
+      case 'next':
+        this.setState({ page: this.state.page + 1 }, () => { this.props.getBTCTestAddress('testnet', this.props.match.params.address, this.state.page); })
+        break;
+      case 'jump':
+        this.setState({ page: _page }, () => { this.props.getBTCTestAddress('testnet', this.props.match.params.address, this.state.page); })
+        break;
+    }
+    document.documentElement.scrollTop = document.body.scrollTop = 0;
+  }
+  showPageMenu = () => {
+    this.setState({ showPage: true }, () => {
+      document.addEventListener('click', this.closeMenu);
+    });
+  }
+  closeMenu = _ => {
+    this.setState({ showPage: false }, () => {
+      document.removeEventListener('click', this.closeMenu);
+    })
+  }
   render() {
-    let { addressObj, txs, BTC_Test_address } = this.props
+    //mxmNJZWbypH4NyrDG3BLwVTGJMjwWkBAPo
+    let { BTC_Test_address } = this.props;
+    this.props.BTC_Test_address.list && this.countPage(this.props.BTC_Test_address.list.total_count);
+    console.log(this.state.page)
     return (
       <div className="BTCTestNetContent">
         <BTCTestHeader back="netTo"></BTCTestHeader>
@@ -158,6 +195,22 @@ class Address extends Component {
 
                     </div>
                   </div>
+                  {this.props.BTC_Test_address.list &&
+                    <div>
+                      {this.state.page > 1 && <button onClick={() => this.changePage('pre')}>Previous</button>}
+                      <div class="dropdown1">
+                        <span onClick={() => {this.showPageMenu() }}>{this.state.page}
+                          <i className="arrows">{
+                            this.state.showPage ? <img src="/img/weibiaoti1@2x.png" /> : <img src="/img/weibiaoti2备份 2@2x.png" />
+                          }</i>
+                          {this.state.showPage ? <div className='dropdown-content1'>
+                            {this.state.pageList.length > 1 && this.state.pageList.map((v, i) => { return <p key={i} onClick={() => this.changePage('jump', v)}>{v}</p> })}
+                          </div> : (null)}
+                        </span>
+                      </div>
+                      {this.state.page < this.state.pageList.length && <button onClick={() => this.changePage('next')}>Next</button>}
+                    </div>
+                  }
                 </div>
               </div>
             </div>

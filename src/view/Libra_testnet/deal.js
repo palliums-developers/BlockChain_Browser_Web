@@ -17,6 +17,7 @@ class Deal extends Component {
     // this.props.getCurSearchtx({
     //   txid: this.props.match.params.txid
     // })
+    document.documentElement.scrollTop=document.body.scrollTop=0;
     this.props.get_libra_version(this.props.match.params.txid)
   }
   goToDeal = (txid) => {
@@ -86,9 +87,9 @@ class Deal extends Component {
                     <p><label>From</label><span className="from" onClick={() => {
                       this.props.history.push('/app/Libra_addressBox/' + libra_version.sender)
                     }}>{libra_version.sender}</span></p>
-                    <p><label>To</label><span className="to" onClick={() => {
+                    <p><label>To</label><span className="to" onClick={() => {libra_version.receiver&&
                       this.props.history.push('/app/Libra_addressBox/' + libra_version.receiver)
-                    }}>{libra_version.receiver}</span></p>
+                    }}>{libra_version.receiver?libra_version.receiver:'Null'}</span></p>
                     <p><label>Value</label><span>{libra_version.amount / 1e6} LBR</span></p>
                     <p><label>Time</label><span>{timeStamp2String(libra_version.expiration_time + '000')}</span></p>
                     <p><label>Gas fee</label><span>{libra_version.gas_unit_price}</span></p>
@@ -98,8 +99,8 @@ class Deal extends Component {
                 </div>
               </div>
               <div className="blockHeightDeal">
-                <p><label>PublicKey</label><span>{libra_version.public_key}</span></p>
-                <p><label>Signature</label><span>{libra_version.signature}</span></p>
+                <p><label>PublicKey</label><span>{libra_version.public_key?libra_version.public_key:'Null'}</span></p>
+                <p><label>Signature</label><span>{libra_version.signature?libra_version.signature:'Null'}</span></p>
                 <p><label>Status</label><span>{this.returnStatus(libra_version.status)}</span></p>
                 {/* <p><label>signedTxnHash</label><span>{libra_version.signedTxnHash}</span></p>
                 <p><label>stateRootHash</label><span>{libra_version.stateRootHash}</span></p>

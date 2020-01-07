@@ -30,6 +30,7 @@ class Address extends Component {
     // this.props.getCurDetailsAddress({
     //   address: this.props.match.params.address
     // })
+    document.documentElement.scrollTop=document.body.scrollTop=0;
     this.props.get_libra_address(this.props.match.params.address)
   }
   getCurValue = (e) => {
