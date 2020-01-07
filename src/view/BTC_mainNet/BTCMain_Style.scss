@@ -884,6 +884,7 @@
   //地址
   .addressBox {
     // background: #FFF;
+   
     .dealContents {
       > .pp {
         width: 100%;
@@ -957,6 +958,62 @@
     .blockHeightContent {
       background: #fff;
       margin-top: 15%;
+      .blockHeightDeal{
+        .bomSelect {
+        height: 0.58rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        button{
+          width: 1.83rem;
+          height:100%;
+          border: 0;
+          outline: 0;
+          background: RGBA(54, 101, 152, 1);
+          font-size: 0.24rem;
+          font-family: PingFangSC-Regular;
+          font-weight: 400;
+          color: white;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        .dropdown1 {
+          display: flex;
+          height: 100%;
+          flex: 1;
+          align-items: center;
+          justify-content: center;
+          span{
+            font-size: 0.22rem;
+            display: flex;
+            align-items: center;
+            position: relative;
+            i{
+              width: 0.22rem;
+              height: 0.22rem;
+              display: flex;
+              img{
+                width: 100%;
+                height: 100%;
+              }
+            }
+            .dropdown-content1{
+              width: 1rem;
+              height: 2rem;
+              overflow: auto;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              position: absolute;
+              top: 0.3rem;
+              left: -0.3rem;
+              background: #FFF;
+            }
+          }
+        }
+      }
+      }
     }
 
     .abstractContent {
@@ -1452,6 +1509,36 @@
                 height: 14px;
             }
             
+        }
+        .blockHeightContent{
+          .blockHeightDeal{
+            .bomSelect {
+              height: 20px;
+              button{
+                width: 68px;
+                height: 20px;
+                font-size: 10px;
+                padding: 0 5px;
+                box-sizing: border-box;
+              }
+              .dropdown1 {
+                span{
+                  font-size: 12px;
+                  i{
+                    width: 10px;
+                    height: 10px;
+                    img{
+                      width: 100%;
+                      height: 100%;
+                    }
+                  }
+                  .dropdown-content1{
+                    top: 20px;
+                  }
+                }
+              }
+            }
+          }
         }
         .price{
             width: 320px;

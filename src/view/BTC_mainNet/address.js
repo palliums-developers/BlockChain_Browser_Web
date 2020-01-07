@@ -201,7 +201,7 @@ class Address extends Component {
                   </div>
                 </div>
                 {this.props.BTC_main_address.list &&
-                  <div>
+                  <div className="bomSelect">
                     {this.state.page > 1 && <button onClick={() => this.changePage('pre')}>Previous</button>}
                     <div class="dropdown1">
                       <span onClick={() => { this.showPageMenu() }}>{this.state.page}

@@ -478,6 +478,7 @@
           }
         }
           .dropdown-content1 {
+            width: 1.78rem;
             position: absolute;
             top: 0.42rem;
             left: 0;
@@ -1517,7 +1518,7 @@
         .recList{
           .dropdown1{
             width: 60px;
-            padding: 5px 10px 5px 15px;
+            padding: 5px;
             box-sizing: border-box;
             >span{
               font-size: 12px;
@@ -1528,13 +1529,13 @@
               }
             }
             .dropdown-content1{
+              width: 59px;
               height: 120px;
               background: #FFF;
               top: 20px;
               overflow: auto;
               p{
-                padding: 5px 6.5px;
-                box-sizing: border-box;
+                 line-height: 20px;
               }
             }
           }
