@@ -50,7 +50,6 @@ class Libra_testnet extends Component {
   }
 
   render() {
-    console.log(this.props.libra_testnet)
     return (
       <div className='libraContent'>
         <LibraHeader back="net"></LibraHeader>
@@ -100,7 +99,7 @@ class Libra_testnet extends Component {
                             if (item.receiver){
                                 this.props.history.push('/app/Libra_addressBox/' + item.receiver)
                             }
-                          }}>{item.receiver && (item.receiver).slice(0, 20) + '...'}</td>
+                          }}>{item.receiver ? (item.receiver).slice(0, 20) + '...':'Null'}</td>
                           <td colSpan="4">{item.amount/10/10/10/10/10/10}</td>
                           <td colSpan="2">{item.gas}</td>
                         </tr>
@@ -124,7 +123,7 @@ class Libra_testnet extends Component {
                       <p><label>Status</label><span>{this.returnStatus(v.status)}</span></p>
                       <p><label>To</label><span onClick={() => {
                         this.props.history.push('/app/Libra_addressBox/' + v.receiver)
-                      }}>{v.receiver && (v.receiver).slice(0, 20) + '...'}</span></p>
+                      }}>{v.receiver ? (v.receiver).slice(0, 20) + '...':'Null'}</span></p>
                       <p><label>Amount</label><span>{v.amount/10/10/10/10/10/10}</span></p>
                       <p><label>Fee</label><span>{v.gas}</span></p>
                     </div>

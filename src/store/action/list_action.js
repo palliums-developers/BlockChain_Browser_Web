@@ -5,8 +5,8 @@ import axios from 'axios'
 const wallet_api = 'http://52.27.228.84:4000';
 const libra_api = 'http://52.27.228.84:4000/explorer/libra';
 const violas_api = 'http://52.27.228.84:4000/explorer/violas';
-const BTC_api = 'http://localhost:10080/open/1.0';
-//const BTC_api = 'http://47.52.66.26:10080/open/1.0';
+// const BTC_api = 'http://localhost:10080/open/1.0';
+const BTC_api = 'http://47.52.66.26:10080/open/1.0';
 // const BTC_api = 'http://localhost:30001/open/1.0';
 // const BTC_api = 'http://192.168.1.111:30001/open/1.0';
 //let url = 'http://192.168.1.112:10080';
@@ -120,9 +120,9 @@ export let getCurDetailsAddress = (params) => {
 
     }
 }
-export let get_libra_address = (_address) => {
+export let get_libra_address = (_address,_offset,_limit) => {
     return dispatch => {
-        axios.get(libra_api + '/address/' + _address)
+        axios.get(libra_api + '/address/' + _address+'?offset='+_offset+'&limit='+_limit)
             .then(res => {
                 // console.log(res.data.data,'sdasd');
                 dispatch({
@@ -286,10 +286,10 @@ export let getViolas_version = (_version) => {
 //             })
 //     }
 // }
-export let getViolas_address = (_address, _module) => {
+export let getViolas_address = (_address, _offset,_limit,_module) => {
     if (_module) {
         return dispatch => {
-            axios.get(violas_api + '/address/' + _address + '?module=' + _module)
+            axios.get(violas_api + '/address/' + _address + '?module=' + _module+'&offset='+_offset+'&limit='+_limit)
                 .then(res => {
                     dispatch({
                         type: 'violas_address',
@@ -299,7 +299,7 @@ export let getViolas_address = (_address, _module) => {
         }
     } else {
         return dispatch => {
-            axios.get(violas_api + '/address/' + _address)
+            axios.get(violas_api + '/address/' + _address+'?offset='+_offset+'&limit='+_limit)
                 .then(res => {
                     dispatch({
                         type: 'violas_address',

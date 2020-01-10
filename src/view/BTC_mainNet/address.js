@@ -35,7 +35,7 @@ class Address extends Component {
     document.documentElement.scrollTop = document.body.scrollTop = 0;
   }
   componentDidMount() {
-    this.props.BTC_main_address.list && this.countPage(this.props.BTC_main_address.list.total_count);
+    // this.props.BTC_main_address.list && this.countPage(this.props.BTC_main_address.list.total_count);
   }
   getCurValue = (e) => {
     this.setState({

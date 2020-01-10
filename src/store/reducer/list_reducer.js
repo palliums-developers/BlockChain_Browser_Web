@@ -14,7 +14,7 @@ let initState = {
       violas_version: {},
       violas_address: {},
       libra_testnet: [],
-      libra_address: [],
+      libra_address: {},
       libra_version: {},
       BTC_main_List: [],
       BTC_main_block: {},
@@ -64,7 +64,7 @@ let ListReducer = (state = initState, action) => {
             case 'libra_testnet':
                   return { ...state, libra_testnet: [...action.data] }
             case 'libra_address':
-                  return { ...state, libra_address: [...action.data] }
+                  return { ...state, libra_address: action.data }
             case 'libra_version':
                   return { ...state, libra_version: action.data }
             case 'BTC_main_List':

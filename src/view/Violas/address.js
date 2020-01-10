@@ -11,13 +11,17 @@ class Address extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      limit: 2,
+      limit: 10,
       offset: 0,
       showMenuBTC: false,
       showMenuViolas: false,
       showMenuStableCoin: false,
       sCoin: [{ address: 'all', name: 'All' }, { address: '0000000000000000000000000000000000000000000000000000000000000000', name: 'vtoken' }],
-      current_sCoin: 'All'
+      current_sCoin: 'All',
+      current_module_address: '',
+      page: 1,
+      pageList: [1],
+      showPage: false
     };
     this.showMenu = this.showMenu.bind(this);
     this.closeMenu = this.closeMenu.bind(this);
@@ -30,22 +34,21 @@ class Address extends Component {
       pathname: '/app/Violas_version/' + txid
     })
   }
-  componentWillMount(){
-    document.documentElement.scrollTop = document.body.scrollTop =0;
+  componentWillMount() {
     this.props.getCurrency();
-    this.props.getAddressModule(this.props.match.params.address);
+    this.props.getViolas_address(this.props.match.params.address, this.state.offset, this.state.limit)
+    // this.props.getAddressModule(this.props.match.params.address);
   }
   componentDidMount() {
+    document.documentElement.scrollTop = document.body.scrollTop = 0;
     // this.props.getCurDetailAddress({
     //   address: this.props.match.params.address
     // })
     // this.props.getCurDetailsAddress({
     //   address: this.props.match.params.address
     // })
-    this.props.getViolas_address(this.props.match.params.address)
   }
   showMenu = (event) => {
-    // this.setState({ showMenuViolas: true });
     switch (event) {
       case 'violas':
         this.setState({ showMenuViolas: true }, () => {
@@ -55,25 +58,31 @@ class Address extends Component {
       case 'BTC':
         this.setState({ showMenuBTC: true }, () => {
           document.addEventListener('click', this.closeMenu);
-        })
+        });
         break;
       case 'All':
         this.setState({ showMenuStableCoin: true }, () => {
           document.addEventListener('click', this.closeMenu);
-        })
+        });
+        break;
+      case 'Page':
+        this.setState({ showPage: true }, () => {
+          document.addEventListener('click', this.closeMenu);
+        });
+        break;
     }
   }
   closeMenu = _ => {
-    this.setState({ showMenuBTC: false, showMenuViolas: false, showMenuStableCoin: false }, () => {
+    this.setState({ showMenuBTC: false, showMenuViolas: false, showMenuStableCoin: false, showPage: false }, () => {
       document.removeEventListener('click', this.closeMenu)
     })
   }
   holdingCurrencyList() {
-    if (this.props.currency.length > 0 && this.state.sCoin.length == 2 && this.props.violas_address_holding_module.length>0) {
+    if (this.props.currency.length > 0 && this.state.sCoin.length == 2 && this.props.violas_address.status) {
       let sCoin_temp = this.state.sCoin;
       for (let i in this.props.currency) {
-        for(let j in this.props.violas_address_holding_module){
-          if(this.props.currency[i].address==this.props.violas_address_holding_module[j]){
+        for (let j in this.props.violas_address.status.module_balande) {
+          if (this.props.currency[i].address == this.props.violas_address.status.module_balande[j].module) {
             // console.log(this.pro)
             sCoin_temp.push({
               address: this.props.currency[i].address,
@@ -88,14 +97,28 @@ class Address extends Component {
     this.setState({
       current_sCoin: _name
     })
-    if(_name=='All'){
-      this.props.getViolas_address(this.props.match.params.address);
-    }else if(_name=='vtoken'){
-      this.props.getViolas_address(this.props.match.params.address,'0000000000000000000000000000000000000000000000000000000000000000');
-    }else{
-      for(let i in this.state.sCoin){
-        if(_name==this.state.sCoin[i].name){
-          this.props.getViolas_address(this.props.match.params.address,this.state.sCoin[i].address);
+    if (_name == 'All') {
+      this.props.getViolas_address(this.props.match.params.address, this.state.offset, this.state.limit);
+      this.setState({ current_module_address: null });
+    } else if (_name == 'vtoken') {
+      this.props.getViolas_address(this.props.match.params.address, this.state.offset, this.state.limit, '0000000000000000000000000000000000000000000000000000000000000000');
+      this.setState({ current_module_address: '0000000000000000000000000000000000000000000000000000000000000000' });
+    } else {
+      for (let i in this.state.sCoin) {
+        if (_name == this.state.sCoin[i].name) {
+          this.props.getViolas_address(this.props.match.params.address, this.state.offset, this.state.limit, this.state.sCoin[i].address);
+          this.setState({ current_module_address: this.state.sCoin[i].address })
+        }
+      }
+    }
+  }
+  getModuleBalance = (_address) => {
+    if (_address == '0000000000000000000000000000000000000000000000000000000000000000') {
+      return this.props.violas_address.status.balance / 10 / 10 / 10 / 10 / 10 / 10;
+    } else {
+      for (let i in this.props.violas_address.status.module_balande) {
+        if (_address == this.props.violas_address.status.module_balande[i].module) {
+          return this.props.violas_address.status.module_balande[i].balance / 1e6;
         }
       }
     }
@@ -117,9 +140,9 @@ class Address extends Component {
   }
   returnStatus = (_num) => {
     if (_num == 4001) {
-      return "success"
+      return <p style={{color:'green'}}>success</p>
     } else {
-      return "failed"
+      return <p style={{color:'red'}}>failed</p>
     }
   }
   onKeyup = (e) => {
@@ -130,93 +153,138 @@ class Address extends Component {
   getSearch = () => {
     search_box(this.state.iptValue, this.props)
   }
+  changePage=(_event,_page,_module_address)=>{
+    switch(_event){
+      case 'pre':
+        this.setState({page:this.state.page-1,offset:this.state.offset-this.state.limit},()=>{
+          this.props.getViolas_address(this.props.match.params.address,this.state.offset,this.state.limit,this.state.current_module_address);
+        });
+        break;
+      case 'next':
+        this.setState({page:this.state.page+1,offset:this.state.offset+this.state.limit},()=>{
+          this.props.getViolas_address(this.props.match.params.address,this.state.offset,this.state.limit,this.state.current_module_address);
+        });
+        break;
+      case 'jump':
+        this.setState({page:_page,offset:this.state.limit*(_page-1)},()=>{
+          this.props.getViolas_address(this.props.match.params.address,this.state.offset,this.state.limit,this.state.current_module_address);
+        });
+        break;
+    }
+    document.documentElement.scrollTop=document.body.scrollTop=0;
+  }
+  countPage = (_total_count) => {
+    let result = this.state.pageList;
+    let result_max = Math.ceil(_total_count / this.state.limit);
+    if (result.length < result_max - 1 && result_max > 2) {
+      for (let i = 2; i <= result_max; i++) {
+        result.push(i);
+      }
+    }
+  }
   render() {
     let { violas_address } = this.props;
     this.holdingCurrencyList();
+    violas_address.status&&this.countPage(violas_address.status.sent_tx_count);
     return (
-      <div className="violasContent">
-        <ViolasHeader back="netTo"></ViolasHeader>
-        <div className="contents contents1">
-          <div className="addressBox">
-            <div className="form">
-              <input onChange={(e) => this.getCurValue(e)} onKeyDown={(e) => this.onKeyup(e)} placeholder="address、version" />
-              <span onClick={this.getSearch}></span>
-            </div>
-            <div className="price">
-              <div>
-                <p>
-                  <i><img src="/img/address@2x.png" /></i>
-                  <label>address</label>
-                </p>
-                <p>{this.props.match.params.address}</p>
-                <span className="balance">Banlance: {violas_address.balance /10/10/10/10/10/10} vtoken</span>
+      violas_address.status ?
+        <div className="violasContent">
+          <ViolasHeader back="netTo"></ViolasHeader>
+          <div className="contents contents1">
+            <div className="addressBox">
+              <div className="form">
+                <input onChange={(e) => this.getCurValue(e)} onKeyDown={(e) => this.onKeyup(e)} placeholder="address、version" />
+                <span onClick={this.getSearch}></span>
               </div>
-              <div className="code">
-                <QRcode value={this.props.match.params.address}></QRcode>
-              </div>
-            </div>
-            <div className="blockHeightContent">
-              <div className="blockHeightAbstract">
-                <h2>Summary</h2>
-                <div className="abstract">
-                  <div className="abstractContent">
-                    <p><label>Address</label><span>{this.props.match.params.address}</span></p>
-                    <p><label>Banlance</label><span>{violas_address.balance /10/10/10/10/10/10} vtoken</span></p>
-                    {/* <p><label>Recent transactions</label><span>{txs.length}</span></p> */}
-                  </div>
+              <div className="price">
+                <div>
+                  <p>
+                    <i><img src="/img/address@2x.png" /></i>
+                    <label>address</label>
+                  </p>
+                  <p>{this.props.match.params.address}</p>
+                  <span className="balance">Banlance: {violas_address.status.balance / 10 / 10 / 10 / 10 / 10 / 10} vtoken</span>
+                </div>
+                <div className="code">
+                  <QRcode value={this.props.match.params.address}></QRcode>
                 </div>
               </div>
-              <div className="blockHeightDeal">
-                <div className='recList'>
-                  <div className='dropdown1'>
-                    <span onClick={() => this.showMenu('All')}>{this.state.current_sCoin}<i className="arrows">{
-                      this.state.showMenuStableCoin ? <img src="/img/weibiaoti1@2x.png" /> : <img src="/img/weibiaoti2备份 2@2x.png" />
-                    }</i></span>
-                    {this.state.showMenuStableCoin ? <div className='dropdown-content1'>
-                      {this.state.sCoin.map((v, i) => {
-                        return <p key={i} onClick={() => this.select_sCoin(v.name)}>{v.name}</p>
-                      })
-                      }
-                    </div> : (null)}
+              <div className="blockHeightContent">
+                <div className="blockHeightAbstract">
+                  <h2>Summary</h2>
+                  <div className="abstract">
+                    <div className="abstractContent">
+                      <p><label>Address</label><span>{this.props.match.params.address}</span></p>
+                      <p><label>Banlance</label><span>{this.state.current_module_address ? this.getModuleBalance(this.state.current_module_address) : violas_address.status.balance / 10 / 10 / 10 / 10 / 10 / 10} {this.state.current_sCoin == 'All' ? 'vtoken' : this.state.current_sCoin}</span></p>
+                      {/* <p><label>Recent transactions</label><span>{txs.length}</span></p> */}
+                    </div>
                   </div>
-                  <h2>Recent transactions</h2>
                 </div>
-                <div className="deal">
-                  {
-                    violas_address.length > 0 && violas_address.map((item, index) => {
-                      return <div key={index}>
-                        <div className="dealContent1 dealContent2">
-                          <div className="dealContents">
-                            <div className="pp" onClick={() => this.goToDeal(item.version)}>
-                              <p>Version: {item.version}</p>
-                              <p>Type:{(item.type)}</p>
-                              <p>Gas:{item.gas}</p>
-                              <p>Time: {timeStamp2String(item.expiration_time + '000')}</p>
-                            </div>
-                            <div className="dealAddress">
-                              <ul>
-                                <li><label onClick={() => this.goToAddress(item.sender)} className="addBlue">{item.sender ? item.sender : 'Null'}</label></li>
-                              </ul>
-                              <span></span>
-                              <ul>
-                                <li><label onClick={() => this.goToAddress(item.receiver)} className="addBlue">{item.receiver ? item.receiver : 'Null'}</label></li>
-                              </ul>
-                            </div>
-                            <div className="descrPrice">
-                              <p>{this.returnStatus(item.status)}</p>
-                              <span>{item.amount /10/10/10/10/10/10} {this.module2name(item.module_address)}</span>
+                <div className="blockHeightDeal">
+                  <div className='recList'>
+                    <div className='dropdown1'>
+                      <span onClick={() => this.showMenu('All')}>{this.state.current_sCoin}<i className="arrows">{
+                        this.state.showMenuStableCoin ? <img src="/img/weibiaoti1@2x.png" /> : <img src="/img/weibiaoti2备份 2@2x.png" />
+                      }</i></span>
+                      {this.state.showMenuStableCoin ? <div className='dropdown-content1'>
+                        {this.state.sCoin.map((v, i) => {
+                          return <p key={i} onClick={() => this.select_sCoin(v.name)}>{v.name}</p>
+                        })
+                        }
+                      </div> : (null)}
+                    </div>
+                    <h2>Recent transactions</h2>
+                  </div>
+                  <div className="deal">
+                    {
+                      violas_address.transactions.map((item, index) => {
+                        return <div key={index}>
+                          <div className="dealContent1 dealContent2">
+                            <div className="dealContents">
+                              <div className="pp" onClick={() => this.goToDeal(item.version)}>
+                                <p>Version: {item.version}</p>
+                                <p>Type:{(item.type)}</p>
+                                <p>Gas:{item.gas}</p>
+                                <p>Time: {timeStamp2String(item.expiration_time + '000')}</p>
+                              </div>
+                              <div className="dealAddress">
+                                <ul>
+                                  <li><label onClick={() => this.goToAddress(item.sender)} className="addBlue">{item.sender ? item.sender : 'Null'}</label></li>
+                                </ul>
+                                <span></span>
+                                <ul>
+                                  <li><label onClick={() => this.goToAddress(item.receiver)} className="addBlue">{item.receiver ? item.receiver : 'Null'}</label></li>
+                                </ul>
+                              </div>
+                              <div className="descrPrice">
+                                {this.returnStatus(item.status)}
+                                <span>{item.amount / 10 / 10 / 10 / 10 / 10 / 10} {this.module2name(item.module_address)}</span>
+                              </div>
                             </div>
                           </div>
+                          <div className="line"></div>
                         </div>
-                        <div className="line"></div>
-                      </div>
-                    })}
+                      })}
+                  </div>
+                </div>
+                <div className="bomSelect">
+                  {this.state.page > 1 && <button onClick={() => this.changePage('pre')}>Previous</button>}
+                  <div class="dropdown1">
+                    <span onClick={() => { this.showMenu('Page') }}>{this.state.page}
+                      <i className="arrows">{
+                        this.state.showPage ? <img src="/img/weibiaoti1@2x.png" /> : <img src="/img/weibiaoti2备份 2@2x.png" />
+                      }</i>
+                      {this.state.showPage ? <div className='dropdown-content1'>
+                        {this.state.pageList.length > 1 && this.state.pageList.map((v, i) => { return <p key={i} onClick={() => this.changePage('jump', v)}>{v}</p> })}
+                      </div> : (null)}
+                    </span>
+                  </div>
+                  {this.state.page < this.state.pageList.length && <button onClick={() => this.changePage('next')}>Next</button>}
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </div>
+        </div> : <div></div>
     );
   }
 }
