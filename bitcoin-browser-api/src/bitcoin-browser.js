@@ -9,6 +9,7 @@ const url0 = "/open/1.0";
 const privateKey  = fs.readFileSync('../api2.violas.io/api2.violas.io_key.key', 'utf8');
 const certificate = fs.readFileSync('../api2.violas.io/api2.violas.io_chain.crt', 'utf8');
 const credentials = {key: privateKey, cert: certificate};
+var https = require('https');
 var httpsServer = https.createServer(credentials, app);
 
 const RateLimit = require("express-rate-limit");
