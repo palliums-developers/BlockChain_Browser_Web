@@ -11,7 +11,8 @@ const libra_api = 'https://api.violas.io/explorer/libra';
 const violas_api = 'https://api.violas.io/explorer/violas';
 
 // const BTC_api = 'http://localhost:10080/open/1.0';
-const BTC_api = 'http://47.52.66.26:10080/open/1.0';
+const BTC_api = 'https://api2.violas.io:10080/open/1.0';
+// const BTC_api = 'http://47.52.66.26:10080/open/1.0';
 // const BTC_api = 'http://localhost:30001/open/1.0';
 // const BTC_api = 'http://192.168.1.111:30001/open/1.0';
 //let url = 'http://192.168.1.112:10080';
