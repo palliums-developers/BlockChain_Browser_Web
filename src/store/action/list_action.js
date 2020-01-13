@@ -6,9 +6,9 @@ import axios from 'axios'
 // const wallet_api = 'http://52.27.228.84:4000';
 // const libra_api = 'http://52.27.228.84:4000/explorer/libra';
 // const violas_api = 'http://52.27.228.84:4000/explorer/violas';
-const wallet_api = 'https://api.violas.io:4000';
-const libra_api = 'https://api.violas.io:4000/explorer/libra';
-const violas_api = 'https://api.violas.io:4000/explorer/violas';
+const wallet_api = 'https://api.violas.io';
+const libra_api = 'https://api.violas.io/explorer/libra';
+const violas_api = 'https://api.violas.io/explorer/violas';
 
 // const BTC_api = 'http://localhost:10080/open/1.0';
 const BTC_api = 'http://47.52.66.26:10080/open/1.0';
