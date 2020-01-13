@@ -6,6 +6,10 @@ const fs = require("fs");
 const file1 = "../log/lastblock_main.json";
 const file2 = "../log/lastblock_test.json";
 const url0 = "/open/1.0";
+const privateKey  = fs.readFileSync('../api2.violas.io/api2.violas.io_key.key', 'utf8');
+const certificate = fs.readFileSync('../api2.violas.io/api2.violas.io_chain.crt', 'utf8');
+const credentials = {key: privateKey, cert: certificate};
+var httpsServer = https.createServer(credentials, app);
 
 const RateLimit = require("express-rate-limit");
 const apiLimiter = new RateLimit({
@@ -87,6 +91,6 @@ app.get(url0 + "/search_address", async (req, res) => {
   res.send(result);
 });
 
-app.listen(PORT, () =>
+httpsServer.listen(PORT, () =>
   console.log("Bitcoin Browser API listening on port " + PORT + "!")
 );
