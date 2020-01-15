@@ -114,7 +114,7 @@ class Address extends Component {
   }
   getModuleBalance = (_address) => {
     if (_address == '0000000000000000000000000000000000000000000000000000000000000000') {
-      return this.props.violas_address.status.balance / 10 / 10 / 10 / 10 / 10 / 10;
+      return this.props.violas_address.status.balance /1e6;
     } else {
       for (let i in this.props.violas_address.status.module_balande) {
         if (_address == this.props.violas_address.status.module_balande[i].module) {
@@ -203,7 +203,7 @@ class Address extends Component {
                     <label>address</label>
                   </p>
                   <p>{this.props.match.params.address}</p>
-                  <span className="balance">Banlance: {violas_address.status.balance / 10 / 10 / 10 / 10 / 10 / 10} vtoken</span>
+                  <span className="balance">Banlance: {violas_address.status.balance /1e6} vtoken</span>
                 </div>
                 <div className="code">
                   <QRcode value={this.props.match.params.address}></QRcode>
@@ -215,7 +215,7 @@ class Address extends Component {
                   <div className="abstract">
                     <div className="abstractContent">
                       <p><label>Address</label><span>{this.props.match.params.address}</span></p>
-                      <p><label>Banlance</label><span>{this.state.current_module_address ? this.getModuleBalance(this.state.current_module_address) : violas_address.status.balance / 10 / 10 / 10 / 10 / 10 / 10} {this.state.current_sCoin == 'All' ? 'vtoken' : this.state.current_sCoin}</span></p>
+                      <p><label>Banlance</label><span>{this.state.current_module_address ? this.getModuleBalance(this.state.current_module_address) : violas_address.status.balance /1e6} {this.state.current_sCoin == 'All' ? 'vtoken' : this.state.current_sCoin}</span></p>
                       {/* <p><label>Recent transactions</label><span>{txs.length}</span></p> */}
                     </div>
                   </div>
@@ -258,7 +258,7 @@ class Address extends Component {
                               </div>
                               <div className="descrPrice">
                                 {this.returnStatus(item.status)}
-                                <span>{item.amount / 10 / 10 / 10 / 10 / 10 / 10} {this.module2name(item.module_address)}</span>
+                                <span>{item.amount /1e6} {this.module2name(item.module_address)}</span>
                               </div>
                             </div>
                           </div>

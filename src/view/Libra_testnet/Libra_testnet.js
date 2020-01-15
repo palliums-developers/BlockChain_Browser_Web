@@ -19,7 +19,7 @@ class Libra_testnet extends Component {
   }
   componentDidMount() {
     // this.props.getCurListBlock();
-    this.props.getCurTestListBlock(this.state.limit,this.state.offset);
+    this.props.getCurTestListBlock(this.state.limit, this.state.offset);
     this.setState({ limit: this.state.limit + 10 })
   }
 
@@ -96,11 +96,11 @@ class Libra_testnet extends Component {
                           }}>{(item.sender).slice(0, 20) + '...'}</td>
                           <td colSpan="2">{this.returnStatus(item.status)}</td>
                           <td colSpan="4" onClick={() => {
-                            if (item.receiver){
-                                this.props.history.push('/app/Libra_addressBox/' + item.receiver)
+                            if (item.receiver) {
+                              this.props.history.push('/app/Libra_addressBox/' + item.receiver)
                             }
-                          }}>{item.receiver ? (item.receiver).slice(0, 20) + '...':'Null'}</td>
-                          <td colSpan="4">{item.amount/10/10/10/10/10/10}</td>
+                          }}>{item.receiver ? (item.receiver).slice(0, 20) + '...' : 'Null'}</td>
+                          <td colSpan="4">{item.amount /1e6}</td>
                           <td colSpan="2">{item.gas}</td>
                         </tr>
                       })
@@ -123,8 +123,8 @@ class Libra_testnet extends Component {
                       <p><label>Status</label><span>{this.returnStatus(v.status)}</span></p>
                       <p><label>To</label><span onClick={() => {
                         this.props.history.push('/app/Libra_addressBox/' + v.receiver)
-                      }}>{v.receiver ? (v.receiver).slice(0, 20) + '...':'Null'}</span></p>
-                      <p><label>Amount</label><span>{v.amount/10/10/10/10/10/10}</span></p>
+                      }}>{v.receiver ? (v.receiver).slice(0, 20) + '...' : 'Null'}</span></p>
+                      <p><label>Amount</label><span>{v.amount /1e6}</span></p>
                       <p><label>Fee</label><span>{v.gas}</span></p>
                     </div>
                   })
