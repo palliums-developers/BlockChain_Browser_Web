@@ -51,9 +51,9 @@ class Address extends Component {
   }
   returnStatus = (_num) => {
     if (_num == 4001) {
-      return <p style={{color:'green'}}>success</p>
+      return <p style={{ color: 'green' }}>success</p>
     } else {
-      return <p style={{color:'red'}}>failed</p>
+      return <p style={{ color: 'red' }}>failed</p>
     }
   }
   countPage = (_total_count) => {
@@ -109,7 +109,7 @@ class Address extends Component {
                     <label>address</label>
                   </p>
                   <p>{this.props.match.params.address}</p>
-                  <span className="balance">Banlance: {libra_address.status.balance / 10 / 10 / 10 / 10 / 10 / 10} LBR</span>
+                  <span className="balance">Banlance: {libra_address.status.balance /1e6} LBR</span>
                 </div>
                 <div className="code">
                   <QRcode value={this.props.match.params.address}></QRcode>
@@ -121,7 +121,7 @@ class Address extends Component {
                   <div className="abstract">
                     <div className="abstractContent">
                       <p><label>Address</label><span>{this.props.match.params.address}</span></p>
-                      <p><label>Banlance</label><span>{libra_address.status.balance / 10 / 10 / 10 / 10 / 10 / 10} LBR</span></p>
+                      <p><label>Banlance</label><span>{libra_address.status.balance /1e6} LBR</span></p>
                       {/* <p><label>Recent transactions</label><span>{txs.length}</span></p> */}
                     </div>
                   </div>
@@ -151,7 +151,7 @@ class Address extends Component {
                               </div>
                               <div className="descrPrice">
                                 {this.returnStatus(item.status)}
-                                <span><i></i>{item.amount / 10 / 10 / 10 / 10 / 10 / 10} LBR</span>
+                                <span><i></i>{item.amount /1e6} LBR</span>
                               </div>
                             </div>
                           </div>
