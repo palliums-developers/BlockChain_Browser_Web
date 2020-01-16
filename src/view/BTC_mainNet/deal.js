@@ -44,7 +44,7 @@ class Deal extends Component {
   }
 
   render() {
-    let { dealList, BTC_main_txid } = this.props
+    let { BTC_main_txid } = this.props
     // console.log(this.props)
     return (
       <div className="BTCMainNetContent">
@@ -55,6 +55,8 @@ class Deal extends Component {
               <input onChange={(e) => this.getCurValue(e)} onKeyDown={(e) => this.onKeyup(e)}placeholder="address、txid、block" />
               <span onClick={this.getSearch}></span>
             </div>
+            {BTC_main_txid?
+            <div>
             <div className="price">
               <p>
                 <i><img src="/img/编组 30@2x.png" /></i>
@@ -69,13 +71,6 @@ class Deal extends Component {
                 <h2>Summary</h2>
                 <div className="abstract">
                   <div className="abstractContent">
-                    {/* <p><label>TXID</label><span>{BTC_main_txid.txid}</span></p>
-                    <p><label>From</label><span className="from" onClick={() => {
-                      this.props.history.push('/app/BTC_address/' + dealList.from)
-                    }}>{dealList.from}</span></p>
-                    <p><label>To</label><span className="to" onClick={() => {
-                      this.props.history.push('/app/addressBox/' + dealList.to)
-                    }}>{dealList.to}</span></p> */}
                     <p><label>Block Height</label><span onClick={() => this.goToBlock(BTC_main_txid.blockheight)}>{BTC_main_txid.blockheight}</span></p>
                     <p><label>Time</label><span>{timeStamp2String(BTC_main_txid.timestamp + '000')}</span></p>
                     <p><label>Size</label><span>{BTC_main_txid.size}</span></p>
@@ -89,14 +84,6 @@ class Deal extends Component {
                   </div>
                 </div>
               </div>
-              {/* <div className="blockHeightDeal">
-                <p><label>senderPublicKey</label><span>{dealList.senderPublicKey}</span></p>
-                <p><label>senderSignature</label><span>{dealList.senderSignature}</span></p>
-                <p><label>signedTxnHash</label><span>{dealList.signedTxnHash}</span></p>
-                <p><label>stateRootHash</label><span>{dealList.stateRootHash}</span></p>
-                <p><label>eventRootHash</label><span>{dealList.eventRootHash}</span></p>
-                <p><label>rawTxnBytes</label><span>{dealList.rawTxnBytes}</span></p>
-              </div> */}
               <div className="deal">
                 <div className="dealContent1">
                   <div className="dealContents">
@@ -118,7 +105,6 @@ class Deal extends Component {
                       {
                         BTC_main_txid && <span></span>
                       }
-                      
                       <ul>
                         {
                           BTC_main_txid.nextaddress && BTC_main_txid.nextaddress.map((v, i) => {
@@ -139,6 +125,7 @@ class Deal extends Component {
                 </div>
               </div>
             </div>
+            </div>: <div className="unavailable"><img src='/img/编组 12@2x(1).png'></img><p>Transaction {this.props.match.params.transaction} is not available on BTC MainNet</p></div>}
           </div>
         </div>
       </div>

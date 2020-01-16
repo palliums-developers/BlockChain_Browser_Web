@@ -56,24 +56,25 @@ class Deal extends Component {
         <div className="contents contents1">
           <div className="dealBox">
             <div className="form">
-              <input onChange={(e) => this.getCurValue(e)} onKeyDown={(e) => this.onKeyup(e)}placeholder="address、txid、block" />
+              <input onChange={(e) => this.getCurValue(e)} onKeyDown={(e) => this.onKeyup(e)} placeholder="address、txid、block" />
               <span onClick={this.getSearch}></span>
             </div>
-            <div className="price">
-              <p>
-                <i><img src="/img/编组 30@2x.png" /></i>
-                <label>BTC TestNet Transaction</label>
-              </p>
-              <p>{this.props.match.params.transaction}</p>
-              <label>Block Hash</label>
-              <p className="hash" onClick={() => this.goToBlock(BTC_Test_txid.blockhash)}>{BTC_Test_txid.blockhash}</p>
-            </div>
-            <div className="blockHeightContent">
-              <div className="blockHeightAbstract">
-                <h2>Summary</h2>
-                <div className="abstract">
-                  <div className="abstractContent">
-                    {/* <p><label>ID</label><span>{dealList._id}</span></p>
+            {BTC_Test_txid ? <div>
+              <div className="price">
+                <p>
+                  <i><img src="/img/编组 30@2x.png" /></i>
+                  <label>BTC TestNet Transaction</label>
+                </p>
+                <p>{this.props.match.params.transaction}</p>
+                <label>Block Hash</label>
+                <p className="hash" onClick={() => this.goToBlock(BTC_Test_txid.blockhash)}>{BTC_Test_txid.blockhash}</p>
+              </div>
+              <div className="blockHeightContent">
+                <div className="blockHeightAbstract">
+                  <h2>Summary</h2>
+                  <div className="abstract">
+                    <div className="abstractContent">
+                      {/* <p><label>ID</label><span>{dealList._id}</span></p>
                     <p><label>From</label><span className="from" onClick={() => {
                       this.props.history.push('/app/addressBox/' + dealList.from)
                     }}>{dealList.from}</span></p>
@@ -86,16 +87,16 @@ class Deal extends Component {
                     <p><label>Gas max</label><span>{dealList.gas_max}</span></p>
                     <p><label>Gas used</label><span>{dealList.gas_used}</span></p>
                     <p><label>Sequence nr</label><span>{dealList.seq_nr}</span></p> */}
-                    <p><label>Block Height</label><span onClick={() => this.goToBlock(BTC_Test_txid.blockheight)}>{BTC_Test_txid.blockheight}</span></p>
-                    <p><label>Time</label><span>{timeStamp2String(BTC_Test_txid.timestamp + '000')}</span></p>
-                    <p><label>Size</label><span>{BTC_Test_txid.size}</span></p>
-                    <p><label>Weight</label><span>{BTC_Test_txid.weight}</span></p>
-                    <p><label>Confirmations</label><span>{BTC_Test_txid.confirmations}</span></p>
+                      <p><label>Block Height</label><span onClick={() => this.goToBlock(BTC_Test_txid.blockheight)}>{BTC_Test_txid.blockheight}</span></p>
+                      <p><label>Time</label><span>{timeStamp2String(BTC_Test_txid.timestamp + '000')}</span></p>
+                      <p><label>Size</label><span>{BTC_Test_txid.size}</span></p>
+                      <p><label>Weight</label><span>{BTC_Test_txid.weight}</span></p>
+                      <p><label>Confirmations</label><span>{BTC_Test_txid.confirmations}</span></p>
+                    </div>
                   </div>
                 </div>
-              </div>
 
-              {/* <div className="blockHeightDeal">
+                {/* <div className="blockHeightDeal">
                 <p><label>senderPublicKey</label><span>{dealList.senderPublicKey}</span></p>
                 <p><label>senderSignature</label><span>{dealList.senderSignature}</span></p>
                 <p><label>signedTxnHash</label><span>{dealList.signedTxnHash}</span></p>
@@ -103,44 +104,45 @@ class Deal extends Component {
                 <p><label>eventRootHash</label><span>{dealList.eventRootHash}</span></p>
                 <p><label>rawTxnBytes</label><span>{dealList.rawTxnBytes}</span></p>
               </div> */}
-                            <div className="deal">
-                <div className="dealContent1">
-                  <div className="dealContents">
-                    <p onClick={() => this.goToDeal(BTC_Test_txid.txid)}>{BTC_Test_txid.txid}</p>
-                    <div className="dealAddress">
-                      <ul>
-                        {
-                          BTC_Test_txid.preaddress && BTC_Test_txid.preaddress.map((v, i) => {
-                            return v.value == 0 ? <p key={i}><span>{v.address}</span></p> :
-                              <label key={i}>
-                                {
-                                  v.value == 0 ? <label>Unparsed address</label> : v.address.length == 34 ? <label className="addBlue" onClick={() => this.goToAddress(v.address)}>{v.address}</label> : <label>{v.address}</label>
+                <div className="deal">
+                  <div className="dealContent1">
+                    <div className="dealContents">
+                      <p onClick={() => this.goToDeal(BTC_Test_txid.txid)}>{BTC_Test_txid.txid}</p>
+                      <div className="dealAddress">
+                        <ul>
+                          {
+                            BTC_Test_txid.preaddress && BTC_Test_txid.preaddress.map((v, i) => {
+                              return v.value == 0 ? <p key={i}><span>{v.address}</span></p> :
+                                <label key={i}>
+                                  {
+                                    v.value == 0 ? <label>Unparsed address</label> : v.address.length == 34 ? <label className="addBlue" onClick={() => this.goToAddress(v.address)}>{v.address}</label> : <label>{v.address}</label>
+                                  }
+                                  <p>{v.value}BTC</p></label>
+                            })
+                          }
+                        </ul>
+                        <span></span>
+                        <ul>
+                          {
+                            BTC_Test_txid.nextaddress && BTC_Test_txid.nextaddress.map((v, i) => {
+                              return <li key={i}>
+                                {v.value == 0 ? <label>Unparsed address</label> : v.address.length == 34 ? <label className="addBlue" onClick={() => this.goToAddress(v.address)}>{v.address}</label> : <label>{v.address}</label>
                                 }
-                                <p>{v.value}BTC</p></label>
-                          })
-                        }
-                      </ul>
-                      <span></span>
-                      <ul>
-                        {
-                          BTC_Test_txid.nextaddress && BTC_Test_txid.nextaddress.map((v, i) => {
-                            return <li key={i}>
-                              {v.value == 0 ? <label>Unparsed address</label> : v.address.length == 34 ? <label className="addBlue" onClick={() => this.goToAddress(v.address)}>{v.address}</label> : <label>{v.address}</label>
-                              }
-                              <span>{v.value} BTC</span>
-                            </li>
+                                <span>{v.value} BTC</span>
+                              </li>
 
-                          })
-                        }
-                      </ul>
-                    </div>
-                    <div className="descrPrice">
-                      <span>Confirmed {BTC_Test_txid.confirmations}</span>
+                            })
+                          }
+                        </ul>
+                      </div>
+                      <div className="descrPrice">
+                        <span>Confirmed {BTC_Test_txid.confirmations}</span>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
+            </div> : <div className="unavailable"><img src='/img/编组 12@2x(1).png'></img><p>Transaction {this.props.match.params.transaction} is not available on BTC TestNet</p></div>}
           </div>
         </div>
       </div>
