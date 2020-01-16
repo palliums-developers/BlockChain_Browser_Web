@@ -1447,9 +1447,20 @@
           width: 14px;
           height: 14px;
         }
-
       }
+      .unavailable {
+        img {
+          width: 100px;
+          margin-bottom: 15px;
+        }
 
+        p {
+          width: 300px;
+          font-size: 8.5px;
+        }
+
+        width:300px;
+      }
       .price {
         width: 320px;
 

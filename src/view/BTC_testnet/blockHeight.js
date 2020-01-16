@@ -124,6 +124,7 @@ class BlockHeight extends Component {
               <input onChange={(e) => this.getCurValue(e)} onKeyDown={(e) => this.onKeyup(e)}placeholder="address、txid、block" />
               <span onClick={this.getSearch}></span>
             </div>
+        {BTC_Test_block.detail?<div>
             <div className="price">
               <p>
                 <i><img src="/img/编组 66@2x.png" /></i>
@@ -199,6 +200,7 @@ class BlockHeight extends Component {
             <div className="btns">
               <button onClick={this.getCurMore}>more</button>
             </div>
+            </div>: <div className="unavailable"><img src='/img/编组 12@2x(1).png'></img><p>Block {this.props.match.params.block_hash} is not available on BTC TestNet</p></div>}
           </div>
         </div>
       </div>
