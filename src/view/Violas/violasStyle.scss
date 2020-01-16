@@ -1031,17 +1031,20 @@
 
       .bomSelect {
         height: 30px;
-        button{
+
+        button {
           width: 80px;
           font-size: 12px;
         }
-        .dropdown1{
-          span{
+
+        .dropdown1 {
+          span {
             font-size: 12px;
           }
-          span i{
+
+          span i {
             width: 10px;
-            height:10px;
+            height: 10px;
           }
         }
       }
@@ -1061,6 +1064,22 @@
         }
       }
     }
+  }
+
+  .unavailable {
+    img {
+      width: 2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    background-color: white;
+    width:11.3rem;
+    font-size: 0.2rem;
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
+    padding:0.5rem;
+    align-items: center;
   }
 
   .wrapBox {
@@ -1528,6 +1547,20 @@
           height: 14px;
         }
 
+      }
+
+      .unavailable {
+        img {
+          width: 100px;
+          margin-bottom: 15px;
+        }
+
+        p {
+          width: 300px;
+          font-size: 8.5px;
+        }
+
+        width:300px;
       }
 
       .price {

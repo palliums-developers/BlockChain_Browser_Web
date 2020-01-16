@@ -114,7 +114,7 @@ class Address extends Component {
   }
   getModuleBalance = (_address) => {
     if (_address == '0000000000000000000000000000000000000000000000000000000000000000') {
-      return this.props.violas_address.status.balance /1e6;
+      return this.props.violas_address.status.balance / 1e6;
     } else {
       for (let i in this.props.violas_address.status.module_balande) {
         if (_address == this.props.violas_address.status.module_balande[i].module) {
@@ -140,9 +140,9 @@ class Address extends Component {
   }
   returnStatus = (_num) => {
     if (_num == 4001) {
-      return <p style={{color:'green'}}>success</p>
+      return <p style={{ color: 'green' }}>success</p>
     } else {
-      return <p style={{color:'red'}}>failed</p>
+      return <p style={{ color: 'red' }}>failed</p>
     }
   }
   onKeyup = (e) => {
@@ -153,25 +153,25 @@ class Address extends Component {
   getSearch = () => {
     search_box(this.state.iptValue, this.props)
   }
-  changePage=(_event,_page,_module_address)=>{
-    switch(_event){
+  changePage = (_event, _page, _module_address) => {
+    switch (_event) {
       case 'pre':
-        this.setState({page:this.state.page-1,offset:this.state.offset-this.state.limit},()=>{
-          this.props.getViolas_address(this.props.match.params.address,this.state.offset,this.state.limit,this.state.current_module_address);
+        this.setState({ page: this.state.page - 1, offset: this.state.offset - this.state.limit }, () => {
+          this.props.getViolas_address(this.props.match.params.address, this.state.offset, this.state.limit, this.state.current_module_address);
         });
         break;
       case 'next':
-        this.setState({page:this.state.page+1,offset:this.state.offset+this.state.limit},()=>{
-          this.props.getViolas_address(this.props.match.params.address,this.state.offset,this.state.limit,this.state.current_module_address);
+        this.setState({ page: this.state.page + 1, offset: this.state.offset + this.state.limit }, () => {
+          this.props.getViolas_address(this.props.match.params.address, this.state.offset, this.state.limit, this.state.current_module_address);
         });
         break;
       case 'jump':
-        this.setState({page:_page,offset:this.state.limit*(_page-1)},()=>{
-          this.props.getViolas_address(this.props.match.params.address,this.state.offset,this.state.limit,this.state.current_module_address);
+        this.setState({ page: _page, offset: this.state.limit * (_page - 1) }, () => {
+          this.props.getViolas_address(this.props.match.params.address, this.state.offset, this.state.limit, this.state.current_module_address);
         });
         break;
     }
-    document.documentElement.scrollTop=document.body.scrollTop=0;
+    document.documentElement.scrollTop = document.body.scrollTop = 0;
   }
   countPage = (_total_count) => {
     let result = this.state.pageList;
@@ -185,106 +185,110 @@ class Address extends Component {
   render() {
     let { violas_address } = this.props;
     this.holdingCurrencyList();
-    violas_address.status&&this.countPage(violas_address.status.sent_tx_count);
+    violas_address.status && this.countPage(violas_address.status.sent_tx_count);
     return (
-      violas_address.status ?
-        <div className="violasContent">
-          <ViolasHeader back="netTo"></ViolasHeader>
-          <div className="contents contents1">
-            <div className="addressBox">
-              <div className="form">
-                <input onChange={(e) => this.getCurValue(e)} onKeyDown={(e) => this.onKeyup(e)} placeholder="address、version" />
-                <span onClick={this.getSearch}></span>
-              </div>
-              <div className="price">
-                <div>
-                  <p>
-                    <i><img src="/img/address@2x.png" /></i>
-                    <label>address</label>
-                  </p>
-                  <p>{this.props.match.params.address}</p>
-                  <span className="balance">Banlance: {violas_address.status.balance /1e6} vtoken</span>
-                </div>
-                <div className="code">
-                  <QRcode value={this.props.match.params.address}></QRcode>
-                </div>
-              </div>
-              <div className="blockHeightContent">
-                <div className="blockHeightAbstract">
-                  <h2>Summary</h2>
-                  <div className="abstract">
-                    <div className="abstractContent">
-                      <p><label>Address</label><span>{this.props.match.params.address}</span></p>
-                      <p><label>Banlance</label><span>{this.state.current_module_address ? this.getModuleBalance(this.state.current_module_address) : violas_address.status.balance /1e6} {this.state.current_sCoin == 'All' ? 'vtoken' : this.state.current_sCoin}</span></p>
-                      {/* <p><label>Recent transactions</label><span>{txs.length}</span></p> */}
-                    </div>
-                  </div>
-                </div>
-                <div className="blockHeightDeal">
-                  <div className='recList'>
-                    <div className='dropdown1'>
-                      <span onClick={() => this.showMenu('All')}>{this.state.current_sCoin}<i className="arrows">{
-                        this.state.showMenuStableCoin ? <img src="/img/weibiaoti1@2x.png" /> : <img src="/img/weibiaoti2备份 2@2x.png" />
-                      }</i></span>
-                      {this.state.showMenuStableCoin ? <div className='dropdown-content1'>
-                        {this.state.sCoin.map((v, i) => {
-                          return <p key={i} onClick={() => this.select_sCoin(v.name)}>{v.name}</p>
-                        })
-                        }
-                      </div> : (null)}
-                    </div>
-                    <h2>Recent transactions</h2>
-                  </div>
-                  <div className="deal">
-                    {
-                      violas_address.transactions.map((item, index) => {
-                        return <div key={index}>
-                          <div className="dealContent1 dealContent2">
-                            <div className="dealContents">
-                              <div className="pp" onClick={() => this.goToDeal(item.version)}>
-                                <p>Version: {item.version}</p>
-                                <p>Type:{(item.type)}</p>
-                                <p>Gas:{item.gas}</p>
-                                <p>Time: {timeStamp2String(item.expiration_time + '000')}</p>
-                              </div>
-                              <div className="dealAddress">
-                                <ul>
-                                  <li><label onClick={() => this.goToAddress(item.sender)} className="addBlue">{item.sender ? item.sender : 'Null'}</label></li>
-                                </ul>
-                                <span></span>
-                                <ul>
-                                  <li><label onClick={() => this.goToAddress(item.receiver)} className="addBlue">{item.receiver ? item.receiver : 'Null'}</label></li>
-                                </ul>
-                              </div>
-                              <div className="descrPrice">
-                                {this.returnStatus(item.status)}
-                                <span>{item.amount /1e6} {this.module2name(item.module_address)}</span>
-                              </div>
-                            </div>
-                          </div>
-                          <div className="line"></div>
-                        </div>
-                      })}
-                  </div>
-                </div>
-                <div className="bomSelect">
-                  {this.state.page > 1 && <button onClick={() => this.changePage('pre')}>Previous</button>}
-                  <div class="dropdown1">
-                    <span onClick={() => { this.showMenu('Page') }}>{this.state.page}
-                      <i className="arrows">{
-                        this.state.showPage ? <img src="/img/weibiaoti1@2x.png" /> : <img src="/img/weibiaoti2备份 2@2x.png" />
-                      }</i>
-                      {this.state.showPage ? <div className='dropdown-content1'>
-                        {this.state.pageList.length > 1 && this.state.pageList.map((v, i) => { return <p key={i} onClick={() => this.changePage('jump', v)}>{v}</p> })}
-                      </div> : (null)}
-                    </span>
-                  </div>
-                  {this.state.page < this.state.pageList.length && <button onClick={() => this.changePage('next')}>Next</button>}
-                </div>
-              </div>
+      <div className="violasContent">
+        <ViolasHeader back="netTo"></ViolasHeader>
+        <div className="contents contents1">
+          <div className="addressBox">
+            <div className="form">
+              <input onChange={(e) => this.getCurValue(e)} onKeyDown={(e) => this.onKeyup(e)} placeholder="address、version" />
+              <span onClick={this.getSearch}></span>
             </div>
+            {
+              violas_address.status ?
+                <div>
+                  <div className="price">
+                    <div>
+                      <p>
+                        <i><img src="/img/address@2x.png" /></i>
+                        <label>address</label>
+                      </p>
+                      <p>{this.props.match.params.address}</p>
+                      <span className="balance">Banlance: {violas_address.status.balance / 1e6} vtoken</span>
+                    </div>
+                    <div className="code">
+                      <QRcode value={this.props.match.params.address}></QRcode>
+                    </div>
+                  </div>
+                  <div className="blockHeightContent">
+                    <div className="blockHeightAbstract">
+                      <h2>Summary</h2>
+                      <div className="abstract">
+                        <div className="abstractContent">
+                          <p><label>Address</label><span>{this.props.match.params.address}</span></p>
+                          <p><label>Banlance</label><span>{this.state.current_module_address ? this.getModuleBalance(this.state.current_module_address) : violas_address.status.balance / 1e6} {this.state.current_sCoin == 'All' ? 'vtoken' : this.state.current_sCoin}</span></p>
+                          {/* <p><label>Recent transactions</label><span>{txs.length}</span></p> */}
+                        </div>
+                      </div>
+                    </div>
+                    <div className="blockHeightDeal">
+                      <div className='recList'>
+                        <div className='dropdown1'>
+                          <span onClick={() => this.showMenu('All')}>{this.state.current_sCoin}<i className="arrows">{
+                            this.state.showMenuStableCoin ? <img src="/img/weibiaoti1@2x.png" /> : <img src="/img/weibiaoti2备份 2@2x.png" />
+                          }</i></span>
+                          {this.state.showMenuStableCoin ? <div className='dropdown-content1'>
+                            {this.state.sCoin.map((v, i) => {
+                              return <p key={i} onClick={() => this.select_sCoin(v.name)}>{v.name}</p>
+                            })
+                            }
+                          </div> : (null)}
+                        </div>
+                        <h2>Recent transactions</h2>
+                      </div>
+                      <div className="deal">
+                        {
+                          violas_address.transactions.map((item, index) => {
+                            return <div key={index}>
+                              <div className="dealContent1 dealContent2">
+                                <div className="dealContents">
+                                  <div className="pp" onClick={() => this.goToDeal(item.version)}>
+                                    <p>Version: {item.version}</p>
+                                    <p>Type:{(item.type)}</p>
+                                    <p>Gas:{item.gas}</p>
+                                    <p>Time: {timeStamp2String(item.expiration_time + '000')}</p>
+                                  </div>
+                                  <div className="dealAddress">
+                                    <ul>
+                                      <li><label onClick={() => this.goToAddress(item.sender)} className="addBlue">{item.sender ? item.sender : 'Null'}</label></li>
+                                    </ul>
+                                    <span></span>
+                                    <ul>
+                                      <li><label onClick={() => this.goToAddress(item.receiver)} className="addBlue">{item.receiver ? item.receiver : 'Null'}</label></li>
+                                    </ul>
+                                  </div>
+                                  <div className="descrPrice">
+                                    {this.returnStatus(item.status)}
+                                    <span>{item.amount / 1e6} {this.module2name(item.module_address)}</span>
+                                  </div>
+                                </div>
+                              </div>
+                              <div className="line"></div>
+                            </div>
+                          })}
+                      </div>
+                    </div>
+                    <div className="bomSelect">
+                      {this.state.page > 1 && <button onClick={() => this.changePage('pre')}>Previous</button>}
+                      <div class="dropdown1">
+                        <span onClick={() => { this.showMenu('Page') }}>{this.state.page}
+                          <i className="arrows">{
+                            this.state.showPage ? <img src="/img/weibiaoti1@2x.png" /> : <img src="/img/weibiaoti2备份 2@2x.png" />
+                          }</i>
+                          {this.state.showPage ? <div className='dropdown-content1'>
+                            {this.state.pageList.length > 1 && this.state.pageList.map((v, i) => { return <p key={i} onClick={() => this.changePage('jump', v)}>{v}</p> })}
+                          </div> : (null)}
+                        </span>
+                      </div>
+                      {this.state.page < this.state.pageList.length && <button onClick={() => this.changePage('next')}>Next</button>}
+                    </div>
+                  </div>
+                </div> : <div className="unavailable"><img src='/img/编组 12@2x.png'></img><p>Address {this.props.match.params.address} is not available on Violas</p></div>
+            }
           </div>
-        </div> : <div></div>
+        </div>
+      </div>
     );
   }
 }

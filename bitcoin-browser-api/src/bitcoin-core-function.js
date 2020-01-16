@@ -51,7 +51,7 @@ async function getblockhash(_net, _height) {
     // console.log(res, 'aaaaaaaaaaaaaaaaaa');
     return res;
   })
-    .catch(e => console.log("error", e));
+    .catch(e => {console.log("error", e);return null});
 }
 // getblockhash('mainnet',999)
 async function getblock(_net, _hash) {
@@ -61,7 +61,7 @@ async function getblock(_net, _hash) {
       // console.log(res)
       return res;
     })
-    .catch(e => console.log("error", e));
+    .catch(e => {console.log("error", e);return null});
 }
 // getblock('net','000000000019d6689c085ae165831e934ff763ae46a2a6c172b3f1b60a8ce26f')
 async function getrawtransaction(_net, txid) {
@@ -72,7 +72,7 @@ async function getrawtransaction(_net, txid) {
       // console.log(res)
       return res;
     })
-    .catch(e => console.log("error", e));
+    .catch(e => {console.log("error", e);return null});
 }
 // getrawtransaction('mainnet','4a5e1e4baab89f3a32518a88c31bc87f618f76673e2cc77ab2127b7afdeda33b')
 // getrawtransaction('mainnet','be628960b5d93f19ea6293b62d4805b30678e1a3e0757c97fc0e6878340ef89f')
@@ -101,6 +101,7 @@ async function getBlockHeight(_net, _hash) {
     return tx.height;
   } else {
     // console.log(tx.height);
+    return null;
   }
 }
 // getBlockHeight('mainnet','0000000000000000000b73363f8d485270d6614e6f6679fbe89424bd4b29890b')
@@ -163,70 +164,73 @@ async function tx_info(_net, raw_txid) {
     // console.log(res)
     return res;
   } else {
-    // console.log(raw_txid,'qweqweqwe')
     let tx = await getrawtransaction(_net, raw_txid);
-    // console.log(tx,'qwerdqwdwq')
-    let vin = [];
-    for (i in tx.vin) {
-      if (!tx.vin[i].coinbase) {
-        vin.push({
-          txid: tx.vin[i].txid,
-          voutNum: tx.vin[i].vout
-        });
-      } else {
-        vin.push({
-          txid: "coinbase",
-          voutNum: -1
-        });
-      }
-    }
-    let vout = vout_value_address(tx);
-    // console.log(vin, '...............vin');
-    // console.log(vout, '.............vout');
-    let vout_pre = [];
-    for (i in vin) {
-      if (vin[i].txid == "coinbase") {
-        vout_pre.push({
-          value: 0,
-          address: "coinbase"
-        });
-      } else {
-        if (vin[i].voutNum > -1) {
-          let tx_pre = await getrawtransaction(_net, vin[i].txid);
-          vout_pre.push(pre_vout_value_address(tx_pre, vin[i].voutNum));
+    if(tx){
+      return null;
+    }else{
+      let vin = [];
+      for (i in tx.vin) {
+        if (!tx.vin[i].coinbase) {
+          vin.push({
+            txid: tx.vin[i].txid,
+            voutNum: tx.vin[i].vout
+          });
+        } else {
+          vin.push({
+            txid: "coinbase",
+            voutNum: -1
+          });
         }
       }
+      let vout = vout_value_address(tx);
+      // console.log(vin, '...............vin');
+      // console.log(vout, '.............vout');
+      let vout_pre = [];
+      for (i in vin) {
+        if (vin[i].txid == "coinbase") {
+          vout_pre.push({
+            value: 0,
+            address: "coinbase"
+          });
+        } else {
+          if (vin[i].voutNum > -1) {
+            let tx_pre = await getrawtransaction(_net, vin[i].txid);
+            vout_pre.push(pre_vout_value_address(tx_pre, vin[i].voutNum));
+          }
+        }
+      }
+      // console.log(vout_pre, '...........vout_pre');
+      let res = {
+        net: _net,
+        txid: raw_txid,
+        blockhash: tx.blockhash,
+        blockheight: 0,
+        timestamp: tx.time,
+        size: tx.size,
+        weight: tx.weight,
+        confirmations: tx.confirmations,
+        input: 0,
+        output: 0,
+        preaddress: [],
+        nextaddress: [],
+        fee: 0
+      };
+      res.blockheight = await getBlockHeight(_net, tx.blockhash);
+      for (i in vout_pre) {
+        res.preaddress.push(vout_pre[i]);
+        res.input += vout_pre[i].value;
+      }
+      for (i in vout) {
+        res.nextaddress.push(vout[i]);
+        res.output += vout[i].value;
+      }
+      res.fee = res.input - res.output;
+      // console.log(res);
+      return res;
     }
-    // console.log(vout_pre, '...........vout_pre');
-    let res = {
-      net: _net,
-      txid: raw_txid,
-      blockhash: tx.blockhash,
-      blockheight: 0,
-      timestamp: tx.time,
-      size: tx.size,
-      weight: tx.weight,
-      confirmations: tx.confirmations,
-      input: 0,
-      output: 0,
-      preaddress: [],
-      nextaddress: [],
-      fee: 0
-    };
-    res.blockheight = await getBlockHeight(_net, tx.blockhash);
-    for (i in vout_pre) {
-      res.preaddress.push(vout_pre[i]);
-      res.input += vout_pre[i].value;
-    }
-    for (i in vout) {
-      res.nextaddress.push(vout[i]);
-      res.output += vout[i].value;
-    }
-    res.fee = res.input - res.output;
-    // console.log(res);
-    return res;
   }
 }
+// tx_info('mainnet','02d054350e6e28cb1948e71e7595c54ae326e9d4f238cf7baeaf2a6945545512'); //error address
 // tx_info('mainnet','02d054350e6e28cb1948e71e7595c54ae326e9d4f238cf7baeaf2a6945545519');
 // tx_info('mainnet', '4a5e1e4baab89f3a32518a88c31bc87f618f76673e2cc77ab2127b7afdeda33b');
 
