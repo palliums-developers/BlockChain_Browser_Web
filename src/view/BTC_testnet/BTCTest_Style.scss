@@ -7,6 +7,7 @@
     width: 19.11rem;
     height: 10.92rem;
     position: relative;
+
     .bgLogo {
       width: 8.14rem;
       // height: 755rem;
@@ -20,7 +21,7 @@
       }
     }
 
-    .navList .dropdown2 > span {
+    .navList .dropdown2>span {
       width: 0.2rem;
       height: 0.23rem;
       border-bottom: 2px solid rgba(130, 179, 255, 1);
@@ -52,10 +53,11 @@
 
   .mainNet {
     width: 100%;
+
     #more {
       width: 3.11rem;
       height: 0.7rem;
-      background: linear-gradient(168deg,rgba(58,107,191,1) 0%,rgba(29,58,126,1) 100%);
+      background: linear-gradient(168deg, rgba(58, 107, 191, 1) 0%, rgba(29, 58, 126, 1) 100%);
 
       font-size: 0.27rem;
       font-weight: 400;
@@ -65,6 +67,7 @@
       text-align: center;
       margin: 1rem auto;
     }
+
     .searchBox {
       h3 {
         font-size: 0.35rem;
@@ -73,6 +76,7 @@
         color: rgba(255, 255, 255, 1);
         margin-bottom: 0.23rem;
       }
+
       .form {
         width: 5.03rem;
         height: 0.6rem;
@@ -124,6 +128,7 @@
       align-items: center;
       position: relative;
       z-index: 2;
+
       .mainHead {
         width: 100%;
         height: 1.09rem;
@@ -136,6 +141,7 @@
           width: 0.4rem;
           height: 0.48rem;
           display: flex;
+
           img {
             width: 100%;
             height: 100%;
@@ -159,13 +165,16 @@
           margin-top: 0.2rem;
         }
       }
+
       .tableList {
         display: none;
       }
+
       .table {
         width: 100%;
         display: flex;
         flex-direction: column;
+
         table {
           width: 100%;
           border-collapse: separate;
@@ -173,6 +182,7 @@
           table-layout: fixed;
           font-size: 0.21rem;
           background: rgba(247, 248, 251, 1);
+
           tr:nth-child(1) th {
             border-bottom: 3px solid rgba(65, 135, 254, 1);
             background: rgba(247, 248, 251, 1);
@@ -185,10 +195,12 @@
             box-sizing: border-box;
             white-space: nowrap;
           }
-          tr:nth-child(1) th{
+
+          tr:nth-child(1) th {
             padding-left: 0.2rem;
             box-sizing: border-box;
           }
+
           th,
           td {
             padding: 0.1rem 0 0.1rem 0.2rem;
@@ -231,11 +243,9 @@
         button {
           width: 100%;
           height: 100%;
-          background: linear-gradient(
-            180deg,
-            rgba(130, 179, 255, 1) 0%,
-            rgba(65, 135, 254, 1) 100%
-          );
+          background: linear-gradient(180deg,
+              rgba(130, 179, 255, 1) 0%,
+              rgba(65, 135, 254, 1) 100%);
           box-shadow: 0px 10px 20px 0px rgba(81, 146, 255, 0.22);
           border-radius: 5px;
           outline: 0;
@@ -262,7 +272,7 @@
       button {
         width: 100%;
         height: 100%;
-        background:linear-gradient(168deg,rgba(58,107,191,1) 0%,rgba(29,58,126,1) 100%);
+        background: linear-gradient(168deg, rgba(58, 107, 191, 1) 0%, rgba(29, 58, 126, 1) 100%);
         box-shadow: 0px 10px 20px 0px rgba(81, 146, 255, 0.22);
         border-radius: 5px;
         outline: 0;
@@ -273,6 +283,7 @@
         color: rgba(255, 255, 255, 1);
       }
     }
+
     .form {
       width: 12.32rem;
       height: 0.8rem;
@@ -285,6 +296,7 @@
 
       margin: 0 auto;
       margin-bottom: 0.4rem;
+
       input {
         width: 100%;
         flex: 1;
@@ -312,12 +324,30 @@
         background-size: 100% 100%;
       }
     }
+
+    .unavailable {
+      img {
+        width: 2rem;
+        margin-bottom: 0.5rem;
+      }
+
+      background-color: white;
+      width:11.3rem;
+      font-size: 0.2rem;
+      display: flex;
+      margin: 0 auto;
+      flex-direction: column;
+      padding:0.5rem;
+      align-items: center;
+    }
+
     .price {
-      > p:nth-child(1) {
+      >p:nth-child(1) {
         label {
           white-space: nowrap;
         }
       }
+
       .balance {
         color: #fff;
         font-size: 0.2rem;
@@ -325,6 +355,7 @@
     }
 
     .blockHeightContent {
+
       // background: #FFF;
       h2 {
         background: rgba(255, 255, 255, 1);
@@ -348,11 +379,12 @@
     .blockHeightDeal {
       width: 100%;
 
-      > h2 {
+      >h2 {
         padding-left: 0.32rem;
         box-sizing: border-box;
       }
     }
+
     .deal {
       width: 100%;
       background: #fff;
@@ -362,9 +394,10 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        button{
+
+        button {
           width: 1.83rem;
-          height:100%;
+          height: 100%;
           border: 0;
           outline: 0;
           background: RGBA(54, 101, 152, 1);
@@ -376,27 +409,32 @@
           align-items: center;
           justify-content: center;
         }
+
         .dropdown1 {
           display: flex;
           height: 100%;
           flex: 1;
           align-items: center;
           justify-content: center;
-          span{
+
+          span {
             font-size: 0.22rem;
             display: flex;
             align-items: center;
             position: relative;
-            i{
+
+            i {
               width: 0.22rem;
               height: 0.22rem;
               display: flex;
-              img{
+
+              img {
                 width: 100%;
                 height: 100%;
               }
             }
-            .dropdown-content1{
+
+            .dropdown-content1 {
               width: 1rem;
               height: 2rem;
               overflow: auto;
@@ -468,7 +506,7 @@
             align-items: center;
             justify-content: space-between;
 
-            > span:nth-child(2) {
+            >span:nth-child(2) {
               width: 0.45rem;
               height: 0.37rem;
               background: url("/img/形状复制 4@2x.png") no-repeat;
@@ -490,15 +528,17 @@
           // height: 87%;
           display: flex;
           flex-direction: column;
-          >p{
-              color: rgba(65, 135, 254, 1);
-            }
-          >div{
-            >p{
+
+          >p {
+            color: rgba(65, 135, 254, 1);
+          }
+
+          >div {
+            >p {
               color: rgba(65, 135, 254, 1);
             }
           }
-          
+
           .descrPrice {
             width: 100%;
             display: flex;
@@ -542,13 +582,14 @@
             align-items: center;
             justify-content: space-between;
 
-            > ul {
+            >ul {
               width: 7rem;
               margin-top: 0.2rem;
               padding-right: 0.33rem;
               box-sizing: border-box;
               margin-left: 0.3rem;
-              > label {
+
+              >label {
                 // width: 59%;
                 display: inline-block;
                 // height: 0.5rem;
@@ -561,14 +602,16 @@
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
-                >p{
-                    white-space: nowrap;
-                    color: #000;
-                    padding-left: 0;
-                    box-sizing: border-box;
+
+                >p {
+                  white-space: nowrap;
+                  color: #000;
+                  padding-left: 0;
+                  box-sizing: border-box;
                 }
               }
-              > p {
+
+              >p {
                 // width: 40%;
                 margin-right: 2.1rem;
 
@@ -595,11 +638,13 @@
                 align-items: center;
                 padding: 0.1rem 0;
                 box-sizing: border-box;
-                > p {
+
+                >p {
                   padding-left: 0;
                   box-sizing: border-box;
                   white-space: nowrap;
                 }
+
                 label {
                   width: 59%;
                   display: inline-block;
@@ -611,9 +656,11 @@
                   word-break: break-all;
                   word-wrap: break-word;
                 }
+
                 .blo {
                   color: rgba(0, 0, 0, 0.5);
                 }
+
                 span {
                   text-align: right;
                   font-size: 0.17rem;
@@ -629,7 +676,7 @@
               }
             }
 
-            > span:nth-child(2) {
+            >span:nth-child(2) {
               width: 0.45rem;
               height: 0.37rem;
               background: url("/img/形状复制 4@2x.png") no-repeat;
@@ -647,7 +694,7 @@
       }
     }
 
-    > p {
+    >p {
       width: 100%;
       height: 0.58rem;
       line-height: 0.6rem;
@@ -713,6 +760,7 @@
           display: flex;
           align-items: center;
           justify-content: space-between;
+
           .from,
           .to {
             color: #4187fe;
@@ -753,24 +801,28 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    .code{
-        width: 1.24rem;
-        height: 1.24rem;
-        background: #FFF;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        position: absolute;
-        right: 0;
-      }
+
+    .code {
+      width: 1.24rem;
+      height: 1.24rem;
+      background: #FFF;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      right: 0;
+    }
+
     canvas {
-        width: 1.2rem!important;
-        height: 1.2rem!important;
-      }
+      width: 1.2rem !important;
+      height: 1.2rem !important;
+    }
+
     p {
       display: flex;
       align-items: center;
     }
+
     label {
       font-size: 0.25rem;
       font-family: PingFangSC-Regular;
@@ -778,6 +830,7 @@
       color: rgba(255, 255, 255, 1);
       margin: 0 0.13rem;
     }
+
     .hash {
       font-size: 0.2rem;
       font-family: PingFangSC-Regular;
@@ -785,11 +838,13 @@
       font-weight: 400;
       margin-top: 0.1rem;
     }
-    > p:nth-child(1) {
+
+    >p:nth-child(1) {
       i {
         width: 0.64rem;
         height: 0.78rem;
         display: flex;
+
         img {
           width: 100%;
           height: 100%;
@@ -804,7 +859,7 @@
       }
     }
 
-    > p:nth-child(2) {
+    >p:nth-child(2) {
       margin: 0.4rem 0;
 
       label {
@@ -903,14 +958,14 @@
     }
 
     .price {
-      > p:nth-child(1) {
+      >p:nth-child(1) {
         img {
           width: 0.69rem;
           height: 0.79rem;
         }
       }
 
-      > p {
+      >p {
         label {
           white-space: nowrap;
         }
@@ -935,7 +990,7 @@
           font-weight: 400;
           color: rgba(255, 255, 255, 1);
 
-          > p {
+          >p {
             font-size: 0.24rem;
             font-family: PingFangSC-Regular;
             font-weight: 400;
@@ -948,16 +1003,17 @@
 
   //地址
   .addressBox {
+
     // background: #FFF;
     .dealContents {
-      > .pp {
+      >.pp {
         width: 100%;
         display: flex;
         justify-content: space-between;
         padding: 0 0.1rem;
         box-sizing: border-box;
 
-        > p {
+        >p {
           font-size: 0.2rem;
           color: #666;
         }
@@ -969,7 +1025,7 @@
       display: flex;
       justify-content: space-between;
 
-      > span {
+      >span {
         width: 0.5rem;
         height: 0.4rem;
         background: url("/img/形状复制 4@2x.png") no-repeat;
@@ -998,17 +1054,17 @@
       flex-direction: column;
       margin-top: 0.77rem;
 
-      > span {
+      >span {
         width: 100%;
       }
 
-      > p:nth-child(2) {
+      >p:nth-child(2) {
         width: 80%;
         display: flex;
         word-break: break-all;
       }
 
-      > p:nth-child(3) {
+      >p:nth-child(3) {
         width: 1.19rem;
         height: 1.18rem;
         float: right;
@@ -1030,7 +1086,7 @@
 
       // padding-right: 114rem;
       // box-sizing: border-box;
-      > div {
+      >div {
         display: flex;
         justify-content: space-between;
 
@@ -1040,20 +1096,22 @@
       }
     }
   }
-  .dealBox{
-     .deal{
-        .dealContent1{
-           .dealContents{
-             .dealAddress{
-               p{
-               color: #000;
-               white-space: nowrap;
-             }
-             }
-           }
+
+  .dealBox {
+    .deal {
+      .dealContent1 {
+        .dealContents {
+          .dealAddress {
+            p {
+              color: #000;
+              white-space: nowrap;
+            }
+          }
         }
-     }
+      }
+    }
   }
+
   .wrapBox {
     background: RGBA(17, 30, 64, 1) !important;
 
@@ -1061,6 +1119,7 @@
       background: RGBA(17, 30, 64, 1) !important;
 
       .contents {
+
         .dealBox,
         .addressBox,
         .pieceHash,
@@ -1110,12 +1169,12 @@
                       }
                     }
 
-                    > span {
+                    >span {
                       background: url("/img/形状复制 42@2x.png") no-repeat;
                       background-size: 100% 100%;
                     }
 
-                    > ul {
+                    >ul {
                       li {
                         label {
                           color: rgba(255, 255, 255, 0.5);
@@ -1153,7 +1212,7 @@
                       }
                     }
 
-                    > span {
+                    >span {
                       background: url("/img/形状复制 42@2x.png") no-repeat;
                       background-size: 100% 100%;
                     }
@@ -1216,7 +1275,7 @@
         .dealBox {
           .price {
             p:nth-child(3) {
-              > p {
+              >p {
                 color: rgba(74, 232, 236, 1);
               }
             }
@@ -1305,389 +1364,235 @@
     }
   }
 }
+
 @media (max-width: 750px) {
   .BTCTestNetContent {
-    .price{
-      label{
+    .price {
+      label {
         font-size: 10px;
       }
     }
-    header .bgLogo{
-          top: 15%;
-      }
+
+    header .bgLogo {
+      top: 15%;
+    }
+
     .netBack {
       background: url("/img/路径 20@2x.png") no-repeat;
       background-size: 100%;
     }
+
     .netToBack {
       background: url("/img/蒙版 btc@2x.png") no-repeat;
       background-size: 100%;
     }
+
     .mainNet {
       .mainContent {
-         .mainHead{
-                 border-bottom:1px solid #4187fe;
-                 i{
-                   width: 16px;
-                   height: 19px;
-                 }
+        .mainHead {
+          border-bottom: 1px solid #4187fe;
+
+          i {
+            width: 16px;
+            height: 19px;
           }
-          .table {
+        }
+
+        .table {
+          display: none;
+        }
+
+        .tableList {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          padding: 0 6px;
+          box-sizing: border-box;
+
+          .listContent {
+            border-bottom: 4px solid rgba(247, 248, 251, 1);
+          }
+
+          p {
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            label {
+              font-size: 12px;
+            }
+
+            span {
+              width: 70%;
+              font-size: 12px;
+            }
+
+            // span:nth-child(1),
+            // span:nth-child(3),
+            // span:nth-child(5),
+            // span:nth-child(7){
+            //     color: rgba(49, 158, 237, 1);
+            // }
+          }
+
+          p:nth-child(1),
+          p:nth-child(5) {
+            span {
+              color: rgba(49, 158, 237, 1);
+            }
+          }
+        }
+      }
+    }
+
+    .dealBox {
+      .form {
+        width: 320px;
+        height: 27px;
+        background: rgba(255, 255, 255, 1);
+        border-radius: 2px;
+
+        input {
+          font-size: 10px;
+        }
+
+        span {
+          width: 14px;
+          height: 14px;
+        }
+
+      }
+
+      .price {
+        width: 320px;
+
+        p:nth-child(1) {
+          i {
+            width: 13px;
+            height: 15px;
+          }
+
+          label {
+            font-size: 12px;
+          }
+
+        }
+
+        p:nth-child(2),
+        p:nth-child(4) {
+          font-size: 12px;
+          word-break: break-all;
+
+        }
+      }
+
+      .blockHeightDeal {
+        >p {
+          label {
+            font-size: 12px;
+          }
+
+          span {
+            width: 70%;
+            font-size: 12px;
+          }
+        }
+      }
+
+      .blockHeightAbstract {
+        padding: 6px 0;
+        box-sizing: border-box;
+
+        h2 {
+          font-size: 12px;
+          line-height: 29px;
+          margin-bottom: 2px;
+        }
+
+        .abstract {
+          flex-direction: column;
+          align-items: flex-start;
+
+          .line {
             display: none;
           }
-          .tableList {
+
+          .abstractContent {
             width: 100%;
+            padding: 0 5px;
+            box-sizing: border-box;
             display: flex;
             flex-direction: column;
-            padding: 0 6px;
-            box-sizing: border-box;
-            .listContent {
-              border-bottom: 4px solid rgba(247, 248, 251, 1);
-            }
+            justify-content: space-between;
+
             p {
-              height: 50px;
-              display: flex;
-              align-items: center;
-              justify-content: space-between;
+              padding: 5px 0;
+              box-sizing: border-box;
 
               label {
-                font-size: 12px;
-              }
-              span {
-                width: 70%;
-                font-size: 12px;
-              }
-              // span:nth-child(1),
-              // span:nth-child(3),
-              // span:nth-child(5),
-              // span:nth-child(7){
-              //     color: rgba(49, 158, 237, 1);
-              // }
-            }
-            p:nth-child(1),
-            p:nth-child(5){
-              span {
-                color: rgba(49, 158, 237, 1);
-              }
-            }
-          }
-        }
-      }
-    .dealBox{
-        .form{
-            width:320px;
-            height:27px;
-            background:rgba(255,255,255,1);
-            border-radius:2px;
-            input{
-                font-size:10px;
-            }
-            span{
-                width: 14px;
-                height: 14px;
-            }
-            
-        }
-        .price{
-            width: 320px;
-                p:nth-child(1){
-                    i{
-                        width: 13px;
-                        height: 15px;
-                    }
-                    label{
-                        font-size: 12px;
-                    }
-                    
-                }
-                p:nth-child(2),
-                p:nth-child(4){
-                   font-size: 12px;
-                   word-break: break-all;
-                    
-                }
-        }
-        .blockHeightDeal{
-             >p{
-                 label{
-                     font-size: 12px;
-                 }
-                 span{
-                     width: 70%;
-                     font-size: 12px;
-                 }
-             }
-        }
-        .blockHeightAbstract{
-            padding: 6px 0;
-            box-sizing: border-box;
-            h2{
-                font-size: 12px;
-                line-height: 29px;
-                margin-bottom: 2px;
-            }
-            .abstract {
-              flex-direction: column;
-              align-items: flex-start;
-              .line{
-                display: none;
-              }
-                .abstractContent{
-                    width: 100%;
-                    padding: 0 5px;
-                    box-sizing: border-box;
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: space-between;
-                    p {
-                      padding: 5px 0;
-                      box-sizing: border-box;
-                        label{
-                            font-size: 10px;
-                        }
-                        span{
-                            width: 60%;
-                            font-size: 10px;
-                        }
-                    }
-                }
-                    
-            }
-        }
-         .deal{
-              .dealContent1{
-                .dealContents{
-                  >p{
-                     word-break: break-all;
-                     font-size: 10px;
-                   }
-                  .descrPrice{
-                    span{
-                      font-size: 10px;
-                      i{
-                        width: 3px;
-                        height: 3px;
-                        margin-top: 8px;
-                      }
-                    }
-                  }
-                   .dealAddress{
-                     >span:nth-child(2){
-                       width: 10px;
-                       height: 8px;
-                     }
-                     >ul{
-                       .addBlue{
-                         widows: 60px;
-                         overflow: hidden;
-                         white-space: nowrap;
-                         text-overflow: ellipsis
-                       }
-                       >p{
-                         span{
-                            // width:59px;
-                            // height:21px;
-                            border:1px solid rgba(19,71,184,1);
-                            font-size:10px;
-                         }
-                       }
-                       li{
-                         span{
-                           font-size: 10px;
-                         }
-                         label{
-                           font-size: 10px;
-                         }
-                       }
-                     }
-                   }
-                }
-              }
-            }
-    }
-    .addressBox{
-      .blockHeightContent{
-          .blockHeightDeal{
-            .bomSelect {
-              height: 20px;
-              button{
-                width: 68px;
-                height: 20px;
                 font-size: 10px;
-                padding: 0 5px;
-                box-sizing: border-box;
               }
-              .dropdown1 {
-                span{
-                  font-size: 12px;
-                  i{
-                    width: 10px;
-                    height: 10px;
-                    img{
-                      width: 100%;
-                      height: 100%;
-                    }
-                  }
-                  .dropdown-content1{
-                    top: 20px;
-                  }
-                }
+
+              span {
+                width: 60%;
+                font-size: 10px;
               }
             }
           }
-        }
-        .form{
-            width:320px;
-            height:27px;
-            background:rgba(255,255,255,1);
-            border-radius:2px;
-            input{
-                font-size:10px;
-            }
-            span{
-                width: 14px;
-                height: 14px;
-            }
-            
-        }
-        .price{
-            width: 320px;
-            >p:nth-child(1){
-             img{
-               width: 12px;
-               height: 15px;
-             }
-            }
-            >p:nth-child(2){
-             font-size: 10px;
-            }
-            >div{
-                width: 250px;
-                p:nth-child(1){
-                    i{
-                        width: 13px;
-                        height: 15px;
-                    }
-                    label{
-                        font-size: 12px;
-                    }
-                    
-                }
-                p:nth-child(2){
-                    font-size:12px;
-                }
-            }
-            .code{
-              width: 62px;
-              height: 62px;
-            }
-            canvas {
-                width: 60px!important;
-                height: 60px!important;
-            }
-        }
-        .blockHeightAbstract{
-            padding: 6px 0;
-            box-sizing: border-box;
-            h2{
-                font-size: 12px;
-                line-height: 29px;
-                margin-bottom: 2px;
-            }
-            .abstract {
-                .abstractContent{
-                  width: 100%;
-                    padding: 0 5px;
-                    box-sizing: border-box;
-                    p {
-                        label{
-                            font-size: 10px;
-                        }
-                        span{
-                            width:70%;
-                            font-size: 10px;
-                            word-break: break-all;
-                        }
-                    }
-                }
-                    
-            }
-        }
-        .deal {
-                .dealContent1 {
-                    .dealContents {
-                        p {
-                            word-break: break-all!important;
-                            font-size: 10px;
-                        }
 
-                        .descrPrice {
-                            span {
-                                font-size: 10px;
-
-                                i {
-                                    width: 3px;
-                                    height: 3px;
-                                    margin-top: 8px;
-                                }
-                            }
-                        }
-
-                        .dealAddress {
-                            >span:nth-child(2) {
-                                width: 10px;
-                                height: 8px;
-                            }
-
-                            >ul {
-                              label {
-                                        font-size: 10px;
-                                    }
-                                .addBlue {
-                                    widows: 60px;
-                                    overflow: hidden;
-                                    white-space: nowrap;
-                                    text-overflow: ellipsis
-                                }
-
-                                li {
-                                    span {
-                                        font-size: 10px;
-                                    }
-                                    >p{
-                                      white-space: nowrap;
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        .blockHeightDeal{
-            h2{
-                font-size: 12px;
-                line-height: 29px;
-                margin-bottom: 2px;
-            }
         }
-    }
-    
-    .blockHeight{
-      .btns{
-         width: 100px;
-         height: 30px;
-         button{
-           font-size: 12px;
-         }
-         
       }
-      .deal{
+
+      .deal {
         .dealContent1 {
           .dealContents {
-            .dealAddress{
-              >ul{
-                >label{
-                  label{
+            >p {
+              word-break: break-all;
+              font-size: 10px;
+            }
+
+            .descrPrice {
+              span {
+                font-size: 10px;
+
+                i {
+                  width: 3px;
+                  height: 3px;
+                  margin-top: 8px;
+                }
+              }
+            }
+
+            .dealAddress {
+              >span:nth-child(2) {
+                width: 10px;
+                height: 8px;
+              }
+
+              >ul {
+                .addBlue {
+                  widows: 60px;
+                  overflow: hidden;
+                  white-space: nowrap;
+                  text-overflow: ellipsis
+                }
+
+                >p {
+                  span {
+                    // width:59px;
+                    // height:21px;
+                    border: 1px solid rgba(19, 71, 184, 1);
+                    font-size: 10px;
+                  }
+                }
+
+                li {
+                  span {
+                    font-size: 10px;
+                  }
+
+                  label {
                     font-size: 10px;
                   }
                 }
@@ -1695,170 +1600,437 @@
             }
           }
         }
-      } 
-      .form{
-            width:320px;
-            height:27px;
-            background:rgba(255,255,255,1);
-            border-radius:2px;
-            input{
-                font-size:10px;
+      }
+    }
+
+    .addressBox {
+      .blockHeightContent {
+        .blockHeightDeal {
+          .bomSelect {
+            height: 20px;
+
+            button {
+              width: 68px;
+              height: 20px;
+              font-size: 10px;
+              padding: 0 5px;
+              box-sizing: border-box;
             }
-            ::-webkit-input-placeholder{
+
+            .dropdown1 {
+              span {
+                font-size: 12px;
+
+                i {
+                  width: 10px;
+                  height: 10px;
+
+                  img {
+                    width: 100%;
+                    height: 100%;
+                  }
+                }
+
+                .dropdown-content1 {
+                  top: 20px;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .form {
+        width: 320px;
+        height: 27px;
+        background: rgba(255, 255, 255, 1);
+        border-radius: 2px;
+
+        input {
+          font-size: 10px;
+        }
+
+        span {
+          width: 14px;
+          height: 14px;
+        }
+
+      }
+
+      .unavailable {
+        img {
+          width: 100px;
+          margin-bottom: 15px;
+        }
+
+        p {
+          width: 300px;
+          font-size: 8.5px;
+        }
+
+        width:300px;
+      }
+
+      .price {
+        width: 320px;
+
+        >p:nth-child(1) {
+          img {
+            width: 12px;
+            height: 15px;
+          }
+        }
+
+        >p:nth-child(2) {
+          font-size: 10px;
+        }
+
+        >div {
+          width: 250px;
+
+          p:nth-child(1) {
+            i {
+              width: 13px;
+              height: 15px;
+            }
+
+            label {
+              font-size: 12px;
+            }
+
+          }
+
+          p:nth-child(2) {
+            font-size: 12px;
+          }
+        }
+
+        .code {
+          width: 62px;
+          height: 62px;
+        }
+
+        canvas {
+          width: 60px !important;
+          height: 60px !important;
+        }
+      }
+
+      .blockHeightAbstract {
+        padding: 6px 0;
+        box-sizing: border-box;
+
+        h2 {
+          font-size: 12px;
+          line-height: 29px;
+          margin-bottom: 2px;
+        }
+
+        .abstract {
+          .abstractContent {
+            width: 100%;
+            padding: 0 5px;
+            box-sizing: border-box;
+
+            p {
+              label {
+                font-size: 10px;
+              }
+
+              span {
+                width: 70%;
+                font-size: 10px;
+                word-break: break-all;
+              }
+            }
+          }
+
+        }
+      }
+
+      .deal {
+        .dealContent1 {
+          .dealContents {
+            p {
+              word-break: break-all !important;
               font-size: 10px;
             }
-            span{
-                width: 14px;
-                height: 14px;
+
+            .descrPrice {
+              span {
+                font-size: 10px;
+
+                i {
+                  width: 3px;
+                  height: 3px;
+                  margin-top: 8px;
+                }
+              }
             }
-            
-        }
-        .price{
-            width: 320px;
-                p:nth-child(1){
-                    i{
-                        width: 13px;
-                        height: 15px;
-                    }
-                    label{
-                        font-size: 12px;
-                    }
-                    
+
+            .dealAddress {
+              >span:nth-child(2) {
+                width: 10px;
+                height: 8px;
+              }
+
+              >ul {
+                label {
+                  font-size: 10px;
                 }
-                 p:nth-child(2){
-                   align-items: flex-start;
-                    label{
-                        font-size: 12px;
-                    }
-                    span{
-                        font-size:10px;
-                        word-break: break-all;
-                    }
+
+                .addBlue {
+                  widows: 60px;
+                  overflow: hidden;
+                  white-space: nowrap;
+                  text-overflow: ellipsis
                 }
+
+                li {
+                  span {
+                    font-size: 10px;
+                  }
+
+                  >p {
+                    white-space: nowrap;
+                  }
+                }
+              }
+            }
+          }
         }
-      .btn{
+      }
+
+      .blockHeightDeal {
+        h2 {
+          font-size: 12px;
+          line-height: 29px;
+          margin-bottom: 2px;
+        }
+      }
+    }
+
+    .blockHeight {
+      .btns {
+        width: 100px;
+        height: 30px;
+
+        button {
+          font-size: 12px;
+        }
+
+      }
+
+      .deal {
+        .dealContent1 {
+          .dealContents {
+            .dealAddress {
+              >ul {
+                >label {
+                  label {
+                    font-size: 10px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .form {
         width: 320px;
-        button{
+        height: 27px;
+        background: rgba(255, 255, 255, 1);
+        border-radius: 2px;
+
+        input {
+          font-size: 10px;
+        }
+
+        ::-webkit-input-placeholder {
+          font-size: 10px;
+        }
+
+        span {
+          width: 14px;
+          height: 14px;
+        }
+
+      }
+
+      .price {
+        width: 320px;
+
+        p:nth-child(1) {
+          i {
+            width: 13px;
+            height: 15px;
+          }
+
+          label {
+            font-size: 12px;
+          }
+
+        }
+
+        p:nth-child(2) {
+          align-items: flex-start;
+
+          label {
+            font-size: 12px;
+          }
+
+          span {
+            font-size: 10px;
+            word-break: break-all;
+          }
+        }
+      }
+
+      .btn {
+        width: 320px;
+
+        button {
           width: 68px;
           height: 20px;
           font-size: 10px;
           padding: 0 5px;
           box-sizing: border-box;
-          img{
+
+          img {
             width: 9px;
             height: 9px;
           }
         }
       }
-      .blockHeightAbstract{
-            padding: 6px 0;
-            box-sizing: border-box;
-            h2{
-                font-size: 12px;
-                line-height: 29px;
-                margin-bottom: 2px;
-            }
-            .abstract {
-              flex-direction: column;
-              align-items: flex-start;
-              .line{
-                display: none;
-              }
-                .abstractContent{
-                    width: 100%;
-                    padding: 0 5px;
-                    box-sizing: border-box;
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: space-between;
-                    p {
-                      padding: 5px 0;
-                      box-sizing: border-box;
-                        label{
-                            font-size: 10px;
-                        }
-                        span{
-                            width: 60%;
-                            font-size: 10px;
-                        }
-                    }
-                }
-                    
-            }
+
+      .blockHeightAbstract {
+        padding: 6px 0;
+        box-sizing: border-box;
+
+        h2 {
+          font-size: 12px;
+          line-height: 29px;
+          margin-bottom: 2px;
         }
-      .blockHeightDeal{
-            h2{
-                font-size: 12px;
-                line-height: 29px;
-                margin-bottom: 2px;
+
+        .abstract {
+          flex-direction: column;
+          align-items: flex-start;
+
+          .line {
+            display: none;
+          }
+
+          .abstractContent {
+            width: 100%;
+            padding: 0 5px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            p {
+              padding: 5px 0;
+              box-sizing: border-box;
+
+              label {
+                font-size: 10px;
+              }
+
+              span {
+                width: 60%;
+                font-size: 10px;
+              }
             }
-            .deal{
-              .dealContent1{
-                .dealContents{
-                  .descrPrice{
-                    span{
+          }
+
+        }
+      }
+
+      .blockHeightDeal {
+        h2 {
+          font-size: 12px;
+          line-height: 29px;
+          margin-bottom: 2px;
+        }
+
+        .deal {
+          .dealContent1 {
+            .dealContents {
+              .descrPrice {
+                span {
+                  font-size: 10px;
+
+                  i {
+                    width: 3px;
+                    height: 3px;
+                    margin-top: 8px;
+                  }
+                }
+              }
+
+              p {
+                word-break: break-all;
+                font-size: 12px;
+              }
+
+              .dealAddress {
+                >span:nth-child(2) {
+                  width: 10px;
+                  height: 8px;
+                }
+
+                >ul {
+                  .addBlue {
+                    widows: 60px;
+                    overflow: hidden;
+                    white-space: nowrap;
+                    text-overflow: ellipsis
+                  }
+
+                  >p {
+                    span {
                       font-size: 10px;
-                      i{
-                        width: 3px;
-                        height: 3px;
-                        margin-top: 8px;
-                      }
                     }
                   }
-                   p{
-                     word-break: break-all;
-                     font-size: 12px;
-                   }
-                   .dealAddress{
-                     >span:nth-child(2){
-                       width: 10px;
-                       height: 8px;
-                     }
-                     >ul{
-                       .addBlue{
-                         widows: 60px;
-                         overflow: hidden;
-                         white-space: nowrap;
-                         text-overflow: ellipsis
-                       }
-                       >p{
-                         span{
-                              font-size: 10px;
-                         }
-                       }
-                       li{
-                         span{
-                           font-size: 10px;
-                         }
-                         label{
-                           font-size: 10px;
-                         }
-                       }
-                     }
-                   }
+
+                  li {
+                    span {
+                      font-size: 10px;
+                    }
+
+                    label {
+                      font-size: 10px;
+                    }
+                  }
                 }
               }
-            }
-      }
-    }
-    }
-    header {
-      .bgLogo {
-        right: 8%;
-        top: 12%;
-      }
-      .head {
-        // width: 320px;
-        // height: 40px;
-        .navList {
-          .dropdown2 {
-            > span {
-              border-bottom: 0;
             }
           }
         }
       }
     }
-    
   }
 
+  header {
+    .bgLogo {
+      right: 8%;
+      top: 12%;
+    }
+
+    .head {
+
+      // width: 320px;
+      // height: 40px;
+      .navList {
+        .dropdown2 {
+          >span {
+            border-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+
+}

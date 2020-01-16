@@ -323,6 +323,22 @@
       }
     }
 
+    .unavailable {
+      img {
+        width: 2rem;
+        margin-bottom: 0.5rem;
+      }
+
+      background-color: white;
+      width:11.3rem;
+      font-size: 0.2rem;
+      display: flex;
+      margin: 0 auto;
+      flex-direction: column;
+      padding:0.5rem;
+      align-items: center;
+    }
+
     .price {
       >p:nth-child(1) {
         label {
@@ -1595,7 +1611,19 @@
         }
 
       }
+      .unavailable {
+        img {
+          width: 100px;
+          margin-bottom: 15px;
+        }
 
+        p {
+          width: 300px;
+          font-size: 8.5px;
+        }
+
+        width:300px;
+      }
       .blockHeightContent {
         .blockHeightDeal {
           .bomSelect {

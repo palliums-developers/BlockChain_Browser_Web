@@ -93,91 +93,93 @@ class Address extends Component {
     let { libra_address } = this.props;
     libra_address.status && this.countPage(libra_address.status.sent_tx_count)
     return (
-      libra_address.status ?
-        <div className="libraContent">
-          <LibraHeader back="netTo"></LibraHeader>
-          <div className="contents contents1">
-            <div className="addressBox">
-              <div className="form">
-                <input onChange={(e) => this.getCurValue(e)} onKeyDown={(e) => this.onKeyup(e)} placeholder="address、version" />
-                <span onClick={this.getSearch}></span>
-              </div>
-              <div className="price">
-                <div>
-                  <p>
-                    <i><img src="/img/address@2x.png" /></i>
-                    <label>address</label>
-                  </p>
-                  <p>{this.props.match.params.address}</p>
-                  <span className="balance">Banlance: {libra_address.status.balance /1e6} LBR</span>
+      <div className="libraContent">
+        <LibraHeader back="netTo"></LibraHeader>
+        <div className="contents contents1">
+          <div className="addressBox">
+            <div className="form">
+              <input onChange={(e) => this.getCurValue(e)} onKeyDown={(e) => this.onKeyup(e)} placeholder="address、version" />
+              <span onClick={this.getSearch}></span>
+            </div>
+            {JSON.stringify(libra_address)!='{}' ?
+              <div>
+                <div className="price">
+                  <div>
+                    <p>
+                      <i><img src="/img/address@2x.png" /></i>
+                      <label>address</label>
+                    </p>
+                    <p>{this.props.match.params.address}</p>
+                    <span className="balance">Banlance: {libra_address.status.balance / 1e6} LBR</span>
+                  </div>
+                  <div className="code">
+                    <QRcode value={this.props.match.params.address}></QRcode>
+                  </div>
                 </div>
-                <div className="code">
-                  <QRcode value={this.props.match.params.address}></QRcode>
-                </div>
-              </div>
-              <div className="blockHeightContent">
-                <div className="blockHeightAbstract">
-                  <h2>Summary</h2>
-                  <div className="abstract">
-                    <div className="abstractContent">
-                      <p><label>Address</label><span>{this.props.match.params.address}</span></p>
-                      <p><label>Banlance</label><span>{libra_address.status.balance /1e6} LBR</span></p>
-                      {/* <p><label>Recent transactions</label><span>{txs.length}</span></p> */}
+                <div className="blockHeightContent">
+                  <div className="blockHeightAbstract">
+                    <h2>Summary</h2>
+                    <div className="abstract">
+                      <div className="abstractContent">
+                        <p><label>Address</label><span>{this.props.match.params.address}</span></p>
+                        <p><label>Banlance</label><span>{libra_address.status.balance / 1e6} LBR</span></p>
+                        {/* <p><label>Recent transactions</label><span>{txs.length}</span></p> */}
+                      </div>
                     </div>
                   </div>
-                </div>
-                <div className="blockHeightDeal">
-                  <h2>Recent transactions</h2>
-                  <div className="deal">
-                    {
-                      libra_address.transactions && libra_address.transactions.map((item, index) => {
-                        return <div key={index}>
-                          <div className="dealContent1 dealContent2">
-                            <div className="dealContents">
-                              <div className="pp" onClick={() => this.goToDeal(item.version)}>
-                                <p>Version: {item.version}</p>
-                                <p>Type:{item.type}</p>
-                                <p>Gas:{item.gas}</p>
-                                <p>Time: {timeStamp2String(item.expiration_time + '000')}</p>
-                              </div>
-                              <div className="dealAddress">
-                                <ul>
-                                  <li><label onClick={() => item.sender && this.goToAddress(item.sender)} className="addBlue">{item.sender ? item.sender : 'Null'}</label></li>
-                                </ul>
-                                <span></span>
-                                <ul>
-                                  <li><label onClick={() => item.receiver && this.goToAddress(item.receiver)} className="addBlue">{item.receiver ? item.receiver : 'Null'}</label></li>
-                                </ul>
-                              </div>
-                              <div className="descrPrice">
-                                {this.returnStatus(item.status)}
-                                <span><i></i>{item.amount /1e6} LBR</span>
+                  <div className="blockHeightDeal">
+                    <h2>Recent transactions</h2>
+                    <div className="deal">
+                      {
+                        libra_address.transactions && libra_address.transactions.map((item, index) => {
+                          return <div key={index}>
+                            <div className="dealContent1 dealContent2">
+                              <div className="dealContents">
+                                <div className="pp" onClick={() => this.goToDeal(item.version)}>
+                                  <p>Version: {item.version}</p>
+                                  <p>Type:{item.type}</p>
+                                  <p>Gas:{item.gas}</p>
+                                  <p>Time: {timeStamp2String(item.expiration_time + '000')}</p>
+                                </div>
+                                <div className="dealAddress">
+                                  <ul>
+                                    <li><label onClick={() => item.sender && this.goToAddress(item.sender)} className="addBlue">{item.sender ? item.sender : 'Null'}</label></li>
+                                  </ul>
+                                  <span></span>
+                                  <ul>
+                                    <li><label onClick={() => item.receiver && this.goToAddress(item.receiver)} className="addBlue">{item.receiver ? item.receiver : 'Null'}</label></li>
+                                  </ul>
+                                </div>
+                                <div className="descrPrice">
+                                  {this.returnStatus(item.status)}
+                                  <span><i></i>{item.amount / 1e6} LBR</span>
+                                </div>
                               </div>
                             </div>
+                            <div className="line"></div>
                           </div>
-                          <div className="line"></div>
-                        </div>
-                      })}
+                        })}
+                    </div>
+                  </div>
+                  <div className="bomSelect">
+                    {this.state.page > 1 && <button onClick={() => this.changePage('pre')}>Previous</button>}
+                    <div class="dropdown1">
+                      <span onClick={() => { this.showPageMenu() }}>{this.state.page}
+                        <i className="arrows">{
+                          this.state.showPage ? <img src="/img/weibiaoti1@2x.png" /> : <img src="/img/weibiaoti2备份 2@2x.png" />
+                        }</i>
+                        {this.state.showPage ? <div className='dropdown-content1'>
+                          {this.state.pageList.length > 1 && this.state.pageList.map((v, i) => { return <p key={i} onClick={() => this.changePage('jump', v)}>{v}</p> })}
+                        </div> : (null)}
+                      </span>
+                    </div>
+                    {this.state.page < this.state.pageList.length && <button onClick={() => this.changePage('next')}>Next</button>}
                   </div>
                 </div>
-                <div className="bomSelect">
-                  {this.state.page > 1 && <button onClick={() => this.changePage('pre')}>Previous</button>}
-                  <div class="dropdown1">
-                    <span onClick={() => { this.showPageMenu() }}>{this.state.page}
-                      <i className="arrows">{
-                        this.state.showPage ? <img src="/img/weibiaoti1@2x.png" /> : <img src="/img/weibiaoti2备份 2@2x.png" />
-                      }</i>
-                      {this.state.showPage ? <div className='dropdown-content1'>
-                        {this.state.pageList.length > 1 && this.state.pageList.map((v, i) => { return <p key={i} onClick={() => this.changePage('jump', v)}>{v}</p> })}
-                      </div> : (null)}
-                    </span>
-                  </div>
-                  {this.state.page < this.state.pageList.length && <button onClick={() => this.changePage('next')}>Next</button>}
-                </div>
-              </div>
-            </div>
+              </div> : <div className="unavailable"><img src='/img/编组 12@2x.png'></img><p>Address {this.props.match.params.address} is not available on Libra</p></div>}
           </div>
-        </div> : <div></div>
+        </div>
+      </div>
     );
   }
 }
