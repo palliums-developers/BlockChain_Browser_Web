@@ -7,7 +7,6 @@ async function detail_block(_net, type, value, limit, offset) {
         value = await b_c.getblockhash(_net, _value);
     }
     if (value) {
-        console.log(value)
         let block = await b_c.getblock(_net, value);
         if (block) {
             let _limit = parseInt(limit);

@@ -165,7 +165,7 @@ async function tx_info(_net, raw_txid) {
     return res;
   } else {
     let tx = await getrawtransaction(_net, raw_txid);
-    if(tx){
+    if(!tx){
       return null;
     }else{
       let vin = [];
