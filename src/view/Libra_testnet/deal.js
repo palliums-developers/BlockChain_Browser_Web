@@ -86,7 +86,7 @@ class Deal extends Component {
                     <p><label>Type</label><span>{libra_version.type}</span></p>
                     <p><label>From</label><span className="from" onClick={() => {
                       this.props.history.push('/app/Libra_addressBox/' + libra_version.sender)
-                    }}>{libra_version.sender}</span></p>
+                    }}>{libra_version.sender ? libra_version.sender : 'Null'}</span></p>
                     <p><label>To</label><span className="to" onClick={() => {
                     libra_version.receiver &&
                       this.props.history.push('/app/Libra_addressBox/' + libra_version.receiver)
