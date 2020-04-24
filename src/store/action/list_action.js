@@ -7,7 +7,7 @@ import axios from 'axios'
 // const libra_api = 'http://52.27.228.84:4000/explorer/libra';
 // const violas_api = 'http://52.27.228.84:4000/explorer/violas';
 const wallet_api = 'https://api.violas.io';
-const libra_api = 'https://api.violas.io/explorer/libra';
+const libra_api = 'http://52.27.228.84:4000/explorer/libra';
 const violas_api = 'https://api.violas.io/explorer/violas';
 
 // const BTC_api = 'http://localhost:10080/open/1.0';
@@ -70,7 +70,7 @@ export let getCurListBlock = () => {
 export let getCurTestListBlock = (_limit, _offset) => {
     return dispatch => {
         axios.get(libra_api + '/recent?limit=' + _limit + '&offset=' + _offset).then(res => {
-            // console.log(res.data.data)
+            console.log(res.data.data)
             dispatch({
                 type: 'libra_testnet',
                 data: res.data.data

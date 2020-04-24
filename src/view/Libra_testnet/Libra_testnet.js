@@ -93,7 +93,7 @@ class Libra_testnet extends Component {
                           <td colSpan="2">{(item.type)}</td>
                           <td colSpan="4" onClick={() => {
                             this.props.history.push('/app/Libra_addressBox/' + item.sender)
-                          }}>{(item.sender).slice(0, 20) + '...'}</td>
+                          }}>{item.sender ? (item.sender).slice(0, 20) + '...' : 'Null'}</td>
                           <td colSpan="2">{this.returnStatus(item.status)}</td>
                           <td colSpan="4" onClick={() => {
                             if (item.receiver) {
@@ -119,7 +119,7 @@ class Libra_testnet extends Component {
                       <p><label>Type</label><span>{(v.type)}</span></p>
                       <p><label>From</label><span onClick={() => {
                         this.props.history.push('/app/Libra_addressBox/' + v.sender)
-                      }}>{(v.sender).slice(0, 20) + '...'}</span></p>
+                      }}>{v.sender ? (v.sender).slice(0, 20) + '...' : 'Null'}</span></p>
                       <p><label>Status</label><span>{this.returnStatus(v.status)}</span></p>
                       <p><label>To</label><span onClick={() => {
                         this.props.history.push('/app/Libra_addressBox/' + v.receiver)
