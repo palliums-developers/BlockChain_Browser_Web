@@ -6,6 +6,8 @@ import ViolasHeader from '../../component/violasHeader'
 import { timeStamp2String } from '../../utils/timer'
 import search_box from '../../utils/search_violas'
 import './violasStyle.scss';
+import GetTestCoins from '../../component/GetTestCoins'
+import "../../style/getTestCoins.scss"
 class Violas extends Component {
     constructor(props) {
         super(props);
@@ -75,6 +77,11 @@ class Violas extends Component {
         return (
             <div className='violasContent'>
                 <ViolasHeader back="net"></ViolasHeader>
+                {
+                    this.props.getCoins ?
+                        <GetTestCoins></GetTestCoins> :
+                        <></>
+                }
                 <div className="contents">
                     <div className="mainNet">
                         <div className="searchBox">
@@ -124,8 +131,8 @@ class Violas extends Component {
                                                         item.receiver &&
                                                             this.props.history.push('/app/Violas_address/' + item.receiver)
                                                     }}>{item.receiver ? (item.receiver).slice(0, 20) + '...' : 'Unparsed address'}</td>
-                                                    <td colSpan="3">{item.amount /1e6}</td>
-                                                    <td colSpan="2">{item.gas /1e6}</td>
+                                                    <td colSpan="3">{item.amount / 1e6}</td>
+                                                    <td colSpan="2">{item.gas / 1e6}</td>
                                                 </tr>
                                             })
                                         }
@@ -152,7 +159,7 @@ class Violas extends Component {
                                                 v.receiver && this.props.history.push('/app/Violas_address/' + v.receiver)
                                             }}>{v.receiver ? (v.receiver).slice(0, 20) + '...' : 'Unparsed address'}</span></p>
                                             <p><label>Amount</label><span>{v.amount}</span></p>
-                                            <p><label>Fee</label><span>{v.gas /1e6}</span></p>
+                                            <p><label>Fee</label><span>{v.gas / 1e6}</span></p>
                                         </div>
                                     })
                                 }

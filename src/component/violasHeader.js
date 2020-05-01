@@ -4,12 +4,14 @@ import { NavLink, withRouter } from 'react-router-dom'
 import { connect } from 'react-redux'
 import * as AllActions from '../store/action/list_action'
 import { bindActionCreators } from 'redux'
+import GetTestCoins from '../component/GetTestCoins'
 class ViolasHeader extends Component {
   constructor(props) {
     super(props);
     this.state = {
       showMenuViolas: false,
       showMenuBTC: false,
+      getCoins: false,
       vCoin: [
         { pathname: '/app/Currency/VTOKEN', type: 'vtoken' }
       ],
@@ -18,8 +20,9 @@ class ViolasHeader extends Component {
         { pathname: '/app/tBTC', type: 'BTC testnet' }
       ]
     };
-    this.showMenu=this.showMenu.bind(this);
-    this.closeMenu=this.closeMenu.bind(this);
+    this.showMenu = this.showMenu.bind(this);
+    this.closeMenu = this.closeMenu.bind(this);
+    this.showGetCoins = this.showGetCoins.bind(this);
   }
   componentDidMount() {
     // this.props.getCurrency();
@@ -34,15 +37,15 @@ class ViolasHeader extends Component {
         });
         break;
       case 'BTC':
-        this.setState({showMenuBTC:true},()=>{
-          document.addEventListener('click',this.closeMenu);
+        this.setState({ showMenuBTC: true }, () => {
+          document.addEventListener('click', this.closeMenu);
         })
         break;
     }
   }
   closeMenu = _ => {
-    this.setState({showMenuBTC:false,showMenuViolas:false},()=>{
-      document.removeEventListener('click',this.closeMenu)
+    this.setState({ showMenuBTC: false, showMenuViolas: false }, () => {
+      document.removeEventListener('click', this.closeMenu)
     })
   }
   addCurrencyList() {
@@ -56,6 +59,9 @@ class ViolasHeader extends Component {
       }
     }
   }
+  showGetCoins() {
+    this.props.showGetCoins();
+  }
   render() {
     this.addCurrencyList();
     return (
@@ -64,11 +70,14 @@ class ViolasHeader extends Component {
           <div className="logo">
             <NavLink to='/app/Violas'><img src="/img/编组 15@2x.png" /></NavLink>
           </div>
+          <div className="getCoins">
+            <button onClick={this.showGetCoins}>Get test coins</button>
+          </div>
           <div className="navList">
             <div className='dropdown1'>
               <span onClick={() => this.showMenu('violas')}>Violas<i className="arrows">{
                 this.state.showMenuViolas ? <img src="/img/weibiaoti1 2@2x.png" /> : <img src="/img/weibiaoti1备份 2@2x.png" />
-                }</i></span>
+              }</i></span>
               <div className='dropdown-content1'>
                 {this.state.showMenuViolas ? (this.state.vCoin.map((v, i) => {
                   return <NavLink to={v.pathname} activeClassName='active' key={i}>{v.type}</NavLink>
@@ -103,6 +112,6 @@ const mapStateToProps = state => {
   return state.ListReducer
 }
 
-const mapDiapatchToProps = diapatch => bindActionCreators(AllActions, diapatch)
+const mapDispatchToProps = dispatch => bindActionCreators(AllActions, dispatch)
 
-export default connect(mapStateToProps, mapDiapatchToProps)(withRouter(ViolasHeader));
+export default connect(mapStateToProps, mapDispatchToProps)(withRouter(ViolasHeader));

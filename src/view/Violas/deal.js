@@ -6,6 +6,8 @@ import { bindActionCreators } from 'redux'
 import { timeStamp2String } from '../../utils/timer'
 import search_box from '../../utils/search_violas'
 import './violasStyle.scss';
+import GetTestCoins from '../../component/GetTestCoins'
+import "../../style/getTestCoins.scss"
 class Deal extends Component {
   constructor(props) {
     super(props);
@@ -71,13 +73,18 @@ class Deal extends Component {
     return (
       <div className="violasContent">
         <ViolasHeader back="netTo"></ViolasHeader>
+        {
+          this.props.getCoins ?
+            <GetTestCoins></GetTestCoins> :
+            <></>
+        }
         <div className="contents contents1">
           <div className="dealBox">
             <div className="form">
               <input onChange={(e) => this.getCurValue(e)} onKeyDown={(e) => this.onKeyup(e)} placeholder="address、version" />
               <span onClick={this.getSearch}></span>
             </div>
-            {JSON.stringify(violas_version)!='{}' ? <div>
+            {JSON.stringify(violas_version) != '{}' ? <div>
               <div className="price">
                 <div>
                   <p>

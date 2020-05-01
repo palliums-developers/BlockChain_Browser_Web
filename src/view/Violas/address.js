@@ -7,6 +7,8 @@ import { timeStamp2String } from '../../utils/timer'
 import search_box from '../../utils/search_violas'
 import QRcode from 'qrcode.react';
 import './violasStyle.scss';
+import GetTestCoins from '../../component/GetTestCoins'
+import "../../style/getTestCoins.scss"
 class Address extends Component {
   constructor(props) {
     super(props);
@@ -189,6 +191,11 @@ class Address extends Component {
     return (
       <div className="violasContent">
         <ViolasHeader back="netTo"></ViolasHeader>
+        {
+          this.props.getCoins ?
+            <GetTestCoins></GetTestCoins> :
+            <></>
+        }
         <div className="contents contents1">
           <div className="addressBox">
             <div className="form">

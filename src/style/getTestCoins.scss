@@ -1,0 +1,227 @@
+.getCoins {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 16px;
+  position: relative;
+  top: 0.05rem;
+  right: 2.5rem;
+  button {
+    width: 100px;
+    color: rgba(255, 255, 255, 1);
+    border-radius: 50px;
+    background: none;
+    border-width: 0;
+    cursor: pointer;
+    border: 1px white solid;
+  }
+}
+.getTestCoins {
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  height: 100%;
+  .container1 {
+    width: 900px;
+    height: 640px;
+    margin: 0 auto;
+    position: relative;
+    top: 100px;
+    border-radius: 10px;
+    background-image: url("/img/getCoins.png");
+    .container2 {
+      width: 700px;
+      margin: 0 auto;
+      position: relative;
+      top: 90px;
+      h1 {
+        font-size: 32px;
+        font-weight: bold;
+        color: rgba(60, 56, 72, 1);
+        line-height: 30px;
+        text-align: center;
+      }
+      .close {
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        top: -50px;
+        left: 700px;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      h3 {
+        font-size: 24px;
+        font-weight: 400;
+        color: rgba(94, 87, 103, 1);
+        line-height: 24px;
+        text-align: center;
+        margin-top: 20px;
+      }
+      h4 {
+        width: 120px;
+        font-size: 24px;
+        font-weight: 400;
+        color: rgba(94, 87, 103, 1);
+        line-height: 24px;
+        //   display: inline;
+      }
+      .inLine1 {
+        display: flex;
+        flex-direction: row;
+        margin-top: 40px;
+        input {
+          width: 560px;
+          font-size: 20px;
+          font-weight: 400;
+          color: rgba(60, 56, 72, 1);
+          line-height: 32px;
+        }
+      }
+      .inLine2 {
+        display: flex;
+        flex-direction: row;
+        margin-top: 40px;
+        h5 {
+          font-size: 24px;
+          font-weight: 600;
+          color: rgba(60, 56, 72, 1);
+          line-height: 26px;
+        }
+        select {
+          font-size: 24px;
+          font-weight: 400;
+          color: rgba(60, 56, 72, 1);
+          line-height: 24px;
+          //   border: 20px rgba(94, 87, 103, 1) solid;
+          background: rgba(255, 255, 255, 1);
+          border-radius: 26px;
+          cursor: pointer;
+          border-width: 0;
+          width: 173px;
+          height: 52px;
+          text-align: center;
+          position: relative;
+          left: 360px;
+          top: -12px;
+        }
+      }
+      .submit {
+        width: 390px;
+        height: 52px;
+        margin: 0 auto;
+        button {
+          width: 100%;
+          height: 100%;
+          font-size: 24px;
+          font-weight: 500;
+          color: rgba(255, 255, 255, 1);
+          line-height: 24px;
+          background: rgba(96, 66, 158, 1);
+          border-radius: 26px;
+          cursor: pointer;
+        }
+      }
+      p {
+        font-size: 20px;
+        font-weight: 400;
+        color: rgba(253, 101, 101, 1);
+        line-height: 18px;
+        text-align: center;
+        margin-top: 20px;
+      }
+    }
+  }
+}
+@media (max-width: 950px) {
+  .getCoins {
+    right: 0rem;
+    top: 0rem;
+    button {
+      font-size: 8px;
+      width: 60px;
+    }
+  }
+  .getTestCoins {
+    .container1 {
+      width: 95%;
+      height: 300px;
+      .container2 {
+        height:280px;
+        width: 280px;
+        top: 10px;
+        h1 {
+          font-size: 18px;
+        }
+        .close {
+          top: 5px;
+          left: 10rem;
+        }
+        h3 {
+          font-size: 15px;
+        }
+        h4 {
+          font-size: 13px;
+          width: 50px;
+        }
+        .inLine1 {
+          margin-top: 20px;
+          input {
+            font-size: 13px;
+            // height: 10px;
+          }
+        }
+        .inLine2{
+          margin-top: 10px;
+          h5{
+            font-size: 13px;
+          }
+          select{
+            font-size: 14px;
+            width: 100px;
+            height: 20px;
+            left:100px;
+            top:0px;
+          }
+        }
+        .submit{
+          height: 30px;
+          width: 200px;
+          button{
+          font-size: 15px;
+
+          }
+        }
+        p{
+          font-size: 15px;
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 600px) {
+  .getTestCoins {
+    .container1 {
+      .container2 {
+        .close {
+          left: 12rem;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 450px) {
+  .getTestCoins {
+    .container1 {
+      .container2 {
+        .close {
+          left: 14rem;
+        }
+      }
+    }
+  }
+}

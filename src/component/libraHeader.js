@@ -103,6 +103,6 @@ const mapStateToProps = state => {
   return state.ListReducer
 }
 
-const mapDiapatchToProps = diapatch => bindActionCreators(AllActions, diapatch)
+const mapDispatchToProps = dispatch => bindActionCreators(AllActions, dispatch)
 
-export default connect(mapStateToProps, mapDiapatchToProps)(withRouter(LibraHeader));
+export default connect(mapStateToProps, mapDispatchToProps)(withRouter(LibraHeader));
