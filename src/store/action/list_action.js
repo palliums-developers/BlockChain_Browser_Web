@@ -126,9 +126,9 @@ export let getCurDetailsAddress = (params) => {
 
     }
 }
-export let get_libra_address = (_address,_offset,_limit) => {
+export let get_libra_address = (_address, _offset, _limit) => {
     return dispatch => {
-        axios.get(libra_api + '/address/' + _address+'?offset='+_offset+'&limit='+_limit)
+        axios.get(libra_api + '/address/' + _address + '?offset=' + _offset + '&limit=' + _limit)
             .then(res => {
                 // console.log(res.data.data,'sdasd');
                 dispatch({
@@ -292,10 +292,10 @@ export let getViolas_version = (_version) => {
 //             })
 //     }
 // }
-export let getViolas_address = (_address, _offset,_limit,_module) => {
+export let getViolas_address = (_address, _offset, _limit, _module) => {
     if (_module) {
         return dispatch => {
-            axios.get(violas_api + '/address/' + _address + '?module=' + _module+'&offset='+_offset+'&limit='+_limit)
+            axios.get(violas_api + '/address/' + _address + '?module=' + _module + '&offset=' + _offset + '&limit=' + _limit)
                 .then(res => {
                     dispatch({
                         type: 'violas_address',
@@ -305,7 +305,7 @@ export let getViolas_address = (_address, _offset,_limit,_module) => {
         }
     } else {
         return dispatch => {
-            axios.get(violas_api + '/address/' + _address+'?offset='+_offset+'&limit='+_limit)
+            axios.get(violas_api + '/address/' + _address + '?offset=' + _offset + '&limit=' + _limit)
                 .then(res => {
                     dispatch({
                         type: 'violas_address',
@@ -339,15 +339,15 @@ export let getCurrency = _ => {
     }
 }
 
-export let getAddressModule=(_address)=>{
-    return dispatch=>{
-        axios.get(wallet_api+'/1.0/violas/module?addr='+_address)
-        .then(res=>{
-            dispatch({
-                type:'violas_address_holding_module',
-                data:res.data.data
+export let getAddressModule = (_address) => {
+    return dispatch => {
+        axios.get(wallet_api + '/1.0/violas/module?addr=' + _address)
+            .then(res => {
+                dispatch({
+                    type: 'violas_address_holding_module',
+                    data: res.data.data
+                })
             })
-        })
     }
 }
 export let getModuleList = (_module_address, _limit, _offset) => {
@@ -356,6 +356,36 @@ export let getModuleList = (_module_address, _limit, _offset) => {
             .then(res => {
                 dispatch({
                     type: 'module_list',
+                    data: res.data.data
+                })
+            })
+    }
+}
+
+export let showGetCoins = () => {
+    return dispatch => {
+        dispatch({
+            type: 'GETCOINS',
+            data: true
+        })
+    }
+}
+
+export let closeGetCoins = () => {
+    return dispatch => {
+        dispatch({
+            type: 'GETCOINS',
+            data: false
+        })
+    }
+}
+
+export let getCoinsFun = (_address, _token_id) => {
+    return dispatch => {
+        axios.get(`${violas_api}/faucet?address=${_address}&token_id=${_token_id}`)
+            .then(res => {
+                dispatch({
+                    type: 'getCoinsFun',
                     data: res.data.data
                 })
             })
