@@ -18,8 +18,11 @@ class BlockHeight extends Component {
 
   async componentDidMount() {
     // let { limit, offset } = this.state
-    await this.hashOrHeight(this.props.match.params.block_hash)
-    this.props.getBTCTestBlock('testnet', this.state.type, this.props.match.params.block_hash, this.state.limit, this.state.offset)
+    // await this.hashOrHeight(this.props.match.params.block_hash)
+
+    this.props.getBTCTestBlock(this.props.match.params.block_hash)
+    // this.props.getBTCTestBlock('testnet', this.state.type, this.props.match.params.block_hash, this.state.limit, this.state.offset)
+
     // this.setState({limit:limit+5});
     // this.props.getCurListBlock()
 
@@ -68,16 +71,16 @@ class BlockHeight extends Component {
   //     this.forceUpdate()
   //   }
   // }
-  curBlock=(_type)=>{
-    if(this.props.BTC_Test_block.detail){
-      let _height=this.props.BTC_Test_block.detail.height
+  curBlock = (_type) => {
+    if (this.props.BTC_Test_block) {
+      // let _height = this.props.BTC_Test_block.detail.height
       switch (_type) {
         case 'prev':
-          this.props.history.push('/app/tBTC_block/'+(_height-1))
+          this.props.history.push('/app/tBTC_block/' + this.props.BTC_Test_block.previousBlockHash)
           break;
         case 'next':
-            this.props.history.push('/app/tBTC_block/'+(_height+1))
-        break;
+          this.props.history.push('/app/tBTC_block/' + this.props.BTC_Test_block.nextBlockHash)
+          break;
         default:
           break;
       }
@@ -99,7 +102,7 @@ class BlockHeight extends Component {
 
   getCurMore = () => {
     this.setState({
-      limit: this.state.limit+ this.state.limit
+      limit: this.state.limit + this.state.limit
     }, () => {
       this.props.getBTCTestBlock('testnet', this.state.type, this.props.match.params.block_hash, this.state.limit, this.state.offset)
 
@@ -121,86 +124,86 @@ class BlockHeight extends Component {
         <div className="contents contents1">
           <div className="blockHeight">
             <div className="form">
-              <input onChange={(e) => this.getCurValue(e)} onKeyDown={(e) => this.onKeyup(e)}placeholder="address、txid、block" />
+              <input onChange={(e) => this.getCurValue(e)} onKeyDown={(e) => this.onKeyup(e)} placeholder="address、txid、block" />
               <span onClick={this.getSearch}></span>
             </div>
-        {BTC_Test_block.detail?<div>
-            <div className="price">
-              <p>
-                <i><img src="/img/编组 66@2x.png" /></i>
-                <label>BTC TestNet Block</label>
-                <span>{this.props.match.params.block}</span>
-              </p>
-              <p><label>BlockHash</label><span>{BTC_Test_block.detail && BTC_Test_block.detail.hash}</span></p>
-            </div>
-            <div className="btn">
-              <button onClick={() => this.curBlock('prev')}><img src="/img/编组 7.png" />previous</button>
-              <button onClick={() => this.curBlock('next')}><img src="/img/编组 2.png" />next</button>
-            </div>
-            <div className="blockHeightContent">
-              <div className="blockHeightAbstract">
-                <h2>Detail</h2>
-                <div className="abstract">
-                  <div className="abstractContent">
-                    <p><label>Height</label><span>{BTC_Test_block.detail && BTC_Test_block.detail.height}</span></p>
-                    <p><label>timestamp</label><span>{timeStamp2String(BTC_Test_block.detail && BTC_Test_block.detail.timestamp + '000')}</span></p>
-                    <p><label>size</label><span>{BTC_Test_block.detail && BTC_Test_block.detail.size} Bytes</span></p>
-                    <p><label>Weight</label><span>{BTC_Test_block.detail && BTC_Test_block.detail.weight}</span></p>
-                    <p><label>confirmations</label><span>{BTC_Test_block.detail && BTC_Test_block.detail.confirmations}</span></p>
-                  </div>
-                  <div className="line"></div>
-                  <div className="abstractContent">
-                    <p><label>nTx</label><span>{BTC_Test_block.detail && BTC_Test_block.detail.nTx}</span></p>
-                    <p><label>version</label><span>{BTC_Test_block.detail && BTC_Test_block.detail.version}</span></p>
-                    <p><label>difficulty</label><span>{BTC_Test_block.detail && BTC_Test_block.detail.difficulty}</span></p>
-                    <p><label>Bits</label><span>{BTC_Test_block.detail && BTC_Test_block.detail.bits}</span></p>
-                    <p><label>Nonce</label><span>{BTC_Test_block.detail && BTC_Test_block.detail.nonce}</span></p>
+            {BTC_Test_block ? <div>
+              <div className="price">
+                <p>
+                  <i><img src="/img/编组 66@2x.png" /></i>
+                  <label>BTC TestNet Block</label>
+                  <span>{this.props.match.params.block}</span>
+                </p>
+                <p><label>BlockHash</label><span>{BTC_Test_block && BTC_Test_block.hash}</span></p>
+              </div>
+              <div className="btn">
+                <button onClick={() => this.curBlock('prev')}><img src="/img/编组 7.png" />previous</button>
+                <button onClick={() => this.curBlock('next')}><img src="/img/编组 2.png" />next</button>
+              </div>
+              <div className="blockHeightContent">
+                <div className="blockHeightAbstract">
+                  <h2>Detail</h2>
+                  <div className="abstract">
+                    <div className="abstractContent">
+                      <p><label>Height</label><span>{BTC_Test_block && BTC_Test_block.height}</span></p>
+                      <p><label>timestamp</label><span>{timeStamp2String(BTC_Test_block && BTC_Test_block.time + '000')}</span></p>
+                      <p><label>size</label><span>{BTC_Test_block && BTC_Test_block.size} Bytes</span></p>
+                      {/* <p><label>Weight</label><span>{BTC_Test_block.detail && BTC_Test_block.detail.weight}</span></p> */}
+                      <p><label>confirmations</label><span>{BTC_Test_block && BTC_Test_block.confirmations}</span></p>
+                    </div>
+                    <div className="line"></div>
+                    <div className="abstractContent">
+                      <p><label>nTx</label><span>{BTC_Test_block && BTC_Test_block.txCount}</span></p>
+                      <p><label>version</label><span>{BTC_Test_block && BTC_Test_block.version}</span></p>
+                      <p><label>difficulty</label><span>{BTC_Test_block && BTC_Test_block.difficulty}</span></p>
+                      <p><label>Bits</label><span>{BTC_Test_block && BTC_Test_block.bits}</span></p>
+                      <p><label>Nonce</label><span>{BTC_Test_block && BTC_Test_block.nonce}</span></p>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div className="blockHeightDeal">
-                <h2>Transaction</h2>
-                <div className="deal">
-                  {
-                    BTC_Test_block.showtx && BTC_Test_block.showtx.map((item, index) => {
-                      return <div key={index}><div className="dealContent1 dealContent2">
-                        <div className="dealContents">
-                          <p onClick={() => this.goToDeal(item.txid)}>{item.txid}</p>
-                          <div className="dealAddress">
-                            <ul>
-                              {
-                                item.preaddress.map((v, i) => {
-                                  return v.value == 0 ? <p key={i}><span>{v.address}</span></p> :
-                                    <label key={i}><label onClick={() => this.goToAddress(v.address)} className="addBlue">{v.address}</label><p>{v.value} BTC</p></label>
-                                })
-                              }
-                            </ul>
-                            <span></span>
-                            <ul>
-                              {
-                                item.nextaddress.map((v, i) => {
-                                  return <li key={i}>{v.value == 0 ? <label>Unparsed address</label> : <label className="addBlue" onClick={() => this.goToAddress(v.address)}>{v.address}</label>}<p>{v.value}BTC</p></li>
-                                })
-                              }
-                            </ul>
+                <div className="blockHeightDeal">
+                  <h2>Transaction</h2>
+                  <div className="deal">
+                    {
+                      BTC_Test_block.txs && BTC_Test_block.txs.map((item, index) => {
+                        return <div key={index}>
+                          <div className="dealContent1 dealContent2">
+                            <div className="dealContents">
+                              <p onClick={() => this.goToDeal(item.txid)}>{item.txid}</p>
+                              <div className="dealAddress">
+                                <ul>
+                                  {
+                                    item.vin.map((v, i) => {
+                                      return v.value == 0 ? <p key={i}><span>{v.addresses}</span></p> :
+                                        <label key={i}><label onClick={() => this.goToAddress(v.addresses)} className="addBlue">{v.addresses}</label><p>{v.value} BTC</p></label>
+                                    })
+                                  }
+                                </ul>
+                                <span></span>
+                                <ul>
+                                  {
+                                    item.vout.map((v, i) => {
+                                      return <li key={i}>{v.value == 0 ? <label>Unparsed address</label> : <label className="addBlue" onClick={() => this.goToAddress(v.scriptPubKey.addresses)}>{v.scriptPubKey.addresses}</label>}<p>{v.value}BTC</p></li>
+                                    })
+                                  }
+                                </ul>
+                              </div>
+                              <div className="descrPrice">
+                                <span><i></i>{item.output} BTC</span>
+                              </div>
+                            </div>
                           </div>
-                          <div className="descrPrice">
-                            <span><i></i>{item.output} BTC</span>
-                          </div>
+                          <div className="line"></div>
                         </div>
-
-                      </div>
-                        <div className="line"></div>
-                      </div>
-                    })
-                  }
+                      })
+                    }
+                  </div>
                 </div>
               </div>
-            </div>
-            <div className="btns">
-              <button onClick={this.getCurMore}>more</button>
-            </div>
-            </div>: <div className="unavailable"><img src='/img/编组 12@2x(1).png'></img><p>Block {this.props.match.params.block_hash} is not available on BTC TestNet</p></div>}
+              <div className="btns">
+                <button onClick={this.getCurMore}>more</button>
+              </div>
+            </div> : <div className="unavailable"><img src='/img/编组 12@2x(1).png'></img><p>Block {this.props.match.params.block_hash} is not available on BTC TestNet</p></div>}
           </div>
         </div>
       </div>

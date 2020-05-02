@@ -13,7 +13,8 @@ class ViolasHeader extends Component {
       showMenuBTC: false,
       getCoins: false,
       vCoin: [
-        { pathname: '/app/Currency/VTOKEN', type: 'vtoken' }
+        // { pathname: '/app/Currency/VTOKEN', type: 'vtoken' }
+        { pathname: '/app/Violas', type: 'vtoken' }
       ],
       bCoin: [
         { pathname: '/app/BTC', type: 'BTC' },

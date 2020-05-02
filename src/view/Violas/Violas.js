@@ -38,10 +38,10 @@ class Violas extends Component {
       iptValue: e.target.value
     })
   }
-  module2name = (_module_address) => {
+  module2name = (_token_id) => {
     let result = "vtoken";
     for (let i in this.props.currency) {
-      if (_module_address == this.props.currency[i].address) {
+      if (_token_id == this.props.currency[i].address) {
         result = this.props.currency[i].name.toLowerCase();
         break;
       }
@@ -108,8 +108,8 @@ class Violas extends Component {
                             {timeStamp2String(item.expiration_time + '000')}
                           </td>
                           <td colSpan="3" onClick={() => {
-                            this.props.history.push('/app/Currency/' + this.module2name(item.module_address).toUpperCase())
-                          }}>{this.module2name(item.module_address)}</td>
+                            this.props.history.push('/app/Currency/' + this.module2name(item.token_id).toUpperCase())
+                          }}>{this.module2name(item.token_id)}</td>
                           <td colSpan="4">{(item.type)}</td>
                           <td colSpan="4" onClick={() => {
                             item.sender &&
@@ -137,8 +137,8 @@ class Violas extends Component {
                       }}>{v.version}</span></p>
                       <p><label>Time</label><span>{timeStamp2String(v.expiration_time + '000')}</span></p>
                       <p><label>Currency</label><span onClick={() => {
-                        this.props.history.push('/app/Currency/' + this.module2name(v.module_address).toUpperCase())
-                      }}>{this.module2name(v.module_address)}</span></p>
+                        this.props.history.push('/app/Currency/' + this.module2name(v.token_id).toUpperCase())
+                      }}>{this.module2name(v.token_id)}</span></p>
                       <p><label>Type</label><span>{(v.type)}</span></p>
                       <p><label>From</label><span onClick={() => {
                         v.sender && this.props.history.push('/app/Violas_address/' + v.sender)

@@ -78,7 +78,7 @@ let ListReducer = (state = initState, action) => {
             case 'BTC_main_address':
                   return { ...state, BTC_main_address: action.data }
             case 'BTC_Test_List':
-                  return { ...state, BTC_Test_List: [...action.data] }
+                  return { ...state, BTC_Test_List: [action.data][0] }
             case 'BTC_Test_block':
                   return { ...state, BTC_Test_block: action.data }
             case 'BTC_Test_txid':

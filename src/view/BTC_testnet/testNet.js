@@ -36,6 +36,8 @@ class BTCTestNet extends Component {
   }
 
   render() {
+    // console.log(this.props.BTC_Test_List,111)
+    // console.log((this.props.BTC_Test_List[0]))
     return (
       <div className='BTCTestNetContent'>
         <BTCTestHeader back="net"></BTCTestHeader>
@@ -58,7 +60,8 @@ class BTCTestNet extends Component {
                     <tr>
                       <th colSpan="3">Height</th>
                       <th colSpan="4">Size</th>
-                      <th colSpan="4">Profit</th>
+                      {/* <th colSpan="4">Profit</th> */}
+                      <th colSpan="4">Confirmation</th>
                       <th colSpan="6">timeStamp</th>
                       <th colSpan="6">Hash</th>
                     </tr>
@@ -72,9 +75,9 @@ class BTCTestNet extends Component {
                             this.props.history.push('/app/tBTC_block/'+ item.height);
                           }}>{item.height}</td>
                           <td colSpan="4">{item.size}</td>
-                          <td colSpan="4">{item.profit}</td>
+                          <td colSpan="4">{item.confirmation}</td>
                           <td colSpan="6">
-                            {timeStamp2String(item.timestamp + '000')}
+                            {timeStamp2String(item.time + '000')}
                           </td>
                           <td colSpan="6" onClick={() => {
                             this.props.history.push('/app/tBTC_block/' + item.hash)
