@@ -13,6 +13,7 @@ const violas_api = 'https://api.violas.io/explorer/violas';
 
 // const BTC_api = 'http://localhost:10080/open/1.0';
 const BTC_api = 'https://api2.violas.io:10080/open/1.0';
+const tBTC_api = 'https://tbtc1.trezor.io/api/'
 // const BTC_api = 'http://47.52.66.26:10080/open/1.0';
 // const BTC_api = 'http://localhost:30001/open/1.0';
 // const BTC_api = 'http://192.168.1.111:30001/open/1.0';
@@ -211,19 +212,59 @@ export let getBTCMainAddress = (_net, _address, _page) => {
 }
 export let getBTCTestList = () => {
     return dispatch => {
-        axios.get(BTC_api + '/list_10block_test').then(res => {
-            // console.log(res.data.block,'123')
-            dispatch({
-                type: 'BTC_Test_List',
-                data: res.data.block
-            })
+        // axios.get(tBTC_api + '/list_10block_test').then(res => {
+        //     // console.log(res.data.block,'123')
+        //     dispatch({
+        //         type: 'BTC_Test_List',
+        //         data: res.data.block
+        //     })
+        // })
+
+        axios.get(tBTC_api).then(async res => {
+            let tBTCList = [];
+            // console.log(tBTCList[0])
+            let _height = res.data.backend.blocks;
+            for (let i = 0; i < 5; i++) {
+                let _height2 = _height - i;
+                await axios.get(tBTC_api + '/block/' + _height2)
+                    .then(res => {
+                        tBTCList.push(
+                            {
+                                hash: res.data.hash,
+                                height: res.data.height,
+                                confirmation: res.data.confirmations,
+                                size: res.data.size,
+                                time: res.data.time
+                            }
+                        );
+                    })
+            }
+            return tBTCList
         })
+            .then(res => {
+                // console.log(res.length)
+                dispatch({
+                    type: 'BTC_Test_List',
+                    data: res
+                })
+            })
     }
 }
 
-export let getBTCTestBlock = (_net, _type, _value, _limit, _offset) => {
+// export let getBTCTestBlock = (_net, _type, _value, _limit, _offset) => {
+//     return dispatch => {
+//         axios.get(tBTC_api + '/search_block?net=' + _net + '&type=' + _type + '&value=' + _value + '&limit=' + _limit + '&offset=' + _offset).then(res => {
+//             // console.log(res.data)
+//             dispatch({
+//                 type: 'BTC_Test_block',
+//                 data: res.data
+//             })
+//         })
+//     }
+// }
+export let getBTCTestBlock = (_temp) => {
     return dispatch => {
-        axios.get(BTC_api + '/search_block?net=' + _net + '&type=' + _type + '&value=' + _value + '&limit=' + _limit + '&offset=' + _offset).then(res => {
+        axios.get(tBTC_api + '/block/' + _temp).then(res => {
             // console.log(res.data)
             dispatch({
                 type: 'BTC_Test_block',
@@ -233,9 +274,20 @@ export let getBTCTestBlock = (_net, _type, _value, _limit, _offset) => {
     }
 }
 
-export let getBTCTestTx = (_net, _txid) => {
+// export let getBTCTestTx = (_net, _txid) => {
+//     return dispatch => {
+//         axios.get(tBTC_api + '/search_txid?net=' + _net + '&txid=' + _txid).then(res => {
+//             // console.log(res)
+//             dispatch({
+//                 type: 'BTC_Test_txid',
+//                 data: res.data
+//             })
+//         })
+//     }
+// }
+export let getBTCTestTx = (_txid) => {
     return dispatch => {
-        axios.get(BTC_api + '/search_txid?net=' + _net + '&txid=' + _txid).then(res => {
+        axios.get(tBTC_api + '/tx/' + _txid).then(res => {
             // console.log(res)
             dispatch({
                 type: 'BTC_Test_txid',
@@ -244,10 +296,20 @@ export let getBTCTestTx = (_net, _txid) => {
         })
     }
 }
-
-export let getBTCTestAddress = (_net, _address, _page) => {
+// export let getBTCTestAddress = (_net, _address, _page) => {
+//     return dispatch => {
+//         axios.get(tBTC_api + '/search_address?net=' + _net + "&address=" + _address + "&page=" + _page).then(res => {
+//             // console.log(res.data)
+//             dispatch({
+//                 type: 'BTC_Test_address',
+//                 data: res.data
+//             })
+//         })
+//     }
+// }
+export let getBTCTestAddress = (_address) => {
     return dispatch => {
-        axios.get(BTC_api + '/search_address?net=' + _net + "&address=" + _address + "&page=" + _page).then(res => {
+        axios.get(tBTC_api + '/address/'+ _address).then(res => {
             // console.log(res.data)
             dispatch({
                 type: 'BTC_Test_address',
@@ -256,7 +318,6 @@ export let getBTCTestAddress = (_net, _address, _page) => {
         })
     }
 }
-
 export let getViolas = (_limit, _offset) => {
     return dispatch => {
         // console.log(violas_api+'/recent_txn?limit='+_limit+'&offset='+_offset)

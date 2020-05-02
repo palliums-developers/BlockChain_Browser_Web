@@ -21,7 +21,7 @@ class Violas extends Component {
     }
     componentWillMount() {
         document.documentElement.scrollTop = document.body.scrollTop = 0;
-        this.props.getModuleList();
+        this.props.getModuleList(this.name2moduleAddress(this.props.match.params.module_name), this.state.limit, this.state.offset);
     }
     componentDidMount() {
         this.props.getCurrency();
@@ -38,11 +38,11 @@ class Violas extends Component {
             iptValue: e.target.value
         })
     }
-    module2name = (_module_address) => {
+    module2name = (_token_id) => {
         if (this.props.currency) {
             let result = "vtoken";
             for (let i in this.props.currency) {
-                if (_module_address == this.props.currency[i].address) {
+                if (_token_id == this.props.currency[i].id) {
                     result = this.props.currency[i].name.toLowerCase();
                     break;
                 }
@@ -51,10 +51,11 @@ class Violas extends Component {
         }
     }
     name2moduleAddress = (_module_name) => {
-        let result = '0000000000000000000000000000000000000000000000000000000000000000';
+        let result = '0';
+        // let result = '0000000000000000000000000000000000000000000000000000000000000000';
         for (let i in this.props.currency) {
             if (_module_name == this.props.currency[i].name) {
-                result = this.props.currency[i].address;
+                result = this.props.currency[i].id;
                 break;
             }
         }
@@ -73,7 +74,8 @@ class Violas extends Component {
         this.props.getModuleList(this.name2moduleAddress(this.props.match.params.module_name), this.state.limit + 10, this.state.offset);
     }
     render() {
-        this.props.module_list.length == 0 && this.props.getModuleList(this.name2moduleAddress(this.props.match.params.module_name), this.state.limit, this.state.offset);
+        // console.log(this.props.module_list.length)
+        // this.props.module_list.length === 0 && this.props.getModuleList(this.name2moduleAddress(this.props.match.params.module_name), this.state.limit, this.state.offset);
         return (
             <div className='violasContent'>
                 <ViolasHeader back="net"></ViolasHeader>
@@ -120,7 +122,7 @@ class Violas extends Component {
                                                     <td colSpan="3">
                                                         {timeStamp2String(item.expiration_time + '000')}
                                                     </td>
-                                                    <td colSpan="3">{this.module2name(item.module_address)}</td>
+                                                    <td colSpan="3">{this.module2name(item.token_id)}</td>
                                                     <td colSpan="4">{(item.type)}</td>
                                                     <td colSpan="4" onClick={() => {
                                                         item.sender &&
@@ -148,8 +150,8 @@ class Violas extends Component {
                                             }}>{v.version}</span></p>
                                             <p><label>Time</label><span>{timeStamp2String(v.expiration_time + '000')}</span></p>
                                             <p><label>Currency</label><span onClick={() => {
-                                                this.props.history.push('/app/Currency/' + this.module2name(v.module_address).toUpperCase())
-                                            }}>{this.module2name(v.module_address)}</span></p>
+                                                this.props.history.push('/app/Currency/' + this.module2name(v.token_id).toUpperCase())
+                                            }}>{this.module2name(v.token_id)}</span></p>
                                             <p><label>Type</label><span>{(v.type)}</span></p>
                                             <p><label>From</label><span onClick={() => {
                                                 v.sender && this.props.history.push('/app/Violas_address/' + v.sender)

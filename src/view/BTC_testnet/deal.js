@@ -13,7 +13,7 @@ class Deal extends Component {
   }
 
   componentDidMount() {
-    this.props.getBTCTestTx('testnet', this.props.match.params.transaction);
+    this.props.getBTCTestTx(this.props.match.params.transaction);
     // this.props.getCurSearchtx({
     //   txid: this.props.match.params.txid
     // })
@@ -49,6 +49,7 @@ class Deal extends Component {
 
   render() {
     let { dealList, BTC_Test_txid } = this.props
+    // console.log(BTC_Test_txid)
     // console.log(BTC_Test_txid)
     return (
       <div className="BTCTestNetContent">
@@ -88,9 +89,11 @@ class Deal extends Component {
                     <p><label>Gas used</label><span>{dealList.gas_used}</span></p>
                     <p><label>Sequence nr</label><span>{dealList.seq_nr}</span></p> */}
                       <p><label>Block Height</label><span onClick={() => this.goToBlock(BTC_Test_txid.blockheight)}>{BTC_Test_txid.blockheight}</span></p>
-                      <p><label>Time</label><span>{timeStamp2String(BTC_Test_txid.timestamp + '000')}</span></p>
-                      <p><label>Size</label><span>{BTC_Test_txid.size}</span></p>
-                      <p><label>Weight</label><span>{BTC_Test_txid.weight}</span></p>
+                      <p><label>Time</label><span>{timeStamp2String(BTC_Test_txid.time + '000')}</span></p>
+                      <p><label>BlockTime</label><span>{timeStamp2String(BTC_Test_txid.blocktime + '000')}</span></p>
+                      <p><label>Value In</label><span>{BTC_Test_txid.valueIn}</span></p>
+                      <p><label>Value out</label><span>{BTC_Test_txid.valueOut}</span></p>
+                      <p><label>Fee</label><span>{BTC_Test_txid.fees}</span></p>
                       <p><label>Confirmations</label><span>{BTC_Test_txid.confirmations}</span></p>
                     </div>
                   </div>
@@ -111,11 +114,11 @@ class Deal extends Component {
                       <div className="dealAddress">
                         <ul>
                           {
-                            BTC_Test_txid.preaddress && BTC_Test_txid.preaddress.map((v, i) => {
-                              return v.value == 0 ? <p key={i}><span>{v.address}</span></p> :
+                            BTC_Test_txid.vin && BTC_Test_txid.vin.map((v, i) => {
+                              return v.value == 0 ? <p key={i}><span>{v.addresses}</span></p> :
                                 <label key={i}>
                                   {
-                                    v.value == 0 ? <label>Unparsed address</label> : v.address.length == 34 ? <label className="addBlue" onClick={() => this.goToAddress(v.address)}>{v.address}</label> : <label>{v.address}</label>
+                                    v.value == 0 ? <label>Unparsed address</label> : v.addresses.length == 34 ? <label className="addBlue" onClick={() => this.goToAddress(v.addresses)}>{v.addresses}</label> : <label>{v.addresses}</label>
                                   }
                                   <p>{v.value}BTC</p></label>
                             })
@@ -124,9 +127,9 @@ class Deal extends Component {
                         <span></span>
                         <ul>
                           {
-                            BTC_Test_txid.nextaddress && BTC_Test_txid.nextaddress.map((v, i) => {
+                            BTC_Test_txid.vout && BTC_Test_txid.vout.map((v, i) => {
                               return <li key={i}>
-                                {v.value == 0 ? <label>Unparsed address</label> : v.address.length == 34 ? <label className="addBlue" onClick={() => this.goToAddress(v.address)}>{v.address}</label> : <label>{v.address}</label>
+                                {v.value == 0 ? <label>Unparsed address</label> : v.scriptPubKey.addresses.length == 34 ? <label className="addBlue" onClick={() => this.goToAddress(v.scriptPubKey.addresses)}>{v.scriptPubKey.addresses}</label> : <label>{v.scriptPubKey.addresses}</label>
                                 }
                                 <span>{v.value} BTC</span>
                               </li>

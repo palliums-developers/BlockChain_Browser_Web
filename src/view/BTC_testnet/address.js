@@ -32,7 +32,8 @@ class Address extends Component {
     //   address: this.props.match.params.address
     // })
     document.documentElement.scrollTop = document.body.scrollTop = 0;
-    this.props.getBTCTestAddress('testnet', this.props.match.params.address, 1)
+    // this.props.getBTCTestAddress('testnet', this.props.match.params.address, 1)
+    this.props.getBTCTestAddress(this.props.match.params.address)
   }
   getCurValue = (e) => {
     this.setState({
@@ -84,6 +85,7 @@ class Address extends Component {
     //mxmNJZWbypH4NyrDG3BLwVTGJMjwWkBAPo
     let { BTC_Test_address } = this.props;
     this.props.BTC_Test_address.list && this.countPage(this.props.BTC_Test_address.list.total_count);
+    console.log(BTC_Test_address)
     return (
       <div className="BTCTestNetContent">
         <BTCTestHeader back="netTo"></BTCTestHeader>
@@ -93,7 +95,7 @@ class Address extends Component {
               <input onChange={(e) => this.getCurValue(e)} onKeyDown={(e) => this.onKeyup(e)} placeholder="address、txid、block" />
               <span onClick={this.getSearch}></span>
             </div>
-            {BTC_Test_address.data ? <div>
+            {BTC_Test_address ? <div>
               <div className="price">
                 <p>
                   <i><img src="/img/address@2x.png" /></i>
@@ -110,9 +112,10 @@ class Address extends Component {
                   <div className="abstract">
                     <div className="abstractContent">
                       <p><label>Address</label><span>{this.props.match.params.address}</span></p>
-                      <p><label>Banlance</label><span>{BTC_Test_address.data && BTC_Test_address.data.balance} Sat</span></p>
-                      <p><label>Total Receive</label><span>{BTC_Test_address.data && BTC_Test_address.data.received} Sat</span></p>
-                      <p><label>Tx Count</label><span>{BTC_Test_address.data && BTC_Test_address.data.tx_count}</span></p>
+                      <p><label>Banlance</label><span>{BTC_Test_address && BTC_Test_address.balance} BTC</span></p>
+                      <p><label>Total Receive</label><span>{BTC_Test_address && BTC_Test_address.totalReceived} BTC</span></p>
+                      <p><label>Total Send</label><span>{BTC_Test_address && BTC_Test_address.totalSent} BTC</span></p>
+                      <p><label>Tx Count</label><span>{BTC_Test_address && BTC_Test_address.txApperances}</span></p>
                     </div>
                   </div>
                 </div>
@@ -121,7 +124,7 @@ class Address extends Component {
                   <div className="deal">
                     <div className="dealContent1">
                       <div className="dealContents">
-                        {BTC_Test_address.list.list.map((v, i) => {
+                        {/* {BTC_Test_address.list && BTC_Test_address.list.list.map((v, i) => {
                           return (
                             <div>
                               <p onClick={() => this.goToDeal(v.hash)}>{v.hash}</p>
@@ -163,8 +166,37 @@ class Address extends Component {
                               </div>
                             </div>
                           )
+                        })} */}
+                        {BTC_Test_address.transactions && BTC_Test_address.transactions.map((v, i) => {
+                          return (
+                            <div>
+                              <p onClick={() => this.goToDeal(v)}>TXID: {v}</p>
+                              {/* <div className="dealAddress">
+                                <ul>
+                                  {
+                                    // v.inputs.map((vint, iint) => {
+                                    //   return vint.input == 0 ? <p key={iint}><span>{vint.address}</span></p> :
+                                    //     <li key={iint}>
+                                    //       {
+                                    //         vint.value == 0 ? <label>地址解析失败</label> : vint.address.length == 34 ? <label className="addBlue" onClick={() => this.goToAddress(vint.address)}>{vint.address}</label> : <label>{vint.address}</label>
+                                    //       }
+                                    //       <span>{vint.value} BTC</span></li>
+                                    v.inputs.map((v1, i1) => {
+                                      return v1.prev_addresses && v1.prev_addresses[i1] ? <label><p className="addBlue" onClick={() => this.goToAddress(v1.prev_addresses)} key={i1}>{v1.prev_addresses + ' '}</p>
+                                        <p>{v1.prev_value + " Sat"}</p></label> : <label className={v1.prev_value ? "addBlue" : ''}>Unparsed address<p>0 Sat</p></label>
+                                    })
+                                  }
+                                </ul>
+                                <span></span>
+                                <ul>
+                                </ul>
+                              </div>
+                              <div className="descrPrice">
+                                <span>Confirmed {v.confirmations}</span>
+                              </div> */}
+                            </div>
+                          )
                         })}
-
                       </div>
                     </div>
                     {this.props.BTC_Test_address.list &&
