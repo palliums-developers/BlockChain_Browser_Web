@@ -419,8 +419,7 @@ export let getViolas_version = (_version) => {
 //     }
 // }
 export let getViolas_address = (_address, _offset, _limit, _module) => {
-    if (Number(_module) >= 0) {
-        console.log(_module)
+    if (Number(_module) >= -1) {
         return dispatch => {
             axios.get(violas_api + '/address/' + _address + '?module=' + _module + '&offset=' + _offset + '&limit=' + _limit)
                 .then(res => {
