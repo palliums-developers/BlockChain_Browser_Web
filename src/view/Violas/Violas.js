@@ -39,14 +39,17 @@ class Violas extends Component {
     })
   }
   module2name = (_token_id) => {
-    let result = "vtoken";
-    for (let i in this.props.currency) {
-      if (_token_id == this.props.currency[i].address) {
-        result = this.props.currency[i].name.toLowerCase();
-        break;
+    if (_token_id == -1){
+      return 'vtoken'
+    } else if (_token_id == null || undefined){
+      return 'Null'
+    }else{
+      for (let i in this.props.currency) {
+        if (_token_id == this.props.currency[i].id) {
+          return this.props.currency[i].name.toLowerCase();
+        }
       }
     }
-    return result
   }
   getSearch = () => {
     search_box(this.state.iptValue, this.props)

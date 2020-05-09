@@ -20,8 +20,10 @@ let initState = {
       libra_version: {},
       BTC_main_List: [],
       BTC_main_block: {},
+      BTC_main_block_tx: [],
       BTC_main_txid: {},
       BTC_main_address: {},
+      BTC_main_address_tx: {},
       BTC_Test_List: [],
       BTC_Test_block: {},
       BTC_Test_txid: {},
@@ -73,10 +75,14 @@ let ListReducer = (state = initState, action) => {
                   return { ...state, BTC_main_List: [...action.data] }
             case 'BTC_main_block':
                   return { ...state, BTC_main_block: action.data }
+            case 'BTC_main_block_tx':
+                  return { ...state, BTC_main_block_tx: [...action.data] }
             case 'BTC_main_txid':
                   return { ...state, BTC_main_txid: action.data }
             case 'BTC_main_address':
                   return { ...state, BTC_main_address: action.data }
+            case 'BTC_main_address_tx':
+                  return { ...state, BTC_main_address_tx: action.data }
             case 'BTC_Test_List':
                   return { ...state, BTC_Test_List: [action.data][0] }
             case 'BTC_Test_block':

@@ -60,8 +60,8 @@ class BTCMainNet extends Component {
                     <tr>
                       <th colSpan="3">Height</th>
                       <th colSpan="4">Size</th>
-                      <th colSpan="4">Profit</th>
-                      <th colSpan="6">timeStamp</th>
+                      <th colSpan="4">Confirmations</th>
+                      <th colSpan="6">TimeStamp</th>
                       <th colSpan="6">Hash</th>
                     </tr>
                   </thead>
@@ -74,7 +74,7 @@ class BTCMainNet extends Component {
                             this.props.history.push('/app/BTC_block/' + item.height);
                           }}>{item.height}</td>
                           <td colSpan="4">{item.size}</td>
-                          <td colSpan="4">{item.profit}</td>
+                          <td colSpan="4">{item.confirmations}</td>
                           <td colSpan="6">
                             {timeStamp2String(item.timestamp + '000')}
                           </td>
