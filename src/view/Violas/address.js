@@ -36,6 +36,7 @@ class Address extends Component {
       pathname: '/app/Violas_version/' + txid
     })
   }
+  
   componentWillMount() {
     this.props.getCurrency();
     this.props.getViolas_address(this.props.match.params.address, this.state.offset, this.state.limit)
@@ -98,21 +99,25 @@ class Address extends Component {
   select_sCoin = (_name) => {
     this.setState({
       current_sCoin: _name
-    })
-    if (_name == 'All') {
-      this.props.getViolas_address(this.props.match.params.address, this.state.offset, this.state.limit);
-      this.setState({ current_module_address: null });
-    } else if (_name == 'vtoken') {
-      this.props.getViolas_address(this.props.match.params.address, this.state.offset, this.state.limit, -1);
-      this.setState({ current_module_address: -1 });
-    } else {
-      for (let i in this.state.sCoin) {
-        if (_name == this.state.sCoin[i].name) {
-          this.props.getViolas_address(this.props.match.params.address, this.state.offset, this.state.limit, this.state.sCoin[i].id);
-          this.setState({ current_module_address: this.state.sCoin[i].id })
+    },()=>{
+        if (_name == 'All') {
+          this.props.getViolas_address(this.props.match.params.address, this.state.offset, this.state.limit);
+          this.setState({ current_module_address: null });
+        } else if (_name == 'vtoken') {
+          this.props.getViolas_address(this.props.match.params.address, this.state.offset, this.state.limit, -1);
+          this.setState({ current_module_address: -1 });
+        } else {
+          
+          for (let i in this.state.sCoin) {
+            if (_name == this.state.sCoin[i].name) {
+              console.log(this.state.sCoin[i].name, _name, this.state.sCoin[i].id)
+              this.props.getViolas_address(this.props.match.params.address, this.state.offset, this.state.limit, this.state.sCoin[i].id);
+              this.setState({ current_module_address: this.state.sCoin[i].id })
+            }
+          }
         }
-      }
-    }
+    })
+    
   }
   getModuleBalance = (_address) => {
     if (_address == '0000000000000000000000000000000000000000000000000000000000000000') {
@@ -130,16 +135,21 @@ class Address extends Component {
       iptValue: e.target.value
     })
   }
-  module2name = (_module_address) => {
-    let result = "vtoken";
-    for (let i in this.props.currency) {
-      if (_module_address == this.props.currency[i].address) {
-        result = this.props.currency[i].name.toLowerCase();
-        break;
+  module2name(_token_id) {
+    // let result = "vtoken";
+    if (_token_id == -1) {
+      return 'vtoken'
+    } else if (_token_id == null || undefined) {
+      return 'Null'
+    } else {
+      for (let i in this.props.currency) {
+        if (_token_id == this.props.currency[i].id) {
+          return this.props.currency[i].name.toLowerCase();
+        }
       }
     }
-    return result
   }
+
   returnStatus = (_num) => {
     if (_num == 4001) {
       return <p style={{ color: 'green' }}>success</p>
@@ -267,7 +277,7 @@ class Address extends Component {
                                   </div>
                                   <div className="descrPrice">
                                     {this.returnStatus(item.status)}
-                                    <span>{item.amount / 1e6} {this.module2name(item.module_address)}</span>
+                                    <span>{item.amount / 1e6} {this.module2name(item.token_id)}</span>
                                   </div>
                                 </div>
                               </div>
