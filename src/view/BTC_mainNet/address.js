@@ -32,6 +32,7 @@ class Address extends Component {
     //   address: this.props.match.params.address
     // })
     this.props.getBTCMainAddress('mainnet', this.props.match.params.address, this.state.page);
+    this.props.getBTCMainAddressTx(this.props.match.params.address, this.state.page);
     document.documentElement.scrollTop = document.body.scrollTop = 0;
   }
   componentDidMount() {
@@ -62,13 +63,23 @@ class Address extends Component {
   changePage = (_event, _page) => {
     switch (_event) {
       case 'pre':
-        this.setState({ page: this.state.page - 1 }, () => { this.props.getBTCMainAddress('mainnet', this.props.match.params.address, this.state.page); })
+        this.setState({ page: this.state.page - 1 }, () => {
+          // this.props.getBTCMainAddress('mainnet', this.props.match.params.address, this.state.page);
+          this.props.getBTCMainAddressTx(this.props.match.params.address, this.state.page);
+        })
         break;
       case 'next':
-        this.setState({ page: this.state.page + 1 }, () => { this.props.getBTCMainAddress('mainnet', this.props.match.params.address, this.state.page); })
+        this.setState({ page: this.state.page + 1 }, () => {
+          // this.props.getBTCMainAddress('mainnet', this.props.match.params.address, this.state.page);
+          this.props.getBTCMainAddressTx(this.props.match.params.address, this.state.page);
+
+        })
         break;
       case 'jump':
-        this.setState({ page: _page }, () => { this.props.getBTCMainAddress('mainnet', this.props.match.params.address, this.state.page); })
+        this.setState({ page: _page }, () => {
+          // this.props.getBTCMainAddress('mainnet', this.props.match.params.address, this.state.page);
+          this.props.getBTCMainAddressTx(this.props.match.params.address, this.state.page);
+        })
         break;
     }
     document.documentElement.scrollTop = document.body.scrollTop = 0;
@@ -84,8 +95,10 @@ class Address extends Component {
     })
   }
   render() {
-    let { BTC_main_address } = this.props;
-    this.props.BTC_main_address.list && this.countPage(this.props.BTC_main_address.list.total_count);
+    let { BTC_main_address, BTC_main_address_tx } = this.props;
+    // console.log(BTC_main_address_tx)
+    // this.props.BTC_main_address.list && this.countPage(this.props.BTC_main_address.list.total_count);
+    BTC_main_address_tx.total_count && this.countPage(BTC_main_address_tx.total_count)
     return (
       <div className="BTCMainNetContent">
         <BTCMainHeader back="netTo"></BTCMainHeader>
@@ -95,7 +108,7 @@ class Address extends Component {
               <input onChange={(e) => this.getCurValue(e)} onKeyDown={(e) => this.onKeyup(e)} placeholder="address、txid、block" />
               <span onClick={this.getSearch}></span>
             </div>
-            {BTC_main_address.data ?
+            {BTC_main_address ?
               <div>
                 <div className="price">
                   <p>
@@ -113,9 +126,9 @@ class Address extends Component {
                     <div className="abstract">
                       <div className="abstractContent">
                         <p><label>Address</label><span>{this.props.match.params.address}</span></p>
-                        <p><label>Banlance</label><span>{BTC_main_address.data && BTC_main_address.data.balance} Sat</span></p>
-                        <p><label>Total Receive</label><span>{BTC_main_address.data && BTC_main_address.data.received} Sat</span></p>
-                        <p><label>Tx Count</label><span>{BTC_main_address.data && BTC_main_address.data.tx_count}</span></p>
+                        <p><label>Banlance</label><span>{BTC_main_address && BTC_main_address.balance / 1e8} BTC</span></p>
+                        <p><label>Total Receive</label><span>{BTC_main_address && BTC_main_address.received / 1e8} BTC</span></p>
+                        <p><label>Tx Count</label><span>{BTC_main_address && BTC_main_address.tx_count}</span></p>
                         {/* <p><label>Recent transactions</label><span>{txs.length}</span></p> */}
                       </div>
                     </div>
@@ -125,7 +138,7 @@ class Address extends Component {
                     <div className="deal">
                       <div className="dealContent1">
                         <div className="dealContents">
-                          {BTC_main_address.list.list.map((v, i) => {
+                          {BTC_main_address_tx.list && BTC_main_address_tx.list.map((v, i) => {
                             return (
                               <div>
                                 <p onClick={() => this.goToDeal(v.hash)}>{v.hash}</p>
@@ -141,7 +154,7 @@ class Address extends Component {
                                       //       <span>{vint.value} BTC</span></li>
                                       v.inputs.map((v1, i1) => {
                                         return v1.prev_addresses && v1.prev_addresses[i1] ? <li><p className="addBlue" onClick={() => this.goToAddress(v1.prev_addresses)} key={i1}>{v1.prev_addresses + ' '}</p>
-                                          <p>{v1.prev_value + " Sat"}</p></li> : <li><label>Unparsed address</label><p className="blo">0 Sat</p></li>
+                                          <p>{v1.prev_value / 1e8 + " BTC"}</p></li> : <li><label>Unparsed address</label><p className="blo">0 BTC</p></li>
                                       })
                                     }
                                   </ul>
@@ -157,7 +170,7 @@ class Address extends Component {
 
                                       // })
                                       v.outputs.map((v2, i2) => {
-                                        return v2.addresses && v2.addresses[i2] ? <li><p className="addBlue" onClick={() => this.goToAddress(v2.addresses)} key={i2}>{v2.addresses}</p><p>{v2.value + " Sat"}</p></li> : <li><label>Unparsed address</label><p className="blo">0 Sat</p></li>
+                                        return v2.addresses && v2.addresses[i2] ? <li><p className="addBlue" onClick={() => this.goToAddress(v2.addresses)} key={i2}>{v2.addresses}</p><p>{v2.value / 1e8 + " BTC"}</p></li> : <li><label>Unparsed address</label><p className="blo">0 BTC</p></li>
 
                                       })
                                     }

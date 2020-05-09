@@ -12,6 +12,7 @@ class BlockHeight extends Component {
     this.state = {
       limit: 5,
       offset: 0,
+      pagesize: 5,
       type: 'hash'
     }
   }
@@ -30,6 +31,7 @@ class BlockHeight extends Component {
     // console.log(this.props.match.params.block_hash)
     document.documentElement.scrollTop = document.body.scrollTop = 0;
     this.props.getBTCMainBlock('mainnet', this.state.type, this.props.match.params.block_hash, this.state.limit, this.state.offset)
+    this.props.getBTCMainBlockTx(this.props.match.params.block_hash, this.state.pagesize)
   }
 
   hashOrHeight = async (_value) => {
@@ -72,8 +74,8 @@ class BlockHeight extends Component {
   //   }
   // }
   curBlock = (_type) => {
-    if (this.props.BTC_main_block.detail) {
-      let _height = this.props.BTC_main_block.detail.height
+    if (this.props.BTC_main_block) {
+      let _height = this.props.BTC_main_block.height
       switch (_type) {
         case 'prev':
           this.props.history.push('/app/BTC_block/' + (_height - 1))
@@ -103,7 +105,8 @@ class BlockHeight extends Component {
   getCurMore = () => {
     this.setState({
       limit: this.state.limit + this.state.limit,
-      offset: this.state.offset
+      offset: this.state.offset,
+      pagesize: this.state.pagesize + this.state.pagesize
     }, () => {
       // this.props.getCurDetailBlock({
       //   net: 'mainnet',
@@ -112,15 +115,16 @@ class BlockHeight extends Component {
       //   limit: this.state.limit + 2,
       //   offset: this.state.offset
       // })
-      this.props.getBTCMainBlock('mainnet', this.state.type, this.props.match.params.block_hash, this.state.limit, this.state.offset)
+      // this.props.getBTCMainBlock('mainnet', this.state.type, this.props.match.params.block_hash, this.state.limit, this.state.offset)
+      this.props.getBTCMainBlockTx(this.props.match.params.block_hash, this.state.pagesize)
     })
   }
 
   render() {
     // console.log(this.props.match.params.block_hash)
     // console.log(this.props)
-    let { BTC_main_block } = this.props;
-    console.log(BTC_main_block.showtx);
+    let { BTC_main_block, BTC_main_block_tx } = this.props;
+    // console.log(BTC_main_block);
 
     return (
       <div className="BTCMainNetContent">
@@ -131,14 +135,14 @@ class BlockHeight extends Component {
               <input onChange={(e) => this.getCurValue(e)} onKeyDown={(e) => this.onKeyup(e)} placeholder="address、txid、block" />
               <span onClick={this.getSearch}></span>
             </div>
-            {BTC_main_block.detail ? <div>
+            {BTC_main_block ? <div>
               <div className="price">
                 <p>
                   <i><img src="/img/编组 66@2x.png" /></i>
                   <label>BTC MainNet Block</label>
                   <span>{this.props.match.params.block}</span>
                 </p>
-                <p><label>BlockHash</label><span>{BTC_main_block.detail.hash}</span></p>
+                <p><label>BlockHash</label><span>{BTC_main_block.hash}</span></p>
               </div>
               <div className="btn">
                 <button onClick={() => this.curBlock('prev')}><img src="/img/编组 7.png" />Previous</button>
@@ -149,19 +153,19 @@ class BlockHeight extends Component {
                   <h2>Detail</h2>
                   <div className="abstract">
                     <div className="abstractContent">
-                      <p><label>Height</label><span>{BTC_main_block.detail.height}</span></p>
-                      <p><label>timestamp</label><span>{timeStamp2String(BTC_main_block.detail.timestamp + '000')}</span></p>
-                      <p><label>size</label><span>{BTC_main_block.detail.size} Bytes</span></p>
-                      <p><label>Weight</label><span>{BTC_main_block.detail.weight}</span></p>
-                      <p><label>confirmations</label><span>{BTC_main_block.detail.confirmations}</span></p>
+                      <p><label>Height</label><span>{BTC_main_block.height}</span></p>
+                      <p><label>timestamp</label><span>{timeStamp2String(BTC_main_block.timestamp + '000')}</span></p>
+                      <p><label>size</label><span>{BTC_main_block.size} Bytes</span></p>
+                      <p><label>Weight</label><span>{BTC_main_block.weight}</span></p>
+                      <p><label>confirmations</label><span>{BTC_main_block.confirmations}</span></p>
                     </div>
                     <div className="line"></div>
                     <div className="abstractContent">
-                      <p><label>nTx</label><span>{BTC_main_block.detail.nTx}</span></p>
-                      <p><label>version</label><span>{BTC_main_block.detail.version}</span></p>
-                      <p><label>difficulty</label><span>{BTC_main_block.detail.difficulty}</span></p>
-                      <p><label>Bits</label><span>{BTC_main_block.detail.bits}</span></p>
-                      <p><label>Nonce</label><span>{BTC_main_block.detail.nonce}</span></p>
+                      <p><label>nTx</label><span>{BTC_main_block.tx_count}</span></p>
+                      <p><label>version</label><span>{BTC_main_block.version}</span></p>
+                      <p><label>difficulty</label><span>{BTC_main_block.difficulty}</span></p>
+                      <p><label>Bits</label><span>{BTC_main_block.bits}</span></p>
+                      <p><label>Nonce</label><span>{BTC_main_block.nonce}</span></p>
                     </div>
                   </div>
                 </div>
@@ -169,24 +173,24 @@ class BlockHeight extends Component {
                   <h2>Transaction</h2>
                   <div className="deal">
                     {
-                      BTC_main_block.showtx && BTC_main_block.showtx.map((item, index) => {
+                      BTC_main_block_tx && BTC_main_block_tx.map((item, index) => {
                         return <div key={index}><div className="dealContent1 dealContent2">
                           <div className="dealContents">
-                            <p onClick={() => this.goToDeal(item.txid)}>{item.txid}</p>
+                            <p onClick={() => this.goToDeal(item.hash)}>{item.hash}</p>
                             <div className="dealAddress">
                               <ul>
                                 {
-                                  item.preaddress.map((v, i) => {
-                                    return v.value == 0 ? <p key={i}><span>{v.address}</span></p> :
-                                      <li key={i}><label onClick={() => this.goToAddress(v.address)} className="addBlue">{v.address}</label><span>{v.value} BTC</span></li>
+                                  item.inputs.map((v, i) => {
+                                    return v.prev_value == 0 ? <p key={i}><span>{v.prev_addresses}</span></p> :
+                                      <li key={i}><label onClick={() => this.goToAddress(v.prev_addresses)} className="addBlue">{v.prev_addresses}</label><span>{v.prev_value / 1e8} BTC</span></li>
                                   })
                                 }
                               </ul>
                               <span></span>
                               <ul>
                                 {
-                                  item.nextaddress.map((v, i) => {
-                                    return <li key={i}>{v.value == 0 ? <label>Unparsed address</label> : <label className="addBlue" onClick={() => this.goToAddress(v.address)}>{v.address}</label>}<span>{v.value} BTC</span></li>
+                                  item.outputs.map((v, i) => {
+                                    return <li key={i}>{v.value == 0 ? <label>Unparsed address</label> : <label className="addBlue" onClick={() => this.goToAddress(v.addresses)}>{v.addresses}</label>}<span>{v.value / 1e8} BTC</span></li>
                                   })
                                 }
                               </ul>

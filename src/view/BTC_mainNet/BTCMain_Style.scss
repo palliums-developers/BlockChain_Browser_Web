@@ -538,6 +538,7 @@
                 // word-wrap: break-word;
                 display: flex;
                 align-items: center;
+                cursor: pointer;
               }
 
               >p {
@@ -765,6 +766,7 @@
       color: rgba(255, 255, 255, 1);
       font-weight: 400;
       margin-top: 0.1rem;
+      cursor: pointer;
     }
 
     >p:nth-child(1) {

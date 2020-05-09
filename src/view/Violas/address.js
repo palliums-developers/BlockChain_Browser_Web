@@ -18,7 +18,7 @@ class Address extends Component {
       showMenuBTC: false,
       showMenuViolas: false,
       showMenuStableCoin: false,
-      sCoin: [{ address: 'all', name: 'All' }, { address: '0000000000000000000000000000000000000000000000000000000000000000', name: 'vtoken' }],
+      sCoin: [{ id: 'all', name: 'All' }, { id: -1, name: 'vtoken' }],
       current_sCoin: 'All',
       current_module_address: '',
       page: 1,
@@ -84,10 +84,10 @@ class Address extends Component {
       let sCoin_temp = this.state.sCoin;
       for (let i in this.props.currency) {
         for (let j in this.props.violas_address.status.module_balande) {
-          if (this.props.currency[i].address == this.props.violas_address.status.module_balande[j].module) {
-            // console.log(this.pro)
+          if (this.props.currency[i].id == this.props.violas_address.status.module_balande[j].id) {
+            // console.log(this.props.currency)
             sCoin_temp.push({
-              address: this.props.currency[i].address,
+              id: this.props.currency[i].id,
               name: this.props.currency[i].name.toLowerCase()
             })
           }
@@ -103,13 +103,13 @@ class Address extends Component {
       this.props.getViolas_address(this.props.match.params.address, this.state.offset, this.state.limit);
       this.setState({ current_module_address: null });
     } else if (_name == 'vtoken') {
-      this.props.getViolas_address(this.props.match.params.address, this.state.offset, this.state.limit, '0000000000000000000000000000000000000000000000000000000000000000');
-      this.setState({ current_module_address: '0000000000000000000000000000000000000000000000000000000000000000' });
+      this.props.getViolas_address(this.props.match.params.address, this.state.offset, this.state.limit, -1);
+      this.setState({ current_module_address: -1 });
     } else {
       for (let i in this.state.sCoin) {
         if (_name == this.state.sCoin[i].name) {
-          this.props.getViolas_address(this.props.match.params.address, this.state.offset, this.state.limit, this.state.sCoin[i].address);
-          this.setState({ current_module_address: this.state.sCoin[i].address })
+          this.props.getViolas_address(this.props.match.params.address, this.state.offset, this.state.limit, this.state.sCoin[i].id);
+          this.setState({ current_module_address: this.state.sCoin[i].id })
         }
       }
     }
