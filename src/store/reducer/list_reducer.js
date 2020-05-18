@@ -1,6 +1,6 @@
 let initState = {
       getCoins: false,
-      getCoinsFun: {},
+      getCoinsFuns: {},
       netTableList: [],
       abstractDetail: {},
       dealsList: [],
@@ -30,7 +30,8 @@ let initState = {
       BTC_Test_address: {},
       currency: [],
       module_list: [],
-      violas_address_holding_module: []
+      violas_address_holding_module: [],
+      info: ''
 }
 
 let ListReducer = (state = initState, action) => {
@@ -99,8 +100,10 @@ let ListReducer = (state = initState, action) => {
                   return { ...state, module_list: [...action.data] }
             case 'GETCOINS':
                   return { ...state, getCoins: action.data }
-            case 'getCoinsFun':
-                  return { ...state, getCoinsFun: action.data }
+            // case 'getCoinsFun':
+            //       return { ...state, getCoinsFuns: action.data }
+            case 'WARN':
+                  return { ...state, info: action.data }
             default:
                   return state;
       }

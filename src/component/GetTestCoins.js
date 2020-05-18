@@ -4,12 +4,16 @@ import { connect } from 'react-redux'
 import * as AllActions from '../store/action/list_action'
 import { bindActionCreators } from 'redux'
 
+var times = 0;//点击次数
+var preClickTime;//上一次点击的时间（毫秒）
+var currentClickTime;//当前点击时间
 class GetTestCoins extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
             coinAddress: '',
             coinId: 0,
+            time:0,
             info: 'Please do not get the currency of this currency repeatedly',
         }
         // this.handleChange = this.handleChange.bind(this)
@@ -19,6 +23,10 @@ class GetTestCoins extends React.Component {
         // this.props.currency.map(item => {
         //     console.log(item.id)
         // })
+    }
+    componentDidMount(){
+        // console.log(l)
+
     }
     handleChange(_type, event) {
         switch (_type) {
@@ -33,12 +41,33 @@ class GetTestCoins extends React.Component {
         }
     }
     handleSubmit() {
+        this.getAgainClick()
+
         // let couldSubmit=false;
         if (this.state.coinAddress.length !== 32) {
-            this.setState({ info: 'Invalid Address' })
+            this.props.getWarning('Invalid Address')
         } else {
             this.props.getCoinsFun(this.state.coinAddress, this.state.coinId)
+            
         }
+    }
+    //判断是否重复点击
+    getAgainClick(){
+        if (times == 0) {
+            preClickTime = new Date().getTime();//首次点击的时间
+            times++
+            return;
+        }
+        currentClickTime = new Date().getTime();
+        if ((currentClickTime - preClickTime) < 2000) {//如果是3秒内重复点击
+            this.props.getWarning('Please do not get the currency of this currency repeatedly')
+            preClickTime = currentClickTime;
+            return;
+        }
+        times++
+        preClickTime = currentClickTime;
+        console.log("当前点击次数:" + times);
+        
     }
     closeGetCoins() {
         this.props.closeGetCoins();
@@ -60,7 +89,7 @@ class GetTestCoins extends React.Component {
                         </div>
                         <div className='inLine2'>
                             <h4>Amount:</h4>
-                            <h5>500</h5>
+                            <h5>0.001</h5>
                             <select onChange={this.handleChange.bind(this, 'id')}>
                                 {
                                     this.props.currency.length > 0 ?
@@ -72,8 +101,8 @@ class GetTestCoins extends React.Component {
                             </select>
                         </div>
                         <div className='submit'>
-                            <button onClick={this.handleSubmit.bind(this)}>Submit</button>
-                            <p>{this.state.info}</p>
+                            <button ref="btn" onClick={this.handleSubmit.bind(this)}>Submit</button>
+                            <p>{this.props.info}</p>
                         </div>
                     </div>
                 </div>
