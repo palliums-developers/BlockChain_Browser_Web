@@ -36,7 +36,7 @@ class Address extends Component {
       pathname: '/app/Violas_version/' + txid
     })
   }
-  
+
   componentWillMount() {
     this.props.getCurrency();
     this.props.getViolas_address(this.props.match.params.address, this.state.offset, this.state.limit)
@@ -99,25 +99,23 @@ class Address extends Component {
   select_sCoin = (_name) => {
     this.setState({
       current_sCoin: _name
-    },()=>{
-        if (_name == 'All') {
-          this.props.getViolas_address(this.props.match.params.address, this.state.offset, this.state.limit);
-          this.setState({ current_module_address: null });
-        } else if (_name == 'vtoken') {
-          this.props.getViolas_address(this.props.match.params.address, this.state.offset, this.state.limit, -1);
-          this.setState({ current_module_address: -1 });
-        } else {
-          
-          for (let i in this.state.sCoin) {
-            if (_name == this.state.sCoin[i].name) {
-              console.log(this.state.sCoin[i].name, _name, this.state.sCoin[i].id)
-              this.props.getViolas_address(this.props.match.params.address, this.state.offset, this.state.limit, this.state.sCoin[i].id);
-              this.setState({ current_module_address: this.state.sCoin[i].id })
-            }
+    }, () => {
+      if (_name == 'All') {
+        this.props.getViolas_address(this.props.match.params.address, this.state.offset, this.state.limit);
+        this.setState({ current_module_address: null });
+      } else if (_name == 'vtoken') {
+        this.props.getViolas_address(this.props.match.params.address, this.state.offset, this.state.limit, -1);
+        this.setState({ current_module_address: -1 });
+      } else {
+        for (let i in this.state.sCoin) {
+          if (_name == this.state.sCoin[i].name) {
+            this.props.getViolas_address(this.props.match.params.address, this.state.offset, this.state.limit, this.state.sCoin[i].id);
+            this.setState({ current_module_address: this.state.sCoin[i].id })
           }
         }
+      }
     })
-    
+
   }
   getModuleBalance = (_address) => {
     if (_address == '0000000000000000000000000000000000000000000000000000000000000000') {
