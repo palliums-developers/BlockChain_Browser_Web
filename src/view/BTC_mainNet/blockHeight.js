@@ -174,35 +174,69 @@ class BlockHeight extends Component {
                   <div className="deal">
                     {
                       BTC_main_block_tx && BTC_main_block_tx.map((item, index) => {
-                        return <div key={index}><div className="dealContent1 dealContent2">
-                          <div className="dealContents">
-                            <p onClick={() => this.goToDeal(item.hash)}>{item.hash}</p>
-                            <div className="dealAddress">
-                              <ul>
-                                {
-                                  item.inputs.map((v, i) => {
-                                    return v.prev_value == 0 ? <p key={i}><span>{v.prev_addresses}</span></p> :
-                                      <li key={i}><label onClick={() => this.goToAddress(v.prev_addresses)} className="addBlue">{v.prev_addresses}</label><span>{v.prev_value / 1e8} BTC</span></li>
-                                  })
-                                }
-                              </ul>
-                              <span></span>
-                              <ul>
-                                {
-                                  item.outputs.map((v, i) => {
-                                    return <li key={i}>{v.value == 0 ? <label>Unparsed address</label> : <label className="addBlue" onClick={() => this.goToAddress(v.addresses)}>{v.addresses}</label>}<span>{v.value / 1e8} BTC</span></li>
-                                  })
-                                }
-                              </ul>
+                        return (
+                          <div key={index}>
+                            <div className="dealContent1 dealContent2">
+                              <div className="dealContents">
+                                <p onClick={() => this.goToDeal(item.hash)}>
+                                  {item.hash}
+                                </p>
+                                <div className="dealAddress">
+                                  <ul>
+                                    {item.inputs.map((v, i) => {
+                                      return v.prev_value == 0 ? (
+                                        <p key={i}>
+                                          <span>{v.prev_addresses}</span>
+                                        </p>
+                                      ) : (
+                                        <li key={i}>
+                                          <label
+                                            onClick={() =>
+                                              this.goToAddress(v.prev_addresses)
+                                            }
+                                            className="addBlue"
+                                          >
+                                            {v.prev_addresses}
+                                          </label>
+                                          <span>{v.prev_value / 1e8} BTC</span>
+                                        </li>
+                                      );
+                                    })}
+                                  </ul>
+                                  <span></span>
+                                  <ul>
+                                    {item.outputs.map((v, i) => {
+                                      return (
+                                        <li key={i}>
+                                          {v.value == 0 ? (
+                                            <label>Unparsed address</label>
+                                          ) : (
+                                            <label
+                                              className="addBlue"
+                                              onClick={() =>
+                                                this.goToAddress(v.addresses)
+                                              }
+                                            >
+                                              {v.addresses}
+                                            </label>
+                                          )}
+                                          <span>{v.value / 1e8} BTC</span>
+                                        </li>
+                                      );
+                                    })}
+                                  </ul>
+                                </div>
+                                <div className="descrPrice">
+                                  <span>
+                                    <i></i>
+                                    {item.outputs_value / 1e8} BTC
+                                  </span>
+                                </div>
+                              </div>
                             </div>
-                            <div className="descrPrice">
-                              <span><i></i>{item.output} BTC</span>
-                            </div>
+                            <div className="line"></div>
                           </div>
-
-                        </div>
-                          <div className="line"></div>
-                        </div>
+                        );
                       })
                     }
                   </div>
