@@ -487,7 +487,7 @@ export let getModuleList = (_module_address, _limit, _offset) => {
             })
     }
 }
-
+//显示隐藏表单
 export let showGetCoins = () => {
     return dispatch => {
         dispatch({
@@ -505,15 +505,35 @@ export let closeGetCoins = () => {
         })
     }
 }
-
+//提交表单
 export let getCoinsFun = (_address, _token_id) => {
     return dispatch => {
         axios.get(`${violas_api}/faucet?address=${_address}&token_id=${_token_id}`)
             .then(res => {
-                dispatch({
-                    type: 'getCoinsFun',
-                    data: res.data.data
-                })
+                // dispatch({
+                //     type: 'getCoinsFun',
+                //     data: res.data
+                // })
+                if (res.data.message == "ok"){
+                    dispatch({
+                        type: 'WARN',
+                        data: 'You get test coins successful'
+                    })
+                }else{
+                    dispatch({
+                        type: 'WARN',
+                        data: 'You get test coins failed'
+                    })
+                }
             })
+    }
+}
+
+export let getWarning = (params)=>{
+    return dispatch=>{
+        dispatch({
+            type: 'WARN',
+            data: params
+        })
     }
 }
