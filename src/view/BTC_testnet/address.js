@@ -7,6 +7,7 @@ import { timeStamp2String } from '../../utils/timer'
 import search_box from '../../utils/search_BTC'
 import QRcode from 'qrcode.react'
 import './BTCTest_Style.scss';
+//mkHS9ne12qx9pS9VojpwU5xtRd4T7X7ZUt
 class Address extends Component {
   constructor(props) {
     super(props);
@@ -33,7 +34,7 @@ class Address extends Component {
     // })
     document.documentElement.scrollTop = document.body.scrollTop = 0;
     // this.props.getBTCTestAddress('testnet', this.props.match.params.address, 1)
-    this.props.getBTCTestAddress(this.props.match.params.address)
+    this.props.getBTCTestAddress(this.props.match.params.address, this.state.page);
   }
   getCurValue = (e) => {
     this.setState({
@@ -50,23 +51,28 @@ class Address extends Component {
   }
   countPage = (_total_count) => {
     let result = this.state.pageList;
-    let result_max = Math.ceil(_total_count / 10);
-    if (result.length < result_max - 1 && result_max > 2) {
-      for (let i = 2; i <= result_max; i++) {
-        result.push(i)
+    // let result_max = Math.ceil(_total_count / 10);
+    // if (result.length < result_max - 1 && result_max > 2) {
+    //   for (let i = 2; i <= result_max; i++) {
+    //     result.push(i)
+    //   }
+    // }
+    if (result.length < _total_count - 1 && _total_count > 2) {
+      for (let i = 2; i <= _total_count; i++) {
+        result.push(i);
       }
     }
   }
   changePage = (_event, _page) => {
     switch (_event) {
       case 'pre':
-        this.setState({ page: this.state.page - 1 }, () => { this.props.getBTCTestAddress('testnet', this.props.match.params.address, this.state.page); })
+        this.setState({ page: this.state.page - 1 }, () => { this.props.getBTCTestAddress(this.props.match.params.address, this.state.page); })
         break;
       case 'next':
-        this.setState({ page: this.state.page + 1 }, () => { this.props.getBTCTestAddress('testnet', this.props.match.params.address, this.state.page); })
+        this.setState({ page: this.state.page + 1 }, () => { this.props.getBTCTestAddress(this.props.match.params.address, this.state.page); })
         break;
       case 'jump':
-        this.setState({ page: _page }, () => { this.props.getBTCTestAddress('testnet', this.props.match.params.address, this.state.page); })
+        this.setState({ page: _page }, () => { this.props.getBTCTestAddress(this.props.match.params.address, this.state.page); })
         break;
     }
     document.documentElement.scrollTop = document.body.scrollTop = 0;
@@ -84,8 +90,7 @@ class Address extends Component {
   render() {
     //mxmNJZWbypH4NyrDG3BLwVTGJMjwWkBAPo
     let { BTC_Test_address } = this.props;
-    this.props.BTC_Test_address.list && this.countPage(this.props.BTC_Test_address.list.total_count);
-    console.log(BTC_Test_address)
+    this.props.BTC_Test_address.totalPages && this.countPage(this.props.BTC_Test_address.totalPages);
     return (
       <div className="BTCTestNetContent">
         <BTCTestHeader back="netTo"></BTCTestHeader>
@@ -170,7 +175,8 @@ class Address extends Component {
                         {BTC_Test_address.transactions && BTC_Test_address.transactions.map((v, i) => {
                           return (
                             <div>
-                              <p onClick={() => this.goToDeal(v)}>TXID: {v}</p>
+                              <p onClick={() => this.goToDeal(v)}>TXID: {v.txid}</p>
+
                               {/* <div className="dealAddress">
                                 <ul>
                                   {
@@ -194,12 +200,24 @@ class Address extends Component {
                               <div className="descrPrice">
                                 <span>Confirmed {v.confirmations}</span>
                               </div> */}
+
+                              {/* <div className="dealAddress">
+                                <ul>
+                                  {
+                                    v.vin.map(
+                                      (vin_v, vin_i) => {
+                                        return vin_v
+                                      }
+                                    )
+                                  }
+                                </ul>
+                              </div> */}
                             </div>
                           )
                         })}
                       </div>
                     </div>
-                    {this.props.BTC_Test_address.list &&
+                    {this.props.BTC_Test_address.totalPages &&
                       <div className="bomSelect">
                         {this.state.page > 1 && <button onClick={() => this.changePage('pre')}>Previous</button>}
                         <div class="dropdown1">

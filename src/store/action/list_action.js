@@ -1,5 +1,9 @@
 
 import axios from 'axios'
+/**
+ * https://github.com/trezor/blockbook/blob/master/docs/api.md#get-address
+ */
+
 // let url = 'http://192.168.1.253:30001/open/1.0'
 // let libra_api = 'http://47.52.66.26:10080';
 
@@ -14,7 +18,8 @@ const violas_api = 'https://api.violas.io/explorer/violas';
 // const BTC_api = 'http://localhost:10080/open/1.0';
 // const BTC_api = 'https://api2.violas.io:10080/open/1.0';
 const BTC_api = "https://chain.api.btc.com/v3/";
-const tBTC_api = 'https://tbtc1.trezor.io/api/'
+// const BTC_api = 'https://btc1.trezor.io/api/';
+const tBTC_api = 'https://tbtc1.trezor.io/api/';
 // const BTC_api = 'http://47.52.66.26:10080/open/1.0';
 // const BTC_api = 'http://localhost:30001/open/1.0';
 // const BTC_api = 'http://192.168.1.111:30001/open/1.0';
@@ -73,7 +78,7 @@ export let getCurListBlock = () => {
 export let getCurTestListBlock = (_limit, _offset) => {
     return dispatch => {
         axios.get(libra_api + '/recent?limit=' + _limit + '&offset=' + _offset).then(res => {
-            console.log(res.data.data)
+            // console.log(res.data.data)
             dispatch({
                 type: 'libra_testnet',
                 data: res.data.data
@@ -175,13 +180,14 @@ export let getBTCMainList = () => {
     //     })
     // }
     return dispatch => {
-        axios.get(BTC_api + 'block/latest').then(res => {
-            // console.log(res.data.data.list,'123')
-            // dispatch({
-            //     type: 'BTC_main_List',
-            //     data: res.data.data.list
-            // })
-            // console.log(res.data.data.height-1,res.data.data.height-2)
+        axios.get(BTC_api+'block/latest').then(res => {
+            console.log(res.data.height)
+            dispatch({
+                type: 'BTC_main_List',
+                data: res.data.data.list
+            })
+            console.log(res.data.data.height-1,res.data.data.height-2)
+
             axios.get(BTC_api + `block/${res.data.data.height},${res.data.data.height - 1},${res.data.data.height - 2},${res.data.data.height - 3},${res.data.data.height - 4}`)
                 .then(res => {
                     dispatch({
@@ -189,6 +195,9 @@ export let getBTCMainList = () => {
                         data: res.data.data
                     })
                 })
+
+            console.log(res.data)
+
         })
     }
 }
@@ -263,15 +272,15 @@ export let getBTCMainAddress = (_net, _address, _page) => {
             })
     }
 }
-export let getBTCMainAddressTx=(_address,_page)=>{
-    return dispatch=>{
-        axios.get(BTC_api+'address/'+_address+'/tx?pagesize=10&page='+_page)
-        .then(res=>{
-            dispatch({
-                type:'BTC_main_address_tx',
-                data:res.data.data
+export let getBTCMainAddressTx = (_address, _page) => {
+    return dispatch => {
+        axios.get(BTC_api + 'address/' + _address + '/tx?pagesize=10&page=' + _page)
+            .then(res => {
+                dispatch({
+                    type: 'BTC_main_address_tx',
+                    data: res.data.data
+                })
             })
-        })
     }
 }
 export let getBTCTestList = () => {
@@ -371,10 +380,10 @@ export let getBTCTestTx = (_txid) => {
 //         })
 //     }
 // }
-export let getBTCTestAddress = (_address) => {
+export let getBTCTestAddress = (_address,_page) => {
     return dispatch => {
-        axios.get(tBTC_api + '/address/' + _address).then(res => {
-            // console.log(res.data)
+        axios.get(tBTC_api + '/v2/address/' + _address+'?pageSize=10&details=txs&page='+_page).then(res => {
+            console.log(res.data)
             dispatch({
                 type: 'BTC_Test_address',
                 data: res.data
@@ -514,12 +523,12 @@ export let getCoinsFun = (_address, _token_id) => {
                 //     type: 'getCoinsFun',
                 //     data: res.data
                 // })
-                if (res.data.message == "ok"){
+                if (res.data.message == "ok") {
                     dispatch({
                         type: 'WARN',
                         data: 'You get test coins successful'
                     })
-                }else{
+                } else {
                     dispatch({
                         type: 'WARN',
                         data: 'You get test coins failed'
@@ -529,8 +538,8 @@ export let getCoinsFun = (_address, _token_id) => {
     }
 }
 
-export let getWarning = (params)=>{
-    return dispatch=>{
+export let getWarning = (params) => {
+    return dispatch => {
         dispatch({
             type: 'WARN',
             data: params
