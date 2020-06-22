@@ -13,7 +13,7 @@ class GetTestCoins extends React.Component {
         this.state = {
             coinAddress: '',
             coinId: 0,
-            time:0,
+            time: 0,
             info: 'Please do not get the currency of this currency repeatedly',
         }
         // this.handleChange = this.handleChange.bind(this)
@@ -24,7 +24,7 @@ class GetTestCoins extends React.Component {
         //     console.log(item.id)
         // })
     }
-    componentDidMount(){
+    componentDidMount() {
         // console.log(l)
 
     }
@@ -48,11 +48,11 @@ class GetTestCoins extends React.Component {
             this.props.getWarning('Invalid Address')
         } else {
             this.props.getCoinsFun(this.state.coinAddress, this.state.coinId)
-            
+
         }
     }
     //判断是否重复点击
-    getAgainClick(){
+    getAgainClick() {
         if (times == 0) {
             preClickTime = new Date().getTime();//首次点击的时间
             times++
@@ -67,7 +67,7 @@ class GetTestCoins extends React.Component {
         times++
         preClickTime = currentClickTime;
         console.log("当前点击次数:" + times);
-        
+
     }
     closeGetCoins() {
         this.props.closeGetCoins();

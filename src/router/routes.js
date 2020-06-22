@@ -23,6 +23,7 @@ import Violas from "../view/Violas/Violas";
 import Violas_version from "../view/Violas/deal";
 import Violas_address from "../view/Violas/address";
 import Currency from "../view/Violas/Currency";
+import Faucet from "../view/faucet/faucet"
 import { async } from "q";
 const wallet_api = 'http://52.27.228.84:4000';
 let routes = [
@@ -96,6 +97,10 @@ let routes = [
                 redirect: '/app/Violas'
             }
         ]
+    },
+    {
+        path:'/faucet',
+        component: Faucet
     },
     {
         path: '/',
