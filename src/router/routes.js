@@ -103,6 +103,10 @@ let routes = [
         component: Faucet
     },
     {
+        path:'/faucet',
+        component: Faucet
+    },
+    {
         path: '/',
         redirect: '/app'
     }
