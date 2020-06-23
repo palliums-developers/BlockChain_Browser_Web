@@ -99,7 +99,7 @@ let routes = [
         ]
     },
     {
-        path:'/faucet',
+        path:'/faucet/:address',
         component: Faucet
     },
     {

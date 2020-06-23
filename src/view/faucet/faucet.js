@@ -36,7 +36,7 @@ class Faucet extends React.Component {
         this.props.getCurrency();
     }
     componentDidMount() {
-        // console.log(l)
+        this.setState({coinAddress:this.props.match.params.address})
     }
     showMenu = (event) => {
         // this.setState({ showMenuViolas: true });
