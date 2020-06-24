@@ -61,7 +61,10 @@ class ViolasHeader extends Component {
     }
   }
   showGetCoins() {
-    this.props.showGetCoins();
+    // this.props.showGetCoins();
+    this.props.history.push({
+      pathname: '/faucet'
+    })
   }
   render() {
     this.addCurrencyList();

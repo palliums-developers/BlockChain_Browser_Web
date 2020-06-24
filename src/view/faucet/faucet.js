@@ -15,12 +15,13 @@ class Faucet extends React.Component {
         super(props);
         this.state = {
             coinAddress: '',
-            coinId: 0,
+            coinId: 'LBR',
             time: 0,
             info: 'Please do not get the currency of this currency repeatedly',
             showMenuViolas: false,
             showMenuBTC: false,
             getCoins: false,
+            auth_key_prefix: '',
             vCoin: [
                 { pathname: '/app/Violas', type: 'vtoken' }
             ],
@@ -35,8 +36,8 @@ class Faucet extends React.Component {
     componentWillMount() {
         this.props.getCurrency();
     }
-    componentDidMount() {
-        this.setState({coinAddress:this.props.match.params.address})
+    async componentDidMount() {
+        await this.setState({ coinAddress: this.props.match.params.address })
     }
     showMenu = (event) => {
         // this.setState({ showMenuViolas: true });
@@ -73,23 +74,25 @@ class Faucet extends React.Component {
         switch (_type) {
             case 'address':
                 this.setState({ coinAddress: event.target.value });
-                console.log(event.target.value)
+                // console.log(event.target.value)
                 break;
             case 'id':
                 this.setState({ coinId: event.target.value })
-                console.log(event.target.value)
+                // console.log(event.target.value)
                 break;
         }
     }
-    handleSubmit() {
-        this.getAgainClick()
-
-        // let couldSubmit=false;
+    async get_auth_key_prefix() {
+        await this.props.getAccountInfo(this.state.coinAddress);
+        await this.setState({ auth_key_prefix: this.props.account_info.authentication_key.slice(0, 32) })
+    }
+    async handleSubmit() {
+        this.getAgainClick();
         if (this.state.coinAddress.length !== 32) {
             this.props.getWarning('Invalid Address')
         } else {
-            this.props.getCoinsFun(this.state.coinAddress, this.state.coinId)
-
+            await this.get_auth_key_prefix();
+            await this.props.getCoinsFun(this.state.coinAddress, this.state.coinId, this.state.auth_key_prefix);
         }
     }
     //判断是否重复点击

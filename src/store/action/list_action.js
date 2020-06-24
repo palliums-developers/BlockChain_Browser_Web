@@ -7,10 +7,10 @@ import axios from 'axios'
 // let url = 'http://192.168.1.253:30001/open/1.0'
 // let libra_api = 'http://47.52.66.26:10080';
 
-// const wallet_api = 'http://52.27.228.84:4000';
+const neibu = 'http://52.27.228.84:4000';
 // const libra_api = 'http://52.27.228.84:4000/explorer/libra';
-// const violas_api = 'http://52.27.228.84:4000/explorer/violas';
-const wallet_api = 'https://api.violas.io';
+const neibu_violas = 'http://52.27.228.84:4000/explorer/violas';
+const waibu = 'https://api.violas.io';
 // const libra_api = 'http://52.27.228.84:4000/explorer/libra';
 const libra_api = 'https://api.violas.io/explorer/libra';
 const violas_api = 'https://api.violas.io/explorer/violas';
@@ -180,13 +180,13 @@ export let getBTCMainList = () => {
     //     })
     // }
     return dispatch => {
-        axios.get(BTC_api+'block/latest').then(res => {
+        axios.get(BTC_api + 'block/latest').then(res => {
             console.log(res.data.height)
             dispatch({
                 type: 'BTC_main_List',
                 data: res.data.data.list
             })
-            console.log(res.data.data.height-1,res.data.data.height-2)
+            console.log(res.data.data.height - 1, res.data.data.height - 2)
 
             axios.get(BTC_api + `block/${res.data.data.height},${res.data.data.height - 1},${res.data.data.height - 2},${res.data.data.height - 3},${res.data.data.height - 4}`)
                 .then(res => {
@@ -380,9 +380,9 @@ export let getBTCTestTx = (_txid) => {
 //         })
 //     }
 // }
-export let getBTCTestAddress = (_address,_page) => {
+export let getBTCTestAddress = (_address, _page) => {
     return dispatch => {
-        axios.get(tBTC_api + '/v2/address/' + _address+'?pageSize=10&details=txs&page='+_page).then(res => {
+        axios.get(tBTC_api + '/v2/address/' + _address + '?pageSize=10&details=txs&page=' + _page).then(res => {
             console.log(res.data)
             dispatch({
                 type: 'BTC_Test_address',
@@ -463,8 +463,8 @@ export let getViolas_address_module = (_module, _address) => {
 }
 
 export let getCurrency = _ => {
-    return dispatch => {
-        axios.get(wallet_api + '/1.0/violas/currency')
+    return async dispatch => {
+        await axios.get(neibu + '/1.0/violas/currency')
             .then(res => {
                 dispatch({
                     type: 'currency',
@@ -474,9 +474,21 @@ export let getCurrency = _ => {
     }
 }
 
+export let getAccountInfo = (_address) => {
+    return async dispatch => {
+        await axios.get(neibu + '/1.0/violas/account/info?address=' + _address)
+            .then(res => {
+                dispatch({
+                    type: 'account_info',
+                    data: res.data.data
+                })
+            })
+    }
+}
+
 export let getAddressModule = (_address) => {
     return dispatch => {
-        axios.get(wallet_api + '/1.0/violas/module?addr=' + _address)
+        axios.get(waibu + '/1.0/violas/module?addr=' + _address)
             .then(res => {
                 dispatch({
                     type: 'violas_address_holding_module',
@@ -515,15 +527,12 @@ export let closeGetCoins = () => {
     }
 }
 //提交表单
-export let getCoinsFun = (_address, _token_id) => {
+export let getCoinsFun = (_address, _token_id, _auth_key_prefix) => {
     return dispatch => {
-        axios.get(`${violas_api}/faucet?address=${_address}&token_id=${_token_id}`)
+        axios.get(`${neibu_violas}/faucet?address=${_address}&currency=${_token_id}&auth_key_prefix=${_auth_key_prefix}`)
             .then(res => {
-                // dispatch({
-                //     type: 'getCoinsFun',
-                //     data: res.data
-                // })
-                if (res.data.message == "ok") {
+                console.log(res.data)
+                if (res.data && res.data.message == "ok") {
                     dispatch({
                         type: 'WARN',
                         data: 'You get test coins successful'
@@ -534,6 +543,12 @@ export let getCoinsFun = (_address, _token_id) => {
                         data: 'You get test coins failed'
                     })
                 }
+            })
+            .catch(err => {
+                dispatch({
+                    type: 'WARN',
+                    data: 'You get test coins failed'
+                })
             })
     }
 }
