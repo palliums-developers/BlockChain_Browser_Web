@@ -181,12 +181,12 @@ export let getBTCMainList = () => {
     // }
     return dispatch => {
         axios.get(BTC_api + 'block/latest').then(res => {
-            console.log(res.data.height)
+            // console.log(res.data.height)
             dispatch({
                 type: 'BTC_main_List',
                 data: res.data.data.list
             })
-            console.log(res.data.data.height - 1, res.data.data.height - 2)
+            // console.log(res.data.data.height - 1, res.data.data.height - 2)
 
             axios.get(BTC_api + `block/${res.data.data.height},${res.data.data.height - 1},${res.data.data.height - 2},${res.data.data.height - 3},${res.data.data.height - 4}`)
                 .then(res => {
@@ -196,7 +196,7 @@ export let getBTCMainList = () => {
                     })
                 })
 
-            console.log(res.data)
+            // console.log(res.data)
 
         })
     }
@@ -383,7 +383,7 @@ export let getBTCTestTx = (_txid) => {
 export let getBTCTestAddress = (_address, _page) => {
     return dispatch => {
         axios.get(tBTC_api + '/v2/address/' + _address + '?pageSize=10&details=txs&page=' + _page).then(res => {
-            console.log(res.data)
+            // console.log(res.data)
             dispatch({
                 type: 'BTC_Test_address',
                 data: res.data
@@ -394,8 +394,8 @@ export let getBTCTestAddress = (_address, _page) => {
 export let getViolas = (_limit, _offset) => {
     return dispatch => {
         // console.log(violas_api+'/recent_txn?limit='+_limit+'&offset='+_offset)
-        axios.get(neibu_violas + '/recent?limit=' + _limit + '&offset=' + _offset)
-        // axios.get(violas_api + '/recent?limit=' + _limit + '&offset=' + _offset)
+        // axios.get(neibu_violas + '/recent?limit=' + _limit + '&offset=' + _offset)
+        axios.get(violas_api + '/recent?limit=' + _limit + '&offset=' + _offset)
             .then(res => {
                 dispatch({
                     type: 'violas_list',
@@ -532,7 +532,7 @@ export let getCoinsFun = (_address, _token_id, _auth_key_prefix) => {
     return dispatch => {
         axios.get(`${neibu_violas}/faucet?address=${_address}&currency=${_token_id}&auth_key_prefix=${_auth_key_prefix}`)
             .then(res => {
-                console.log(res.data)
+                // console.log(res.data)
                 if (res.data && res.data.message == "ok") {
                     dispatch({
                         type: 'WARN',
