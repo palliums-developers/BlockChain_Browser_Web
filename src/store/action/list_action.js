@@ -394,7 +394,8 @@ export let getBTCTestAddress = (_address, _page) => {
 export let getViolas = (_limit, _offset) => {
     return dispatch => {
         // console.log(violas_api+'/recent_txn?limit='+_limit+'&offset='+_offset)
-        axios.get(violas_api + '/recent?limit=' + _limit + '&offset=' + _offset)
+        axios.get(neibu_violas + '/recent?limit=' + _limit + '&offset=' + _offset)
+        // axios.get(violas_api + '/recent?limit=' + _limit + '&offset=' + _offset)
             .then(res => {
                 dispatch({
                     type: 'violas_list',
