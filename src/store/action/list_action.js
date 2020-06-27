@@ -464,14 +464,58 @@ export let getViolas_address_module = (_module, _address) => {
 }
 
 export let getCurrency = _ => {
-    return async dispatch => {
-        await axios.get(neibu + '/1.0/violas/currency')
-            .then(res => {
-                dispatch({
-                    type: 'currency',
-                    data: res.data.data
-                })
-            })
+    // return async dispatch => {
+    //     await axios.get(neibu + '/1.0/violas/currency')
+    //         .then(res => {
+    //             dispatch({
+    //                 type: 'currency',
+    //                 data: res.data.data
+    //             })
+    //         })
+    // }
+    return dispatch => {
+        dispatch({
+            type: 'currency',
+            data: {
+                currencies: [{
+                    address: "00000000000000000000000000000001",
+                    module: "LBR",
+                    name: "LBR",
+                    show_icon: "http://52.27.228.84:4000/1.0/violas/icon/violas.png",
+                    show_name: "LBR"
+                }, {
+                    address: "00000000000000000000000000000001",
+                    module: "VLSUSD",
+                    name: "VLSUSD",
+                    show_icon: "http://52.27.228.84:4000/1.0/violas/icon/violas.png",
+                    show_name: "USD"
+                }, {
+                    address: "00000000000000000000000000000001",
+                    module: "VLSEUR",
+                    name: "VLSEUR",
+                    show_icon: "http://52.27.228.84:4000/1.0/violas/icon/violas.png",
+                    show_name: "EUR"
+                }, {
+                    address: "00000000000000000000000000000001",
+                    module: "VLSGBP",
+                    name: "VLSGBP",
+                    show_icon: "http://52.27.228.84:4000/1.0/violas/icon/violas.png",
+                    show_name: "GBP"
+                }, {
+                    address: "00000000000000000000000000000001",
+                    module: "VLSJPY",
+                    name: "VLSJPY",
+                    show_icon: "http://52.27.228.84:4000/1.0/violas/icon/violas.png",
+                    show_name: "JPY"
+                }, {
+                    address: "00000000000000000000000000000001",
+                    module: "VLSSGD",
+                    name: "VLSSGD",
+                    show_icon: "http://52.27.228.84:4000/1.0/violas/icon/violas.png",
+                    show_name: "SGD"
+                }]
+            },
+        })
     }
 }
 
