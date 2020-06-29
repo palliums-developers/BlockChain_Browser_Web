@@ -87,29 +87,36 @@ class Faucet extends React.Component {
         await this.setState({ auth_key_prefix: this.props.account_info.authentication_key.slice(0, 32) })
     }
     async handleSubmit() {
-        this.getAgainClick();
-        if (this.state.coinAddress.length !== 32) {
-            this.props.getWarning('Invalid Address')
-        } else {
-            await this.get_auth_key_prefix();
-            await this.props.getCoinsFun(this.state.coinAddress, this.state.coinId, this.state.auth_key_prefix);
-        }
+        if (this.getAgainClick()) {
+            if (this.state.coinAddress.length !== 32) {
+                this.props.getWarning('Invalid Address')
+            } else {
+                await this.get_auth_key_prefix();
+                await this.props.getCoinsFun(this.state.coinAddress, this.state.coinId, this.state.auth_key_prefix);
+            }
+        };
     }
     //判断是否重复点击
     getAgainClick() {
         if (times == 0) {
             preClickTime = new Date().getTime();//首次点击的时间
             times++
-            return;
+            console.log('0')
+            return true;
         }
         currentClickTime = new Date().getTime();
-        if ((currentClickTime - preClickTime) < 2000) {//如果是3秒内重复点击
+        console.log(currentClickTime-preClickTime)
+        if ((currentClickTime - preClickTime) < 3000) {//如果是3秒内重复点击
             this.props.getWarning('Please do not get the currency of this currency repeatedly')
             preClickTime = currentClickTime;
-            return;
+            console.log('f')
+            return false;
+        } else {
+            times++
+            preClickTime = currentClickTime;
+            console.log('t')
+            return true;
         }
-        times++
-        preClickTime = currentClickTime;
     }
     render() {
         this.addCurrencyList();
@@ -171,7 +178,11 @@ class Faucet extends React.Component {
                         </div>
                         <div className='submit'>
                             <button ref="btn" onClick={this.handleSubmit.bind(this)}>Submit</button>
-                            <p>{this.props.info}</p>
+                            {
+                                this.props.info === 'You get test coins successful' ?
+                                    <p style={{ color: 'green' }}>{this.props.info}</p> :
+                                    <p>{this.props.info}</p>
+                            }
                         </div>
                     </div>
                 </div>

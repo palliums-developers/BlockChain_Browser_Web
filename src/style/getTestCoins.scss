@@ -104,10 +104,15 @@
           border-width: 0;
           width: 173px;
           height: 52px;
-          text-align: center;
           position: relative;
           left: 360px;
           top: -12px;
+          text-align: center;
+          text-align-last:center;
+        }
+        option {
+          text-align: center;
+          text-align-last:center;
         }
       }
       .submit {
