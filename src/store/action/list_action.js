@@ -7,9 +7,9 @@ import axios from 'axios'
 // let url = 'http://192.168.1.253:30001/open/1.0'
 // let libra_api = 'http://47.52.66.26:10080';
 
-const neibu = 'http://52.27.228.84:4000';
+const neibu = 'https://api4.violas.io';
 // const libra_api = 'http://52.27.228.84:4000/explorer/libra';
-const neibu_violas = 'http://52.27.228.84:4000/explorer/violas';
+const neibu_violas = 'https://api4.violas.io/explorer/violas';
 const waibu = 'https://api.violas.io';
 // const libra_api = 'http://52.27.228.84:4000/explorer/libra';
 const libra_api = 'https://api.violas.io/explorer/libra';
