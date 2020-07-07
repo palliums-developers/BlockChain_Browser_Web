@@ -32,7 +32,8 @@ let initState = {
       module_list: [],
       violas_address_holding_module: [],
       account_info: {},
-      info: ''
+      Published: [],
+      info: '',
 }
 
 let ListReducer = (state = initState, action) => {
@@ -107,6 +108,8 @@ let ListReducer = (state = initState, action) => {
             //       return { ...state, getCoinsFuns: action.data }
             case 'WARN':
                   return { ...state, info: action.data }
+            case 'Published':
+                  return { ...state, Published: [...action.data] }
             default:
                   return state;
       }

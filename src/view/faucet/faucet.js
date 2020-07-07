@@ -86,7 +86,13 @@ class Faucet extends React.Component {
         await this.props.getAccountInfo(this.state.coinAddress);
         await this.setState({ auth_key_prefix: this.props.account_info.authentication_key.slice(0, 32) })
     }
+    async get_published(_address){
+        await this.props.getPublished(_address);
+        console.log(this.props.Published);
+        console.log(this.state.coinId)
+    }
     async handleSubmit() {
+        this.get_published(this.state.coinAddress)
         if (this.getAgainClick()) {
             if (this.state.coinAddress.length !== 32) {
                 this.props.getWarning('Invalid Address')

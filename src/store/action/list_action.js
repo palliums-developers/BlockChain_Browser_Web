@@ -599,6 +599,18 @@ export let getCoinsFun = (_address, _token_id, _auth_key_prefix) => {
     }
 }
 
+export let getPublished =(_address)=>{
+    return dispatch=>{
+        axios.get(`${neibu}/1.0/violas/currency/published?addr=${_address}`)
+        .then(res=>{
+            dispatch({
+                type:'Published',
+                data:res.data.published
+            })
+        })
+    }
+}
+
 export let getWarning = (params) => {
     return dispatch => {
         dispatch({
