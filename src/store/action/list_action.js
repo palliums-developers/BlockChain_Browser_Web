@@ -465,7 +465,7 @@ export let getViolas_address_module = (_module, _address) => {
 
 export let getCurrency = _ => {
     return async dispatch => {
-        await axios.get(neibu + '/1.0/violas/currency')
+        await axios.get(waibu + '/1.0/violas/currency')
             .then(res => {
                 dispatch({
                     type: 'currency',
@@ -522,7 +522,7 @@ export let getCurrency = _ => {
 
 export let getAccountInfo = (_address) => {
     return async dispatch => {
-        await axios.get(neibu + '/1.0/violas/account/info?address=' + _address)
+        await axios.get(waibu + '/1.0/violas/account/info?address=' + _address)
             .then(res => {
                 dispatch({
                     type: 'account_info',
@@ -575,7 +575,7 @@ export let closeGetCoins = () => {
 //提交表单
 export let getCoinsFun = (_address, _token_id, _auth_key_prefix) => {
     return dispatch => {
-        axios.get(`${neibu_violas}/faucet?address=${_address}&currency=${_token_id}&auth_key_prefix=${_auth_key_prefix}`)
+        axios.get(`${violas_api}/faucet?address=${_address}&currency=${_token_id}&auth_key_prefix=${_auth_key_prefix}`)
             .then(res => {
                 // console.log(res.data)
                 if (res.data && res.data.message == "ok") {
@@ -600,12 +600,13 @@ export let getCoinsFun = (_address, _token_id, _auth_key_prefix) => {
 }
 
 export let getPublished =(_address)=>{
-    return dispatch=>{
-        axios.get(`${neibu}/1.0/violas/currency/published?addr=${_address}`)
+    return async dispatch=>{
+        await axios.get(`${waibu}/1.0/violas/currency/published?addr=${_address}`)
         .then(res=>{
+            // console.log(res.data)
             dispatch({
                 type:'Published',
-                data:res.data.published
+                data:res.data.data.published
             })
         })
     }

@@ -15,7 +15,7 @@ class Faucet extends React.Component {
         super(props);
         this.state = {
             coinAddress: '',
-            coinId: 'LBR',
+            coinId: 'VLS',
             time: 0,
             info: 'Please do not get the currency of this currency repeatedly',
             showMenuViolas: false,
@@ -28,16 +28,29 @@ class Faucet extends React.Component {
             bCoin: [
                 { pathname: '/app/BTC', type: 'BTC' },
                 { pathname: '/app/tBTC', type: 'BTC testnet' }
-            ]
+            ],
+            VLSCurrency: [],
+            Published: [],
+            WARN: '',
         };
         this.showMenu = this.showMenu.bind(this);
         this.closeMenu = this.closeMenu.bind(this);
     }
-    componentWillMount() {
-        this.props.getCurrency();
+    async componentWillMount() {
+        await this.props.getCurrency();
+        await this.setState({ VLSCurrency: this.getVLS(this.props.currency) });
     }
     async componentDidMount() {
         await this.setState({ coinAddress: this.props.match.params.address })
+    }
+    getVLS(_currency) {
+        let temp = [];
+        for (let i = _currency.length - 1; i >= 0; i--) {
+            if (_currency[i].name.indexOf('VLS') !== -1) {
+                temp.push(_currency[i]);
+            }
+        }
+        return temp;
     }
     showMenu = (event) => {
         // this.setState({ showMenuViolas: true });
@@ -86,13 +99,25 @@ class Faucet extends React.Component {
         await this.props.getAccountInfo(this.state.coinAddress);
         await this.setState({ auth_key_prefix: this.props.account_info.authentication_key.slice(0, 32) })
     }
-    async get_published(_address){
+    async get_published(_address) {
         await this.props.getPublished(_address);
-        console.log(this.props.Published);
-        console.log(this.state.coinId)
+        await this.setState({ Published: this.props.Published });
     }
     async handleSubmit() {
-        this.get_published(this.state.coinAddress)
+        await this.setState({ WARN: '' });
+        await this.get_published(this.state.coinAddress)
+        let match_published = false;
+        for (let i = 0; i < this.state.Published.length; i++) {
+            if (this.state.coinId == this.state.Published[i]) {
+                match_published = true;
+                break;
+            }
+        }
+        if (!match_published) {
+            await this.setState({ WARN: `This address are not published ${this.state.coinId}` });
+            return;
+        }
+
         if (this.getAgainClick()) {
             if (this.state.coinAddress.length !== 32) {
                 this.props.getWarning('Invalid Address')
@@ -111,7 +136,7 @@ class Faucet extends React.Component {
             return true;
         }
         currentClickTime = new Date().getTime();
-        console.log(currentClickTime-preClickTime)
+        console.log(currentClickTime - preClickTime)
         if ((currentClickTime - preClickTime) < 3000) {//如果是3秒内重复点击
             this.props.getWarning('Please do not get the currency of this currency repeatedly')
             preClickTime = currentClickTime;
@@ -173,9 +198,16 @@ class Faucet extends React.Component {
                             <h4>Amount:</h4>
                             <h5>0.001</h5>
                             <select onChange={this.handleChange.bind(this, 'id')}>
-                                {
+                                {/* {
                                     this.props.currency.length > 0 ?
                                         this.props.currency.map((item) => {
+                                            return <option value={item.id}>{item.name}</option>
+                                        }) :
+                                        <></>
+                                } */}
+                                {
+                                    this.state.VLSCurrency.length > 0 ?
+                                        this.state.VLSCurrency.map((item) => {
                                             return <option value={item.id}>{item.name}</option>
                                         }) :
                                         <></>
@@ -187,7 +219,7 @@ class Faucet extends React.Component {
                             {
                                 this.props.info === 'You get test coins successful' ?
                                     <p style={{ color: 'green' }}>{this.props.info}</p> :
-                                    <p>{this.props.info}</p>
+                                    <p>{this.props.info}<br/>{this.state.WARN}</p>
                             }
                         </div>
                     </div>
