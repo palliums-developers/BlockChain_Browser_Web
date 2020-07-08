@@ -31,7 +31,6 @@ class Faucet extends React.Component {
             ],
             VLSCurrency: [],
             Published: [],
-            WARN: '',
         };
         this.showMenu = this.showMenu.bind(this);
         this.closeMenu = this.closeMenu.bind(this);
@@ -104,7 +103,11 @@ class Faucet extends React.Component {
         await this.setState({ Published: this.props.Published });
     }
     async handleSubmit() {
-        await this.setState({ WARN: '' });
+        await this.props.getWarning('');
+        if (this.state.coinAddress.length !== 32) {
+            this.props.getWarning('Invalid Address');
+            return;
+        }
         await this.get_published(this.state.coinAddress)
         let match_published = false;
         for (let i = 0; i < this.state.Published.length; i++) {
@@ -114,17 +117,13 @@ class Faucet extends React.Component {
             }
         }
         if (!match_published) {
-            await this.setState({ WARN: `This address are not published ${this.state.coinId}` });
+            await this.props.getWarning(`This address are not published ${this.state.coinId}`);
             return;
         }
 
         if (this.getAgainClick()) {
-            if (this.state.coinAddress.length !== 32) {
-                this.props.getWarning('Invalid Address')
-            } else {
-                await this.get_auth_key_prefix();
-                await this.props.getCoinsFun(this.state.coinAddress, this.state.coinId, this.state.auth_key_prefix);
-            }
+            await this.get_auth_key_prefix();
+            await this.props.getCoinsFun(this.state.coinAddress, this.state.coinId, this.state.auth_key_prefix);
         };
     }
     //判断是否重复点击
@@ -219,7 +218,7 @@ class Faucet extends React.Component {
                             {
                                 this.props.info === 'You get test coins successful' ?
                                     <p style={{ color: 'green' }}>{this.props.info}</p> :
-                                    <p>{this.props.info}<br/>{this.state.WARN}</p>
+                                    <p>{this.props.info}<br />{this.state.WARN}</p>
                             }
                         </div>
                     </div>
