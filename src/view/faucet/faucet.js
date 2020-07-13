@@ -15,7 +15,7 @@ class Faucet extends React.Component {
         super(props);
         this.state = {
             coinAddress: '',
-            coinId: 'VLS',
+            coinId: 'LBR',
             time: 0,
             info: 'Please do not get the currency of this currency repeatedly',
             showMenuViolas: false,
@@ -37,7 +37,8 @@ class Faucet extends React.Component {
     }
     async componentWillMount() {
         await this.props.getCurrency();
-        await this.setState({ VLSCurrency: this.getVLS(this.props.currency) });
+        await this.setState({ VLSCurrency: this.props.currency});
+        // await this.setState({ VLSCurrency: this.getVLS(this.props.currency) });
     }
     async componentDidMount() {
         await this.setState({ coinAddress: this.props.match.params.address })
