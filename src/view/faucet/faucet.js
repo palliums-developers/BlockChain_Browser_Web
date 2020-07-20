@@ -156,7 +156,7 @@ class Faucet extends React.Component {
                 <div className='getTestCoins_header'>
                     <div className='header_contain'>
                         <div className='getTestCoins_logo'>
-                            <img className='logo' src='/img/new_logo_purple.png' />
+                            <img className='logo' onClick={()=>this.props.history.push('/')} src='/img/new_logo_purple.png' />
                             {/* <NavLink to='/app/Violas'><img className='logo' src='/img/new_logo_purple.png' /></NavLink> */}
                         </div>
                         <div className="navList">

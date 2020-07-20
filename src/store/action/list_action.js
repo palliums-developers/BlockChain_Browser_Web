@@ -182,12 +182,15 @@ export let getBTCMainList = () => {
     return dispatch => {
         axios.get(BTC_api + 'block/latest').then(res => {
             // console.log(res.data.height)
-            dispatch({
-                type: 'BTC_main_List',
-                data: res.data.data.list
-            })
-            // console.log(res.data.data.height - 1, res.data.data.height - 2)
 
+            // dispatch({
+            //     type: 'BTC_main_List',
+            //     data: res.data.data.list
+            // })
+
+            // console.log(res.data.data.height - 1, res.data.data.height - 2)
+            console.log(res.data.data.height)
+            
             axios.get(BTC_api + `block/${res.data.data.height},${res.data.data.height - 1},${res.data.data.height - 2},${res.data.data.height - 3},${res.data.data.height - 4}`)
                 .then(res => {
                     dispatch({

@@ -21,7 +21,8 @@ class Violas extends Component {
     }
     componentWillMount() {
         document.documentElement.scrollTop = document.body.scrollTop = 0;
-        this.props.getModuleList(this.name2moduleAddress(this.props.match.params.module_name), this.state.limit, this.state.offset);
+        this.props.getModuleList(this.props.match.params.module_name, this.state.limit, this.state.offset);
+        // this.props.getModuleList(this.name2moduleAddress(this.props.match.params.module_name), this.state.limit, this.state.offset);
     }
     componentDidMount() {
         this.props.getCurrency();
@@ -122,7 +123,8 @@ class Violas extends Component {
                                                     <td colSpan="3">
                                                         {timeStamp2String(item.expiration_time + '000')}
                                                     </td>
-                                                    <td colSpan="3">{this.module2name(item.token_id)}</td>
+                                                    <td colSpan="3">{item.currency.toLowerCase()}</td>
+                                                    {/* <td colSpan="3">{this.module2name(item.token_id)}</td> */}
                                                     <td colSpan="4">{(item.type)}</td>
                                                     <td colSpan="4" onClick={() => {
                                                         item.sender &&
