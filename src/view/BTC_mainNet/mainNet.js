@@ -91,7 +91,6 @@ class BTCMainNet extends Component {
               <div className="tableList">
                 {
                   this.props.BTC_main_List && this.props.BTC_main_List.map((v, i) => {
-                    console.log(this.props.BTC_main_List)
                     return <div className="listContent" key={i}>
                       <p><label>Height</label><span onClick={() => {
                         this.props.history.push('/app/BTC_block/' + v.height);

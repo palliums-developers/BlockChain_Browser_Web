@@ -189,7 +189,6 @@ export let getBTCMainList = () => {
             // })
 
             // console.log(res.data.data.height - 1, res.data.data.height - 2)
-            console.log(res.data.data.height)
             
             axios.get(BTC_api + `block/${res.data.data.height},${res.data.data.height - 1},${res.data.data.height - 2},${res.data.data.height - 3},${res.data.data.height - 4}`)
                 .then(res => {
