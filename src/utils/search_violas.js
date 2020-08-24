@@ -5,7 +5,7 @@ function search_violas(input, props) {
     if (re.test(input)) {
         // console.log(input * 1, 'height')
         props.history.push('/app/Violas_version/' + input * 1)
-    } else{
+    } else if (input.length === 32) {
         // console.log(input, 'hash')
         props.history.push('/app/Violas_address/' + input)
     }

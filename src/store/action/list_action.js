@@ -10,10 +10,10 @@ import axios from 'axios'
 const neibu = 'https://api4.violas.io';
 // const libra_api = 'http://52.27.228.84:4000/explorer/libra';
 const neibu_violas = 'https://api4.violas.io/explorer/violas';
-const waibu = 'https://api.violas.io';
+const waibu = 'https://api4.violas.io';
 // const libra_api = 'http://52.27.228.84:4000/explorer/libra';
-const libra_api = 'https://api.violas.io/explorer/libra';
-const violas_api = 'https://api.violas.io/explorer/violas';
+const libra_api = 'https://api4.violas.io/explorer/libra';
+const violas_api = 'https://api4.violas.io/explorer/violas';
 
 // const BTC_api = 'http://localhost:10080/open/1.0';
 // const BTC_api = 'https://api2.violas.io:10080/open/1.0';
@@ -189,7 +189,7 @@ export let getBTCMainList = () => {
             // })
 
             // console.log(res.data.data.height - 1, res.data.data.height - 2)
-            
+
             axios.get(BTC_api + `block/${res.data.data.height},${res.data.data.height - 1},${res.data.data.height - 2},${res.data.data.height - 3},${res.data.data.height - 4}`)
                 .then(res => {
                     dispatch({
@@ -522,15 +522,27 @@ export let getCurrency = _ => {
     // }
 }
 
-export let getAccountInfo = (_address) => {
-    return async dispatch => {
-        await axios.get(waibu + '/1.0/violas/account/info?address=' + _address)
-            .then(res => {
-                dispatch({
-                    type: 'account_info',
-                    data: res.data.data
+export let getAccountInfo = (_address, libra) => {
+    if (!libra) {
+        return async dispatch => {
+            await axios.get(waibu + '/1.0/violas/account/info?address=' + _address)
+                .then(res => {
+                    dispatch({
+                        type: 'account_info',
+                        data: res.data.data
+                    })
                 })
-            })
+        }
+    } else {
+        return async dispatch => {
+            await axios.get(waibu + '/1.0/libra/account/info?address=' + _address)
+                .then(res => {
+                    dispatch({
+                        type: 'account_info_libra',
+                        data: res.data.data
+                    })
+                })
+        }
     }
 }
 
@@ -574,43 +586,80 @@ export let closeGetCoins = () => {
         })
     }
 }
-//提交表单
-export let getCoinsFun = (_address, _token_id, _auth_key_prefix) => {
-    return dispatch => {
-        axios.get(`${violas_api}/faucet?address=${_address}&currency=${_token_id}&auth_key_prefix=${_auth_key_prefix}`)
+export let getMarketCurrency = () => {
+    return async dispatch => {
+        await axios.get(waibu + '/1.0/market/exchange/currency')
             .then(res => {
-                // console.log(res.data)
-                if (res.data && res.data.message == "ok") {
-                    dispatch({
-                        type: 'WARN',
-                        data: 'You get test coins successful'
-                    })
-                } else {
-                    dispatch({
-                        type: 'WARN',
-                        data: 'You get test coins failed'
-                    })
-                }
-            })
-            .catch(err => {
                 dispatch({
-                    type: 'WARN',
-                    data: 'You get test coins failed'
+                    type: 'market_currencies',
+                    data: res.data.data
                 })
             })
     }
 }
+//提交表单
+export let getCoinsFun = (_address, _token_id, _auth_key_prefix, _libra) => {
+    if (!_libra) {
+        return dispatch => {
+            axios.get(`${violas_api}/faucet?address=${_address}&currency=${_token_id}&auth_key_prefix=${_auth_key_prefix}`)
+                .then(res => {
+                    // console.log(res.data)
+                    if (res.data && res.data.message == "ok") {
+                        dispatch({
+                            type: 'WARN',
+                            data: 'You get test coins successful'
+                        })
+                    } else {
+                        dispatch({
+                            type: 'WARN',
+                            data: 'You get test coins failed'
+                        })
+                    }
+                })
+                .catch(err => {
+                    dispatch({
+                        type: 'WARN',
+                        data: 'You get test coins failed'
+                    })
+                })
+        }
+    } else {
+        return dispatch => {
+            axios.get(`${libra_api}/faucet?address=${_address}&currency=${_token_id}&auth_key_prefix=${_auth_key_prefix}`)
+                .then(res => {
+                    // console.log(res.data)
+                    if (res.data && res.data.message == "ok") {
+                        dispatch({
+                            type: 'WARN',
+                            data: 'You get test coins successful'
+                        })
+                    } else {
+                        dispatch({
+                            type: 'WARN',
+                            data: 'You get test coins failed'
+                        })
+                    }
+                })
+                .catch(err => {
+                    dispatch({
+                        type: 'WARN',
+                        data: 'You get test coins failed'
+                    })
+                })
+        }
+    }
+}
 
-export let getPublished =(_address)=>{
-    return async dispatch=>{
+export let getPublished = (_address) => {
+    return async dispatch => {
         await axios.get(`${waibu}/1.0/violas/currency/published?addr=${_address}`)
-        .then(res=>{
-            // console.log(res.data)
-            dispatch({
-                type:'Published',
-                data:res.data.data.published
+            .then(res => {
+                // console.log(res.data)
+                dispatch({
+                    type: 'Published',
+                    data: res.data.data.published
+                })
             })
-        })
     }
 }
 

@@ -15,7 +15,7 @@ class Faucet extends React.Component {
         super(props);
         this.state = {
             coinAddress: '',
-            coinId: 'LBR',
+            coinId: {},
             time: 0,
             info: 'Please do not get the currency of this currency repeatedly',
             showMenuViolas: false,
@@ -30,25 +30,50 @@ class Faucet extends React.Component {
                 { pathname: '/app/tBTC', type: 'BTC testnet' }
             ],
             VLSCurrency: [],
+            MarketCurrencies: [],
             Published: [],
         };
         this.showMenu = this.showMenu.bind(this);
         this.closeMenu = this.closeMenu.bind(this);
     }
     async componentWillMount() {
-        await this.props.getCurrency();
-        await this.setState({ VLSCurrency: this.props.currency});
-        // await this.setState({ VLSCurrency: this.getVLS(this.props.currency) });
+        await this.props.getMarketCurrency();
+        // await this.setState({ VLSCurrency: this.props.currency});
+        await this.setState({ MarketCurrencies: this.getFaucetList(this.props.market_currencies) })
     }
     async componentDidMount() {
         await this.setState({ coinAddress: this.props.match.params.address })
     }
-    getVLS(_currency) {
+    getFaucetList(_currency) {
         let temp = [];
-        for (let i = _currency.length - 1; i >= 0; i--) {
-            if (_currency[i].name.indexOf('VLS') !== -1) {
-                temp.push(_currency[i]);
-            }
+        // for (let i = _currency.length - 1; i >= 0; i--) {
+        //     if (_currency[i].name.indexOf('VLS') !== -1) {
+        //         temp.push(_currency[i]);
+        //     }
+        // }
+        let temp_libra = _currency.libra;
+        for (let i = 0; i < temp_libra.length; i++) {
+            temp.push({
+                address: temp_libra[i].address,
+                icon: temp_libra[i].icon,
+                index: temp_libra[i].index,
+                module: temp_libra[i].module,
+                name: temp_libra[i].name,
+                show_name: temp_libra[i].show_name,
+                chain: 'libra'
+            })
+        }
+        let temp_violas = _currency.violas;
+        for(let j=0;j<temp_violas.length;j++){
+            temp.push({
+                address: temp_violas[j].address,
+                icon: temp_violas[j].icon,
+                index: temp_violas[j].index,
+                module: temp_violas[j].module,
+                name: temp_violas[j].name,
+                show_name: temp_violas[j].show_name,
+                chain: 'violas'
+            })
         }
         return temp;
     }
@@ -90,7 +115,7 @@ class Faucet extends React.Component {
                 // console.log(event.target.value)
                 break;
             case 'id':
-                this.setState({ coinId: event.target.value })
+                this.setState({ coinId: JSON.parse(event.target.value) })
                 // console.log(event.target.value)
                 break;
         }
@@ -112,7 +137,7 @@ class Faucet extends React.Component {
         await this.get_published(this.state.coinAddress)
         let match_published = false;
         for (let i = 0; i < this.state.Published.length; i++) {
-            if (this.state.coinId == this.state.Published[i]) {
+            if (this.state.coinId.name == this.state.Published[i]) {
                 match_published = true;
                 break;
             }
@@ -121,10 +146,9 @@ class Faucet extends React.Component {
             await this.props.getWarning(`This address are not published ${this.state.coinId}`);
             return;
         }
-
         if (this.getAgainClick()) {
             await this.get_auth_key_prefix();
-            await this.props.getCoinsFun(this.state.coinAddress, this.state.coinId, this.state.auth_key_prefix);
+            await this.props.getCoinsFun(this.state.coinAddress, this.state.coinId.name, this.state.auth_key_prefix);
         };
     }
     //判断是否重复点击
@@ -132,20 +156,19 @@ class Faucet extends React.Component {
         if (times == 0) {
             preClickTime = new Date().getTime();//首次点击的时间
             times++
-            console.log('0')
             return true;
         }
         currentClickTime = new Date().getTime();
-        console.log(currentClickTime - preClickTime)
+        // console.log(currentClickTime - preClickTime)
         if ((currentClickTime - preClickTime) < 3000) {//如果是3秒内重复点击
             this.props.getWarning('Please do not get the currency of this currency repeatedly')
             preClickTime = currentClickTime;
-            console.log('f')
+            // console.log('f')
             return false;
         } else {
             times++
             preClickTime = currentClickTime;
-            console.log('t')
+            // console.log('t')
             return true;
         }
     }
@@ -156,7 +179,7 @@ class Faucet extends React.Component {
                 <div className='getTestCoins_header'>
                     <div className='header_contain'>
                         <div className='getTestCoins_logo'>
-                            <img className='logo' onClick={()=>this.props.history.push('/')} src='/img/new_logo_purple.png' />
+                            <img className='logo' onClick={() => this.props.history.push('/')} src='/img/new_logo_purple.png' />
                             {/* <NavLink to='/app/Violas'><img className='logo' src='/img/new_logo_purple.png' /></NavLink> */}
                         </div>
                         <div className="navList">
@@ -196,7 +219,7 @@ class Faucet extends React.Component {
                         </div>
                         <div className='inLine2'>
                             <h4>Amount:</h4>
-                            <h5>0.001</h5>
+                            <h5>0.1</h5>
                             <select onChange={this.handleChange.bind(this, 'id')}>
                                 {/* {
                                     this.props.currency.length > 0 ?
@@ -206,9 +229,9 @@ class Faucet extends React.Component {
                                         <></>
                                 } */}
                                 {
-                                    this.state.VLSCurrency.length > 0 ?
-                                        this.state.VLSCurrency.map((item) => {
-                                            return <option value={item.id}>{item.name}</option>
+                                    this.state.MarketCurrencies.length > 0 ?
+                                        this.state.MarketCurrencies.map((item) => {
+                                            return <option value={JSON.stringify(item)}>{item.show_name} ({item.chain})</option>
                                         }) :
                                         <></>
                                 }
