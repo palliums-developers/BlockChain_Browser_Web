@@ -39,7 +39,12 @@ class Faucet extends React.Component {
     async componentWillMount() {
         await this.props.getMarketCurrency();
         // await this.setState({ VLSCurrency: this.props.currency});
-        await this.setState({ MarketCurrencies: this.getFaucetList(this.props.market_currencies) })
+        await this.setState({
+            MarketCurrencies: this.getFaucetList(this.props.market_currencies),
+        })
+        await this.setState({
+            coinId: this.state.MarketCurrencies[0]
+        })
     }
     async componentDidMount() {
         await this.setState({ coinAddress: this.props.match.params.address })
@@ -64,7 +69,7 @@ class Faucet extends React.Component {
             })
         }
         let temp_violas = _currency.violas;
-        for(let j=0;j<temp_violas.length;j++){
+        for (let j = 0; j < temp_violas.length; j++) {
             temp.push({
                 address: temp_violas[j].address,
                 icon: temp_violas[j].icon,
@@ -120,12 +125,16 @@ class Faucet extends React.Component {
                 break;
         }
     }
-    async get_auth_key_prefix() {
-        await this.props.getAccountInfo(this.state.coinAddress);
+    async get_auth_key_prefix(_chain) {
+        await this.props.getAccountInfo(this.state.coinAddress, _chain);
         await this.setState({ auth_key_prefix: this.props.account_info.authentication_key.slice(0, 32) })
     }
-    async get_published(_address) {
-        await this.props.getPublished(_address);
+    async get_published(_address, _chain) {
+        if (_chain === 'libra') {
+            await this.props.getPublished(_address, 'libra')
+        } else {
+            await this.props.getPublished(_address);
+        }
         await this.setState({ Published: this.props.Published });
     }
     async handleSubmit() {
@@ -134,7 +143,11 @@ class Faucet extends React.Component {
             this.props.getWarning('Invalid Address');
             return;
         }
-        await this.get_published(this.state.coinAddress)
+        if (this.state.coinId.chain === 'violas') {
+            await this.get_published(this.state.coinAddress)
+        } else {
+            await this.get_published(this.state.coinAddress, 'libra')
+        }
         let match_published = false;
         for (let i = 0; i < this.state.Published.length; i++) {
             if (this.state.coinId.name == this.state.Published[i]) {
@@ -143,12 +156,12 @@ class Faucet extends React.Component {
             }
         }
         if (!match_published) {
-            await this.props.getWarning(`This address are not published ${this.state.coinId}`);
+            await this.props.getWarning(`This address are not published ${this.state.coinId.show_name} from ${this.state.coinId.chain}`);
             return;
         }
         if (this.getAgainClick()) {
-            await this.get_auth_key_prefix();
-            await this.props.getCoinsFun(this.state.coinAddress, this.state.coinId.name, this.state.auth_key_prefix);
+            await this.get_auth_key_prefix(this.state.coinId.chain);
+            await this.props.getCoinsFun(this.state.coinAddress, this.state.coinId.name, this.state.auth_key_prefix, this.state.coinId.chain);
         };
     }
     //判断是否重复点击
@@ -219,7 +232,7 @@ class Faucet extends React.Component {
                         </div>
                         <div className='inLine2'>
                             <h4>Amount:</h4>
-                            <h5>0.1</h5>
+                            <h5>{this.state.coinId.chain === 'libra' ? 0.0001 : 0.1}</h5>
                             <select onChange={this.handleChange.bind(this, 'id')}>
                                 {/* {
                                     this.props.currency.length > 0 ?

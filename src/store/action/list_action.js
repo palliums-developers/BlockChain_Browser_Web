@@ -523,7 +523,7 @@ export let getCurrency = _ => {
 }
 
 export let getAccountInfo = (_address, libra) => {
-    if (!libra) {
+    if (libra != 'libra') {
         return async dispatch => {
             await axios.get(waibu + '/1.0/violas/account/info?address=' + _address)
                 .then(res => {
@@ -538,7 +538,7 @@ export let getAccountInfo = (_address, libra) => {
             await axios.get(waibu + '/1.0/libra/account/info?address=' + _address)
                 .then(res => {
                     dispatch({
-                        type: 'account_info_libra',
+                        type: 'account_info',
                         data: res.data.data
                     })
                 })
@@ -599,9 +599,9 @@ export let getMarketCurrency = () => {
 }
 //提交表单
 export let getCoinsFun = (_address, _token_id, _auth_key_prefix, _libra) => {
-    if (!_libra) {
+    if (_libra != 'libra') {
         return dispatch => {
-            axios.get(`${violas_api}/faucet?address=${_address}&currency=${_token_id}&auth_key_prefix=${_auth_key_prefix}`)
+            axios.get(`${violas_api}/faucet?address=${_address}&currency=${_token_id}&auth_key_perfix=${_auth_key_prefix}`)
                 .then(res => {
                     // console.log(res.data)
                     if (res.data && res.data.message == "ok") {
@@ -625,7 +625,7 @@ export let getCoinsFun = (_address, _token_id, _auth_key_prefix, _libra) => {
         }
     } else {
         return dispatch => {
-            axios.get(`${libra_api}/faucet?address=${_address}&currency=${_token_id}&auth_key_prefix=${_auth_key_prefix}`)
+            axios.get(`${waibu}/1.0/libra/mint?address=${_address}&currency=${_token_id}&auth_key_perfix=${_auth_key_prefix}`)
                 .then(res => {
                     // console.log(res.data)
                     if (res.data && res.data.message == "ok") {
@@ -650,16 +650,29 @@ export let getCoinsFun = (_address, _token_id, _auth_key_prefix, _libra) => {
     }
 }
 
-export let getPublished = (_address) => {
-    return async dispatch => {
-        await axios.get(`${waibu}/1.0/violas/currency/published?addr=${_address}`)
-            .then(res => {
-                // console.log(res.data)
-                dispatch({
-                    type: 'Published',
-                    data: res.data.data.published
+export let getPublished = (_address, _libra) => {
+    if (_libra === 'libra') {
+        return async dispatch => {
+            await axios.get(`${waibu}/1.0/libra/currency/published?addr=${_address}`)
+                .then(res => {
+                    // console.log(res.data)
+                    dispatch({
+                        type: 'Published',
+                        data: res.data.data.published
+                    })
                 })
-            })
+        }
+    } else {
+        return async dispatch => {
+            await axios.get(`${waibu}/1.0/violas/currency/published?addr=${_address}`)
+                .then(res => {
+                    // console.log(res.data)
+                    dispatch({
+                        type: 'Published',
+                        data: res.data.data.published
+                    })
+                })
+        }
     }
 }
 
