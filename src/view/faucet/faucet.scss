@@ -1,34 +1,48 @@
 .getTestCoins_header {
-  height: 80px;
+  display: flex;
+  height: 86px;
   width: 100%;
   background-color: white;
   /* z-index: 10; */
 }
 .header_contain {
-  width: 900px;
+  width: 1160px;
   margin: 0px auto;
   line-height: 40px;
   display: flex;
+  align-items: center;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-between;
 }
+
+.getCoinBTN{
+  // display: flex;
+  width: 141px;
+  height: 30px;
+  border-radius: 15px;
+  border: 1px solid #6131AB;
+  font-size: 16px;
+  font-weight: 500;
+  color: #6131AB;
+  margin-left: -40%;
+  line-height: 30px;
+  text-align: center;
+  cursor: pointer;
+}
 .getTestCoins_logo {
-  margin-bottom: 30px;
+  // margin-bottom: 30px;
   display: flex;
+  cursor: pointer;
 }
 .getTestCoins_logo .logo {
-  width: 116px;
-  height: 18px;
+  width:233px;
+  height: 19px;
 }
-.getTestCoins_logo {
-  display: flex;
-  flex-direction: row;
-}
-.getTestCoins_logo .logo {
-  position: relative;
-  top: 30px;
-}
+// .getTestCoins_logo .logo {
+//   position: relative;
+//   top: 30px;
+// }
 .navList {
   font-size: 18px;
   height: 80px;
@@ -40,9 +54,12 @@
   }
 
   .dropdown2 {
-    margin: 0 30px;
+    margin-left:83px;
   }
-
+  a{
+    margin-left: 83px;
+    margin-right: -23px;
+  }
   .dropdown1,
   .dropdown2 {
     width: 40px;
@@ -51,7 +68,10 @@
     align-items: center;
     position: relative;
     z-index: 9999;
-
+    span:hover{
+      color:rgba(97, 49, 171, 1);
+      border-bottom: 2px solid rgba(97, 49, 171, 1);
+    }
     .dropdown-content1 {
       width: 160px;
       display: block;
@@ -114,13 +134,43 @@
 
   span,
   a {
+    width: 24px;
     font-weight: 400;
-    color: #6131ab;
-    // line-height: 5px;
+    font-size: 18px;
+    color:rgba(153, 153, 153, 1);
+    line-height:20px;
     white-space: nowrap;
+    cursor: pointer;
+  }
+  a:hover{
+      color:rgba(97, 49, 171, 1);
+      border-bottom: 2px solid rgba(97, 49, 171, 1);
+    }
+}
+@media (max-width: 1300px) {
+  .header_contain {
+    width: 900px;
+    }
+  .getCoinBTN{
+     margin-left: -25%;
   }
 }
-
+@media (max-width: 1300px){
+  .navList{
+    .dropdown2 {
+    margin-left:53px;
+  }
+  a{
+    margin-left: 53px;
+    margin-right: 10px;
+  }
+  }
+}
+@media (max-width: 950px) {
+  .getTestCoins_header {
+    display: none;
+  }
+}
 @media (max-width: 900px) {
   .header_contain {
     width: 95%;

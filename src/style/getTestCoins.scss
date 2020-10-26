@@ -19,28 +19,29 @@
   position: fixed;
   top: 0;
   z-index: 10;
-  background: rgba(0, 0, 0, 0.6);
+  background:url('/img/bigBack.png') 50% center / cover no-repeat;
+  // background-size: 100% 100%;
   width: 100%;
   height: 100%;
   
   .container1 {
-    width: 900px;
-    height: 640px;
+    width: 850px;
+    height: 600px;
     margin: 0 auto;
     position: relative;
-    top: 100px;
-    border-radius: 10px;
-    background-image: url("/img/getCoins.png");
+    top: 150px;
+    background: #FFFFFF;;
+    // border-radius: 10px;
+    // background-image: url("/img/getCoins.png");
     .container2 {
       width: 700px;
       margin: 0 auto;
       position: relative;
-      top: 90px;
+      top: 61px;
       h1 {
-        font-size: 32px;
+        font-size:25px;
         font-weight: bold;
-        color: rgba(60, 56, 72, 1);
-        line-height: 30px;
+        color:rgba(51, 51, 51, 1);
         text-align: center;
       }
       .close {
@@ -55,18 +56,17 @@
         }
       }
       h3 {
-        font-size: 24px;
+        font-size:18px;
         font-weight: 400;
-        color: rgba(94, 87, 103, 1);
-        line-height: 24px;
+        color: rgba(92, 92, 92, 1);
         text-align: center;
-        margin-top: 20px;
+        margin-top:15px;
       }
       h4 {
         width: 120px;
-        font-size: 24px;
+        font-size: 20px;
         font-weight: 400;
-        color: rgba(94, 87, 103, 1);
+        color: rgba(92, 92, 92, 1);
         line-height: 24px;
         //   display: inline;
       }
@@ -74,19 +74,33 @@
         display: flex;
         flex-direction: row;
         margin-top: 40px;
-        input {
+        .input {
+          resize:none;
           width: 560px;
+          height: 116px;
           font-size: 20px;
           font-weight: 400;
           color: rgba(60, 56, 72, 1);
           line-height: 32px;
           outline: 0;
+          border-radius: 4px;
+          border: 1.5px solid #999999;
+          padding-left: 14px;
+          padding-right: 20px;
+          box-sizing: border-box;
+        }
+        .focusAct{
+          border: 1.5px solid rgba(97, 49, 171, 1);
         }
       }
       .inLine2 {
         display: flex;
-        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
         margin-top: 40px;
+        .label{
+          display: flex;
+        }
         h5 {
           font-size: 24px;
           font-weight: 600;
@@ -94,22 +108,18 @@
           line-height: 26px;
         }
         .select,select {
-          
           font-size: 24px;
           font-weight: 400;
           color: rgba(60, 56, 72, 1);
           background: rgba(255, 255, 255, 1);
-          border-radius: 26px;
+          border-radius:24px;
           cursor: pointer;
-          // width: 180px;
           height: 52px;
           position: relative;
-          left: 360px;
           top: -12px;
-            
-          // justify-content:space-around ;
-          // text-align: center;
-          // text-align-last:center;
+          :hover{
+            background: #F7F7F9;
+          }
           .input{
             width: 180px;
             height: 100%;
@@ -118,6 +128,8 @@
             padding-left:30px;
             padding-right: 25px;
             box-sizing: border-box;
+            border-radius: 30px;
+            
             .ipt{
               width: 85%;
               border: 0;
@@ -134,8 +146,8 @@
               display: flex;
               align-items: center;
               img{
-                width: 15px;
-                height: 10px;
+                width: 20px;
+                height: 12px;
               }
             }
             
@@ -151,6 +163,7 @@
             padding: 12px 4px;
             box-sizing: border-box;
             overflow:auto;
+            box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.08);
             ul{
               width: 100%;
               text-align: center;
@@ -161,6 +174,7 @@
                 font-weight: 400;
                 color: #9E9AA4;
                 white-space: nowrap;
+                margin-bottom: 8px;
               }
               li:hover{
                 background:rgba(237, 229, 255, 1);
@@ -172,9 +186,6 @@
             height: 30px;
             border-radius: 30px;
           }
-        }
-        select:hover{
-          border: 1px rgba(191, 162, 251, 1) solid;
         }
         // option {
         //   text-align: center;
@@ -233,6 +244,7 @@
           border-radius: 26px;
           cursor: pointer;
           outline: 0;
+          border: 0;
         }
       }
       p {
@@ -264,43 +276,65 @@
   }
   .getTestCoins {
     .container1 {
-      width: 95%;
-      height: 300px;
+      width: 320px;
+      height: 452px;
+      top: 110px;
       .container2 {
-        height: 280px;
-        width: 280px;
-        top: 10px;
+        width: 100%;
+        padding: 0 21px;
+        box-sizing: border-box;
+        top: 30px;
         h1 {
-          font-size: 18px;
+          width: 100%;
+          font-size: 16px;
+       
         }
         .close {
           top: 5px;
           left: 10rem;
         }
         h3 {
-          font-size: 15px;
+          font-size: 12px;
+          margin-top: 5px;
         }
         h4 {
-          font-size: 13px;
+          font-size: 12px;
           width: 50px;
         }
         .inLine1 {
+          display: flex;
+          flex-direction: column;
           margin-top: 20px;
-          input {
+          h4{
+            margin-left: 5px;
+          }
+          .input {
+            width: 100%;
             font-size: 13px;
             // height: 10px;
           }
         }
         .inLine2 {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: unset;
           margin-top: 10px;
+          .label{
+            flex-direction: column;
+            margin-left: 5px;
+          }
           h5 {
-            font-size: 13px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-top: 5px;
           }
           .select {
             width: 100px;
-            height: 20px;
-            left: 100px;
-            top: 0px;
+            height:30px;
+            left: 180px;
+            top: -30px;
+            
             .input{
               width: 110px;
               padding-left: 15px;
@@ -317,8 +351,9 @@
             
           }
           }
+          
           .list{
-            width: 120px!important;
+            width: 110px!important;
             height:150px!important;
             top:30px!important;
             ul{

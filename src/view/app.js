@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 // import Footer from '../component/violasFooter'
 import RouterView from '../router/routerView'
 import './app.scss';
-
+import MobileHeader from '../component/mobileHeader'
 class App extends Component {
   constructor(props) {
     super(props);
@@ -46,6 +46,7 @@ class App extends Component {
             window.localStorage.getItem('frame') == 'light' ? <img src="/img/编组 16@2x.png" /> : <img src="/img/编组 13@2x.png" />
           }
         </div> */}
+        <MobileHeader></MobileHeader>
         <RouterView routes={routes}></RouterView>
         {/* <Footer></Footer>
         {

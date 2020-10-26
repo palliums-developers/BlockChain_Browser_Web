@@ -3,7 +3,7 @@ import { NavLink, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import * as AllActions from '../../store/action/list_action';
 import { bindActionCreators } from 'redux';
-
+import MobileHeader from '../../component/mobileHeader'
 import './faucet.scss'
 
 var times = 0;//点击次数
@@ -33,7 +33,8 @@ class Faucet extends React.Component {
             MarketCurrencies: [],
             Published: [],
             name:'',
-            showDropDown: false
+            showDropDown: false,
+            getFocus:false
         };
         this.showMenu = this.showMenu.bind(this);
         this.closeMenu = this.closeMenu.bind(this);
@@ -207,15 +208,25 @@ class Faucet extends React.Component {
             return true;
         }
     }
+    showGetCoins = () => {
+    // this.props.showGetCoins();
+    this.props.history.push({
+      pathname: '/faucet'
+    })
+    }
     render() {
         this.addCurrencyList();
         return (
             <div className='getTestCoins'>
+                <MobileHeader></MobileHeader>
                 <div className='getTestCoins_header'>
                     <div className='header_contain'>
                         <div className='getTestCoins_logo'>
                             <img className='logo' onClick={() => this.props.history.push('/')} src='/img/new_logo_purple.png' />
                             {/* <NavLink to='/app/Violas'><img className='logo' src='/img/new_logo_purple.png' /></NavLink> */}
+                        </div>
+                        <div className="getCoinBTN" onClick={this.showGetCoins}>
+                            Get test coins
                         </div>
                         <div className="navList">
                             <div className='dropdown1'>
@@ -250,11 +261,25 @@ class Faucet extends React.Component {
                             <h3>This test coins are only used in test chain</h3>
                             <div className='inLine1'>
                                 <h4>Address:</h4>
-                                <input autofocus onChange={this.handleChange.bind(this, 'address')} defaultValue={this.state.coinAddress} />
+                                <textarea className={this.state.getFocus ? 'input focusAct' : 'input'} onFocus={() => {
+                                    this.setState({
+                                        getFocus: true
+                                    });
+                                    }}
+                                    onBlur={() => {
+                                    this.setState({
+                                        getFocus: false,
+                                    });
+                                    }} autofocus onChange={this.handleChange.bind(this, 'address')} defaultValue={this.state.coinAddress}>
+                                    
+                                </textarea>
+                                {/* <input autofocus onChange={this.handleChange.bind(this, 'address')} defaultValue={this.state.coinAddress} /> */}
                             </div>
                             <div className='inLine2'>
-                                <h4>Amount:</h4>
-                                <h5>{this.state.coinId.chain === 'libra' ? 0.0001 : 0.1}</h5>
+                                <div className="label">
+                                    <h4>Amount:</h4>
+                                    <h5>{this.state.coinId.chain === 'libra' ? 0.0001 : 0.1}</h5>
+                                </div>
                                 <div className="select">
                                     <div class="input" onClick={(event)=>{
                                        this.stopPropagation(event)
@@ -314,4 +339,4 @@ const mapStateToProps = state => {
 }
 
 const mapDispatchToProps = dispatch => bindActionCreators(AllActions, dispatch)
-export default connect(mapStateToProps, mapDispatchToProps)(Faucet);
+export default connect(mapStateToProps, mapDispatchToProps)(withRouter(Faucet));
