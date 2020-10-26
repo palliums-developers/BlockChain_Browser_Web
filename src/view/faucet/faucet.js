@@ -40,20 +40,19 @@ class Faucet extends React.Component {
         this.closeMenu = this.closeMenu.bind(this);
     }
     async componentWillMount() {
-        
+
         await this.props.getMarketCurrency();
         // await this.setState({ VLSCurrency: this.props.currency});
         await this.setState({
             MarketCurrencies: this.getFaucetList(this.props.market_currencies),
         })
-        console.log(this.state.MarketCurrencies)
         await this.setState({
             coinId: this.state.MarketCurrencies[0],
             name: this.state.MarketCurrencies[0].show_name
         })
     }
     stopPropagation(e) {
-      e.nativeEvent.stopImmediatePropagation();
+        e.nativeEvent.stopImmediatePropagation();
     }
     closeDialog1 = () => {
         this.setState({
@@ -129,22 +128,14 @@ class Faucet extends React.Component {
         }
     }
     handleChange(_type, event) {
-        console.log(_type, event)
         switch (_type) {
             case 'address':
                 this.setState({ coinAddress: event.target.value });
-                // console.log(event.target.value)
                 break;
             case 'id':
-                this.setState({ name: event.name, showDropDown: false })
-                // console.log(event.target.value)
+                this.setState({ name: event.show_name, showDropDown: false, coinId: event })
                 break;
         }
-    }
-    handleChange1(event) {
-        // console.log(event)
-        
-        this.setState({chainId:event, name: event.name, showDropDown: false })
     }
     async get_auth_key_prefix(_chain) {
         await this.props.getAccountInfo(this.state.coinAddress, _chain);
@@ -159,14 +150,12 @@ class Faucet extends React.Component {
         await this.setState({ Published: this.props.Published });
     }
     async handleSubmit() {
-        console.log('111')
         await this.props.getWarning('');
         if (this.state.coinAddress.length !== 32) {
             this.props.getWarning('Invalid Address');
             return;
         }
         if (this.state.coinId.chain === 'violas') {
-            console.log('222')
             await this.get_published(this.state.coinAddress)
         } else {
             await this.get_published(this.state.coinAddress, 'libra')
@@ -291,25 +280,25 @@ class Faucet extends React.Component {
                                        {/* <input value={} type="text"/> */}
                                     <span>
                                         {
-                                        this.state.showDropDown ? <img src="/img/xiala@2x.png" alt="" /> : <img src="/img/xiala@2x (1).png" alt="" />
+                                            this.state.showDropDown ? <img src="/img/xiala@2x.png" alt="" /> : <img src="/img/xiala@2x (1).png" alt="" />
                                         }
                                     </span>
-                                    </div>
-                                    {
+                                </div>
+                                {
                                     this.state.showDropDown ? <div class="list">
                                         <ul>
                                             {
                                                 this.state.MarketCurrencies.length > 0 ?
                                                     this.state.MarketCurrencies.map((item, ind) => {
-                                                        return <li key={ind} onClick={() => this.handleChange1(item)}>{item.show_name} ({item.chain})</li>
+                                                        return <li key={ind} onClick={() => this.handleChange('id', item)}>{item.show_name} ({item.chain})</li>
                                                     }) :
                                                     <></>
                                             }
                                         </ul>
                                     </div> : null
-                                    }
-                                </div>
-                                {/* <select onChange={this.handleChange.bind(this, 'id')}>
+                                }
+                            </div>
+                            {/* <select onChange={this.handleChange.bind(this, 'id')}>
                                     {{
                                     this.props.currency.length > 0 ?
                                         this.props.currency.map((item) => {
@@ -317,19 +306,18 @@ class Faucet extends React.Component {
                                         }) :
                                         <></>
                                 } }
-                                    
                                 </select> */}
-                            </div>
-                            <div className='submit'>
-                                <button ref="btn" onClick={this.handleSubmit.bind(this)}>Submit</button>
-                                {
-                                    this.props.info === 'You get test coins successful' ?
-                                        <p style={{ color: 'green' }}>{this.props.info}</p> :
-                                        <p>{this.props.info}<br />{this.state.WARN}</p>
-                                }
-                            </div>
+                        </div>
+                        <div className='submit'>
+                            <button ref="btn" onClick={this.handleSubmit.bind(this)}>Submit</button>
+                            {
+                                this.props.info === 'You get test coins successful' ?
+                                    <p style={{ color: 'green' }}>{this.props.info}</p> :
+                                    <p>{this.props.info}<br />{this.state.WARN}</p>
+                            }
                         </div>
                     </div>
+                </div>
             </div>
         )
     }

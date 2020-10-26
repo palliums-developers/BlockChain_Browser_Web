@@ -153,8 +153,8 @@
             
           }
           .list{
-            width: 175px;
-            height: 228px;
+            // width: 175px;
+            // height: 228px;
             background:#FFF;
             position: absolute;
             top:58px;
@@ -384,6 +384,23 @@
   .getCoins {
     right: 2rem;
     top: 1.5rem;
+  }
+}
+@media (max-height: 700px) {
+  .getTestCoins {
+    .container1 {
+      top: 100px;
+      .container2{
+        .inLine2{
+        .select{
+          .list{
+            top: -230px;
+          }
+        }
+        }
+        
+      }
+    }
   }
 }
 @media (max-width: 600px) {
