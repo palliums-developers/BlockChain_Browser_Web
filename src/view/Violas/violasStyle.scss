@@ -1337,6 +1337,12 @@
 
 @media (max-width: 750px) {
   .violasContent {
+    .unavailable {
+      width: 300px;
+        img {
+          width: 100px;
+        }
+      }
     .netBack {
       background: url("/img/路径 522@2x.png") no-repeat;
       background-size: 100%;

@@ -1169,6 +1169,12 @@
 
 @media (max-width: 750px) {
     .libraContent {
+        .unavailable {
+            width: 300px;
+                img {
+                width: 100px;
+                }
+            }
         .netBack {
             background: url("/img/路径 61@2x.png") no-repeat;
             background-size: 100%;

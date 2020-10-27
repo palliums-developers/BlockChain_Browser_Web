@@ -1360,6 +1360,12 @@
 
 @media (max-width: 750px) {
   .BTCMainNetContent {
+    .unavailable {
+      width: 300px;
+        img {
+          width: 100px;
+        }
+      }
     header .bgLogo {
       right: 5%;
       top: 15%;

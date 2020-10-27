@@ -1367,6 +1367,12 @@
 
 @media (max-width: 750px) {
   .BTCTestNetContent {
+    .unavailable {
+      width: 300px;
+        img {
+          width: 100px;
+        }
+      }
     .price {
       label {
         font-size: 10px;
