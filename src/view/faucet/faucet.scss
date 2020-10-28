@@ -103,7 +103,7 @@
     white-space: nowrap;
     cursor: pointer;
   }
-  a:hover{
+  >a:hover{
       color:rgba(97, 49, 171, 1);
       border-bottom: 2px solid rgba(97, 49, 171, 1);
     }
@@ -157,15 +157,18 @@
   }
 }
 @media (max-width: 1300px){
-  .navList{
-    .dropdown2 {
-    margin-left:53px;
+  .getTestCoins_header{
+    .navList{
+      .dropdown2 {
+      margin-left:53px;
+    }
+    >a{
+      margin-left: 53px;
+      margin-right: 10px;
+    }
+    }
   }
-  a{
-    margin-left: 53px;
-    margin-right: 10px;
-  }
-  }
+  
 }
 @media (max-width: 950px) {
   .getTestCoins_header {
