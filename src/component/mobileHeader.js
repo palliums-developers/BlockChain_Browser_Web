@@ -64,9 +64,12 @@ class MobileHeader extends Component {
   }
   showGetCoins() {
     // this.props.showGetCoins();
-    this.props.history.push({
-      pathname: '/faucet'
+    this.setState({
+      showRouters:false
+    },()=>{
+      this.props.history.push('/faucet')
     })
+    
   }
   render() {
     this.addCurrencyList();
@@ -80,7 +83,12 @@ class MobileHeader extends Component {
                     })
                 }}><img src="/img/listicon.png"/></p>
                 <p onClick={()=>{
-                    this.props.history.push('/app/Violas')
+                    
+                    this.setState({
+                        showRouters:false
+                    },()=>{
+                      this.props.history.push('/app/Violas')
+                    })
                 }}><img src="/img/形状结合 2@2x.png"/></p>
                 <p onClick={this.showGetCoins}>Get test coins</p>
             </div>
