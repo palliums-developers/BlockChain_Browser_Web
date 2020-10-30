@@ -53,8 +53,8 @@ header {
     z-index: 9;
 
     .logo {
-      width: 2.74rem;
-      height: 0.38rem;
+      width: 2.53rem;
+      height: 0.24rem;
       display: flex;
 
       // margin-left: 3.82rem;
@@ -169,13 +169,13 @@ header {
   display: none;
   
 }
-
-@media (max-width:1200px){
+@media (max-width:1600px){
   header .head .logo{
-    width: 175px;
-    height: 24px;
+    width: 200px;
+    height: 20px;
   }
 }
+
 @media  (max-width: 950px) {
   header{
     .head{

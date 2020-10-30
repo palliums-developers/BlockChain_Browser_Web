@@ -3,11 +3,11 @@
   font-weight: 500;
   line-height: 16px;
   position: relative;
-  top: 0.05rem;
+  // top: 0.05rem;
   right: 2.5rem;
   button {
-    width: 131px;
-    height: 28px;
+    width: 141px;
+    height: 30px;
     color: rgba(255, 255, 255, 1);
     border-radius: 50px;
     background: none;
@@ -110,6 +110,9 @@
           color: rgba(60, 56, 72, 1);
           line-height: 26px;
         }
+        .select:hover{
+            background: #F7F7F9;
+          }
         .select,select {
           font-size: 24px;
           font-weight: 400;
@@ -120,9 +123,7 @@
           height: 52px;
           position: relative;
           top: -12px;
-          :hover{
-            background: #F7F7F9;
-          }
+          
           .input{
             width: 180px;
             height: 100%;
@@ -163,7 +164,7 @@
             top:58px;
             left: 0;
             border-radius: 24px;
-            padding: 12px 4px;
+            padding: 12px 0;
             box-sizing: border-box;
             overflow:auto;
             box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.08);
@@ -180,7 +181,7 @@
                 margin-bottom: 8px;
               }
               li:hover{
-                background:rgba(237, 229, 255, 1);
+                background:rgba(245, 240, 255, 1);
                 color:rgba(60, 56, 72, 1) ;
               }
             }
@@ -281,6 +282,14 @@
     button {
       width: 100px;
       height: 26px;
+      margin-left: 15px;
+    }
+  }
+}
+@media (max-width:1100px){
+  .getCoins {
+    button {
+      margin-left: 25px;
     }
   }
 }
