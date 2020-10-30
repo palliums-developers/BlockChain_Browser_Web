@@ -6,14 +6,16 @@
   top: 0.05rem;
   right: 2.5rem;
   button {
-    width: 1.5rem;
-    height: 30px;
+    width: 131px;
+    height: 28px;
     color: rgba(255, 255, 255, 1);
     border-radius: 50px;
     background: none;
     border-width: 0;
     cursor: pointer;
     border: 1px white solid;
+    white-space: nowrap;
+    outline: 0;
   }
 }
 .getTestCoins {
@@ -259,10 +261,26 @@
     }
   }
 }
+@media (max-width:1600px){
+  .getCoins {
+    button {
+      width: 121px;
+      height: 28px;
+    }
+  }
+}
 @media (max-width:1300px){
   .getTestCoins {
     .container1 {
       height: 540px;
+    }
+  }
+}
+@media (max-width:1200px){
+  .getCoins {
+    button {
+      width: 100px;
+      height: 26px;
     }
   }
 }
@@ -385,6 +403,8 @@
     }
   }
 }
+
+
 @media (max-width:750px){
   .getCoins {
     right: 2rem;

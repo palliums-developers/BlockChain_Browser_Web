@@ -169,6 +169,13 @@ header {
   display: none;
   
 }
+
+@media (max-width:1200px){
+  header .head .logo{
+    width: 175px;
+    height: 24px;
+  }
+}
 @media  (max-width: 950px) {
   header{
     .head{
