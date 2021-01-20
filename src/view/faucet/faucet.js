@@ -70,19 +70,20 @@ class Faucet extends React.Component {
         //         temp.push(_currency[i]);
         //     }
         // }
-        let temp_libra = _currency.libra;
-        for (let i = 0; i < temp_libra.length; i++) {
-            temp.push({
-                address: temp_libra[i].address,
-                icon: temp_libra[i].icon,
-                index: temp_libra[i].index,
-                module: temp_libra[i].module,
-                name: temp_libra[i].name,
-                show_name: temp_libra[i].show_name,
-                chain: 'libra'
-            })
-        }
-        let temp_violas = _currency.violas;
+        // let temp_libra = _currency.libra;
+        // console.log(_currency);
+        // for (let i = 0; i < temp_libra.length; i++) {
+        //     temp.push({
+        //         address: temp_libra[i].address,
+        //         icon: temp_libra[i].icon,
+        //         index: temp_libra[i].index,
+        //         module: temp_libra[i].module,
+        //         name: temp_libra[i].name,
+        //         show_name: temp_libra[i].show_name,
+        //         chain: 'libra'
+        //     })
+        // }
+        let temp_violas = _currency;
         for (let j = 0; j < temp_violas.length; j++) {
             temp.push({
                 address: temp_violas[j].address,
