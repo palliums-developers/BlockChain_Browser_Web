@@ -40,16 +40,19 @@ class Faucet extends React.Component {
         this.closeMenu = this.closeMenu.bind(this);
     }
     async componentWillMount() {
-
-        await this.props.getMarketCurrency();
-        // await this.setState({ VLSCurrency: this.props.currency});
-        await this.setState({
-            MarketCurrencies: this.getFaucetList(this.props.market_currencies),
-        })
-        await this.setState({
-            coinId: this.state.MarketCurrencies[0],
-            name: this.state.MarketCurrencies[0].show_name
-        })
+      await this.props.getMarketCurrency();
+      await this.setState({ VLSCurrency: this.props.currency});
+      let obj = new Object();
+      obj.violas = this.props.market_currencies.currencies;
+      obj.libra = this.props.market_currencies1.currencies;
+    //   console.log(this.getFaucetList(obj));
+      await this.setState({
+        MarketCurrencies: this.getFaucetList(obj),
+      });
+      await this.setState({
+        coinId: this.state.MarketCurrencies[0],
+        name: this.state.MarketCurrencies[0].show_name,
+      });
     }
     stopPropagation(e) {
         e.nativeEvent.stopImmediatePropagation();
@@ -60,40 +63,41 @@ class Faucet extends React.Component {
         })
     }
     async componentDidMount() {
+        
         document.addEventListener('click', this.closeDialog1);
         await this.setState({ coinAddress: this.props.match.params.address })
     }
     getFaucetList(_currency) {
         let temp = [];
-        // for (let i = _currency.length - 1; i >= 0; i--) {
-        //     if (_currency[i].name.indexOf('VLS') !== -1) {
-        //         temp.push(_currency[i]);
-        //     }
-        // }
-        // let temp_libra = _currency.libra;
+        for (let i = _currency.length - 1; i >= 0; i--) {
+            if (_currency[i].name.indexOf('VLS') !== -1) {
+                temp.push(_currency[i]);
+            }
+        }
+        let temp_libra = _currency.libra;
         // console.log(_currency);
-        // for (let i = 0; i < temp_libra.length; i++) {
-        //     temp.push({
-        //         address: temp_libra[i].address,
-        //         icon: temp_libra[i].icon,
-        //         index: temp_libra[i].index,
-        //         module: temp_libra[i].module,
-        //         name: temp_libra[i].name,
-        //         show_name: temp_libra[i].show_name,
-        //         chain: 'libra'
-        //     })
-        // }
-        let temp_violas = _currency;
+        for (let i = 0; i < temp_libra.length; i++) {
+            temp.push({
+              address: temp_libra[i].address,
+              icon: temp_libra[i].show_icon,
+              index: temp_libra[i].index,
+              module: temp_libra[i].module,
+              name: temp_libra[i].name,
+              show_name: temp_libra[i].show_name,
+              chain: "libra",
+            });
+        }
+        let temp_violas = _currency.violas;
         for (let j = 0; j < temp_violas.length; j++) {
             temp.push({
-                address: temp_violas[j].address,
-                icon: temp_violas[j].icon,
-                index: temp_violas[j].index,
-                module: temp_violas[j].module,
-                name: temp_violas[j].name,
-                show_name: temp_violas[j].show_name,
-                chain: 'violas'
-            })
+              address: temp_violas[j].address,
+              icon: temp_violas[j].show_icon,
+              index: temp_violas[j].index,
+              module: temp_violas[j].module,
+              name: temp_violas[j].name,
+              show_name: temp_violas[j].show_name,
+              chain: "violas",
+            });
         }
         return temp;
     }

@@ -588,13 +588,18 @@ export let closeGetCoins = () => {
 }
 export let getMarketCurrency = () => {
     return async dispatch => {
-        await axios.get(waibu + '/1.0/market/exchange/currency')
-            .then(res => {
-                dispatch({
-                    type: 'market_currencies',
-                    data: res.data.data
-                })
-            })
+        await axios.get(waibu + "/1.0/violas/currency").then((res) => {
+          dispatch({
+            type: "market_currencies",
+            data: res.data.data,
+          });
+        });
+        await axios.get(waibu + "/1.0/libra/currency").then((res) => {
+          dispatch({
+            type: "market_currencies1",
+            data: res.data.data,
+          });
+        });
     }
 }
 //提交表单
