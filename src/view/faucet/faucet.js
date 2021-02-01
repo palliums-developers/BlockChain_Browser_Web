@@ -42,8 +42,8 @@ class Faucet extends React.Component {
     await this.setState({ VLSCurrency: this.props.currency });
     let obj = new Object();
     obj.violas = this.props.market_currencies.currencies;
-    obj.libra = this.props.market_currencies1.currencies;
-    //   console.log(this.getFaucetList(obj));
+    obj.diem = this.props.market_currencies1.currencies;
+    //   console.log((obj));
     await this.setState({
       MarketCurrencies: this.getFaucetList(obj),
     });
@@ -71,7 +71,7 @@ class Faucet extends React.Component {
         temp.push(_currency[i]);
       }
     }
-    let temp_libra = _currency.libra;
+    let temp_libra = _currency.diem;
     // console.log(_currency);
     for (let i = 0; i < temp_libra.length; i++) {
       temp.push({
@@ -81,7 +81,7 @@ class Faucet extends React.Component {
         module: temp_libra[i].module,
         name: temp_libra[i].name,
         show_name: temp_libra[i].show_name,
-        chain: "libra",
+        chain: "diem",
       });
     }
     let temp_violas = _currency.violas;
@@ -294,7 +294,7 @@ class Faucet extends React.Component {
                     : null}
                 </div>
               </div>
-              <NavLink to="/app/Libra">Libra</NavLink>
+              <NavLink to="/app/Diem">Diem</NavLink>
             </div>
           </div>
         </div>

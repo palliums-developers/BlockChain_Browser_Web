@@ -524,7 +524,7 @@ export let getCurrency = _ => {
 }
 
 export let getAccountInfo = (_address, libra) => {
-    if (libra != 'libra') {
+    if (libra != 'diem') {
         return async dispatch => {
             await axios.get(waibu + '/1.0/violas/account/info?address=' + _address)
                 .then(res => {

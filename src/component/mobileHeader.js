@@ -32,7 +32,7 @@ class MobileHeader extends Component {
   }
   showMenu = (event, id) => {
     // this.setState({ showMenuViolas: true });
-    console.log(event);
+    // console.log(event);
     switch (event) {
       case "violas":
         this.setState({ showMenuId: id, showMenuViolas: true }, () => {
