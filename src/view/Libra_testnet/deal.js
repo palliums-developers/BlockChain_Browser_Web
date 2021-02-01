@@ -85,11 +85,11 @@ class Deal extends Component {
                     <p><label>ID</label><span>{libra_version.version}</span></p>
                     <p><label>Type</label><span>{libra_version.type}</span></p>
                     <p><label>From</label><span className="from" onClick={() => {
-                      this.props.history.push('/app/Libra_addressBox/' + libra_version.sender)
+                      this.props.history.push('/app/Diem_addressBox/' + libra_version.sender)
                     }}>{libra_version.sender ? libra_version.sender : 'Null'}</span></p>
                     <p><label>To</label><span className="to" onClick={() => {
                     libra_version.receiver &&
-                      this.props.history.push('/app/Libra_addressBox/' + libra_version.receiver)
+                      this.props.history.push('/app/Diem_addressBox/' + libra_version.receiver)
                     }}>{libra_version.receiver ? libra_version.receiver : 'Null'}</span></p>
                     <p><label>Value</label><span>{libra_version.amount /1e6} LBR</span></p>
                     <p><label>Time</label><span>{timeStamp2String(libra_version.expiration_time + '000')}</span></p>

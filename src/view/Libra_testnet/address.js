@@ -19,11 +19,11 @@ class Address extends Component {
     }
   }
   goToAddress = (address) => {
-    this.props.history.push('/app/Libra_addressBox/' + address)
+    this.props.history.push('/app/Diem_addressBox/' + address)
   }
   goToDeal = (txid) => {
     this.props.history.push({
-      pathname: '/app/Libra_dealbox/' + txid
+      pathname: '/app/Diem_dealbox/' + txid
     })
   }
   componentDidMount() {

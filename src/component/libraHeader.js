@@ -86,7 +86,7 @@ class LibraHeader extends Component {
                 }
               </div>
             </div>
-            <NavLink to='/app/Libra'>Libra</NavLink>
+            <NavLink to='/app/Diem'>Diem</NavLink>
           </div>
         </div>
         {

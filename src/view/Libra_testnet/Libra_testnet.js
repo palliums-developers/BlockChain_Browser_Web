@@ -56,7 +56,7 @@ class Libra_testnet extends Component {
         <div className="contents">
           <div className="mainNet">
             <div className="searchBox">
-              <h3>Libra TestNet</h3>
+              <h3>Diem TestNet</h3>
               <div className="form">
                 <input onChange={(e) => this.getCurValue(e)} onKeyDown={(e) => this.onKeyup(e)} placeholder="address、version" />
                 <span onClick={this.getSearch}></span>
@@ -85,19 +85,19 @@ class Libra_testnet extends Component {
                       this.props.libra_testnet && this.props.libra_testnet.map((item, index) => {
                         return <tr key={index}>
                           <td colSpan="2" onClick={() => {
-                            this.props.history.push('/app/Libra_dealbox/' + item.version)
+                            this.props.history.push('/app/Diem_dealbox/' + item.version)
                           }}>{item.version}</td>
                           <td colSpan="3">
                             {timeStamp2String(item.expiration_time + '000')}
                           </td>
                           <td colSpan="2">{(item.type)}</td>
                           <td colSpan="4" onClick={() => {
-                            this.props.history.push('/app/Libra_addressBox/' + item.sender)
+                            this.props.history.push('/app/Diem_addressBox/' + item.sender)
                           }}>{item.sender ? (item.sender).slice(0, 20) + '...' : 'Null'}</td>
                           <td colSpan="2">{this.returnStatus(item.status)}</td>
                           <td colSpan="4" onClick={() => {
                             if (item.receiver) {
-                              this.props.history.push('/app/Libra_addressBox/' + item.receiver)
+                              this.props.history.push('/app/Diem_addressBox/' + item.receiver)
                             }
                           }}>{item.receiver ? (item.receiver).slice(0, 20) + '...' : 'Null'}</td>
                           <td colSpan="4">{item.amount /1e6}</td>
@@ -113,16 +113,16 @@ class Libra_testnet extends Component {
                   this.props.libra_testnet && this.props.libra_testnet.map((v, i) => {
                     return <div className="listContent" key={i}>
                       <p><label>Version</label><span onClick={() => {
-                        this.props.history.push('/app/Libra_dealbox/' + v.version)
+                        this.props.history.push('/app/Diem_dealbox/' + v.version)
                       }}>{v.version}</span></p>
                       <p><label>Time</label><span>{timeStamp2String(v.expiration_time + '000')}</span></p>
                       <p><label>Type</label><span>{(v.type)}</span></p>
                       <p><label>From</label><span onClick={() => {
-                        this.props.history.push('/app/Libra_addressBox/' + v.sender)
+                        this.props.history.push('/app/Diem_addressBox/' + v.sender)
                       }}>{v.sender ? (v.sender).slice(0, 20) + '...' : 'Null'}</span></p>
                       <p><label>Status</label><span>{this.returnStatus(v.status)}</span></p>
                       <p><label>To</label><span onClick={() => {
-                        this.props.history.push('/app/Libra_addressBox/' + v.receiver)
+                        this.props.history.push('/app/Diem_addressBox/' + v.receiver)
                       }}>{v.receiver ? (v.receiver).slice(0, 20) + '...' : 'Null'}</span></p>
                       <p><label>Amount</label><span>{v.amount /1e6}</span></p>
                       <p><label>Fee</label><span>{v.gas}</span></p>

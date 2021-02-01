@@ -28,12 +28,12 @@ class BlockHeight extends Component {
   }
 
   goToAddress = (address) => {
-    this.props.history.push('/app/addressBox/' + address)
+    this.props.history.push('/app/Diem_addressBox/' + address)
   }
 
   goToDeal = (txid) => {
     this.props.history.push({
-      pathname: '/app/dealbox/' + txid
+      pathname: '/app/Diem_dealbox/' + txid
     })
   }
 

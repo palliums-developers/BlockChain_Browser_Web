@@ -44,15 +44,15 @@ let routes = [
                 component: Violas_address
             },
             {
-                path: '/app/Libra',
+                path: '/app/Diem',
                 component: Libra_testnet,
             },
             {
-                path: '/app/Libra_dealbox/:txid',
+                path: '/app/Diem_dealbox/:txid',
                 component: DealBox
             },
             {
-                path: '/app/Libra_addressBox/:address',
+                path: '/app/Diem_addressBox/:address',
                 component: AddressBox
             },
             {

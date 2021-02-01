@@ -10,10 +10,11 @@ import axios from 'axios'
 const neibu = 'https://api4.violas.io';
 // const libra_api = 'http://52.27.228.84:4000/explorer/libra';
 const neibu_violas = 'https://api4.violas.io/explorer/violas';
-const waibu = 'https://api4.violas.io';
+const waibu = 'https://api.violas.io';
 // const libra_api = 'http://52.27.228.84:4000/explorer/libra';
-const libra_api = 'https://api4.violas.io/explorer/libra';
-const violas_api = 'https://api4.violas.io/explorer/violas';
+// const libra_api = 'https://api4.violas.io/explorer/libra';
+const libra_api = 'https://api.violas.io/explorer/libra';
+const violas_api = 'https://api.violas.io/explorer/violas';
 
 // const BTC_api = 'http://localhost:10080/open/1.0';
 // const BTC_api = 'https://api2.violas.io:10080/open/1.0';

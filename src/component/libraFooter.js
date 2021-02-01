@@ -42,7 +42,7 @@ class LibraFooter extends Component {
                   other token
                 </div>
               </div>
-              <NavLink to='/app/Libra'>Libra</NavLink>
+              <NavLink to='/app/Diem'>Diem</NavLink>
               <div className='dropdown'>
                 <span>BTC</span>
                 <div className='dropdown-content'>
