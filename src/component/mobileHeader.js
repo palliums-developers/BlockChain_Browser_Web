@@ -4,7 +4,7 @@ import { NavLink, withRouter } from "react-router-dom";
 import { connect } from "react-redux";
 import * as AllActions from "../store/action/list_action";
 import { bindActionCreators } from "redux";
-import GetTestCoins from "../component/GetTestCoins";
+// import GetTestCoins from "../component/GetTestCoins";
 class MobileHeader extends Component {
   constructor(props) {
     super(props);
@@ -44,6 +44,8 @@ class MobileHeader extends Component {
           document.addEventListener("click", this.closeMenu);
         });
         break;
+      default:
+        return;
     }
   };
   closeMenu = (_) => {
@@ -102,7 +104,7 @@ class MobileHeader extends Component {
           >
             <img src="/img/形状结合 2@2x.png" />
           </p>
-          <p onClick={this.showGetCoins}>Get test coins</p>
+          {/* <p onClick={this.showGetCoins}>Get test coins</p> */}
         </div>
         {this.state.showRouters ? (
           <div className="mark">

@@ -1,10 +1,10 @@
 // 头部
-import React, { Component } from 'react';
-import { NavLink, withRouter } from 'react-router-dom'
-import { connect } from 'react-redux'
-import * as AllActions from '../store/action/list_action'
-import { bindActionCreators } from 'redux'
-import GetTestCoins from '../component/GetTestCoins'
+import React, { Component } from "react";
+import { NavLink, withRouter } from "react-router-dom";
+import { connect } from "react-redux";
+import * as AllActions from "../store/action/list_action";
+import { bindActionCreators } from "redux";
+// import GetTestCoins from '../component/GetTestCoins'
 class ViolasHeader extends Component {
   constructor(props) {
     super(props);
@@ -14,12 +14,12 @@ class ViolasHeader extends Component {
       getCoins: false,
       vCoin: [
         // { pathname: '/app/Currency/VTOKEN', type: 'vtoken' }
-        { pathname: '/app/Violas', type: 'vtoken' }
+        { pathname: "/app/Violas", type: "vtoken" },
       ],
       bCoin: [
-        { pathname: '/app/BTC', type: 'BTC' },
-        { pathname: '/app/tBTC', type: 'BTC testnet' }
-      ]
+        { pathname: "/app/BTC", type: "BTC" },
+        { pathname: "/app/tBTC", type: "BTC testnet" },
+      ],
     };
     this.showMenu = this.showMenu.bind(this);
     this.closeMenu = this.closeMenu.bind(this);
@@ -32,90 +32,130 @@ class ViolasHeader extends Component {
   showMenu = (event) => {
     // this.setState({ showMenuViolas: true });
     switch (event) {
-      case 'violas':
+      case "violas":
         this.setState({ showMenuViolas: true }, () => {
-          document.addEventListener('click', this.closeMenu);
+          document.addEventListener("click", this.closeMenu);
         });
         break;
-      case 'BTC':
+      case "BTC":
         this.setState({ showMenuBTC: true }, () => {
-          document.addEventListener('click', this.closeMenu);
-        })
+          document.addEventListener("click", this.closeMenu);
+        });
         break;
+      default:
+        return;
     }
-  }
-  closeMenu = _ => {
+  };
+  closeMenu = (_) => {
     this.setState({ showMenuBTC: false, showMenuViolas: false }, () => {
-      document.removeEventListener('click', this.closeMenu)
-    })
-  }
+      document.removeEventListener("click", this.closeMenu);
+    });
+  };
   addCurrencyList() {
-    if (this.props.currency.length > 0 && this.state.vCoin.length == 1) {
+    if (this.props.currency.length > 0 && this.state.vCoin.length === 1) {
       let vCoin_temp = this.state.vCoin;
       for (let i in this.props.currency) {
         vCoin_temp.push({
-          pathname: '/app/Currency/' + this.props.currency[i].name,
-          type: this.props.currency[i].name.toLowerCase()
-        })
+          pathname: "/app/Currency/" + this.props.currency[i].name,
+          type: this.props.currency[i].name.toLowerCase(),
+        });
       }
     }
   }
   showGetCoins() {
     // this.props.showGetCoins();
     this.props.history.push({
-      pathname: '/faucet'
-    })
+      pathname: "/faucet",
+    });
   }
   render() {
     this.addCurrencyList();
     return (
-      <header className={this.props.back == 'net' ? "netBack" : "netToBack"}>
+      <header className={this.props.back == "net" ? "netBack" : "netToBack"}>
         <div className="head">
           <div className="logo">
-            <NavLink to='/app/Violas'><img src="/img/编组 15@2x.png" /></NavLink>
+            <NavLink to="/app/Violas">
+              <img src="/img/编组 15@2x.png" />
+            </NavLink>
           </div>
-          <div className="getCoins">
+          {/* <div className="getCoins">
             <button onClick={this.showGetCoins}>Get test coins</button>
-          </div>
+          </div> */}
           <div className="navList">
-            <div className='dropdown1'>
-              <span onClick={() => this.showMenu('violas')}>Violas<i className="arrows">{
-                this.state.showMenuViolas ? <img src="/img/weibiaoti1 2@2x.png" /> : <img src="/img/weibiaoti1备份 2@2x.png" />
-              }</i></span>
-              <div className='dropdown-content1'>
-                {this.state.showMenuViolas ? (this.state.vCoin.map((v, i) => {
-                  return <NavLink to={v.pathname} activeClassName='active' key={i}>{v.type}</NavLink>
-                })) : (null)
-                }
+            <div className="dropdown1">
+              <span onClick={() => this.showMenu("violas")}>
+                Violas
+                <i className="arrows">
+                  {this.state.showMenuViolas ? (
+                    <img src="/img/weibiaoti1 2@2x.png" />
+                  ) : (
+                    <img src="/img/weibiaoti1备份 2@2x.png" />
+                  )}
+                </i>
+              </span>
+              <div className="dropdown-content1">
+                {this.state.showMenuViolas
+                  ? this.state.vCoin.map((v, i) => {
+                      return (
+                        <NavLink
+                          to={v.pathname}
+                          activeClassName="active"
+                          key={i}
+                        >
+                          {v.type}
+                        </NavLink>
+                      );
+                    })
+                  : null}
               </div>
             </div>
-            <div className='dropdown2'>
-              <span onClick={() => this.showMenu('BTC')}>BTC<i className="arrows">{
-                this.state.showMenuBTC ? <img src="/img/weibiaoti1 2@2x.png" /> : <img src="/img/weibiaoti1备份 2@2x.png" />
-              }</i></span>
-              <div className='dropdown-content2'>
-                {this.state.showMenuBTC ? (this.state.bCoin.map((v, i) => {
-                  return <NavLink to={v.pathname} activeClassName='active' key={i}>{v.type}</NavLink>
-                })) : (null)
-                }
+            <div className="dropdown2">
+              <span onClick={() => this.showMenu("BTC")}>
+                BTC
+                <i className="arrows">
+                  {this.state.showMenuBTC ? (
+                    <img src="/img/weibiaoti1 2@2x.png" />
+                  ) : (
+                    <img src="/img/weibiaoti1备份 2@2x.png" />
+                  )}
+                </i>
+              </span>
+              <div className="dropdown-content2">
+                {this.state.showMenuBTC
+                  ? this.state.bCoin.map((v, i) => {
+                      return (
+                        <NavLink
+                          to={v.pathname}
+                          activeClassName="active"
+                          key={i}
+                        >
+                          {v.type}
+                        </NavLink>
+                      );
+                    })
+                  : null}
               </div>
             </div>
-            <NavLink to='/app/Diem'>Diem</NavLink>
+            <NavLink to="/app/Diem">Diem</NavLink>
           </div>
         </div>
-        {
-          this.props.back == 'net' ? <div className="bgLogo">
+        {this.props.back == "net" ? (
+          <div className="bgLogo">
             <img src="/img/编组 162@2x.png" />
-          </div> : null
-        }
+          </div>
+        ) : null}
       </header>
     );
   }
 }
-const mapStateToProps = state => {
-  return state.ListReducer
-}
+const mapStateToProps = (state) => {
+  return state.ListReducer;
+};
 
-const mapDispatchToProps = dispatch => bindActionCreators(AllActions, dispatch)
+const mapDispatchToProps = (dispatch) =>
+  bindActionCreators(AllActions, dispatch);
 
-export default connect(mapStateToProps, mapDispatchToProps)(withRouter(ViolasHeader));
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(withRouter(ViolasHeader));
