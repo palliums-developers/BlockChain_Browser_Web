@@ -118,7 +118,7 @@ class Deal extends Component {
                               return v.value == 0 ? <p key={i}><span>{v.addresses}</span></p> :
                                 <label key={i}>
                                   {
-                                    v.value == 0 ? <label>Unparsed address</label> : v.addresses.length == 34 ? <label className="addBlue" onClick={() => this.goToAddress(v.addresses)}>{v.addresses}</label> : <label>{v.addresses}</label>
+                                    v.value == 0 ? <label>Unparsed address</label> : v.addresses[0].length >= 26 ? <label className="addBlue" onClick={() => this.goToAddress(v.addresses)}>{v.addresses}</label> : <label>{v.addresses}</label>
                                   }
                                   <p>{v.value}BTC</p></label>
                             })
@@ -129,7 +129,7 @@ class Deal extends Component {
                           {
                             BTC_Test_txid.vout && BTC_Test_txid.vout.map((v, i) => {
                               return <li key={i}>
-                                {v.value == 0 ? <label>Unparsed address</label> : v.scriptPubKey.addresses.length == 34 ? <label className="addBlue" onClick={() => this.goToAddress(v.scriptPubKey.addresses)}>{v.scriptPubKey.addresses}</label> : <label>{v.scriptPubKey.addresses}</label>
+                                {v.value == 0 ? <label>Unparsed address</label> : v.scriptPubKey.addresses[0].length >= 26 ? <label className="addBlue" onClick={() => this.goToAddress(v.scriptPubKey.addresses)}>{v.scriptPubKey.addresses}</label> : <label>{v.scriptPubKey.addresses}</label>
                                 }
                                 <span>{v.value} BTC</span>
                               </li>

@@ -24,7 +24,6 @@ class Deal extends Component {
     this.props.history.push({ pathname: '/app/BTC_transaction/' + txid })
   }
   goToAddress = (address) => {
-    console.log(address)
     this.props.history.push({ pathname: '/app/BTC_address/' + address })
   }
   goToBlock = (_block) => {

@@ -21,6 +21,7 @@ class Address extends Component {
     this.props.history.push("/app/tBTC_address/" + address);
   };
   goToDeal = (txid) => {
+    console.log(txid,'txid')
     this.props.history.push({
       pathname: "/app/tBTC_transaction/" + txid,
     });
@@ -112,6 +113,7 @@ class Address extends Component {
     let { BTC_Test_address } = this.props;
     this.props.BTC_Test_address.totalPages &&
       this.countPage(this.props.BTC_Test_address.totalPages);
+      // console.log(BTC_Test_address.transactions);
     return (
       <div className="BTCTestNetContent">
         <BTCTestHeader back="netTo"></BTCTestHeader>
@@ -228,45 +230,85 @@ class Address extends Component {
                             BTC_Test_address.transactions.map((v, i) => {
                               return (
                                 <div>
-                                  <p onClick={() => this.goToDeal(v)}>
-                                    TXID: {v.txid}
+                                  <p onClick={() => this.goToDeal(v.txid)}>
+                                    {v.txid}
                                   </p>
 
-                                  {/* <div className="dealAddress">
-                                <ul>
-                                  {
-                                    // v.inputs.map((vint, iint) => {
-                                    //   return vint.input == 0 ? <p key={iint}><span>{vint.address}</span></p> :
-                                    //     <li key={iint}>
-                                    //       {
-                                    //         vint.value == 0 ? <label>地址解析失败</label> : vint.address.length == 34 ? <label className="addBlue" onClick={() => this.goToAddress(vint.address)}>{vint.address}</label> : <label>{vint.address}</label>
-                                    //       }
-                                    //       <span>{vint.value} BTC</span></li>
-                                    v.inputs.map((v1, i1) => {
-                                      return v1.prev_addresses && v1.prev_addresses[i1] ? <label><p className="addBlue" onClick={() => this.goToAddress(v1.prev_addresses)} key={i1}>{v1.prev_addresses + ' '}</p>
-                                        <p>{v1.prev_value + " Sat"}</p></label> : <label className={v1.prev_value ? "addBlue" : ''}>Unparsed address<p>0 Sat</p></label>
-                                    })
-                                  }
-                                </ul>
-                                <span></span>
-                                <ul>
-                                </ul>
-                              </div>
-                              <div className="descrPrice">
-                                <span>Confirmed {v.confirmations}</span>
-                              </div> */}
-
-                                  {/* <div className="dealAddress">
-                                <ul>
-                                  {
-                                    v.vin.map(
-                                      (vin_v, vin_i) => {
-                                        return vin_v
+                                  <div className="dealAddress">
+                                    <ul>
+                                      {
+                                        // v.inputs.map((vint, iint) => {
+                                        //   return vint.input == 0 ? <p key={iint}><span>{vint.address}</span></p> :
+                                        //     <li key={iint}>
+                                        //       {
+                                        //         vint.value == 0 ? <label>地址解析失败</label> : vint.address.length == 34 ? <label className="addBlue" onClick={() => this.goToAddress(vint.address)}>{vint.address}</label> : <label>{vint.address}</label>
+                                        //       }
+                                        //       <span>{vint.value} BTC</span></li>
+                                        
+                                          v.vin.map((v1, i1) => {
+                                            return !v1.value ? (
+                                              <p key={i1}>
+                                                <span>{v1.addresses}</span>
+                                              </p>
+                                            ) : (
+                                              <label key={i1}>
+                                                {v1.value == 0 ? (
+                                                  <label>
+                                                    Unparsed address
+                                                  </label>
+                                                ) : v1.addresses &&
+                                                  v1.addresses[0].length >=
+                                                    26 ? (
+                                                  <label
+                                                    className="addBlue"
+                                                    onClick={() =>
+                                                      this.goToAddress(
+                                                        v1.addresses
+                                                      )
+                                                    }
+                                                  >
+                                                    {v1.addresses}
+                                                  </label>
+                                                ) : (
+                                                  <label>{v1.addresses}</label>
+                                                )}
+                                                <p>{v1.value}BTC</p>
+                                              </label>
+                                            );
+                                          })
                                       }
-                                    )
-                                  }
-                                </ul>
-                              </div> */}
+                                    </ul>
+                                    <span></span>
+                                    <ul>
+                                      {v.vout.map((v2, i2) => {
+                                          return (
+                                            <li key={i2}>
+                                              {v2.value == 0 ? (
+                                                <label>Unparsed address</label>
+                                              ) : v2.addresses&&v2.addresses[0]
+                                                  .length >= 26 ? (
+                                                <label
+                                                  className="addBlue"
+                                                  onClick={() =>
+                                                    this.goToAddress(
+                                                      v2.addresses
+                                                    )
+                                                  }
+                                                >
+                                                  {v2.addresses}
+                                                </label>
+                                              ) : (
+                                                <label>{v2.addresses}</label>
+                                              )}
+                                              <span>{v2.value} BTC</span>
+                                            </li>
+                                          );
+                                        })}
+                                    </ul>
+                                  </div>
+                                  <div className="descrPrice">
+                                    <span>Confirmed {v.confirmations}</span>
+                                  </div>
                                 </div>
                               );
                             })}

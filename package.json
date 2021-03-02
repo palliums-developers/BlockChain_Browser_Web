@@ -35,7 +35,7 @@
     "cors": "^2.8.5",
     "express-rate-limit": "^5.0.0",
     "node-fetch": "^2.6.0",
-    "node-sass": "^4.12.0",
+    "node-sass": "^4.14.1",
     "qrcode-react": "^0.1.16",
     "react-redux": "^7.1.0",
     "react-router-dom": "^5.0.1",
