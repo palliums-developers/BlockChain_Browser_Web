@@ -27,10 +27,10 @@ class Violas extends Component {
     this.setState({ limit: this.state.limit + 10 })
   }
   returnStatus = (_num) => {
-    if (_num == 4001) {
-      return "success"
+    if (_num == "Executed") {
+      return "Success";
     } else {
-      return "failed"
+      return "Failed";
     }
   }
   getCurValue = (e) => {

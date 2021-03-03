@@ -149,10 +149,10 @@ class Address extends Component {
   }
 
   returnStatus = (_num) => {
-    if (_num == 4001) {
-      return <p style={{ color: 'green' }}>success</p>
+    if (_num == "Executed") {
+      return <p style={{ color: "green" }}>Success</p>;
     } else {
-      return <p style={{ color: 'red' }}>failed</p>
+      return <p style={{ color: "red" }}>Failed</p>;
     }
   }
   onKeyup = (e) => {

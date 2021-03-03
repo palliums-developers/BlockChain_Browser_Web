@@ -43,10 +43,10 @@ class Deal extends Component {
   }
 
   returnStatus = (_num) => {
-    if (_num == 4001) {
-      return "success";
+    if (_num == "Executed") {
+      return "Success";
     } else {
-      return "failed";
+      return "Failed";
     }
   }
   module2name = (_module_address) => {
