@@ -115,12 +115,12 @@ class Deal extends Component {
                         <ul>
                           {
                             BTC_Test_txid.vin && BTC_Test_txid.vin.map((v, i) => {
-                              return v.value == 0 ? <p key={i}><span>{v.addresses}</span></p> :
+                              return v.value == 0 ? <p key={i}><span>Coinbase</span></p> :
                                 <label key={i}>
                                   {
                                     v.value == 0 ? <label>Unparsed address</label> : v.addresses[0].length >= 26 ? <label className="addBlue" onClick={() => this.goToAddress(v.addresses)}>{v.addresses}</label> : <label>{v.addresses}</label>
                                   }
-                                  <p>{v.value}BTC</p></label>
+                                  <p>{v.value} BTC</p></label>
                             })
                           }
                         </ul>

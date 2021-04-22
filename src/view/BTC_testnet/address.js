@@ -21,7 +21,7 @@ class Address extends Component {
     this.props.history.push("/app/tBTC_address/" + address);
   };
   goToDeal = (txid) => {
-    console.log(txid,'txid')
+    console.log(txid, "txid");
     this.props.history.push({
       pathname: "/app/tBTC_transaction/" + txid,
     });
@@ -113,7 +113,7 @@ class Address extends Component {
     let { BTC_Test_address } = this.props;
     this.props.BTC_Test_address.totalPages &&
       this.countPage(this.props.BTC_Test_address.totalPages);
-      // console.log(BTC_Test_address.transactions);
+    // console.log(BTC_Test_address.transactions);
     return (
       <div className="BTCTestNetContent">
         <BTCTestHeader back="netTo"></BTCTestHeader>
@@ -153,20 +153,24 @@ class Address extends Component {
                         <p>
                           <label>Banlance</label>
                           <span>
-                            {BTC_Test_address && BTC_Test_address.balance} BTC
+                            {BTC_Test_address && BTC_Test_address.balance / 1e8}{" "}
+                            BTC
                           </span>
                         </p>
                         <p>
                           <label>Total Receive</label>
                           <span>
-                            {BTC_Test_address && BTC_Test_address.totalReceived}{" "}
+                            {BTC_Test_address &&
+                              BTC_Test_address.totalReceived / 1e8}{" "}
                             BTC
                           </span>
                         </p>
                         <p>
                           <label>Total Send</label>
                           <span>
-                            {BTC_Test_address && BTC_Test_address.totalSent} BTC
+                            {BTC_Test_address &&
+                              BTC_Test_address.totalSent / 1e8}{" "}
+                            BTC
                           </span>
                         </p>
                         <p>
@@ -244,66 +248,64 @@ class Address extends Component {
                                         //         vint.value == 0 ? <label>地址解析失败</label> : vint.address.length == 34 ? <label className="addBlue" onClick={() => this.goToAddress(vint.address)}>{vint.address}</label> : <label>{vint.address}</label>
                                         //       }
                                         //       <span>{vint.value} BTC</span></li>
-                                        
-                                          v.vin.map((v1, i1) => {
-                                            return !v1.value ? (
-                                              <p key={i1}>
-                                                <span>{v1.addresses}</span>
-                                              </p>
-                                            ) : (
-                                              <label key={i1}>
-                                                {v1.value == 0 ? (
-                                                  <label>
-                                                    Unparsed address
-                                                  </label>
-                                                ) : v1.addresses &&
-                                                  v1.addresses[0].length >=
-                                                    26 ? (
-                                                  <label
-                                                    className="addBlue"
-                                                    onClick={() =>
-                                                      this.goToAddress(
-                                                        v1.addresses
-                                                      )
-                                                    }
-                                                  >
-                                                    {v1.addresses}
-                                                  </label>
-                                                ) : (
-                                                  <label>{v1.addresses}</label>
-                                                )}
-                                                <p>{v1.value}BTC</p>
-                                              </label>
-                                            );
-                                          })
+
+                                        v.vin.map((v1, i1) => {
+                                          return !v1.value ? (
+                                            <p key={i1}>
+                                              {/* <span>{v1.addresses}</span> */}
+                                              {/* <span>from Block Reward</span> */}
+                                              <span>Coinbase</span>
+                                            </p>
+                                          ) : (
+                                            <label key={i1}>
+                                              {v1.value == 0 ? (
+                                                <label>Unparsed address</label>
+                                              ) : v1.addresses &&
+                                                v1.addresses[0].length >= 26 ? (
+                                                <label
+                                                  className="addBlue"
+                                                  onClick={() =>
+                                                    this.goToAddress(
+                                                      v1.addresses
+                                                    )
+                                                  }
+                                                >
+                                                  {v1.addresses}
+                                                </label>
+                                              ) : (
+                                                <label>{v1.addresses}</label>
+                                              )}
+                                              <p>{v1.value / 1e8} BTC</p>
+                                            </label>
+                                          );
+                                        })
                                       }
                                     </ul>
                                     <span></span>
                                     <ul>
                                       {v.vout.map((v2, i2) => {
-                                          return (
-                                            <li key={i2}>
-                                              {v2.value == 0 ? (
-                                                <label>Unparsed address</label>
-                                              ) : v2.addresses&&v2.addresses[0]
-                                                  .length >= 26 ? (
-                                                <label
-                                                  className="addBlue"
-                                                  onClick={() =>
-                                                    this.goToAddress(
-                                                      v2.addresses
-                                                    )
-                                                  }
-                                                >
-                                                  {v2.addresses}
-                                                </label>
-                                              ) : (
-                                                <label>{v2.addresses}</label>
-                                              )}
-                                              <span>{v2.value} BTC</span>
-                                            </li>
-                                          );
-                                        })}
+                                        return (
+                                          <li key={i2}>
+                                            {v2.value == 0 ? (
+                                              <label>Unparsed address</label>
+                                            ) : v2.addresses &&
+                                              v2.addresses[0] &&
+                                              v2.addresses[0].length >= 26 ? (
+                                              <label
+                                                className="addBlue"
+                                                onClick={() =>
+                                                  this.goToAddress(v2.addresses)
+                                                }
+                                              >
+                                                {v2.addresses}
+                                              </label>
+                                            ) : (
+                                              <label>{v2.addresses}</label>
+                                            )}
+                                            <span>{v2.value / 1e8} BTC</span>
+                                          </li>
+                                        );
+                                      })}
                                     </ul>
                                   </div>
                                   <div className="descrPrice">

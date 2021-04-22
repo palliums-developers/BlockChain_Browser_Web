@@ -296,7 +296,7 @@ export let getBTCTestList = () => {
         //     })
         // })
 
-        axios.get(tBTC_api).then(async res => {
+        axios.get(tBTC_api+'/v2').then(async res => {
             let tBTCList = [];
             // console.log(tBTCList[0])
             let _height = res.data.backend.blocks;
@@ -385,7 +385,7 @@ export let getBTCTestTx = (_txid) => {
 // }
 export let getBTCTestAddress = (_address, _page) => {
     return dispatch => {
-        axios.get(tBTC_api + '/v2/address/' + _address + '?pageSize=10&details=txs&page=' + _page).then(res => {
+        axios.get(tBTC_api + 'v2/address/' + _address + '?pageSize=10&details=txs&page=' + _page).then(res => {
             // console.log(res.data)
             dispatch({
                 type: 'BTC_Test_address',

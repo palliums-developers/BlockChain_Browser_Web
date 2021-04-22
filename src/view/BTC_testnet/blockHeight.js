@@ -246,9 +246,15 @@ class BlockHeight extends Component {
                                   <div className="dealAddress">
                                     <ul>
                                       {item.vin.map((v, i) => {
-                                        return v.value == 0 ? (
+                                        return v.value === "0" &&
+                                          v.addresses.length === 0 ? (
                                           <p key={i}>
-                                            <span>{v.addresses}</span>
+                                            <span>Coinbase</span>
+                                          </p>
+                                        ) : v.value !== "0" &&
+                                          v.addresses.length === 0 ? (
+                                          <p key={i}>
+                                            <span>Unparsed address</span>
                                           </p>
                                         ) : (
                                           <label key={i}>
@@ -284,7 +290,7 @@ class BlockHeight extends Component {
                                                 {v.scriptPubKey.addresses}
                                               </label>
                                             )}
-                                            <p>{v.value}BTC</p>
+                                            <p>{v.value} BTC</p>
                                           </li>
                                         );
                                       })}
@@ -293,7 +299,7 @@ class BlockHeight extends Component {
                                   <div className="descrPrice">
                                     <span>
                                       <i></i>
-                                      {item.output} BTC
+                                      {item.valueOut} BTC
                                     </span>
                                   </div>
                                 </div>
